@@ -29,15 +29,15 @@
 
       <p>
         <label for="account">Account Number</label>
-        Enter full fourteen digit account number, excluding dashes. If your request is not project-based, the last four digits will be 0000.
-        <input type="text" name="account" placeholder="11111111110000" class="textbox" id="account">
+        Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.
+        <input type="text" name="account" placeholder="111-111-1111-0000" class="textbox" id="account"> <!-- Email should not recieve dashes -->
       </p>
 
       <p>
         <fieldset>
           <legend>Photography Services Requested</legend>
 
-            <p>If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for your intended use, as some of the images in our collection have restrictions.</p>
+            <p>Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
 
             <label>New Images</label>
               <input type="checkbox" name="photoservice" value="new2d">2D collection items <span class="behavior"><em>Bring materials to Rights &amp; Reproductions.</em></span><br>
@@ -47,11 +47,11 @@
               <input type="checkbox" name="photoservice" value="newmarketing">Marketing photography<br>
               <input type="checkbox" name="photoservice" value="newevent">Event photography<br>
               <input type="checkbox" name="photoservice" value="other">Other<br>
-              <label for="photoservice_other_textarea">Describe service request.</label><textarea name="photoservice_other_textarea" id="photoservice_other_textarea"></textarea>
+              <textarea name="photoservice_other_textarea" placeholder="Describe the service request." id="photoservice_other_textarea"></textarea>
             <label>Exisiting Images</label>
               <input type="checkbox" name="photoservice" value="exisitingcollection">Collections items<br>
               <input type="checkbox" name="photoservice" value="existingnoncollection">Non-collections items<br>
-              <label for="photoservice_exisiting_textarea">For existing digital images of collection items, please include the ICHi, DN, SDN, or HB number.</label><textarea name="photoservice_exisiting_textarea" id="photoservice_exisiting_textarea"></textarea>
+              <textarea name="photoservice_exisiting_textarea" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_exisiting_textarea"></textarea>
         </fieldset>
       </p>
 
@@ -62,7 +62,7 @@
             <input type="checkbox" name="delivery" value="email"> E-mail<br>
             <input type="checkbox" name="delivery" value="disc"> Burn to disc <span class="behavior"><em>CDs and DVDs with labels are $2 each and are charged to your account.</em></span><br>
             <input type="checkbox" name="delivery" value="other"> Other<br>
-            <label for="delivery_other_textarea">Describe delivery method.</label><textarea name="delivery_other_textarea" id="delivery_other_textarea"></textarea>
+            <textarea name="delivery_other_textarea" placeholder="Describe the delivery method." id="delivery_other_textarea"></textarea>
         </fieldset>
       </p>
 
@@ -73,7 +73,7 @@
               <input type="radio" name="specs" value="lowres"> Low resolution image <span class="behavior"><em>For web use or PowerPoint presentation, 72 dpi.</em></span><br>
               <input type="radio" name="specs" value="editorialquality"> Editorial quality image <span class="behavior"><em>For publication use, 300 dpi.</em></span><br>
               <input type="radio" name="specs" value="other"> Other<br>
-              <label for="specs_other_textarea">Describe image quality request.</label><textarea name="specs_other_textarea" id="specs_other_textarea"></textarea>
+              <textarea name="specs_other_textarea" placeholder="Describe the image quality request." id="specs_other_textarea"></textarea>
             <label>File Type</label>
               <input type="radio" name="specs" value="jpeg"> JPEG<br>
               <input type="radio" name="specs" value="tiff"> TIFF<br>
@@ -89,7 +89,7 @@
             <input type="checkbox" name="use" value="exhibition"> Exhibition<br>
             <input type="checkbox" name="use" value="admarketing"> Advertising &amp; Marketing<br>
             <input type="checkbox" name="use" value="other"> Other<br> 
-            <label for="use_other_textarea">Describe planned use.</label><textarea name="use_other_textarea" id="use_other_textarea"></textarea>
+            <textarea name="use_other_textarea" placeholder="Describe the planned use." id="use_other_textarea"></textarea>
         </fieldset>
       </p>
 
@@ -98,19 +98,18 @@
           <legend>Work Description</legend>
             <input type="radio" name="work" value="internalclient"> Internal Client <br>
             <input type="radio" name="work" value="externalclient"> External Client<br>
-            <label for="externalclient_name">Name of external client.</label><input type="text" name="externalclient_name" id="externalclient_name">
+            <label for="externalclient_name">Name of external client:</label><input type="text" name="externalclient_name" id="externalclient_name">
         </fieldset>
       </p>
 
       <p>
         <label for="date">Due Date</label>
-        <input type="date" name="date" id="date">
+          <p>Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.</p>
+          <input type="date" name="date" id="date">
       </p>
 
-      <p>Please place you orders to allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new digital images will likely take additional time. Rush orders will be reviewed on a case-by-case basis.</p>
-
       <p>
-        <input type="submit" name="submit" value="Submit Form">
+        <input type="submit" name="submit" value="Place Order">
       </p>
 
     </form>
