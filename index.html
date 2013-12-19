@@ -2,64 +2,65 @@
 <html lang="en">
   <head>
     <link type="text/css" rel="stylesheet" href="css/custom.css">
-    <title>Photography and Imaging Order Form</title>
+    <title>Photography and Imaging Orders</title>
   </head>
   
   <body>
+
+    <h1>Photography and Imaging Orders</h1>
     
-    <h1>Chicago History Museum Photo Lab</h1>
-
-      <p>Place internal photo orders for digital files with this form. It will be directed to the Rights &amp; Reproductions and Photo Lab staff automatically. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for your intended use, as some of the images in our collection have restrictions. Please place you orders to allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new digital images will likely take additional time. Rush orders will be reviewed on a case-by-case basis.</p> 
-
-      <p>If you have any questions, please feel free to email the Photo Lab or Rights &amp; Reproductions staff.</p>	
-
-    <h2>Photography and Imaging Order Form</h2>
+      <p>Place internal photo orders for digital files. If you have any questions, please feel free to email the Photo Lab or Rights &amp; Reproductions staff: <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a> or <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a>.</p>
 
     <form>
       <p>
-        <label for="name">Name</label>
-        <input type="text" name="name" class="textbox" id="name">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" placeholder="John Doe" class="textbox" id="name">
       </p>
 
       <p>
         <label for="phone">Phone</label>
-        <input type="tel" name="phone" class="textbox" id="phone">
+        <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone">
       </p>
 
       <p>
         <label for="department">Department</label>
-        <input type="text" name="department" class="textbox" id="department">
+        <input type="text" name="department" placeholder="Marketing" class="textbox" id="department">
       </p>
 
       <p>
         <label for="account">Account Number</label>
-        <input type="text" name="account" class="textbox" id="account">
+        Enter full fourteen digit account number, excluding dashes. If your request is not project-based, the last four digits will be 0000.
+        <input type="text" name="account" placeholder="11111111110000" class="textbox" id="account">
       </p>
 
       <p>
         <fieldset>
           <legend>Photography Services Requested</legend>
+
+            <p>If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for your intended use, as some of the images in our collection have restrictions.</p>
+
             <label>New Images</label>
-              <input type="checkbox" name="photoservice" value="new2d">2D collection items (please bring materials to Rights &amp; Reproductions)<br>
-              <input type="checkbox" name="photoservice" value="new3d">3D collection items (please coordinate material delivery to the photo lab with collection managers)<br>
+              <input type="checkbox" name="photoservice" value="new2d">2D collection items<br> <!-- Bring materials to Rights &amp; Reproductions -->
+              <input type="checkbox" name="photoservice" value="new3d">3D collection items<br><!-- Coordinate material delivery to the photo lab with collection managers -->
               <input type="checkbox" name="photoservice" value="newexhibitdoc">Exhibition documentation<br>
               <input type="checkbox" name="photoservice" value="newexhibitions">Photography for exhibitions<br>
               <input type="checkbox" name="photoservice" value="newmarketing">Marketing photography<br>
               <input type="checkbox" name="photoservice" value="newevent">Event photography<br>
+              <input type="checkbox" name="photoservice" value="other">Other<!-- Describe in work description below -->
             <label>Exisiting Images</label>
               <input type="checkbox" name="photoservice" value="exisitingcollection">Collections items<br>
               <input type="checkbox" name="photoservice" value="existingnoncollection">Non-collections items <br>
-              <input type="checkbox" name="photoservice" value="other">Other (please describe in work description below)
+              <!-- For existing digital images of collection items, please include the ICHi, DN, SDN, or HB number.  -->
         </fieldset>
       </p>
 
       <p>
         <fieldset>
           <legend>Delivery Method</legend>
-            <input type="checkbox" name="delivery" value="server"> Save on server (please provide folder location in work description below)<br>
+            <input type="checkbox" name="delivery" value="server"> Save on server<br> <!-- Provide folder location in work description below -->
             <input type="checkbox" name="delivery" value="email"> E-mail<br>
-            <input type="checkbox" name="delivery" value="disc"> Burn to disc (CDs and DVDs with labels are $2 each and are charged to your account)<br>
-            <input type="checkbox" name="delivery" value="other"> Other (please describe in work description below)
+            <input type="checkbox" name="delivery" value="disc"> Burn to disc<br> <!-- CDs and DVDs with labels are $2 each and are charged to your account -->
+            <input type="checkbox" name="delivery" value="other"> Other <!-- Please describe in work description below -->
         </fieldset>
       </p>
 
@@ -67,9 +68,9 @@
         <fieldset>
           <legend>Digital File Specs</legend>
             <label>Image Quality</label>
-              <input type="radio" name="specs" value="lowres"> Low resolution image (for web use or PowerPoint presentation, 72 dpi)<br>
-              <input type="radio" name="specs" value="editorialquality"> Editorial quality image (for publication use, 300 dpi)<br>
-              <input type="radio" name="specs" value="other"> Other (please specify in work description below)<br>
+              <input type="radio" name="specs" value="lowres"> Low resolution image<br> <!-- For web use or PowerPoint presentation, 72 dpi -->
+              <input type="radio" name="specs" value="editorialquality"> Editorial quality image<br> <!-- For publication use, 300 dpi -->
+              <input type="radio" name="specs" value="other"> Other<br> <!-- Please specify in work description below -->
             <label>File Type</label>
               <input type="radio" name="specs" value="jpeg"> JPEG<br>
               <input type="radio" name="specs" value="tiff"> TIFF<br>
@@ -79,24 +80,29 @@
       <p>
         <fieldset>
           <legend>Planned Use</legend>
-            <input type="checkbox" name="use" value="socialmedia"> Social media (Facebook, Tumblr, Blog)<br>
+            <input type="checkbox" name="use" value="socialmedia"> Social media<br> <!-- Facebook, Tumblr, Blog -->
             <input type="checkbox" name="use" value="web"> Web<br>
             <input type="checkbox" name="use" value="publication"> Publication<br>
             <input type="checkbox" name="use" value="exhibition"> Exhibition<br>
             <input type="checkbox" name="use" value="admarketing"> Advertising &amp; Marketing<br>
-            <input type="checkbox" name="use" value="other"> Other (please describe in work description below)<br>
+            <input type="checkbox" name="use" value="other"> Other<br> <!-- Please describe in work description below -->
         </fieldset>
       </p>
 
       <p>
-        <label for="account">Work Description <br>For existing digital images of collection items, please include the ICHi, DN, SDN, or HB number. If this image is being requested by an external client, please include the name of the client.</label>
-        <textarea name="workdescription" class="textbox" id="workdescription"></textarea>
+        <fieldset>
+          <legend>Work Description</legend>
+            <input type="radio" name="work" value="internalclient"> Internal Client <br>
+            <input type="radio" name="work" value="externalclient"> External Client <!--  If this image is being requested by an external client, please include the name of the client. -->
+        </fieldset>
       </p>
 
       <p>
         <label for="date">Due Date</label>
         <input type="date" name="date" id="date">
       </p>
+
+      <p>Please place you orders to allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new digital images will likely take additional time. Rush orders will be reviewed on a case-by-case basis.</p> 
 
       <p>
         <input type="submit" name="submit" value="Submit Form">
