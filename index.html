@@ -9,7 +9,7 @@
 
     <h1>Photography and Imaging Orders</h1>
     
-      <p>Place internal photo orders for digital files. If you have any questions, please feel free to email the Photo Lab or Rights &amp; Reproductions staff: <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a> or <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a>.</p>
+      <p>Place internal photo orders for digital files. <!-- If you have any questions, please feel free to email the Photo Lab or Rights &amp; Reproductions staff: <a href="mailto:photolab@chicagohistory.org" target="_top">photolab@chicagohistory.org</a> or <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a>. --></p>
 
     <form>
       <p>
@@ -40,27 +40,29 @@
             <p>If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for your intended use, as some of the images in our collection have restrictions.</p>
 
             <label>New Images</label>
-              <input type="checkbox" name="photoservice" value="new2d">2D collection items<br> <!-- Bring materials to Rights &amp; Reproductions -->
-              <input type="checkbox" name="photoservice" value="new3d">3D collection items<br><!-- Coordinate material delivery to the photo lab with collection managers -->
+              <input type="checkbox" name="photoservice" value="new2d">2D collection items <span class="behavior"><em>Bring materials to Rights &amp; Reproductions.</em></span><br>
+              <input type="checkbox" name="photoservice" value="new3d">3D collection items <span class="behavior"><em>Coordinate material delivery to the photo lab with collection managers.</em></span><br>
               <input type="checkbox" name="photoservice" value="newexhibitdoc">Exhibition documentation<br>
               <input type="checkbox" name="photoservice" value="newexhibitions">Photography for exhibitions<br>
               <input type="checkbox" name="photoservice" value="newmarketing">Marketing photography<br>
               <input type="checkbox" name="photoservice" value="newevent">Event photography<br>
-              <input type="checkbox" name="photoservice" value="other">Other<!-- Describe in work description below -->
+              <input type="checkbox" name="photoservice" value="other">Other<br>
+              <label for="photoservice_other_textarea">Describe service request.</label><textarea name="photoservice_other_textarea" id="photoservice_other_textarea"></textarea>
             <label>Exisiting Images</label>
               <input type="checkbox" name="photoservice" value="exisitingcollection">Collections items<br>
-              <input type="checkbox" name="photoservice" value="existingnoncollection">Non-collections items <br>
-              <!-- For existing digital images of collection items, please include the ICHi, DN, SDN, or HB number.  -->
+              <input type="checkbox" name="photoservice" value="existingnoncollection">Non-collections items<br>
+              <label for="photoservice_exisiting_textarea">For existing digital images of collection items, please include the ICHi, DN, SDN, or HB number.</label><textarea name="photoservice_exisiting_textarea" id="photoservice_exisiting_textarea"></textarea>
         </fieldset>
       </p>
 
       <p>
         <fieldset>
           <legend>Delivery Method</legend>
-            <input type="checkbox" name="delivery" value="server"> Save on server<br> <!-- Provide folder location in work description below -->
+            <input type="checkbox" name="delivery" value="server"> Save on server <span class="behavior"><em>Provide folder location in work description below.</em></span><br>
             <input type="checkbox" name="delivery" value="email"> E-mail<br>
-            <input type="checkbox" name="delivery" value="disc"> Burn to disc<br> <!-- CDs and DVDs with labels are $2 each and are charged to your account -->
-            <input type="checkbox" name="delivery" value="other"> Other <!-- Please describe in work description below -->
+            <input type="checkbox" name="delivery" value="disc"> Burn to disc <span class="behavior"><em>CDs and DVDs with labels are $2 each and are charged to your account.</em></span><br>
+            <input type="checkbox" name="delivery" value="other"> Other<br>
+            <label for="delivery_other_textarea">Describe delivery method.</label><textarea name="delivery_other_textarea" id="delivery_other_textarea"></textarea>
         </fieldset>
       </p>
 
@@ -68,9 +70,10 @@
         <fieldset>
           <legend>Digital File Specs</legend>
             <label>Image Quality</label>
-              <input type="radio" name="specs" value="lowres"> Low resolution image<br> <!-- For web use or PowerPoint presentation, 72 dpi -->
-              <input type="radio" name="specs" value="editorialquality"> Editorial quality image<br> <!-- For publication use, 300 dpi -->
-              <input type="radio" name="specs" value="other"> Other<br> <!-- Please specify in work description below -->
+              <input type="radio" name="specs" value="lowres"> Low resolution image <span class="behavior"><em>For web use or PowerPoint presentation, 72 dpi.</em></span><br>
+              <input type="radio" name="specs" value="editorialquality"> Editorial quality image <span class="behavior"><em>For publication use, 300 dpi.</em></span><br>
+              <input type="radio" name="specs" value="other"> Other<br>
+              <label for="specs_other_textarea">Describe image quality request.</label><textarea name="specs_other_textarea" id="specs_other_textarea"></textarea>
             <label>File Type</label>
               <input type="radio" name="specs" value="jpeg"> JPEG<br>
               <input type="radio" name="specs" value="tiff"> TIFF<br>
@@ -80,12 +83,13 @@
       <p>
         <fieldset>
           <legend>Planned Use</legend>
-            <input type="checkbox" name="use" value="socialmedia"> Social media<br> <!-- Facebook, Tumblr, Blog -->
+            <input type="checkbox" name="use" value="socialmedia"> Social media <span class="behavior"><em>Facebook, Tumblr, Blog, etc.</em></span><br>
             <input type="checkbox" name="use" value="web"> Web<br>
             <input type="checkbox" name="use" value="publication"> Publication<br>
             <input type="checkbox" name="use" value="exhibition"> Exhibition<br>
             <input type="checkbox" name="use" value="admarketing"> Advertising &amp; Marketing<br>
-            <input type="checkbox" name="use" value="other"> Other<br> <!-- Please describe in work description below -->
+            <input type="checkbox" name="use" value="other"> Other<br> 
+            <label for="use_other_textarea">Describe planned use.</label><textarea name="use_other_textarea" id="use_other_textarea"></textarea>
         </fieldset>
       </p>
 
@@ -93,7 +97,8 @@
         <fieldset>
           <legend>Work Description</legend>
             <input type="radio" name="work" value="internalclient"> Internal Client <br>
-            <input type="radio" name="work" value="externalclient"> External Client <!--  If this image is being requested by an external client, please include the name of the client. -->
+            <input type="radio" name="work" value="externalclient"> External Client<br>
+            <label for="externalclient_name">Name of external client.</label><input type="text" name="externalclient_name" id="externalclient_name">
         </fieldset>
       </p>
 
@@ -102,7 +107,7 @@
         <input type="date" name="date" id="date">
       </p>
 
-      <p>Please place you orders to allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new digital images will likely take additional time. Rush orders will be reviewed on a case-by-case basis.</p> 
+      <p>Please place you orders to allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new digital images will likely take additional time. Rush orders will be reviewed on a case-by-case basis.</p>
 
       <p>
         <input type="submit" name="submit" value="Submit Form">
