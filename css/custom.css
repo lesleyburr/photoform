@@ -3,6 +3,10 @@ body {
 	width: auto;
 }
 
+form {
+	width: 80%;
+}
+
 .textbox {
 	display: block;
 }
