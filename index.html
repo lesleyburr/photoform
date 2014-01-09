@@ -58,8 +58,10 @@
       <p>
         <fieldset>
           <legend>Delivery Method</legend>
-            <input type="checkbox" name="delivery" value="server"> Save on server <em>Provide folder location.</em><br> <!-- This triggers an input for the folder path -->
+            <input type="checkbox" name="delivery" value="server"> Save on server. Provide folder location.<br> <!-- This triggers an input for the folder path -->
+            <input type="text" name="folderlocation" placeholder="Folder location" class="textbox" id="folderlocation">
             <input type="checkbox" name="delivery" value="email"> E-mail<br> <!-- Triggers an input  -->
+            <input type="text" name="e-mail" placeholder="name@mail.com" class="textbox" id="e-mail">
             <input type="checkbox" name="delivery" value="disc"> Burn to disc. CDs and DVDs with labels are $2 each and are charged to your account.<br>
             <input type="checkbox" name="delivery" value="other"> Other<br>
             <textarea name="delivery_other_textarea" placeholder="Describe the delivery method." id="delivery_other_textarea"></textarea>
