@@ -75,14 +75,18 @@
       <p>
         <fieldset>
           <legend>Digital File Specs</legend>
-            <label>Image Quality</label>
-              <input type="radio" name="specs" value="lowres"> Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.<br>
-              <input type="radio" name="specs" value="editorialquality"> Editorial quality image e.g. for printing or publication use, 300 dpi.<br>
-              <input type="radio" name="specs" value="other"> Other<br>
-              <textarea name="specs_other_textarea" placeholder="Describe the image quality request." id="specs_other_textarea"></textarea>
-            <label>File Type</label>
-              <input type="radio" name="specs" value="jpeg"> JPEG<br>
-              <input type="radio" name="specs" value="tiff"> TIFF<br>
+            <fieldset>
+              <label>Image Quality</label>
+                <input type="radio" name="imgquality" value="lowres" required> Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.<br>
+                <input type="radio" name="imgquality" value="editorialquality" required> Editorial quality image e.g. for printing or publication use, 300 dpi.<br>
+                <input type="radio" name="imgquality" value="other" required> Other<br>
+                <textarea name="imgquality_other_textarea" placeholder="Describe the image quality request." id="imgquality_other_textarea"></textarea>
+            </fieldset>
+            <fieldset>
+              <label>File Type</label>
+                <input type="radio" name="filetype" value="jpeg" required> JPEG<br>
+                <input type="radio" name="filetype" value="tiff" required> TIFF<br>
+            </fieldset>    
         </fieldset>
       </p>
 
@@ -102,8 +106,8 @@
       <p>
         <fieldset>
           <legend>Work Description</legend>
-            <input type="radio" name="work" value="internalclient"> Internal Client <br>
-            <input type="radio" name="work" value="externalclient"> External Client<br>
+            <input type="radio" name="work" value="internalclient" required> Internal Client <br>
+            <input type="radio" name="work" value="externalclient" required> External Client<br>
             <label for="externalclient_name">Name of external client:</label><input type="text" name="externalclient_name" id="externalclient_name">
         </fieldset>
       </p>
