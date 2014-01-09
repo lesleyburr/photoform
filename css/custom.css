@@ -1,17 +1,17 @@
-body {
+/*body {
 	margin: 5em;
 	width: auto;
-}
+}*/
 
-form {
+/*form {
 	width: 80%;
-}
+}*/
 
 .textbox {
 	display: block;
 }
 
-label {
+/*label {
 	display: block;
 }
 
@@ -29,4 +29,4 @@ label {
 
 em {
 	font-style: italic;
-}
+}*/
