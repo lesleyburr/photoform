@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Photo Order Form</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/modernizr.js"></script>
+    <script src="js/custom-smartform.js"></script>
   </head>
   <body>
-
+    <main>
     <div class="row">
       <div class="large-12 columns">
-        <h1>Photography and Imaging Orders</h1>
+        <header><h1>Photography and Imaging Orders</h1></header>
     
       <p>Place internal photo orders for digital files. <!-- If you have any questions, please feel free to email the Photo Lab or Rights &amp; Reproductions staff: <a href="mailto:photolab@chicagohistory.org" target="_top">photolab@chicagohistory.org</a> or <a href="mailto:rightsrepro@chicagohistory.org" target="_top">rightsrepro@chicagohistory.org</a>. --></p>
 
@@ -34,7 +35,7 @@
       <p>
         <label for="account">Account Number</label>
         Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.
-        <input type="text" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required> <!-- Email should not recieve dashes -->
+        <input type="text" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" pattern="account-number" required> <!-- Email should not recieve dashes -->
       </p>
 
       <p>
@@ -125,6 +126,7 @@
     </form>
       </div>
     </div>
+  </main>
     
     <script src="js/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
