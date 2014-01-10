@@ -29,7 +29,7 @@ $('#isserverselected').click(function() {
 });
 
 $('#isemailselected').click(function() {
-    $("#e-mail").toggle(this.checked);
+    $("#email").toggle(this.checked);
 });
 
 $('#isotherspecs').click(function() {
