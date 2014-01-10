@@ -32,6 +32,18 @@ $('#isemailselected').click(function() {
     $("#e-mail").toggle(this.checked);
 });
 
+$('#isotherspecs').click(function() {
+    $("#imgquality_other_textarea").toggle(this.checked);
+});
+
+$('#isotheruse').click(function() {
+    $("#use_other_textarea").toggle(this.checked);
+});
+
+$('#isexternalclient').click(function() {
+    $("#externalclient_name").toggle(this.checked);
+});
+
 // $(document)
 //   .foundation()
 //   .foundation('abide', {

@@ -87,8 +87,8 @@
               <label>Image Quality</label>
                 <input type="radio" name="imgquality" value="Low resolution image" required> Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.<br>
                 <input type="radio" name="imgquality" value="Editorial quality image" required> Editorial quality image e.g. for printing or publication use, 300 dpi.<br>
-                <input type="radio" name="imgquality" value="Other" required> Other<br>
-                <textarea name="imgquality_other_textarea" placeholder="Describe the image quality request." id="imgquality_other_textarea"></textarea>
+                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> Other<br>
+                <textarea name="imgquality_other_textarea" placeholder="Describe the image quality request." id="imgquality_other_textarea" style="display:none"></textarea>
             </fieldset>
             <fieldset>
               <label>File Type</label>
@@ -106,8 +106,8 @@
             <input type="checkbox" name="use" value="Publication"> Publication<br>
             <input type="checkbox" name="use" value="Exhibition"> Exhibition<br>
             <input type="checkbox" name="use" value="Advertising & Marketing"> Advertising &amp; Marketing<br>
-            <input type="checkbox" name="use" value="Other">Other<br> 
-            <textarea name="use_other_textarea" placeholder="Describe the planned use." id="use_other_textarea"></textarea>
+            <input type="checkbox" name="use" value="Other" id="isotheruse">Other<br> 
+            <textarea name="use_other_textarea" placeholder="Describe the planned use." id="use_other_textarea" style="display:none"></textarea>
         </fieldset>
       </p>
 
@@ -115,8 +115,8 @@
         <fieldset>
           <legend>Work Description</legend>
             <input type="radio" name="work" value="Internal Client" required> Internal Client <br>
-            <input type="radio" name="work" value="External Client" required> External Client<br>
-            <label for="externalclient_name">Name of external client:</label><input type="text" name="externalclient_name" id="externalclient_name">
+            <input type="radio" name="work" value="External Client" id="isexternalclient" required> External Client<br>
+            <input type="text" name="externalclient_name" placeholder="Name of external client" id="externalclient_name" style="display:none">
         </fieldset>
       </p>
 
