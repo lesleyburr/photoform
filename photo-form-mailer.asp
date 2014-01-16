@@ -120,7 +120,7 @@ If Request.Form("client") = "External Client" Then
 End If
 
 ' Due Date
-HTML = HTML & "<h2>Duwe Date</h2>"
+HTML = HTML & "<h2>Due Date</h2>"
 HTML = HTML & "<p>" & Request.Form("date") & "</p>"
 
 
@@ -134,11 +134,9 @@ objCDOMail.MailFormat = 0
 objCDOMail.Body = HTML
 objCDOMail.Send
 Set objCDOMail = Nothing
-
-
-
 %>
-<html>
+
+<html class="no-js" lang="en">
 <head>
 <title>Photo Order Submitted</title>
 <link rel="stylesheet" href="css/foundation.css" />
