@@ -90,22 +90,3 @@ $('#isotheruse').click(function() {
 $('#isexternalclient').click(function() {
     $("#externalclient_name").toggle(this.checked);
 });
-
-
-
-
-
-var initDatepicker = function() {  
-    $('input[type=date]').each(function() {  
-        var $input = $(this);  
-        $input.datepicker({  
-            minDate: $input.attr('min'),  
-            maxDate: $input.attr('max'),  
-            dateFormat: 'yy-mm-dd'  
-        });  
-    });  
-};  
-  
-if(!Modernizr.inputtypes.date){  
-    $(document).ready(initDatepicker);  
-};  
