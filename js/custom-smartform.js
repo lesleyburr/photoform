@@ -1,22 +1,3 @@
-$("input[placeholder]").each(function(){
-  if($(this).val()==""){
-    $(this).val($(this).attr("placeholder"));
-    $(this).focus(function(){
-      if($(this).val()==$(this).attr("placeholder")) $(this).val("");
-    });
-    $(this).blur(function(){
-      if($(this).val()==""){
-         $(this).val($(this).attr("placeholder"));
-      }
-     });
-  }
-});
-
-
-
-
-
-
 $('#is2dselected').click(function() {
     $("#txt2dinstructions").toggle(this.checked);
 });
@@ -109,11 +90,3 @@ $('#isotheruse').click(function() {
 $('#isexternalclient').click(function() {
     $("#externalclient_name").toggle(this.checked);
 });
-
-// $(document)
-//   .foundation()
-//   .foundation('abide', {
-//     patterns: {
-//       account-number: /^([0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9])$/
-//     }
-//   });

@@ -11,9 +11,32 @@
 	display: block;
 }
 
-.placeholder
-{
-  color: #aaa;
+/*input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:    red;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color:    red;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color:    red;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:    red;
+}*/
+
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    red;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    red;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    red;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    red;
 }
 
 /*label {
