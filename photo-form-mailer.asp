@@ -4,7 +4,7 @@
 
 <%
 dim dicKey, dicVal, dicObj, navfile, fileObj, strFilePath, nav, atopic
-set dicObj = createobject("Scripting.Dictionary") 
+set dicObj = createobject("Scripting.Dictionary")
 set fileObj = createobject("Scripting.FileSystemObject")
 strFilePath = Server.Mappath("counter.txt")
 if isobject(fileObj) then
@@ -17,12 +17,12 @@ set fileObj = nothing
 
 ' Set up Constants
 Const ForWriting = 2   ' Input OutPut mode
-Const Create = True    
+Const Create = True
 
 ' Dimension local variables
 Dim MyFile
 MyFile = strFilePath
-Dim FSO                       
+Dim FSO
 Dim TS  ' TextStreamObject
 
 Set FSO = Server.CreateObject("Scripting.FileSystemObject")
@@ -40,7 +40,7 @@ Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
 objCDOMail.To = "gonzalez@chicagohistory.org, burr@chicagohistory.org"
 
-strSubject = "#N" & atopic & "-" & Request.Form("employee")
+strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
 
 HTML = "<html>"
@@ -48,15 +48,14 @@ HTML = HTML & "<head></head>"
 HTML = HTML & "<body>"
 
 ' Order Tracking
-HTML = HTML & "<h1><strong>Order Number:" & "N" & atopic & "</h1>"
+HTML = HTML & "<h1><strong>Order Number:" & atopic & "</h1>"
 
 ' User Information
-HTML = HTML & "<h2><strong>Requested by:</strong></h2>" 
-HTML = HTML & "<p>" & Request.Form("employee") & "</p>"
-HTML = HTML & "<p>" & Request.Form("phone") & "</p>"
+HTML = HTML & "<h2><strong>Services requested by:</strong></h2>"
+HTML = HTML & "<p>" & Request.Form("name") & "</p>"
 HTML = HTML & "<p>" & Request.Form("department") & "</p>"
+HTML = HTML & "<p>" & Request.Form("phone") & "</p>"
 HTML = HTML & "<p>Account #: " & Request.Form("account") & "</p>"
-
 
 ' Photography Services for New Images
 HTML = HTML & "<h2>Photography Services for New Images</h2>"
@@ -67,7 +66,7 @@ If Request.Form("photoservice_new") = "Other" Then
 End If
 
 ' Photography Services for Existing Images
-HTML = HTML & "<h2>Photography Services for New Images</h2>"
+HTML = HTML & "<h2>Photography Services for Existing Images</h2>"
 HTML = HTML & "<p>" & Request.Form("photoservice_existing") & "</p>"
 If Request.Form("photoservice_existing") = "Collections items" Then
 	HTML = HTML & "<p>Collection IDs:</p>"
@@ -129,7 +128,7 @@ HTML = HTML & "</body>"
 HTML = HTML & "</html>"
 
 objCDOMail.BodyFormat = 0
-objCDOMail.MailFormat = 0 
+objCDOMail.MailFormat = 0
 
 objCDOMail.Body = HTML
 objCDOMail.Send
