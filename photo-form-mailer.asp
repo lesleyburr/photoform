@@ -58,7 +58,8 @@ HTML = HTML & "<p>" & Request.Form("phone") & "</p>"
 HTML = HTML & "<p>Account #: " & Request.Form("account") & "</p>"
 
 ' Photography Services for New Images
-HTML = HTML & "<h2>Photography Services for New Images</h2>"
+HTML = HTML & "<h2>Services for New Images</h2>"
+' *** I may need a for each loop here and in other areas to retrieve the descriptions http://stackoverflow.com/questions/2348/what-is-the-best-way-to-iterate-through-an-array-in-classic-asp-vbscript'
 HTML = HTML & "<p>" & Request.Form("photoservice_new") & "</p>"
 If Request.Form("photoservice_new") = "Other" Then
 	HTML = HTML & "<p>Description:</p>"
@@ -66,7 +67,7 @@ If Request.Form("photoservice_new") = "Other" Then
 End If
 
 ' Photography Services for Existing Images
-HTML = HTML & "<h2>Photography Services for Existing Images</h2>"
+HTML = HTML & "<h2>Services for Existing Images</h2>"
 HTML = HTML & "<p>" & Request.Form("photoservice_existing") & "</p>"
 If Request.Form("photoservice_existing") = "Collections items" Then
 	HTML = HTML & "<p>Collection IDs:</p>"
@@ -74,7 +75,7 @@ If Request.Form("photoservice_existing") = "Collections items" Then
 End If
 
 ' Delivery Methods
-HTML = HTML & "<h2>Delivery Methods</h2>"
+HTML = HTML & "<h2>Delivery</h2>"
 HTML = HTML & "<p>" & Request.Form("delivery") & "</p>"
 If Request.Form("delivery") = "Save on server" Then
 	HTML = HTML & "<p>Server Path:</p>"
@@ -110,11 +111,10 @@ If Request.Form("use") = "Other" Then
 	HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
 End If
 
-'Work Description
-HTML = HTML & "<h2>Client</h2>"
-HTML = HTML & "<p>" & Request.Form("client") & "</p>"
-If Request.Form("client") = "External Client" Then
-	HTML = HTML & "<p>External Client Name:</p>"
+'Who is the Client?
+HTML = HTML & "<h2>Client Information</h2>"
+HTML = HTML & "<p>This is for an" & Request.Form("client") & ".</p>"
+If Request.Form("client") = "external client" Then
 	HTML = HTML & "<p>" & Request.Form("external_client_name") & "</p>"
 End If
 
