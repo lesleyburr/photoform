@@ -58,12 +58,24 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services for New Images
 HTML = HTML & "<h2>Services for New Images</h2>"
+
+Dim new_images, new_image
+new_images = Request.Form("photoservice_new")
+
+HTML = HTML & "<ul>"
+
+For Each new_image in new_images
+	HTML = HTML & "<li>" & new_image & "</li>"
+Next
+
+HTML = HTML & "</ul>"
+
 ' *** I may need a for each loop here and in other areas to retrieve the descriptions http://stackoverflow.com/questions/2348/what-is-the-best-way-to-iterate-through-an-array-in-classic-asp-vbscript'
-HTML = HTML & "<p>" & Request.Form("photoservice_new") & "</p>"
-If Request.Form("photoservice_new") = "Other" Then
-	HTML = HTML & "<p>Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
-End If
+'HTML = HTML & "<p>" & Request.Form("photoservice_new") & "</p>"
+'If Request.Form("photoservice_new") = "Other" Then
+'	HTML = HTML & "<p>Description:</p>"
+'	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
+'End If
 
 ' Photography Services for Existing Images
 HTML = HTML & "<h2>Services for Existing Images</h2>"
