@@ -53,8 +53,8 @@ HTML = HTML & "<h1><strong>Order Number:" & atopic & "</h1>"
 ' User Information
 HTML = HTML & "<h2><strong>Services requested by:</strong></h2>"
 HTML = HTML & "<p>" & Request.Form("name") & " in " & Request.Form("department") & "<br />"
-HTML = HTML &  Request.Form("phone") & "<br />"
-HTML = HTML & "Account #: " & Request.Form("account") & "</p>"
+HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
+HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services for New Images
 HTML = HTML & "<h2>Services for New Images</h2>"
