@@ -59,8 +59,9 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 ' Photography Services for New Images
 HTML = HTML & "<h2>Services for New Images</h2>"
 
-Dim new_images, new_image
-new_images = Request.Form("photoservice_new")
+Dim arr_new_images, new_images, new_image
+arr_new_images = Request.Form("photoservice_new")
+new_images = split(arr_new_images,",")
 
 HTML = HTML & "<ul>"
 
