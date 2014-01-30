@@ -37,7 +37,8 @@
 
         <div class="content active" id="panel2-1">
 
-        <label for="name" class="labelspace">Full Name</label>
+        <fieldset>
+        <label for="name">Full Name</label>
         <input type="text" name="name" placeholder="John Doe" class="textbox" id="name" required>
   
         <label for="phone" class="labelspace">Phone</label>
@@ -49,6 +50,7 @@
         <label for="account" class="labelspace">Account Number</label>
         <p class="instructions">Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.</p>
         <input type="number" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required>
+        </fieldset>
 
         </div>
     
@@ -185,12 +187,14 @@
 
         <div class="content" id="panel2-5">
       
-        <label for="date" class="labelspace">Due Date</label>
+        <fieldset><label for="date">Due Date</label>
           <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
           <input type="date" name="date" id="date" required>
       
       
         <input type="submit" name="submit" value="Place Order" class="button labelspace">
+
+        </fieldset>
 
         </div>
       
