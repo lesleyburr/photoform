@@ -4,11 +4,43 @@
 }*/
 
 /*form {
-	width: 80%;
+	width: 85%;
 }*/
+
+header {
+	margin-top: 4em;
+	margin-bottom: 1em;
+}
 
 .textbox {
 	display: block;
+}
+
+.purpose {
+	font-size: 1.3em;
+	margin-bottom: 2em;
+}
+
+label {
+	font-size: 1em;
+	margin-top: 2em;
+}
+
+legend {
+	color: #555;
+}
+
+.instructions {
+	font-size: .9em;
+	margin-bottom: 1em;
+}
+
+fieldset {
+	margin-top: 2em;
+}
+
+checkbox {
+	
 }
 
 /*input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 

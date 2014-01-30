@@ -15,35 +15,35 @@
       <div class="large-12 columns">
         <header><h1>Photography and Imaging Orders</h1></header>
 
-      <p>Place internal photo orders for digital files.</p>
+      <p class="purpose">Place internal photo orders for digital files.</p>
 
     <form method="post" action="photo-form-mailer.asp">
-      <p>
+      
         <label for="name">Full Name</label>
         <input type="text" name="name" placeholder="John Doe" class="textbox" id="name" required>
-      </p>
+   
 
-      <p>
+  
         <label for="phone">Phone</label>
         <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone" required>
-      </p>
+    
 
-      <p>
+   
         <label for="department">Department</label>
         <input type="text" name="department" placeholder="Marketing" class="textbox" id="department" required>
-      </p>
+  
 
-      <p>
+    
         <label for="account">Account Number</label>
-        Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.
+        <p class="instructions">Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.</p>
         <input type="number" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required>
-      </p>
+    
 
-      <p>
+      
         <fieldset>
           <legend>Photography Services Requested</legend>
 
-            <p>Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
+            <p class="instructions">Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
 
             <label>New Images</label>
               <input type="checkbox" name="photoservice_new" value="2D collection items" id="is2dselected"> 2D collection items
@@ -79,13 +79,13 @@
               <textarea name="photoservice_new_other" placeholder="Describe the service request." id="photoservice_other_textarea" style="display:none"></textarea>
 
             <label>Exisiting Images</label>
-              <input type="checkbox" name="photoservice_exisiting" value="Collections items" id="iscollectionsselected"> Collections items<br>
-              <textarea name="photoservice_exisiting_collection_id" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea" style="display:none"></textarea>
-              <input type="checkbox" name="photoservice_exisiting" value="Non-collections items"> Non-collections items<br>
+              <input type="checkbox" name="photoservice_existing" value="Collections items" id="iscollectionsselected"> Collections items<br>
+              <textarea name="photoservice_existing_collection_id" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea" style="display:none"></textarea>
+              <input type="checkbox" name="photoservice_existing" value="Non-collections items"> Non-collections items<br>
         </fieldset>
-      </p>
+      
 
-      <p>
+      
         <fieldset>
           <legend>Delivery Method</legend>
 
@@ -99,9 +99,9 @@
             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> Other<br>
             <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea" style="display:none"></textarea>
         </fieldset>
-      </p>
+      
 
-      <p>
+      
         <fieldset>
           <legend>Digital File Specs</legend>
             <fieldset>
@@ -117,9 +117,9 @@
                 <input type="radio" name="filetype" value="TIFF" required> TIFF<br>
             </fieldset>
         </fieldset>
-      </p>
+      
 
-      <p>
+      
         <fieldset>
           <legend>Planned Use</legend>
             <input type="checkbox" name="use" value="Social media"> Social media e.g. Facebook, Tumblr, Blog, etc.<br>
@@ -130,26 +130,26 @@
             <input type="checkbox" name="use" value="Other" id="isotheruse"> Other<br>
             <textarea name="use_other" placeholder="Describe the planned use." id="use_other_textarea" style="display:none"></textarea>
         </fieldset>
-      </p>
+      
 
-      <p>
+      
         <fieldset>
           <legend>Client</legend>
             <input type="radio" name="client" value="Chicago History Museum" required> Chicago History Museum<br>
             <input type="radio" name="client" value="external client" id="isexternalclient" required> External Client<br>
             <input type="text" name="external_client_name" placeholder="Name of external client" id="externalclient_name" style="display:none">
         </fieldset>
-      </p>
+      
 
-      <p>
+      
         <label for="date">Due Date</label>
-          Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<br>
+          <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
           <input type="date" name="date" id="date" required>
-      </p>
+      
 
-      <p>
+      
         <input type="submit" name="submit" value="Place Order" class="button">
-      </p>
+      
 
     </form>
       </div>
