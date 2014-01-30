@@ -1,12 +1,3 @@
-/*body {
-	margin: 5em;
-	width: auto;
-}*/
-
-/*form {
-	width: 85%;
-}*/
-
 header {
 	margin-top: 4em;
 	margin-bottom: 1em;
@@ -54,36 +45,3 @@ input {
 	margin: 0;
 	top: 14px;
 }
-
-/*input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-    color:    red;
-}
-input:-moz-placeholder, textarea:-moz-placeholder { 
-    color:    red;
-}
-input::-moz-placeholder, textarea::-moz-placeholder { 
-    color:    red;
-}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-    color:    red;
-}*/
-
-/*label {
-	display: block;
-}*/
-
-/*h1 {
-	font-size: 2.7em;
-}
-
-h2 {
-	font-size: 2em;
-}
-
-label {
-	font-size: 1em;
-}
-
-em {
-	font-style: italic;
-}*/

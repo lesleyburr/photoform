@@ -93,20 +93,6 @@ $('#isdeliveryother').click(function() {
 
 // 
 // 
-// Delivery Method
-// 
-// 
-
-$('#isserverselected').click(function() {
-    $("#folderlocation").toggle(this.checked);
-});
-
-$('#isemailselected').click(function() {
-    $("#email").toggle(this.checked);
-});
-
-// 
-// 
 // Image Quality
 // 
 // 
@@ -133,4 +119,18 @@ $('#isotheruse').click(function() {
 
 $('#isexternalclient').click(function() {
     $("#externalclient_name").toggle(this.checked);
+});
+
+// 
+// 
+// Delivery Method
+// 
+// 
+
+$('#isserverselected').click(function() {
+    $("#folderlocation").toggle(this.checked);
+});
+
+$('#isemailselected').click(function() {
+    $("#email").toggle(this.checked);
 });

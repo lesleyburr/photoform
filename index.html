@@ -11,6 +11,7 @@
   </head>
   <body>
     <main>
+
     <div class="row">
       <div class="large-12 columns">
         <header><h1>Photography and Imaging Orders</h1></header>
@@ -18,27 +19,46 @@
       <p class="purpose">Place internal photo orders for digital files.</p>
 
     <form method="post" action="photo-form-mailer.asp">
-      
+
+        <dl class="tabs" data-tab>
+          <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
+          <dd><a href="#panel2-2">Tab 2</a></dd>
+          <dd><a href="#panel2-3">Tab 3</a></dd>
+          <dd><a href="#panel2-4">Tab 4</a></dd>
+          <dd><a href="#panel2-5">Tab 5</a></dd>
+        </dl>
+        <div class="tabs-content">
+          
+        <!--  -->
+        <!--  -->
+        <!-- Page One -->
+        <!--  -->
+        <!--  -->
+
+        <div class="content active" id="panel2-1">
+
         <label for="name" class="labelspace">Full Name</label>
         <input type="text" name="name" placeholder="John Doe" class="textbox" id="name" required>
-   
-
   
         <label for="phone" class="labelspace">Phone</label>
         <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone" required>
-    
-
    
         <label for="department" class="labelspace">Department</label>
         <input type="text" name="department" placeholder="Marketing" class="textbox" id="department" required>
-  
-
     
         <label for="account" class="labelspace">Account Number</label>
         <p class="instructions">Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.</p>
         <input type="number" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required>
-    
 
+        </div>
+    
+        <!--  -->
+        <!--  -->
+        <!-- Page Two -->
+        <!--  -->
+        <!--  -->
+
+        <div class="content" id="panel2-2">
       
         <fieldset>
           <legend>Photography Services Requested</legend>
@@ -84,24 +104,15 @@
                 <input type="checkbox" name="photoservice_existing" value="Non-collections items"> <label class="box">Non-collections items</label><br>
               </section>
         </fieldset>
+        </div>
       
+        <!--  -->
+        <!--  -->
+        <!-- Page Three -->
+        <!--  -->
+        <!--  -->
 
-      
-        <fieldset>
-          <legend>Delivery Method</legend>
-
-            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> <label class="box">Save on server. Provide folder location.</label><br>
-            <input type="text" name="folder_location" placeholder="Folder location" class="textbox" id="folderlocation" style="display:none">
-            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> <label class="box">E-mail</label><br>
-            <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email" style="display:none">
-            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> <label class="box">Burn to disc</label>
-            <div id="txtburninstructions" style="display:none"> CDs and DVDs with labels are $2 each and are charged to your account.</div>
-            <br>
-            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
-            <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea" style="display:none"></textarea>
-        </fieldset>
-      
-
+        <div class="content" id="panel2-3">
       
         <fieldset>
           <legend>Digital File Specs</legend>
@@ -118,9 +129,17 @@
                 <input type="radio" name="filetype" value="TIFF" required><label class="box">TIFF</label><br>
             </fieldset>
         </fieldset>
-      
+        </div>
 
-      
+
+        <!--  -->
+        <!--  -->
+        <!-- Page Four -->
+        <!--  -->
+        <!--  -->
+
+        <div class="content" id="panel2-4">
+
         <fieldset>
           <legend>Planned Use</legend>
             <input type="checkbox" name="use" value="Social media"> <label class="box">Social media e.g. Facebook, Tumblr, Blog, etc.</label><br>
@@ -136,21 +155,46 @@
       
         <fieldset>
           <legend>Client</legend>
-            <input type="radio" name="client" value="Chicago History Museum" required><label class="box">Chicago History Museum</label><br>
+            <input type="radio" name="client" value="the Museum" required><label class="box">Chicago History Museum</label><br>
             <input type="radio" name="client" value="external client" id="isexternalclient" required><label class="box">External Client</label><br>
             <input type="text" name="external_client_name" placeholder="Name of external client" id="externalclient_name" style="display:none">
         </fieldset>
-      
 
+
+      
+        <fieldset>
+          <legend>Delivery Method</legend>
+
+            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> <label class="box">Save on server. Provide folder location.</label><br>
+            <input type="text" name="folder_location" placeholder="Folder location" class="textbox" id="folderlocation" style="display:none">
+            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> <label class="box">E-mail</label><br>
+            <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email" style="display:none">
+            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> <label class="box">Burn to disc</label>
+            <div id="txtburninstructions" style="display:none"> CDs and DVDs with labels are $2 each and are charged to your account.</div>
+            <br>
+            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
+            <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea" style="display:none"></textarea>
+        </fieldset>
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <!-- Page Five -->
+        <!--  -->
+        <!--  -->
+
+        <div class="content" id="panel2-5">
       
         <label for="date" class="labelspace">Due Date</label>
           <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
           <input type="date" name="date" id="date" required>
       
-
       
         <input type="submit" name="submit" value="Place Order" class="button labelspace">
+
+        </div>
       
+      </div>
 
     </form>
       </div>
