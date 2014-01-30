@@ -59,9 +59,8 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 ' Photography Services for New Images
 HTML = HTML & "<h2>Services for New Images</h2>"
 
-Dim arr_new_images, new_images, new_image
-arr_new_images = Request.Form("photoservice_new")
-new_images = split(arr_new_images,",")
+Dim new_images, new_image
+new_images = split(Request.Form("photoservice_new"),",")
 
 HTML = HTML & "<ul>"
 
@@ -71,8 +70,6 @@ Next
 
 HTML = HTML & "</ul>"
 
-' *** I may need a for each loop here and in other areas to retrieve the descriptions http://stackoverflow.com/questions/2348/what-is-the-best-way-to-iterate-through-an-array-in-classic-asp-vbscript'
-'HTML = HTML & "<p>" & Request.Form("photoservice_new") & "</p>"
 'If Request.Form("photoservice_new") = "Other" Then
 '	HTML = HTML & "<p>Description:</p>"
 '	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
@@ -80,27 +77,52 @@ HTML = HTML & "</ul>"
 
 ' Photography Services for Existing Images
 HTML = HTML & "<h2>Services for Existing Images</h2>"
-HTML = HTML & "<p>" & Request.Form("photoservice_existing") & "</p>"
-If Request.Form("photoservice_existing") = "Collections items" Then
-	HTML = HTML & "<p>Collection IDs:</p>"
-	HTML = HTML & "<p>" & Request.Form("photoservice_existing_collection_id") & "</p>"
-End If
+
+Dim existing_images, existing_image
+existing_images = split(Request.Form("photoservice_existing"),",")
+
+HTML = HTML & "<ul>"
+
+For Each existing_image in existing_images
+	HTML = HTML & "<li>" & existing_image & "</li>"
+Next
+
+HTML = HTML & "</ul>"
+
+'If Request.Form("photoservice_existing") = "Collections items" Then
+''	HTML = HTML & "<p>Collection IDs:</p>"
+''	HTML = HTML & "<p>" & Request.Form("photoservice_existing_collection_id") & "</p>"
+'End If
+
 
 ' Delivery Methods
 HTML = HTML & "<h2>Delivery</h2>"
-HTML = HTML & "<p>" & Request.Form("delivery") & "</p>"
-If Request.Form("delivery") = "Save on server" Then
-	HTML = HTML & "<p>Server Path:</p>"
-	HTML = HTML & "<p>" & Request.Form("folder_location") & "</p>"
-End If
-If Request.Form("delivery") = "E-mail" Then
-	HTML = HTML & "<p>E-mail Address:</p>"
-	HTML = HTML & "<p>" & Request.Form("e-mail") & "</p>"
-End If
-If Request.Form("delivery") = "Other" Then
-	HTML = HTML & "<p>Delivery Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("deliver_other") & "</p>"
-End If
+
+Dim delivery_methods, delivery_method
+delivery_methods = split(Request.Form("delivery"),",")
+
+HTML = HTML & "<ul>"
+
+For Each delivery_method in delivery_methods
+	HTML = HTML & "<li>" & delivery_method & "</li>"
+Next
+
+HTML = HTML & "</ul>"
+
+'If Request.Form("delivery") = "Save on server" Then
+''	HTML = HTML & "<p>Server Path:</p>"
+''	HTML = HTML & "<p>" & Request.Form("folder_location") & "</p>"
+'End If
+
+'If Request.Form("delivery") = "E-mail" Then
+''	HTML = HTML & "<p>E-mail Address:</p>"
+''	HTML = HTML & "<p>" & Request.Form("e-mail") & "</p>"
+'End If
+
+'If Request.Form("delivery") = "Other" Then
+''	HTML = HTML & "<p>Delivery Description:</p>"
+''	HTML = HTML & "<p>" & Request.Form("deliver_other") & "</p>"
+'End If
 
 ' Digital File Specs
 HTML = HTML & "<h2>File Specifications</h2>"
