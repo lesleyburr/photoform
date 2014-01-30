@@ -126,10 +126,16 @@ HTML = HTML & "</ul>"
 
 ' Digital File Specs
 HTML = HTML & "<h2>File Specifications</h2>"
-HTML = HTML & "<p>" & Request.Form("imgquality") & "</p>"
-If Request.Form("imgquality") = "Other" Then
-	HTML = HTML & "<p>File Spec Description:</p>"
+
+HTML = HTML & "<h3>Image Quality</h3>"
+
+dim quality
+quality = Request.Form("imgquality")
+
+If quality = "Other" Then
 	HTML = HTML & "<p>" & Request.Form("imgquality_other") & "</p>"
+Else
+	HTML = HTML & "<p>" & quality & "</p>"
 End If
 
 ' File Type
