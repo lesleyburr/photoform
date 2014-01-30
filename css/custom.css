@@ -23,7 +23,12 @@ header {
 
 label {
 	font-size: 1em;
+	color: #000;
+}
+
+.labelspace {
 	margin-top: 2em;
+	margin-bottom: 1em;
 }
 
 legend {
@@ -39,8 +44,15 @@ fieldset {
 	margin-top: 2em;
 }
 
-checkbox {
-	
+.box {
+	margin-left: 1em;
+}
+
+input {
+	vertical-align: bottom;
+	position: relative;
+	margin: 0;
+	top: 14px;
 }
 
 /*input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 

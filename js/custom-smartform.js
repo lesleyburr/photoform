@@ -1,3 +1,13 @@
+// 
+// 
+// New Images
+// 
+// 
+
+$('#isnewimagesselected').click(function() {
+    $("#newchoices").toggle(this.checked);
+});
+
 $('#is2dselected').click(function() {
     $("#txt2dinstructions").toggle(this.checked);
 });
@@ -63,6 +73,16 @@ $('#isotherserviceselected').click(function() {
     $("#photoservice_other_textarea").toggle(this.checked);
 });
 
+// 
+// 
+// Existing Images
+// 
+// 
+
+$('#isexistingimagesselected').click(function() {
+    $("#existingchoices").toggle(this.checked);
+});
+
 $('#iscollectionsselected').click(function() {
     $("#photoservice_collections_textarea").toggle(this.checked);
 });
@@ -70,6 +90,12 @@ $('#iscollectionsselected').click(function() {
 $('#isdeliveryother').click(function() {
     $("#delivery_other_textarea").toggle(this.checked);
 });
+
+// 
+// 
+// Delivery Method
+// 
+// 
 
 $('#isserverselected').click(function() {
     $("#folderlocation").toggle(this.checked);
@@ -79,13 +105,31 @@ $('#isemailselected').click(function() {
     $("#email").toggle(this.checked);
 });
 
+// 
+// 
+// Image Quality
+// 
+// 
+
 $('#isotherspecs').click(function() {
     $("#imgquality_other_textarea").toggle(this.checked);
 });
 
+// 
+// 
+// Planned Use
+// 
+// 
+
 $('#isotheruse').click(function() {
     $("#use_other_textarea").toggle(this.checked);
 });
+
+// 
+// 
+// External Client
+// 
+// 
 
 $('#isexternalclient').click(function() {
     $("#externalclient_name").toggle(this.checked);
