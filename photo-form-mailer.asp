@@ -145,7 +145,7 @@ uses = split(Request.Form("use"),",")
 
 HTML = HTML & "<ul>"
 
-For Each use in use
+For Each use in uses
 	HTML = HTML & "<li>" & use & "</li>"
 Next
 
