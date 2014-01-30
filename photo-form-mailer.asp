@@ -139,11 +139,22 @@ HTML = HTML & "<p>" & Request.Form("filetype") & "</p>"
 
 'Planned Use
 HTML = HTML & "<h2>Planned Use</h2>"
-HTML = HTML & "<p>" & Request.Form("use") & "</p>"
-If Request.Form("use") = "Other" Then
-	HTML = HTML & "<p>Use Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
-End If
+
+Dim uses, use
+uses = split(Request.Form("use"),",")
+
+HTML = HTML & "<ul>"
+
+For Each use in use
+	HTML = HTML & "<li>" & use & "</li>"
+Next
+
+HTML = HTML & "</ul>"
+
+'If Request.Form("use") = "Other" Then
+''	HTML = HTML & "<p>Use Description:</p>"
+''	HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+'End If
 
 'Who is the Client?
 HTML = HTML & "<h2>Client Information</h2>"
