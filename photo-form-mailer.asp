@@ -58,38 +58,82 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services
 
-If Request.Form("service_exhibition_documentation") <> "" then
-	HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
-	Dim exhibition_documentation_details, exhibition_documentation_detail  
-	exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
-
-	For Each exhibition_documentation_detail   in exhibition_documentation_details
-		HTML = HTML & "<br />" & exhibition_documentation_detail
-	Next
-		HTML = HTML & "</p>" 
-End If
-
+' - New Images Requested
 If Request.Form("new_images") = "on" Then
-	Dim new_images, new_image, new_image_details, new_image_detail
-	new_images = split(Request.Form("photoservice_new"),",")
-	new_image_details = split(Request.Form("photoservice_new_details"),",")
 
-	HTML = HTML & "<h2>New Images Needed</h2>"
+	' -- 2D Collection Items
+	If Request.Form("service_2d_collection") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_2d_collection") & "</p>" 
+	End If
 
-	For Each new_image in new_images
-		HTML = HTML & "<p>" & new_image 
-			For Each new_image_detail in new_image_details
-				HTML = HTML & "<br />" & new_image_detail
-			Next
-			HTML = HTML & "</p>"
-	Next
+	' -- 3D Collection Items
+	If Request.Form("service_3d_collection") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_3d_collection") & "</p>" 
+	End If
+
+	' -- Exhibition Documentation
+	If Request.Form("service_exhibition_documentation") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
+		Dim exhibition_documentation_details, exhibition_documentation_detail  
+		exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
+
+		For Each exhibition_documentation_detail in exhibition_documentation_details
+			HTML = HTML & "<br />" & exhibition_documentation_detail
+		Next
+			HTML = HTML & "</p>" 
+	End If
+
+	' -- Photography for Exhibitions
+	If Request.Form("service_photography_exhibitions") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_photography_exhibitions")
+		Dim exhibition_photography_details, exhibition_photography_detail  
+		exhibition_documentation_details = split(Request.Form("service_photography_exhibitions_details"),",")
+
+		For Each exhibition_photography_detail in exhibition_photography_details
+			HTML = HTML & "<br />" & exhibition_photography_detail
+		Next
+			HTML = HTML & "</p>" 
+	End If
+
+	' -- Marketing Photography
+	If Request.Form("service_marketing") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_marketing")
+		Dim marketing_details, marketing_detail  
+		exhibition_documentation_details = split(Request.Form("service_marketing_details"),",")
+
+		For Each marketing_detail in marketing_details  
+			HTML = HTML & "<br />" & marketing_detail 
+		Next
+			HTML = HTML & "</p>" 
+	End If
+
+	' -- Event Photography
+	If Request.Form("service_event") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_event")
+		Dim event_details, event_detail  
+		event_details = split(Request.Form("service_event_details"),",")
+
+		For Each event_detail in event_details  
+			HTML = HTML & "<br />" & event_detail 
+		Next
+			HTML = HTML & "</p>" 
+	End If
+
+	' -- Other Photography
+	If Request.Form("service_other") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_other")
+		Dim other_details, other_detail  
+		other_details = split(Request.Form("service_other_details"),",")
+
+		For Each other_detail in other_details  
+			HTML = HTML & "<br />" & other_detail 
+		Next
+			HTML = HTML & "</p>" 
+	End If
+
 End If
 
-
-'If Request.Form("photoservice_new") = "Other" Then
-'	HTML = HTML & "<p>Description:</p>"
-'	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
-'End If
+' - Exhisting Images Requested
 
 if Request.Form("existing_images") = "on" Then
 	Dim existing_images, existing_image
