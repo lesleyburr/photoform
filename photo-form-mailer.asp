@@ -57,29 +57,32 @@ HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
 HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services
-if Request.Form("new_images") = "on" Then
+
+If Request.Form("service_exhibition_documentation") <> "" then
+	HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
+	Dim exhibition_documentation_details, exhibition_documentation_detail  
+	exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
+
+	For Each exhibition_documentation_detail   in exhibition_documentation_details
+		HTML = HTML & "<br />" & exhibition_documentation_detail
+	Next
+		HTML = HTML & "</p>" 
+End If
+
+If Request.Form("new_images") = "on" Then
 	Dim new_images, new_image, new_image_details, new_image_detail
 	new_images = split(Request.Form("photoservice_new"),",")
 	new_image_details = split(Request.Form("photoservice_new_details"),",")
 
 	HTML = HTML & "<h2>New Images Needed</h2>"
-	HTML = HTML & "<ul>"
 
 	For Each new_image in new_images
-		HTML = HTML & "<li>" & new_image 
-
-		IF new_image_details <> "" then
-			HTML = HTML & "<ul>"
+		HTML = HTML & "<p>" & new_image 
 			For Each new_image_detail in new_image_details
-				HTML = HTML & "<li>" & new_image_detail & "</li>"
+				HTML = HTML & "<br />" & new_image_detail
 			Next
-			HTML = HTML & "</ul>"
-		Else
-			HTML = HTML & "</li>"
-		End If
+			HTML = HTML & "</p>"
 	Next
-
-	HTML = HTML & "</ul>"
 End If
 
 
