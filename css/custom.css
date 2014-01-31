@@ -47,7 +47,9 @@ input {
 }
 
 #newchoices, #txt2dinstructions, #txt3dinstructions, 
-#existingchoices, #photoservice_collections_textarea {
+#exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
+#datetime_exhibitiondoc, #existingchoices, 
+#photoservice_collections_textarea {
 	display: none;
 }
 

@@ -75,6 +75,12 @@
                 <input type="checkbox" name="photoservice_new" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
                 <div id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers.</div>
                 <br>
+                <input type="checkbox" name="photoservice_new" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
+                
+
+                <textarea name="photoservice_new_details" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation"></textarea>
+                <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
+                <input type="datetime" name="photoservice_new_details" id="datetime_exhibitiondoc">
 
 
 
@@ -82,35 +88,24 @@
 
 
 
-
-
-
-
-
-
-
-                <input type="checkbox" name="photoservice_new" value="Exhibition documentation" id="isexhibitiondocumentat ion"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
-                <textarea name="photoservice_new" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation" style="display:none"></textarea>
-                <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc" style="display:none">When should photography occur?</label>
-                <input type="datetime" name="datetime_exhibitiondoc" id="datetime_exhibitiondoc" style="display:none">
 
                 <input type="checkbox" name="photoservice_new" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box">Photography for exhibitions e.g. images for use in an exhibition</label><br>
-                <textarea name="photoservice_new" placeholder="Describe the exhibition  you working on, and what objects, people, or locations would you like photographed." id="photographyexhibitions" style="display:none"></textarea>
+                <textarea name="photoservice_new_details" placeholder="Describe the exhibition  you working on, and what objects, people, or locations would you like photographed." id="photographyexhibitions" style="display:none"></textarea>
                 <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions" style="display:none">When should photography occur?</label>
-                <input type="datetime" name="datetime_photographyexhibitions" id="datetime_photographyexhibitions" style="display:none">
+                <input type="datetime" name="photoservice_new_details" id="datetime_photographyexhibitions" style="display:none">
 
                 <input type="checkbox" name="photoservice_new" value="Marketing photography" id="ismarketingselected"> <label class="box">Marketing photography</label><br>
-                <textarea name="photoservice_new" placeholder="Describe what you would liked photographed." id="marketing" style="display:none"></textarea>
+                <textarea name="photoservice_new_details" placeholder="Describe what you would liked photographed." id="marketing" style="display:none"></textarea>
                 <label for="datetime_marketing" id="labelfor_datetime_marketing" style="display:none">When should photography occur?</label>
-                <input type="datetime" name="datetime_marketing" id="datetime_marketing" style="display:none">
+                <input type="datetime" name="photoservice_new_details" id="datetime_marketing" style="display:none">
 
                 <input type="checkbox" name="photoservice_new" value="Event photography" id="iseventselected"> <label class="box">Event photography</label><br>
-                <textarea name="photoservice_new" placeholder="Describe what event you would like photographed." id="event" style="display:none"></textarea>
+                <textarea name="photoservice_new_details" placeholder="Describe what event you would like photographed." id="event" style="display:none"></textarea>
                 <label for="datetime_event" id="labelfor_datetime_event" style="display:none">When should photography occur?</label>
-                <input type="datetime" name="datetime_event" id="datetime_event" style="display:none">
+                <input type="datetime" name="photoservice_new_details" id="datetime_event" style="display:none">
 
                 <input type="checkbox" name="photoservice_new" value="Other" id="isotherserviceselected"> <label class="box">Other</label><br>
-                <textarea name="photoservice_new_other" placeholder="Describe the service request." id="photoservice_other_textarea" style="display:none"></textarea>
+                <textarea name="photoservice_new_details" placeholder="Describe the service request." id="photoservice_other_textarea" style="display:none"></textarea>
               </section>
 
             <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box">Existing Images</label><br>
