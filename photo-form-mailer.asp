@@ -182,22 +182,15 @@ Dim uses, use
 uses = split(Request.Form("use"),",")
 
 For Each use in uses
-	
-	If use = "Other" then
+	If Trim(use) = "Other" Then
 		HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
-
 	Else
 		HTML = HTML & "<p>" & use & "</p>"
 	End If
 Next
 
 
-'If Request.Form("use") = "Other" Then
-''	HTML = HTML & "<p>Use Description:</p>"
-''	HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
-'End If
-
-'Who is the Client?
+'Client Information
 HTML = HTML & "<h2>Client Information</h2>"
 
 dim client
