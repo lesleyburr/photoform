@@ -60,15 +60,16 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' - New Images Requested
 If Request.Form("new_images") = "on" Then
+	HTML = HTML & "<h2>New Images Needed</h2>"
 
 	' -- 2D Collection Items
-	If Request.Form("service_2d_collection") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_2d_collection") & "</p>" 
+	If Request.Form("service_2d_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_2d_items") & "</p>" 
 	End If
 
 	' -- 3D Collection Items
-	If Request.Form("service_3d_collection") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_3d_collection") & "</p>" 
+	If Request.Form("service_3d_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_3d_items") & "</p>" 
 	End If
 
 	' -- Exhibition Documentation
@@ -87,7 +88,7 @@ If Request.Form("new_images") = "on" Then
 	If Request.Form("service_photography_exhibitions") <> "" then
 		HTML = HTML & "<p>" & Request.Form("service_photography_exhibitions")
 		Dim exhibition_photography_details, exhibition_photography_detail  
-		exhibition_documentation_details = split(Request.Form("service_photography_exhibitions_details"),",")
+		exhibition_photography_details = split(Request.Form("service_photography_exhibitions_details"),",")
 
 		For Each exhibition_photography_detail in exhibition_photography_details
 			HTML = HTML & "<br />" & exhibition_photography_detail
@@ -99,7 +100,7 @@ If Request.Form("new_images") = "on" Then
 	If Request.Form("service_marketing") <> "" then
 		HTML = HTML & "<p>" & Request.Form("service_marketing")
 		Dim marketing_details, marketing_detail  
-		exhibition_documentation_details = split(Request.Form("service_marketing_details"),",")
+		marketing_details = split(Request.Form("service_marketing_details"),",")
 
 		For Each marketing_detail in marketing_details  
 			HTML = HTML & "<br />" & marketing_detail 
@@ -135,24 +136,24 @@ End If
 
 ' - Exhisting Images Requested
 
-if Request.Form("existing_images") = "on" Then
-	Dim existing_images, existing_image
-	existing_images = split(Request.Form("photoservice_existing"),",")
+If Request.Form("existing_images") = "on" Then
 	
 	HTML = HTML & "<h2>Existing Images Needed</h2>"
-	HTML = HTML & "<ul>"
 
-	For Each existing_image in existing_images
-		HTML = HTML & "<li>" & existing_image & "</li>"
-	Next
+	' -- Collection Items
+	If Request.Form("service_collections_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_collections_items") & "<br />"
+		HTML = HTML & Request.Form("service_collections_items_details") & "</p>"
+	End If
 
-	HTML = HTML & "</ul>"
+	' -- Non-Collection Items
+	If Request.Form("service_noncollections_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_noncollections_items") & "</p>"
+	End If
+
+
 End If
 
-'If Request.Form("photoservice_existing") = "Collections items" Then
-''	HTML = HTML & "<p>Collection IDs:</p>"
-''	HTML = HTML & "<p>" & Request.Form("photoservice_existing_collection_id") & "</p>"
-'End If
 
 
 ' Digital File Specs
@@ -180,13 +181,16 @@ HTML = HTML & "<h2>Planned Use</h2>"
 Dim uses, use
 uses = split(Request.Form("use"),",")
 
-HTML = HTML & "<ul>"
-
 For Each use in uses
-	HTML = HTML & "<li>" & use & "</li>"
+	
+	If use = "Other" then
+		HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+
+	Else
+		HTML = HTML & "<p>" & use & "</p>"
+	End If
 Next
 
-HTML = HTML & "</ul>"
 
 'If Request.Form("use") = "Other" Then
 ''	HTML = HTML & "<p>Use Description:</p>"
