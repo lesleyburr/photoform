@@ -68,9 +68,9 @@
                             <input type="checkbox" name="new_images" value="on" id="isnewimagesselected"><label class="box">New Images</label><br>
                                 <section id="newchoices">
                                     <input type="checkbox" name="service_2d_items" value="2D collection items" id="is2dselected"> <label class="box">2D collection items</label>
-                                        <p id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.</p><br>
+                                        <p data-alert class="alert-box info radius" id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.<a href="#" class="close">&times;</a></p><br>
                                     <input type="checkbox" name="service_3d_items" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
-                                        <p id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers.</p><br>
+                                        <p data-alert class="alert-box info radius" id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers. <a href="#" class="close">&times;</a></p><br>
                                     <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
                                         <textarea name="service_exhibition_documentation_details" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation"></textarea>
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
@@ -157,7 +157,7 @@
                             <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> <label class="box">E-mail</label><br>
                                 <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email">
                             <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> <label class="box">Burn to disc</label>
-                                <p id="txtburninstructions"> CDs and DVDs with labels are $2 each and are charged to your account.</p><br>
+                                <p data-alert class="alert-box info radius" id="txtburninstructions"> CDs and DVDs with labels are $2 each and are charged to your account.<a href="#" class="close">&times;</a></p><br>
                             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
                                 <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea"></textarea>
                         </fieldset>
