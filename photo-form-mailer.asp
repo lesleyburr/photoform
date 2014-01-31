@@ -48,46 +48,48 @@ HTML = HTML & "<head></head>"
 HTML = HTML & "<body>"
 
 ' Order Tracking
-HTML = HTML & "<h1><strong>Order Number:" & atopic & "</h1>"
+HTML = HTML & "<h1><strong>Order Number: " & atopic & "</h1>"
 
 ' User Information
-HTML = HTML & "<h2><strong>Services requested by:</strong></h2>"
+HTML = HTML & "<h2><strong>Requested by:</strong></h2>"
 HTML = HTML & "<p>" & Request.Form("name") & " in " & Request.Form("department") & "<br />"
 HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
 HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
-' Photography Services for New Images
-HTML = HTML & "<h2>Services for New Images</h2>"
+' Photography Services
+if Request.Form("new_images") = "New Images" Then
+	Dim new_images, new_image
+	new_images = split(Request.Form("photoservice_new"),",")
 
-Dim new_images, new_image
-new_images = split(Request.Form("photoservice_new"),",")
+	HTML = HTML & "<h2>New Images Needed</h2>"
+	HTML = HTML & "<ul>"
 
-HTML = HTML & "<ul>"
+	For Each new_image in new_images
+		HTML = HTML & "<li>" & new_image & "</li>"
+	Next
 
-For Each new_image in new_images
-	HTML = HTML & "<li>" & new_image & "</li>"
-Next
+	HTML = HTML & "</ul>"
+End If
 
-HTML = HTML & "</ul>"
 
 'If Request.Form("photoservice_new") = "Other" Then
 '	HTML = HTML & "<p>Description:</p>"
 '	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
 'End If
 
-' Photography Services for Existing Images
-HTML = HTML & "<h2>Services for Existing Images</h2>"
+if Request.Form("existing_images") = "Existing Images" Then
+	Dim existing_images, existing_image
+	existing_images = split(Request.Form("photoservice_existing"),",")
+	
+	HTML = HTML & "<h2>Existing Images Needed</h2>"
+	HTML = HTML & "<ul>"
 
-Dim existing_images, existing_image
-existing_images = split(Request.Form("photoservice_existing"),",")
+	For Each existing_image in existing_images
+		HTML = HTML & "<li>" & existing_image & "</li>"
+	Next
 
-HTML = HTML & "<ul>"
-
-For Each existing_image in existing_images
-	HTML = HTML & "<li>" & existing_image & "</li>"
-Next
-
-HTML = HTML & "</ul>"
+	HTML = HTML & "</ul>"
+End If
 
 'If Request.Form("photoservice_existing") = "Collections items" Then
 ''	HTML = HTML & "<p>Collection IDs:</p>"
@@ -133,14 +135,14 @@ dim quality
 quality = Request.Form("imgquality")
 
 If quality = "Other" Then
-	HTML = HTML & "<p>" & Request.Form("imgquality_other") & "</p>"
+	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & "</em></p>"
 Else
-	HTML = HTML & "<p>" & quality & "</p>"
+	HTML = HTML & "<p><em>" & quality & "</em></p>"
 End If
 
 ' File Type
 HTML = HTML & "<h3>File Type</h3>"
-HTML = HTML & "<p>" & Request.Form("filetype") & "</p>"
+HTML = HTML & "<p><em>" & Request.Form("filetype") & "</em></p>"
 
 
 'Planned Use
@@ -164,9 +166,14 @@ HTML = HTML & "</ul>"
 
 'Who is the Client?
 HTML = HTML & "<h2>Client Information</h2>"
-HTML = HTML & "<p>This is for an" & Request.Form("client") & ".</p>"
-If Request.Form("client") = "external client" Then
-	HTML = HTML & "<p>" & Request.Form("external_client_name") & "</p>"
+
+dim client
+client = Request.Form("client")
+
+If client = "external client" Then
+	HTML = HTML & "<p>This is for <em>" & Request.Form("external_client_name") & "</em>, they are an external client.</p>"
+Else
+	HTML = HTML & "<p>This is for <em>" & client & "</em>.</p>"
 End If
 
 ' Due Date
