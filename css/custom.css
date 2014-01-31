@@ -45,3 +45,9 @@ input {
 	margin: 0;
 	top: 14px;
 }
+
+#newchoices, #txt2dinstructions, #txt3dinstructions, 
+#existingchoices, #photoservice_collections_textarea {
+	display: none;
+}
+

@@ -67,15 +67,29 @@
 
             <p class="instructions">Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
 
-            <input type="checkbox" name="new_images" id="isnewimagesselected"><label class="box">New Images</label><br>
-              <section id="newchoices" style="display:none">
+            <input type="checkbox" name="new_images" value="on" id="isnewimagesselected"><label class="box">New Images</label><br>
+              <section id="newchoices">
                 <input type="checkbox" name="photoservice_new" value="2D collection items" id="is2dselected"> <label class="box">2D collection items</label>
-                <div id="txt2dinstructions" style="display:none">Bring materials to Rights &amp; Reproductions.</div>
+                <div id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.</div>
                 <br>
                 <input type="checkbox" name="photoservice_new" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
-                <div id="txt3dinstructions" style="display:none">Coordinate material delivery to the photo lab with collection managers.</div>
+                <div id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers.</div>
                 <br>
-                <input type="checkbox" name="photoservice_new" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <input type="checkbox" name="photoservice_new" value="Exhibition documentation" id="isexhibitiondocumentat ion"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
                 <textarea name="photoservice_new" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation" style="display:none"></textarea>
                 <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc" style="display:none">When should photography occur?</label>
                 <input type="datetime" name="datetime_exhibitiondoc" id="datetime_exhibitiondoc" style="display:none">
@@ -99,10 +113,10 @@
                 <textarea name="photoservice_new_other" placeholder="Describe the service request." id="photoservice_other_textarea" style="display:none"></textarea>
               </section>
 
-            <input type="checkbox" name="existing_images" id="isexistingimagesselected"><label class="box">Existing Images</label><br>
-              <section id= "existingchoices" style="display:none">
+            <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box">Existing Images</label><br>
+              <section id= "existingchoices">
                 <input type="checkbox" name="photoservice_existing" value="Collections items" id="iscollectionsselected"> <label class="box">Collections items</label><br>
-                <textarea name="photoservice_existing_collection_id" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea" style="display:none"></textarea>
+                <textarea name="photoservice_existing_collection_id" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea"></textarea>
                 <input type="checkbox" name="photoservice_existing" value="Non-collections items"> <label class="box">Non-collections items</label><br>
               </section>
         </fieldset>
