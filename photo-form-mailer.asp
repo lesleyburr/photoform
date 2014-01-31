@@ -58,14 +58,25 @@ HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services
 if Request.Form("new_images") = "on" Then
-	Dim new_images, new_image
+	Dim new_images, new_image, new_image_details, new_image_detail
 	new_images = split(Request.Form("photoservice_new"),",")
+	new_image_details = split(Request.Form("photoservice_new_details"),",")
 
 	HTML = HTML & "<h2>New Images Needed</h2>"
 	HTML = HTML & "<ul>"
 
 	For Each new_image in new_images
-		HTML = HTML & "<li>" & new_image & "</li>"
+		HTML = HTML & "<li>" & new_image 
+
+		IF new_image_details <> "" then
+			HTML = HTML & "<ul>"
+			For Each new_image_detail in new_image_details
+				HTML = HTML & "<li>" & new_image_detail & "</li>"
+			Next
+			HTML = HTML & "</ul>"
+		Else
+			HTML = HTML & "</li>"
+		End If
 	Next
 
 	HTML = HTML & "</ul>"
