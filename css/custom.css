@@ -48,8 +48,14 @@ input {
 
 #newchoices, #txt2dinstructions, #txt3dinstructions, 
 #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
-#datetime_exhibitiondoc, #existingchoices, 
-#photoservice_collections_textarea {
+#datetime_exhibitiondoc, #photographyexhibitions, 
+#labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, 
+#marketing, #labelfor_datetime_marketing, #datetime_marketing, 
+#event, #labelfor_datetime_event, #datetime_event, 
+#photoservice_other_textarea, #existingchoices, 
+#photoservice_collections_textarea, #imgquality_other_textarea, 
+#use_other_textarea, #externalclient_name, #folderlocation, 
+#email, #txtburninstructions, #delivery_other_textarea {
 	display: none;
 }
 
