@@ -57,7 +57,7 @@ HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
 HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
 ' Photography Services
-if Request.Form("new_images") = "New Images" Then
+if Request.Form("new_images") = "on" Then
 	Dim new_images, new_image
 	new_images = split(Request.Form("photoservice_new"),",")
 
@@ -77,7 +77,7 @@ End If
 '	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
 'End If
 
-if Request.Form("existing_images") = "Existing Images" Then
+if Request.Form("existing_images") = "on" Then
 	Dim existing_images, existing_image
 	existing_images = split(Request.Form("photoservice_existing"),",")
 	
@@ -96,35 +96,6 @@ End If
 ''	HTML = HTML & "<p>" & Request.Form("photoservice_existing_collection_id") & "</p>"
 'End If
 
-
-' Delivery Methods
-HTML = HTML & "<h2>Delivery</h2>"
-
-Dim delivery_methods, delivery_method
-delivery_methods = split(Request.Form("delivery"),",")
-
-HTML = HTML & "<ul>"
-
-For Each delivery_method in delivery_methods
-	HTML = HTML & "<li>" & delivery_method & "</li>"
-Next
-
-HTML = HTML & "</ul>"
-
-'If Request.Form("delivery") = "Save on server" Then
-''	HTML = HTML & "<p>Server Path:</p>"
-''	HTML = HTML & "<p>" & Request.Form("folder_location") & "</p>"
-'End If
-
-'If Request.Form("delivery") = "E-mail" Then
-''	HTML = HTML & "<p>E-mail Address:</p>"
-''	HTML = HTML & "<p>" & Request.Form("e-mail") & "</p>"
-'End If
-
-'If Request.Form("delivery") = "Other" Then
-''	HTML = HTML & "<p>Delivery Description:</p>"
-''	HTML = HTML & "<p>" & Request.Form("deliver_other") & "</p>"
-'End If
 
 ' Digital File Specs
 HTML = HTML & "<h2>File Specifications</h2>"
@@ -175,6 +146,37 @@ If client = "external client" Then
 Else
 	HTML = HTML & "<p>This is for <em>" & client & "</em>.</p>"
 End If
+
+
+' Delivery Methods
+HTML = HTML & "<h2>Delivery</h2>"
+
+Dim delivery_methods, delivery_method
+delivery_methods = split(Request.Form("delivery"),",")
+
+HTML = HTML & "<ul>"
+
+For Each delivery_method in delivery_methods
+	HTML = HTML & "<li>" & delivery_method & "</li>"
+Next
+
+HTML = HTML & "</ul>"
+
+'If Request.Form("delivery") = "Save on server" Then
+''	HTML = HTML & "<p>Server Path:</p>"
+''	HTML = HTML & "<p>" & Request.Form("folder_location") & "</p>"
+'End If
+
+'If Request.Form("delivery") = "E-mail" Then
+''	HTML = HTML & "<p>E-mail Address:</p>"
+''	HTML = HTML & "<p>" & Request.Form("e-mail") & "</p>"
+'End If
+
+'If Request.Form("delivery") = "Other" Then
+''	HTML = HTML & "<p>Delivery Description:</p>"
+''	HTML = HTML & "<p>" & Request.Form("deliver_other") & "</p>"
+'End If
+
 
 ' Due Date
 HTML = HTML & "<h2>Due Date</h2>"
