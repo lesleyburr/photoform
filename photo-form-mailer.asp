@@ -3,6 +3,9 @@
 <% Response.Buffer = True %>
 
 <%
+' *******************************************************
+' Setup the order number counter and file storage for it.
+' *******************************************************
 dim dicKey, dicVal, dicObj, navfile, fileObj, strFilePath, nav, atopic
 set dicObj = createobject("Scripting.Dictionary")
 set fileObj = createobject("Scripting.FileSystemObject")
@@ -15,11 +18,11 @@ atopic = nav
 navfile.close
 set fileObj = nothing
 
-' Set up Constants
+' -Set up Constants
 Const ForWriting = 2   ' Input OutPut mode
 Const Create = True
 
-' Dimension local variables
+' -Dimension local variables
 Dim MyFile
 MyFile = strFilePath
 Dim FSO
@@ -29,12 +32,15 @@ Set FSO = Server.CreateObject("Scripting.FileSystemObject")
 Set TS = FSO.OpenTextFile(MyFile, ForWriting, Create)
 TS.write nav + 1
 
-' close TextStreamObject and destroy local variables to relase memory
+' -Close TextStreamObject and destroy local variables to relase memory
 TS.close
 Set TS = Nothing
 Set FSO = Nothing
 
-' setup email
+
+' *******************************************************
+' Setup the Response HTML E-mail and Send it
+' *******************************************************
 Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
@@ -241,6 +247,11 @@ objCDOMail.Body = HTML
 objCDOMail.Send
 Set objCDOMail = Nothing
 %>
+
+
+<!-- ******************************************************* 
+	 Create the Response Web Page 	
+     ******************************************************* -->
 
 <html class="no-js" lang="en">
 <head>
