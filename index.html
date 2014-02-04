@@ -70,24 +70,34 @@
                                         <p data-alert class="alert-box info radius" id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.<a href="#" class="close">&times;</a></p><br>
                                     <input type="checkbox" name="service_3d_items" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers. <a href="#" class="close">&times;</a></p><br>
+                                    
                                     <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. photography of a gallery space">Exhibition documentation</span></label><br>
-                                        <textarea name="service_exhibition_documentation_details" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation"></textarea>
+                                        <label for="exhibitiondocumentation">What is the name of the exhibition you would like photographed?</label>
+                                        <textarea name="service_exhibition_documentation_details" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation"></textarea>
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
-                                        <input type="datetime" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
+                                        <input type="date" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
+                                    
                                     <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. images for use in an exhibition">Photography for exhibitions</span></label><br>
-                                        <textarea name="service_photography_exhibitions_details" placeholder="Describe the exhibition  you working on, and what objects, people, or locations would you like photographed." id="photographyexhibitions"></textarea>
+                                        <label for="photographyexhibitions">Describe the exhibition  you working on, and what objects, people, or locations would you like photographed.</label>
+                                        <textarea name="service_photography_exhibitions_details" placeholder="placeholder" id="photographyexhibitions"></textarea>
                                         <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">When should photography occur?</label>
-                                        <input type="datetime" name="service_photography_exhibitions_details" id="datetime_photographyexhibitions">
+                                        <input type="date" name="service_photography_exhibitions_details" id="datetime_photographyexhibitions">
+                                    
                                     <input type="checkbox" name="service_marketing" value="Marketing photography" id="ismarketingselected"> <label class="box">Marketing photography</label><br>
-                                        <textarea name="service_marketing_details" placeholder="Describe what you would liked photographed." id="marketing"></textarea>
+                                        <label for="marketing">Describe what you would liked photographed.</label>
+                                        <textarea name="service_marketing_details" placeholder="placeholder" id="marketing"></textarea>
                                         <label for="datetime_marketing" id="labelfor_datetime_marketing">When should photography occur?</label>
-                                        <input type="datetime" name="service_marketing_details" id="datetime_marketing">
+                                        <input type="date" name="service_marketing_details" id="datetime_marketing">
+                                    
                                     <input type="checkbox" name="service_event" value="Event photography" id="iseventselected"> <label class="box">Event photography</label><br>
-                                        <textarea name="service_event_details" placeholder="Describe what event you would like photographed." id="event"></textarea>
+                                        <label for="event">Describe what event you would like photographed.</label>
+                                        <textarea name="service_event_details" placeholder="placeholder" id="event"></textarea>
                                         <label for="datetime_event" id="labelfor_datetime_event">When should photography occur?</label>
-                                        <input type="datetime" name="service_event_details" id="datetime_event">
+                                        <input type="date" name="service_event_details" id="datetime_event">
+                                    
                                     <input type="checkbox" name="service_other" value="Other" id="isotherserviceselected"> <label class="box">Other</label><br>
-                                        <textarea name="service_other_details" placeholder="Describe the service request." id="photoservice_other_textarea"></textarea>
+                                        <label for="photoservice_other_textarea">Describe the service request.</label>
+                                        <textarea name="service_other_details" placeholder="placeholder" id="photoservice_other_textarea"></textarea>
                                 </section>
                             </fieldset>
 
@@ -95,7 +105,8 @@
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box biglabel">I need copies of existing images</label><br>
                                 <section id= "existingchoices">
                                     <input type="checkbox" name="service_collections_items" value="Collections items" id="iscollectionsselected"> <label class="box">Collections items</label><br>
-                                        <textarea name="service_collections_items_details" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea"></textarea>
+                                        <label for="photoservice_collections_textarea">Please include the ICHi, DN, SDN, or HB numbers of the collection items.</label>
+                                        <textarea name="service_collections_items_details" placeholder="placeholder" id="photoservice_collections_textarea"></textarea>
                                     <input type="checkbox" name="service_noncollections_items" value="Non-collections items"> <label class="box">Non-collections items</label><br>
                                 </section>
                             </fieldset>
@@ -139,8 +150,8 @@
                         <legend>Digital File Specs</legend>
                             <fieldset>
                             <label>Image Quality</label>
-                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box">Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.</label><br>
-                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box">Editorial quality image e.g. for printing or publication use, 300 dpi.</label><br>
+                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for web use or PowerPoint presentation, 72 dpi">Low resolution image</span></label><br>
+                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for printing or publication use, 300 dpi">Editorial quality image</span></label><br>
                                 <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> <label class="box">Other</label><br>
                                     <textarea name="imgquality_other" placeholder="Describe the image quality request." id="imgquality_other_textarea"></textarea>
                             </fieldset>
