@@ -17,12 +17,25 @@ label {
 	color: #000;
 }
 
+/*.biglabel {
+	font-size: 1.2em;
+	padding-bottom: 1em;
+}*/
+
+/*#isnewimagesselected, #isexistingimagesselected {
+	vertical-align: bottom;
+	position: relative;
+	margin: 0;
+	top: -30px;
+}*/
+
 .labelspace {
 	margin-top: 2em;
 }
 
 legend {
 	color: #555;
+	font-size: 1.5em;
 }
 
 .instructions {
@@ -30,6 +43,8 @@ legend {
 }
 
 fieldset {
+	/*background-color: #eee;*/
+	/*border: none;*/
 	margin-top: 2em;
 }
 

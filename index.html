@@ -63,17 +63,18 @@
                   
                         <fieldset>
                         <legend>Photography Services</legend>
-                            <input type="checkbox" name="new_images" value="on" id="isnewimagesselected"><label class="box">I need new images</label><br>
+                            <fieldset>
+                                <input type="checkbox" name="new_images" value="on" id="isnewimagesselected"><label class="box biglabel">I need new images</label><br>
                                 <section id="newchoices">
                                     <input type="checkbox" name="service_2d_items" value="2D collection items" id="is2dselected"> <label class="box">2D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.<a href="#" class="close">&times;</a></p><br>
                                     <input type="checkbox" name="service_3d_items" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers. <a href="#" class="close">&times;</a></p><br>
-                                    <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box">Exhibition documentation e.g. photography of a gallery space</label><br>
+                                    <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box">Exhibition documentation <em>e.g. photography of a gallery space</em></label><br>
                                         <textarea name="service_exhibition_documentation_details" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation"></textarea>
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
                                         <input type="datetime" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
-                                    <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box">Photography for exhibitions e.g. images for use in an exhibition </label><br>
+                                    <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box">Photography for exhibitions <em>e.g. images for use in an exhibition</em></label><br>
                                         <textarea name="service_photography_exhibitions_details" placeholder="Describe the exhibition  you working on, and what objects, people, or locations would you like photographed." id="photographyexhibitions"></textarea>
                                         <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">When should photography occur?</label>
                                         <input type="datetime" name="service_photography_exhibitions_details" id="datetime_photographyexhibitions">
@@ -88,13 +89,16 @@
                                     <input type="checkbox" name="service_other" value="Other" id="isotherserviceselected"> <label class="box">Other</label><br>
                                         <textarea name="service_other_details" placeholder="Describe the service request." id="photoservice_other_textarea"></textarea>
                                 </section>
+                            </fieldset>
 
-                            <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box">I need copies of existing images</label><br>
+                            <fieldset>
+                                <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box biglabel">I need copies of existing images</label><br>
                                 <section id= "existingchoices">
                                     <input type="checkbox" name="service_collections_items" value="Collections items" id="iscollectionsselected"> <label class="box">Collections items</label><br>
                                         <textarea name="service_collections_items_details" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea"></textarea>
                                     <input type="checkbox" name="service_noncollections_items" value="Non-collections items"> <label class="box">Non-collections items</label><br>
                                 </section>
+                            </fieldset>
                         </fieldset>
                     </div>
       
