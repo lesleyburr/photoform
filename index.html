@@ -22,17 +22,16 @@
                 <form method="post" action="photo-form-mailer.asp">
 
                 <dl class="tabs" data-tab>
-                    <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
-                    <dd><a href="#panel2-2">Tab 2</a></dd>
-                    <dd><a href="#panel2-3">Tab 3</a></dd>
-                    <dd><a href="#panel2-4">Tab 4</a></dd>
-                    <dd><a href="#panel2-5">Tab 5</a></dd>
+                    <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
+                    <dd><a href="#panel2-2">Services</a></dd>
+                    <dd><a href="#panel2-3">Use</a></dd>
+                    <dd><a href="#panel2-4">Files</a></dd>
                 </dl>
 
                 <div class="tabs-content large-12 columns">
           
                     <!--  -->
-                    <!-- Page One -->
+                    <!-- Tab One -->
                     <!--  -->
 
                     <div class="content active large-12 columns" id="panel2-1">
@@ -56,7 +55,7 @@
     
         
                     <!--  -->
-                    <!-- Page Two -->
+                    <!-- Tab Two -->
                     <!--  -->
                     
 
@@ -102,35 +101,10 @@
       
         
                     <!--  -->
-                    <!-- Page Three -->
+                    <!-- Tab Three -->
                     <!--  -->
 
                     <div class="content large-12 columns" id="panel2-3">
-      
-                        <fieldset>
-                        <legend>Digital File Specs</legend>
-                            <fieldset>
-                            <label>Image Quality</label>
-                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box">Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.</label><br>
-                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box">Editorial quality image e.g. for printing or publication use, 300 dpi.</label><br>
-                                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> <label class="box">Other</label><br>
-                                    <textarea name="imgquality_other" placeholder="Describe the image quality request." id="imgquality_other_textarea"></textarea>
-                            </fieldset>
-                            <fieldset>
-                            <label>File Type</label>
-                                <input type="radio" name="filetype" value="JPEG" required><label class="box"> JPEG </label><br>
-                                <input type="radio" name="filetype" value="TIFF" required><label class="box">TIFF</label><br>
-                            </fieldset>
-                        </fieldset>
-                    </div>
-
-
- 
-                    <!--  -->
-                    <!-- Page Four -->
-                    <!--  -->
-
-                    <div class="content large-12 columns" id="panel2-4">
 
                         <fieldset>
                         <legend>Planned Use</legend>
@@ -150,6 +124,30 @@
                             <input type="text" name="external_client_name" placeholder="Name of external client" id="externalclient_name">
                         </fieldset>
 
+                    </div>
+
+                    <!--  -->
+                    <!-- Tab Four -->
+                    <!--  -->
+
+                    <div class="content large-12 columns" id="panel2-4">
+      
+                        <fieldset>
+                        <legend>Digital File Specs</legend>
+                            <fieldset>
+                            <label>Image Quality</label>
+                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box">Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.</label><br>
+                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box">Editorial quality image e.g. for printing or publication use, 300 dpi.</label><br>
+                                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> <label class="box">Other</label><br>
+                                    <textarea name="imgquality_other" placeholder="Describe the image quality request." id="imgquality_other_textarea"></textarea>
+                            </fieldset>
+                            <fieldset>
+                            <label>File Type</label>
+                                <input type="radio" name="filetype" value="JPEG" required><label class="box"> JPEG </label><br>
+                                <input type="radio" name="filetype" value="TIFF" required><label class="box">TIFF</label><br>
+                            </fieldset>
+                        </fieldset>
+
                         <fieldset>
                         <legend>Delivery Method</legend>
                             <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> <label class="box">Save on server. Provide folder location.</label><br>
@@ -161,15 +159,7 @@
                             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
                                 <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea"></textarea>
                         </fieldset>
-                    </div>
 
-
-                    <!--  -->
-                    <!-- Page Five -->
-                    <!--  -->
-
-                    <div class="content large-12 columns" id="panel2-5">
-                  
                         <fieldset>
                         <label for="date">Due Date</label>
                             <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
@@ -179,6 +169,7 @@
                         </fieldset>
 
                     </div>
+
       
                 </div>
 
