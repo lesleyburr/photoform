@@ -17,6 +17,10 @@ $('#is3dselected').click(function() {
 });
 
 $('#isexhibitiondocumentation').click(function() {
+    $("#labelfor_exhibitiondocumentation").toggle(this.checked);
+});
+
+$('#isexhibitiondocumentation').click(function() {
     $("#exhibitiondocumentation").toggle(this.checked);
 });
 
@@ -26,6 +30,11 @@ $('#isexhibitiondocumentation').click(function() {
 
 $('#isexhibitiondocumentation').click(function() {
     $("#datetime_exhibitiondoc").toggle(this.checked);
+});
+
+
+$('#isphotographyexhibitions').click(function() {
+    $("#labelfor_photographyexhibitions").toggle(this.checked);
 });
 
 $('#isphotographyexhibitions').click(function() {
@@ -41,6 +50,10 @@ $('#isphotographyexhibitions').click(function() {
 });
 
 $('#ismarketingselected').click(function() {
+    $("#labelfor_marketing").toggle(this.checked);
+});
+
+$('#ismarketingselected').click(function() {
     $("#marketing").toggle(this.checked);
 });
 
@@ -50,6 +63,10 @@ $('#ismarketingselected').click(function() {
 
 $('#ismarketingselected').click(function() {
     $("#datetime_marketing").toggle(this.checked);
+});
+
+$('#iseventselected').click(function() {
+    $("#labelfor_event").toggle(this.checked);
 });
 
 $('#iseventselected').click(function() {
@@ -64,9 +81,8 @@ $('#iseventselected').click(function() {
     $("#datetime_event").toggle(this.checked);
 });
 
-
-$('#isburnselected').click(function() {
-    $("#txtburninstructions").toggle(this.checked);
+$('#isotherserviceselected').click(function() {
+    $("#labelfor_photoservice_other_textarea").toggle(this.checked);
 });
 
 $('#isotherserviceselected').click(function() {
@@ -81,6 +97,10 @@ $('#isotherserviceselected').click(function() {
 
 $('#isexistingimagesselected').click(function() {
     $("#existingchoices").toggle(this.checked);
+});
+
+$('#iscollectionsselected').click(function() {
+    $("#labelfor_photoservice_collections_textarea").toggle(this.checked);
 });
 
 $('#iscollectionsselected').click(function() {
@@ -133,4 +153,8 @@ $('#isserverselected').click(function() {
 
 $('#isemailselected').click(function() {
     $("#email").toggle(this.checked);
+});
+
+$('#isburnselected').click(function() {
+    $("#txtburninstructions").toggle(this.checked);
 });
