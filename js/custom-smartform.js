@@ -33,6 +33,11 @@ $('#isexhibitiondocumentation').click(function() {
 });
 
 
+
+
+
+
+
 $('#isphotographyexhibitions').click(function() {
     $("#labelfor_photographyexhibitions").toggle(this.checked);
 });
@@ -48,6 +53,11 @@ $('#isphotographyexhibitions').click(function() {
 $('#isphotographyexhibitions').click(function() {
     $("#datetime_photographyexhibitions").toggle(this.checked);
 });
+
+
+
+
+
 
 $('#ismarketingselected').click(function() {
     $("#labelfor_marketing").toggle(this.checked);
