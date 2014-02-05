@@ -123,13 +123,13 @@
                         <fieldset>
                         <legend>Planned Use</legend>
                             <p class="instructions">Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
-                            <input type="checkbox" name="use" value="Social media"><label class="box">Social media e.g. Facebook, Tumblr, Blog, etc.</label><br>
+                            <input type="checkbox" name="use" value="Social media"><label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. Facebook, Tumblr, Blog, etc.">Social media</span></label><br>
                             <input type="checkbox" name="use" value="Website"><label class="box">Website</label><br>
                             <input type="checkbox" name="use" value="Publication"><label class="box">Publication</label><br>
                             <input type="checkbox" name="use" value="Exhibition"><label class="box">Exhibition</label><br>
                             <input type="checkbox" name="use" value="Advertising and Marketing"><label class="box">Advertising &amp; Marketing</label><br>
                             <input type="checkbox" name="use" value="Other" id="isotheruse"><label class="box">Other</label><br>
-                                <label for="use_other_textarea" id="labelfor_use_other_textarea">Describe the planned use.</label>
+                                <label for="use_other_textarea" id="labelfor_use_other_textarea">What will these images be used for?</label>
                                 <textarea name="use_other" placeholder="placeholder" id="use_other_textarea"></textarea>
                         </fieldset>
       
@@ -137,7 +137,8 @@
                         <legend>Client</legend>
                             <input type="radio" name="client" value="the Museum" required><label class="box">Chicago History Museum</label><br>
                             <input type="radio" name="client" value="external client" id="isexternalclient" required><label class="box">External Client</label><br>
-                            <input type="text" name="external_client_name" placeholder="Name of external client" id="externalclient_name">
+                            <label for="externalclient_name" id="labelfor_externalclient_name">What is the name of the external client?</label>
+                            <input type="text" name="external_client_name" placeholder="placeholder" id="externalclient_name">
                         </fieldset>
 
                     </div>

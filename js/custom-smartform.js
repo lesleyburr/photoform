@@ -157,6 +157,10 @@ $('#isotheruse').click(function() {
 // 
 
 $('#isexternalclient').click(function() {
+    $("#labelfor_externalclient_name").toggle(this.checked);
+});
+
+$('#isexternalclient').click(function() {
     $("#externalclient_name").toggle(this.checked);
 });
 

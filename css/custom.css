@@ -75,7 +75,7 @@ p {
 #event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea, 
 #photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
 #photoservice_collections_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea, 
-#use_other_textarea, #externalclient_name, #folderlocation, 
+#use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #folderlocation, 
 #email, #txtburninstructions, #delivery_other_textarea, #labelfor_event {
 	display: none;
 }
