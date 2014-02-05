@@ -64,11 +64,6 @@ $('#isphotographyexhibitions').click(function() {
     $("#datetime_photographyexhibitions").toggle(this.checked);
 });
 
-
-
-
-
-
 $('#ismarketingselected').click(function() {
     $("#labelfor_marketing").toggle(this.checked);
 });
@@ -146,6 +141,10 @@ $('#isotherspecs').click(function() {
 // Planned Use
 // 
 // 
+
+$('#isotheruse').click(function() {
+    $("#labelfor_use_other_textarea").toggle(this.checked);
+});
 
 $('#isotheruse').click(function() {
     $("#use_other_textarea").toggle(this.checked);
