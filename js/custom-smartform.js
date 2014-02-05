@@ -32,18 +32,28 @@ $('#isexhibitiondocumentation').click(function() {
     $("#datetime_exhibitiondoc").toggle(this.checked);
 });
 
-
-
-
-
-
-
 $('#isphotographyexhibitions').click(function() {
     $("#labelfor_photographyexhibitions").toggle(this.checked);
 });
 
 $('#isphotographyexhibitions').click(function() {
     $("#photographyexhibitions").toggle(this.checked);
+});
+
+$('#isphotographyexhibitions').click(function() {
+    $("#labelfor_photography_exhibitions_description").toggle(this.checked);
+});
+
+$('#isphotographyexhibitions').click(function() {
+    $("#photography_exhibitions_description").toggle(this.checked);
+});
+
+$('#isphotographyexhibitions').click(function() {
+    $("#labelfor_photography_exhibitions_details").toggle(this.checked);
+});
+
+$('#isphotographyexhibitions').click(function() {
+    $("#photography_exhibitions_details").toggle(this.checked);
 });
 
 $('#isphotographyexhibitions').click(function() {

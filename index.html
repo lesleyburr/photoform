@@ -72,16 +72,24 @@
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers. <a href="#" class="close">&times;</a></p><br>          
                                     <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. photography of a gallery space">Exhibition documentation</span></label><br>
                                         <label for="exhibitiondocumentation" id="labelfor_exhibitiondocumentation">What is the name of the exhibition you would like photographed?</label>
-                                        <textarea name="service_exhibition_documentation_details" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation"></textarea>
+                                        <input type="text" name="service_exhibition_documentation_details" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation"></textarea>
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
                                         <input type="date" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
                                     <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. images for use in an exhibition">Photography for exhibitions</span></label><br>
                                         
 
-                                        <label for="photographyexhibitions" id="labelfor_photographyexhibitions">Exhibition title</label>
-                                        <text name="service_photography_exhibitions_details" placeholder="Facing Freedom" id="photographyexhibitions"></textarea>
 
-                                         <label for="photography_exhibitions_description" id="labelfor_photography_exhibitions_description">Description</label>
+
+                                        <label for="photographyexhibitions" id="labelfor_photographyexhibitions">Exhibition title</label>
+                                        <input type="text" name="service_photography_exhibitions_details" placeholder="Facing Freedom" id="photographyexhibitions"></text>
+
+
+
+
+
+
+
+                                        <label for="photography_exhibitions_description" id="labelfor_photography_exhibitions_description">Description</label>
                                         <textarea name="service_photography_exhibitions_details" placeholder="Describe the exhibition" id="photography_exhibitions_description"></textarea>
 
                                          <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">Photography details</label>
@@ -93,7 +101,7 @@
 
 
 
-                                        
+
                                     <input type="checkbox" name="service_marketing" value="Marketing photography" id="ismarketingselected"> <label class="box">Marketing photography</label><br>
                                         <label for="marketing" id="labelfor_marketing">Describe what you would liked photographed.</label>
                                         <textarea name="service_marketing_details" placeholder="placeholder" id="marketing"></textarea>
@@ -115,7 +123,7 @@
                                 <section id= "existingchoices">
                                     <input type="checkbox" name="service_collections_items" value="Collections items" id="iscollectionsselected"> <label class="box">Collections items</label><br>
                                         <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">Please include the ICHi, DN, SDN, or HB numbers of the collection items.</label>
-                                        <textarea name="service_collections_items_details" placeholder="placeholder" id="photoservice_collections_textarea"></textarea>
+                                        <textarea name="service_collections_items_details" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
                                     <input type="checkbox" name="service_noncollections_items" value="Non-collections items"> <label class="box">Non-collections items</label><br>
                                 </section>
                             </fieldset>
