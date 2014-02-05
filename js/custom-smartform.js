@@ -122,15 +122,15 @@ $('#iscollectionsselected').click(function() {
     $("#photoservice_collections_textarea").toggle(this.checked);
 });
 
-$('#isdeliveryother').click(function() {
-    $("#delivery_other_textarea").toggle(this.checked);
-});
 
 // 
 // 
 // Image Quality
 // 
 // 
+$('#isotherspecs').click(function() {
+    $("#labelfor_imgquality_other_textarea").toggle(this.checked);
+});
 
 $('#isotherspecs').click(function() {
     $("#imgquality_other_textarea").toggle(this.checked);
@@ -171,6 +171,10 @@ $('#isexternalclient').click(function() {
 // 
 
 $('#isserverselected').click(function() {
+    $("#labelfor_folderlocation").toggle(this.checked);
+});
+
+$('#isserverselected').click(function() {
     $("#folderlocation").toggle(this.checked);
 });
 
@@ -180,4 +184,12 @@ $('#isemailselected').click(function() {
 
 $('#isburnselected').click(function() {
     $("#txtburninstructions").toggle(this.checked);
+});
+
+$('#isdeliveryother').click(function() {
+    $("#labelfor_delivery_other_textarea").toggle(this.checked);
+});
+
+$('#isdeliveryother').click(function() {
+    $("#delivery_other_textarea").toggle(this.checked);
 });
