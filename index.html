@@ -151,41 +151,42 @@
                     <div class="content large-12 columns" id="panel2-4">
       
                         <fieldset>
-                        <legend>Digital File Specs</legend>
+                        <legend>File Specs</legend>
                             <fieldset>
                             <label>Image Quality</label>
-                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for web use or PowerPoint presentation, 72 dpi">Low resolution image</span></label><br>
-                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for printing or publication use, 300 dpi">Editorial quality image</span></label><br>
+                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for web use or PowerPoint presentation, 72 dpi">Low resolution</span></label><br>
+                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for printing or publication use, 300 dpi">Editorial quality</span></label><br>
                                 <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> <label class="box">Other</label><br>
-                                    <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">Describe the image quality request.</label>
-                                    <textarea name="imgquality_other" placeholder="placeholder" id="imgquality_other_textarea"></textarea>
+                                    <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">Describe the image quality you need.</label>
+                                    <textarea name="imgquality_other" placeholder="I need the files to be 600dpi." id="imgquality_other_textarea"></textarea>
                             </fieldset>
                             <fieldset>
                             <label>File Type</label>
-                                <input type="radio" name="filetype" value="JPEG" required><label class="box"> JPEG </label><br>
-                                <input type="radio" name="filetype" value="TIFF" required><label class="box">TIFF</label><br>
+                                <input type="radio" name="filetype" value="JPEG" required><label class="box"><span data-tooltip class="has-tip tip-right" title="Recommended for web or research.">JPEG</span></label><br>
+                                <input type="radio" name="filetype" value="TIFF" required><label class="box"><span data-tooltip class="has-tip tip-right" title="Recommended for print.">TIFF</span></label><br>
                             </fieldset>
                         </fieldset>
 
                         <fieldset>
-                        <legend>Delivery Method</legend>
+                        <legend>File Delivery Method</legend>
                             <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> <label class="box">Save on server</label><br>
                                 <label for="folderlocation" id="labelfor_folderlocation">Provide the folder location.</label>
-                                <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014 object list, images, and label-blog copy\Photo Orders\4229 Jan. and Feb" class="textbox" id="folderlocation">
+                                <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="textbox" id="folderlocation">
                             <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> <label class="box">E-mail</label><br>
                                 <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email">
                             <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> <label class="box">Burn to disc</label>
                                 <p data-alert class="alert-box info radius" id="txtburninstructions"> CDs and DVDs with labels are $2 each and are charged to your account.<a href="#" class="close">&times;</a></p><br>
                             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
                                 <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">How would you like the files delivered?</label>
-                                <textarea name="delivery_other" placeholder="placeholder" id="delivery_other_textarea"></textarea>
+                                <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="delivery_other_textarea"></textarea>
                         </fieldset>
 
                         <fieldset>
                         <label for="date">Due Date</label>
-                            <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
+                            <p class="instructions">Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.<p>
+                            <p data-alert class="alert-box info radius" id="largebatches">Requests for large batches of new images will take additional time.</p>
                             <input type="date" name="date" id="date" required>
-                            <input type="submit" name="submit" value="Place Order" class="button labelspace">
+                            <input type="submit" name="submit" value="PLACE MY ORDER" class="button labelspace">
 
                         </fieldset>
 
