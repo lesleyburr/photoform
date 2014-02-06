@@ -3,6 +3,9 @@
 <% Response.Buffer = True %>
 
 <%
+' *******************************************************
+' Setup the order number counter and file storage for it.
+' *******************************************************
 dim dicKey, dicVal, dicObj, navfile, fileObj, strFilePath, nav, atopic
 set dicObj = createobject("Scripting.Dictionary")
 set fileObj = createobject("Scripting.FileSystemObject")
@@ -15,11 +18,11 @@ atopic = nav
 navfile.close
 set fileObj = nothing
 
-' Set up Constants
+' -Set up Constants
 Const ForWriting = 2   ' Input OutPut mode
 Const Create = True
 
-' Dimension local variables
+' -Dimension local variables
 Dim MyFile
 MyFile = strFilePath
 Dim FSO
@@ -29,12 +32,14 @@ Set FSO = Server.CreateObject("Scripting.FileSystemObject")
 Set TS = FSO.OpenTextFile(MyFile, ForWriting, Create)
 TS.write nav + 1
 
-' close TextStreamObject and destroy local variables to relase memory
+' -Close TextStreamObject and destroy local variables to relase memory
 TS.close
 Set TS = Nothing
 Set FSO = Nothing
 
-' Setup E-mail
+' *******************************************************
+' Setup the Response HTML E-mail and Send it
+' *******************************************************
 Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
@@ -48,87 +53,182 @@ HTML = HTML & "<head></head>"
 HTML = HTML & "<body>"
 
 ' Order Tracking
-HTML = HTML & "<h1><strong>Order Number:" & atopic & "</h1>"
+HTML = HTML & "<h1><strong>Order Number: " & atopic & "</h1>"
 
 ' User Information
-HTML = HTML & "<h2><strong>Services requested by:</strong></h2>"
-HTML = HTML & "<p>" & Request.Form("name") & " in " & Request.Form("department") & "<br />"
+HTML = HTML & "<p>Requested by <strong>" & Request.Form("name") & "</strong> in <strong>" & Request.Form("department") & "</strong>.<br />"
 HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
 HTML = HTML & "Account: " & Request.Form("account") & "</p>"
 
-' Photography Services for New Images
-HTML = HTML & "<h2>Services for New Images</h2>"
+' Photography Services
 
-Dim arr_new_images, new_images, new_image
-arr_new_images = Request.Form("photoservice_new")
-new_images = split(arr_new_images,",")
+' - New Images Requested
+If Request.Form("new_images") = "on" Then
+	HTML = HTML & "<h2>New Images Needed</h2>"
 
-HTML = HTML & "<ul>"
+	' -- 2D Collection Items
+	If Request.Form("service_2d_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_2d_items") & "</p>"
+	End If
 
-For Each new_image in new_images
-	HTML = HTML & "<li>" & new_image & "</li>"
-Next
+	' -- 3D Collection Items
+	If Request.Form("service_3d_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_3d_items") & "</p>"
+	End If
 
-HTML = HTML & "</ul>"
+	' -- Exhibition Documentation
+	If Request.Form("service_exhibition_documentation") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
+		Dim exhibition_documentation_details, exhibition_documentation_detail
+		exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
 
-' *** I may need a for each loop here and in other areas to retrieve the descriptions http://stackoverflow.com/questions/2348/what-is-the-best-way-to-iterate-through-an-array-in-classic-asp-vbscript'
-'HTML = HTML & "<p>" & Request.Form("photoservice_new") & "</p>"
-'If Request.Form("photoservice_new") = "Other" Then
-'	HTML = HTML & "<p>Description:</p>"
-'	HTML = HTML & "<p>" & Request.Form("photoservice_new_other") & "</p>"
-'End If
+		For Each exhibition_documentation_detail in exhibition_documentation_details
+			HTML = HTML & "<br />" & exhibition_documentation_detail
+		Next
+			HTML = HTML & "</p>"
+	End If
 
-' Photography Services for Existing Images
-HTML = HTML & "<h2>Services for Existing Images</h2>"
-HTML = HTML & "<p>" & Request.Form("photoservice_existing") & "</p>"
-If Request.Form("photoservice_existing") = "Collections items" Then
-	HTML = HTML & "<p>Collection IDs:</p>"
-	HTML = HTML & "<p>" & Request.Form("photoservice_existing_collection_id") & "</p>"
+	' -- Photography for Exhibitions
+	If Request.Form("service_photography_exhibitions") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_photography_exhibitions")
+		Dim exhibition_photography_details, exhibition_photography_detail
+		exhibition_photography_details = split(Request.Form("service_photography_exhibitions_details"),",")
+
+		For Each exhibition_photography_detail in exhibition_photography_details
+			HTML = HTML & "<br />" & exhibition_photography_detail
+		Next
+			HTML = HTML & "</p>"
+	End If
+
+	' -- Marketing Photography
+	If Request.Form("service_marketing") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_marketing")
+		Dim marketing_details, marketing_detail
+		marketing_details = split(Request.Form("service_marketing_details"),",")
+
+		For Each marketing_detail in marketing_details
+			HTML = HTML & "<br />" & marketing_detail
+		Next
+			HTML = HTML & "</p>"
+	End If
+
+	' -- Event Photography
+	If Request.Form("service_event") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_event")
+		Dim event_details, event_detail
+		event_details = split(Request.Form("service_event_details"),",")
+
+		For Each event_detail in event_details
+			HTML = HTML & "<br />" & event_detail
+		Next
+			HTML = HTML & "</p>"
+	End If
+
+	' -- Other Photography
+	If Request.Form("service_other") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_other_details") & "</p>"
+	End If
+
 End If
 
-' Delivery Methods
-HTML = HTML & "<h2>Delivery</h2>"
-HTML = HTML & "<p>" & Request.Form("delivery") & "</p>"
-If Request.Form("delivery") = "Save on server" Then
-	HTML = HTML & "<p>Server Path:</p>"
-	HTML = HTML & "<p>" & Request.Form("folder_location") & "</p>"
+' - Exhisting Images Requested
+
+If Request.Form("existing_images") = "on" Then
+
+	HTML = HTML & "<h2>Existing Images Needed</h2>"
+
+	' -- Collection Items
+	If Request.Form("service_collections_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_collections_items") & "<br />"
+		HTML = HTML & Request.Form("service_collections_items_details") & "</p>"
+	End If
+
+	' -- Non-Collection Items
+	If Request.Form("service_noncollections_items") <> "" then
+		HTML = HTML & "<p>" & Request.Form("service_noncollections_items") & "</p>"
+	End If
+
+
 End If
-If Request.Form("delivery") = "E-mail" Then
-	HTML = HTML & "<p>E-mail Address:</p>"
-	HTML = HTML & "<p>" & Request.Form("e-mail") & "</p>"
-End If
-If Request.Form("delivery") = "Other" Then
-	HTML = HTML & "<p>Delivery Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("deliver_other") & "</p>"
-End If
+
+
 
 ' Digital File Specs
 HTML = HTML & "<h2>File Specifications</h2>"
-HTML = HTML & "<p>" & Request.Form("imgquality") & "</p>"
-If Request.Form("imgquality") = "Other" Then
-	HTML = HTML & "<p>File Spec Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("imgquality_other") & "</p>"
+
+HTML = HTML & "<h3>Image Quality</h3>"
+
+dim quality
+quality = Request.Form("imgquality")
+
+If quality = "Other" Then
+	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & "</em></p>"
+Else
+	HTML = HTML & "<p><em>" & quality & "</em></p>"
 End If
 
 ' File Type
 HTML = HTML & "<h3>File Type</h3>"
-HTML = HTML & "<p>" & Request.Form("filetype") & "</p>"
+HTML = HTML & "<p><em>" & Request.Form("filetype") & "</em></p>"
 
 
 'Planned Use
 HTML = HTML & "<h2>Planned Use</h2>"
-HTML = HTML & "<p>" & Request.Form("use") & "</p>"
-If Request.Form("use") = "Other" Then
-	HTML = HTML & "<p>Use Description:</p>"
-	HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+
+Dim uses, use
+uses = split(Request.Form("use"),",")
+
+For Each use in uses
+	If Trim(use) = "Other" Then
+		HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+	Else
+		HTML = HTML & "<p>" & use & "</p>"
+	End If
+Next
+
+
+'Client Information
+HTML = HTML & "<h2>Client Information</h2>"
+
+dim client
+client = Request.Form("client")
+
+If client = "external client" Then
+	HTML = HTML & "<p>This is for <em>" & Request.Form("external_client_name") & "</em>, they are an external client.</p>"
+Else
+	HTML = HTML & "<p>This is for <em>" & client & "</em>.</p>"
 End If
 
-'Who is the Client?
-HTML = HTML & "<h2>Client Information</h2>"
-HTML = HTML & "<p>This is for an" & Request.Form("client") & ".</p>"
-If Request.Form("client") = "external client" Then
-	HTML = HTML & "<p>" & Request.Form("external_client_name") & "</p>"
-End If
+
+' Delivery Methods
+HTML = HTML & "<h2>Delivery</h2>"
+
+Dim delivery_methods, delivery_method
+delivery_methods = split(Request.Form("delivery"),",")
+
+For Each delivery_method in delivery_methods
+
+	Select Case Trim(delivery_method)
+
+	Case "Save on server"
+		HTML = HTML & "<p>Save the files on the network at " & Request.Form("folder_location") & ".</p>"
+
+	Case "E-mail"
+		HTML = HTML & "<p>Email the files to " & Request.Form("email") & ".</p>"
+
+	Case "Burn to disc"
+		HTML = HTML & "<p>Burn the files to disc.</p>"
+
+	Case "Other"
+		HTML = HTML & "<p>" & Request.Form("delivery_other") & ".</p>"
+
+	Case else
+		HTML = HTML & "<p>" & delivery_method & ".</p>"
+
+	End Select
+
+Next
+
 
 ' Due Date
 HTML = HTML & "<h2>Due Date</h2>"
@@ -146,6 +246,11 @@ objCDOMail.Body = HTML
 objCDOMail.Send
 Set objCDOMail = Nothing
 %>
+
+
+<!-- *******************************************************
+	 Create the Response Web Page
+     ******************************************************* -->
 
 <html class="no-js" lang="en">
 <head>

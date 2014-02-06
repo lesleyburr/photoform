@@ -1,45 +1,82 @@
-/*body {
-	margin: 5em;
-	width: auto;
-}*/
-
-/*form {
-	width: 80%;
-}*/
+header {
+	margin-top: 4em;
+	margin-bottom: 1em;
+}
 
 .textbox {
 	display: block;
 }
 
-/*input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-    color:    red;
-}
-input:-moz-placeholder, textarea:-moz-placeholder { 
-    color:    red;
-}
-input::-moz-placeholder, textarea::-moz-placeholder { 
-    color:    red;
-}
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-    color:    red;
-}*/
-
-/*label {
-	display: block;
-}*/
-
-/*h1 {
-	font-size: 2.7em;
-}
-
-h2 {
-	font-size: 2em;
+.purpose {
+	font-size: 1.3em;
+	margin-bottom: 2em;
 }
 
 label {
 	font-size: 1em;
+	color: #000;
 }
 
-em {
-	font-style: italic;
+/*.biglabel {
+	font-size: 1.2em;
+	padding-bottom: 1em;
 }*/
+
+/*#isnewimagesselected, #isexistingimagesselected {
+	vertical-align: bottom;
+	position: relative;
+	margin: 0;
+	top: -30px;
+}*/
+
+.labelspace {
+	margin-top: 2em;
+}
+
+legend {
+	color: #555;
+	font-size: 1.5em;
+}
+
+.instructions {
+	font-size: 1em;
+}
+
+fieldset {
+	/*background-color: #eee;*/
+	/*border: none;*/
+	margin-top: 2em;
+}
+
+.box {
+	margin-left: 1em;
+}
+
+input {
+	vertical-align: bottom;
+	position: relative;
+	margin: 0;
+	top: 14px;
+}
+
+/*.tabs dd {
+	width: 20%;
+}*/
+
+p {
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+#newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
+#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #labelfor_photography_exhibitions_description, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
+#labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing, 
+#marketing, #labelfor_datetime_marketing, #datetime_marketing, 
+#event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea, 
+#photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
+#photoservice_collections_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea, 
+#use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation, 
+#email, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event {
+	display: none;
+}
+

@@ -9,155 +9,200 @@
     <script type="text/javascript" src="js/modernizr.js"></script>
     <title>Photo Order Form</title>
   </head>
+  
   <body>
     <main>
-    <div class="row">
-      <div class="large-12 columns">
-        <header><h1>Photography and Imaging Orders</h1></header>
 
-      <p>Place internal photo orders for digital files.</p>
+        <div class="row">
+            <div class="large-12 columns">
+                
+                <header><h1>Photography and Imaging Orders</h1></header>
+                <p class="purpose">Place internal orders for digital files.</p>
 
-    <form method="post" action="photo-form-mailer.asp">
-      <p>
-        <label for="name">Full Name</label>
-        <input type="text" name="name" placeholder="John Doe" class="textbox" id="name" required>
-      </p>
+                <form method="post" action="photo-form-mailer.asp">
 
-      <p>
-        <label for="phone">Phone</label>
-        <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone" required>
-      </p>
+                <dl class="tabs" data-tab>
+                    <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
+                    <dd><a href="#panel2-2">Services</a></dd>
+                    <dd><a href="#panel2-3">Use</a></dd>
+                    <dd><a href="#panel2-4">Files</a></dd>
+                </dl>
 
-      <p>
-        <label for="department">Department</label>
-        <input type="text" name="department" placeholder="Marketing" class="textbox" id="department" required>
-      </p>
+                <div class="tabs-content large-12 columns">
+          
+                    <!--  -->
+                    <!-- Tab One -->
+                    <!--  -->
 
-      <p>
-        <label for="account">Account Number</label>
-        Enter full fourteen digit account number. If your request is not project-based, the last four digits will be 0000.
-        <input type="number" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required>
-      </p>
+                    <div class="content active large-12 columns" id="panel2-1">
 
-      <p>
-        <fieldset>
-          <legend>Photography Services Requested</legend>
+                        <fieldset>
+                        <label for="name">Full Name</label>
+                            <input type="text" name="name" placeholder="Bill Murray" class="textbox" id="name" required>
+  
+                        <label for="phone" class="labelspace">Phone</label>
+                            <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone" required>
+   
+                        <label for="department" class="labelspace">Department</label>
+                            <input type="text" name="department" placeholder="Publications" class="textbox" id="department" required>
+    
+                        <label for="account" class="labelspace">Account Number</label>
+                            <p class="instructions">Enter your project's fourteen digit account number. If this request is not project-based, then make the last four digits 0000.</p>
+                            <input type="number" name="account" placeholder="111-111-1111-0000" class="textbox" id="account" required>
+                        </fieldset>
 
-            <p>Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
+                    </div>
+    
+        
+                    <!--  -->
+                    <!-- Tab Two -->
+                    <!--  -->
+                    
 
-            <label>New Images</label>
-              <input type="checkbox" name="photoservice_new" value="2D collection items" id="is2dselected"> 2D collection items
-              <div id="txt2dinstructions" style="display:none">Bring materials to Rights &amp; Reproductions.</div>
-              <br>
-              <input type="checkbox" name="photoservice_new" value="3D collection items" id="is3dselected"> 3D collection items
-              <div id="txt3dinstructions" style="display:none">Coordinate material delivery to the photo lab with collection managers.</div>
-              <br>
+                    <div class="content large-12 columns" id="panel2-2">
+                  
+                        <fieldset>
+                        <legend>Photography Services</legend>
+                            <fieldset>
+                                <input type="checkbox" name="new_images" value="on" id="isnewimagesselected"><label class="box biglabel">I need new images</label><br>
+                                <section id="newchoices">
+                                    <input type="checkbox" name="service_2d_items" value="2D collection items" id="is2dselected"> <label class="box">2D collection items</label>
+                                        <p data-alert class="alert-box info radius" id="txt2dinstructions">Bring materials to Rights &amp; Reproductions.<a href="#" class="close">&times;</a></p><br>
+                                    <input type="checkbox" name="service_3d_items" value="3D collection items" id="is3dselected"> <label class="box">3D collection items</label>
+                                        <p data-alert class="alert-box info radius" id="txt3dinstructions">Coordinate material delivery to the photo lab with collection managers. <a href="#" class="close">&times;</a></p><br>          
+                                    <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. photography of a gallery space">Exhibition documentation</span></label><br>
+                                        <label for="exhibitiondocumentation" id="labelfor_exhibitiondocumentation">What is the name of the exhibition you would like photographed?</label>
+                                        <input type="text" name="service_exhibition_documentation_details" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation"></textarea>
+                                        <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">When should photography occur?</label>
+                                        <input type="date" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
+                                    <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. images for use in an exhibition">Photography for exhibitions</span></label><br>
+                                        <label for="photographyexhibitions" id="labelfor_photographyexhibitions">Exhibition title</label>
+                                        <input type="text" name="service_photography_exhibitions_details" placeholder="Facing Freedom" id="photographyexhibitions"></text>
+                                        <label for="photography_exhibitions_description" id="labelfor_photography_exhibitions_description">Description</label>
+                                        <textarea name="service_photography_exhibitions_details" placeholder="Describe the exhibition" id="photography_exhibitions_description"></textarea>
 
+                                         <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">Photography details</label>
+                                        <textarea name="service_photography_exhibitions_details" placeholder="Objects, people, or locations to be photographed." id="photography_exhibitions_details"></textarea>
 
+                                        <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">When should photography occur?</label>
+                                        <input type="date" name="service_photography_exhibitions_details" id="datetime_photographyexhibitions">
+                                    <input type="checkbox" name="service_marketing" value="Marketing photography" id="ismarketingselected"> <label class="box">Marketing photography</label><br>
+                                        <label for="marketing" id="labelfor_marketing">Describe what you would liked photographed.</label>
+                                        <textarea name="service_marketing_details" placeholder="placeholder" id="marketing"></textarea>
+                                        <label for="datetime_marketing" id="labelfor_datetime_marketing">When should photography occur?</label>
+                                        <input type="date" name="service_marketing_details" id="datetime_marketing">
+                                    <input type="checkbox" name="service_event" value="Event photography" id="iseventselected"> <label class="box">Event photography</label><br>
+                                        <label for="event" id="labelfor_event">Describe what event you would like photographed.</label>
+                                        <textarea name="service_event_details" placeholder="placeholder" id="event"></textarea>
+                                        <label for="datetime_event" id="labelfor_datetime_event">When should photography occur?</label>
+                                        <input type="date" name="service_event_details" id="datetime_event">
+                                    <input type="checkbox" name="service_other" value="Other" id="isotherserviceselected"><label class="box">Other</label><br>
+                                        <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">Describe the service request.</label>
+                                        <textarea name="service_other_details" placeholder="placeholder" id="photoservice_other_textarea"></textarea>
+                                </section>
+                            </fieldset>
 
-              <input type="checkbox" name="photoservice_new" value="Exhibition documentation" id="isexhibitiondocumentation"> Exhibition documentation e.g. photography of a gallery space<br>
-              <textarea name="photoservice_new" placeholder="What is the name of the exhibition you would like photographed?" id="exhibitiondocumentation" style="display:none"></textarea>
-              <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc" style="display:none">When should photography occur?</label>
-              <input type="datetime" name="datetime_exhibitiondoc" id="datetime_exhibitiondoc" style="display:none">
+                            <fieldset>
+                                <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected"><label class="box biglabel">I need copies of existing images</label><br>
+                                <section id= "existingchoices">
+                                    <input type="checkbox" name="service_collections_items" value="Collections items" id="iscollectionsselected"> <label class="box">Collections items</label><br>
+                                        <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">Please include the ICHi, DN, SDN, or HB numbers of the collection items.</label>
+                                        <textarea name="service_collections_items_details" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
+                                    <input type="checkbox" name="service_noncollections_items" value="Non-collections items"> <label class="box">Non-collections items</label><br>
+                                </section>
+                            </fieldset>
+                        </fieldset>
+                    </div>
+      
+        
+                    <!--  -->
+                    <!-- Tab Three -->
+                    <!--  -->
 
-              <input type="checkbox" name="photoservice_new" value="Photography for exhibitions" id="isphotographyexhibitions"> Photography for exhibitions e.g. images for use in an exhibition<br>
-              <textarea name="photoservice_new" placeholder="Describe the exhibition  you working on, and what objects, people, or locations would you like photographed." id="photographyexhibitions" style="display:none"></textarea>
-              <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions" style="display:none">When should photography occur?</label>
-              <input type="datetime" name="datetime_photographyexhibitions" id="datetime_photographyexhibitions" style="display:none">
+                    <div class="content large-12 columns" id="panel2-3">
+                        <fieldset>
+                        <legend>Planned Use</legend>
+                            <p class="instructions">Some of the images in our collection have restrictions. If you are requesting collections materials, Rights &amp; Reproductions will make sure your images are cleared for their intended use.</p>
+                            <input type="checkbox" name="use" value="Social media"><label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. Facebook, Tumblr, Blog, etc.">Social media</span></label><br>
+                            <input type="checkbox" name="use" value="Website"><label class="box">Website</label><br>
+                            <input type="checkbox" name="use" value="Publication"><label class="box">Publication</label><br>
+                            <input type="checkbox" name="use" value="Exhibition"><label class="box">Exhibition</label><br>
+                            <input type="checkbox" name="use" value="Advertising and Marketing"><label class="box">Advertising &amp; Marketing</label><br>
+                            <input type="checkbox" name="use" value="Other" id="isotheruse"><label class="box">Other</label><br>
+                                <label for="use_other_textarea" id="labelfor_use_other_textarea">What will these images be used for?</label>
+                                <textarea name="use_other" placeholder="placeholder" id="use_other_textarea"></textarea>
+                        </fieldset>
+      
+                        <fieldset>
+                        <legend>Client</legend>
+                            <input type="radio" name="client" value="the Museum" required><label class="box">Chicago History Museum</label><br>
+                            <input type="radio" name="client" value="external client" id="isexternalclient" required><label class="box">External Client</label><br>
+                            <label for="externalclient_name" id="labelfor_externalclient_name">What is the name of the external client?</label>
+                            <input type="text" name="external_client_name" placeholder="placeholder" id="externalclient_name">
+                        </fieldset>
 
-              <input type="checkbox" name="photoservice_new" value="Marketing photography" id="ismarketingselected"> Marketing photography<br>
-              <textarea name="photoservice_new" placeholder="Describe what you would liked photographed." id="marketing" style="display:none"></textarea>
-              <label for="datetime_marketing" id="labelfor_datetime_marketing" style="display:none">When should photography occur?</label>
-              <input type="datetime" name="datetime_marketing" id="datetime_marketing" style="display:none">
+                    </div>
 
-              <input type="checkbox" name="photoservice_new" value="Event photography" id="iseventselected"> Event photography<br>
-              <textarea name="photoservice_new" placeholder="Describe what event you would like photographed." id="event" style="display:none"></textarea>
-              <label for="datetime_event" id="labelfor_datetime_event" style="display:none">When should photography occur?</label>
-              <input type="datetime" name="datetime_event" id="datetime_event" style="display:none">
+                    <!--  -->
+                    <!-- Tab Four -->
+                    <!--  -->
 
-              <input type="checkbox" name="photoservice_new" value="Other" id="isotherserviceselected"> Other<br>
-              <textarea name="photoservice_new_other" placeholder="Describe the service request." id="photoservice_other_textarea" style="display:none"></textarea>
+                    <div class="content large-12 columns" id="panel2-4">
+      
+                        <fieldset>
+                        <legend>Digital File Specs</legend>
+                            <fieldset>
+                            <label>Image Quality</label>
+                                <input type="radio" name="imgquality" value="Low resolution image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for web use or PowerPoint presentation, 72 dpi">Low resolution image</span></label><br>
+                                <input type="radio" name="imgquality" value="Editorial quality image" required> <label class="box"><span data-tooltip class="has-tip tip-right" title="e.g. for printing or publication use, 300 dpi">Editorial quality image</span></label><br>
+                                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> <label class="box">Other</label><br>
+                                    <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">Describe the image quality request.</label>
+                                    <textarea name="imgquality_other" placeholder="placeholder" id="imgquality_other_textarea"></textarea>
+                            </fieldset>
+                            <fieldset>
+                            <label>File Type</label>
+                                <input type="radio" name="filetype" value="JPEG" required><label class="box"> JPEG </label><br>
+                                <input type="radio" name="filetype" value="TIFF" required><label class="box">TIFF</label><br>
+                            </fieldset>
+                        </fieldset>
 
-            <label>Exisiting Images</label>
-              <input type="checkbox" name="photoservice_exisiting" value="Collections items" id="iscollectionsselected"> Collections items<br>
-              <textarea name="photoservice_exisiting_collection_id" placeholder="Please include the ICHi, DN, SDN, or HB numbers of the collection items." id="photoservice_collections_textarea" style="display:none"></textarea>
-              <input type="checkbox" name="photoservice_exisiting" value="Non-collections items"> Non-collections items<br>
-        </fieldset>
-      </p>
+                        <fieldset>
+                        <legend>Delivery Method</legend>
+                            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> <label class="box">Save on server</label><br>
+                                <label for="folderlocation" id="labelfor_folderlocation">Provide the folder location.</label>
+                                <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014 object list, images, and label-blog copy\Photo Orders\4229 Jan. and Feb" class="textbox" id="folderlocation">
+                            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> <label class="box">E-mail</label><br>
+                                <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email">
+                            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> <label class="box">Burn to disc</label>
+                                <p data-alert class="alert-box info radius" id="txtburninstructions"> CDs and DVDs with labels are $2 each and are charged to your account.<a href="#" class="close">&times;</a></p><br>
+                            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> <label class="box">Other</label><br>
+                                <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">How would you like the files delivered?</label>
+                                <textarea name="delivery_other" placeholder="placeholder" id="delivery_other_textarea"></textarea>
+                        </fieldset>
 
-      <p>
-        <fieldset>
-          <legend>Delivery Method</legend>
+                        <fieldset>
+                        <label for="date">Due Date</label>
+                            <p class="instructions">Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<p>
+                            <input type="date" name="date" id="date" required>
+                            <input type="submit" name="submit" value="Place Order" class="button labelspace">
 
-            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> Save on server. Provide folder location.<br>
-            <input type="text" name="folder_location" placeholder="Folder location" class="textbox" id="folderlocation" style="display:none">
-            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"> E-mail<br>
-            <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email" style="display:none">
-            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> Burn to disc
-            <div id="txtburninstructions" style="display:none"> CDs and DVDs with labels are $2 each and are charged to your account.</div>
-            <br>
-            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> Other<br>
-            <textarea name="delivery_other" placeholder="Describe the delivery method." id="delivery_other_textarea" style="display:none"></textarea>
-        </fieldset>
-      </p>
+                        </fieldset>
 
-      <p>
-        <fieldset>
-          <legend>Digital File Specs</legend>
-            <fieldset>
-              <label>Image Quality</label>
-                <input type="radio" name="imgquality" value="Low resolution image" required> Low resolution image e.g. for web use or PowerPoint presentation, 72 dpi.<br>
-                <input type="radio" name="imgquality" value="Editorial quality image" required> Editorial quality image e.g. for printing or publication use, 300 dpi.<br>
-                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> Other<br>
-                <textarea name="imgquality_other" placeholder="Describe the image quality request." id="imgquality_other_textarea" style="display:none"></textarea>
-            </fieldset>
-            <fieldset>
-              <label>File Type</label>
-                <input type="radio" name="filetype" value="JPEG" required> JPEG<br>
-                <input type="radio" name="filetype" value="TIFF" required> TIFF<br>
-            </fieldset>
-        </fieldset>
-      </p>
+                    </div>
 
-      <p>
-        <fieldset>
-          <legend>Planned Use</legend>
-            <input type="checkbox" name="use" value="Social media"> Social media e.g. Facebook, Tumblr, Blog, etc.<br>
-            <input type="checkbox" name="use" value="Website"> Website<br>
-            <input type="checkbox" name="use" value="Publication"> Publication<br>
-            <input type="checkbox" name="use" value="Exhibition"> Exhibition<br>
-            <input type="checkbox" name="use" value="Advertising and Marketing"> Advertising &amp; Marketing<br>
-            <input type="checkbox" name="use" value="Other" id="isotheruse"> Other<br>
-            <textarea name="use_other" placeholder="Describe the planned use." id="use_other_textarea" style="display:none"></textarea>
-        </fieldset>
-      </p>
+      
+                </div>
 
-      <p>
-        <fieldset>
-          <legend>Client</legend>
-            <input type="radio" name="client" value="Chicago History Museum" required> Chicago History Museum<br>
-            <input type="radio" name="client" value="external client" id="isexternalclient" required> External Client<br>
-            <input type="text" name="external_client_name" placeholder="Name of external client" id="externalclient_name" style="display:none">
-        </fieldset>
-      </p>
+                </form>
 
-      <p>
-        <label for="date">Due Date</label>
-          Allow for a two week turnaround, with the understanding that some orders make take additional time. Requests for large batches of new images will take additional time. Rush orders are reviewed on a case-by-case basis.<br>
-          <input type="date" name="date" id="date" required>
-      </p>
+            </div>
+        </div>
 
-      <p>
-        <input type="submit" name="submit" value="Place Order" class="button">
-      </p>
-
-    </form>
-      </div>
-    </div>
   </main>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script src="js/foundation.tooltip.js"></script>
     <script type="text/javascript" src="js/placeholders.min.js"></script>
     <script type="text/javascript" src="js/custom-smartform.js"></script>
     <script>
