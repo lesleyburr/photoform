@@ -122,6 +122,13 @@ $('#iscollectionsselected').click(function() {
     $("#photoservice_collections_textarea").toggle(this.checked);
 });
 
+$('#isservicenoncollectionsselected').click(function() {
+    $("#labelfor_service_noncollections_items_details_textarea").toggle(this.checked);
+});
+
+$('#isservicenoncollectionsselected').click(function() {
+    $("#service_noncollections_items_details_textarea").toggle(this.checked);
+});
 
 // 
 // 
