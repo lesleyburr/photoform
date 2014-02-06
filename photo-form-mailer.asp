@@ -34,7 +34,7 @@ TS.close
 Set TS = Nothing
 Set FSO = Nothing
 
-' setup email
+' Setup E-mail
 Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
