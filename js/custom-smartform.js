@@ -150,7 +150,7 @@ $('#isotherspecs').click(function() {
 // 
 
 $('#is2dselected, #is3dselected, #isotherserviceselected, #iscollectionsselected').click(function() {
-     $("#restrictions").show(this.checked);
+     $("#restrictions").toggle(this.checked);
 });
 
 
@@ -207,5 +207,21 @@ $('#isdeliveryother').click(function() {
 });
 
 $('#isnewimagesselected').click(function() {
-     $("#largebatches").show(this.checked);
+     $("#largebatches").toggle(this.checked);
+});
+
+
+// 
+// 
+// Formatter
+// 
+// 
+
+new Formatter(document.getElementById('phone'), {
+  'pattern': '({{999}}) {{999}}-{{9999}}',
+  'persistent': true
+});
+$('#phone').formatter({
+  'pattern': '({{999}}) {{999}}-{{9999}}',
+  'persistent': true
 });
