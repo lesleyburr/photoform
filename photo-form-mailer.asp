@@ -37,6 +37,20 @@ TS.close
 Set TS = Nothing
 Set FSO = Nothing
 
+
+
+' *******************************************************
+' Remove non-numeric characters from input
+' *******************************************************
+Dim regEx
+
+  Function stripNonNumeric(inputString)
+    Set regEx = New RegExp
+     regEx.Global = True
+     regEx.Pattern = "\D"
+     stripNonNumeric = regEx.Replace(inputString,"")
+  End Function
+
 ' *******************************************************
 ' Setup the Response HTML E-mail and Send it
 ' *******************************************************
@@ -57,8 +71,8 @@ HTML = HTML & "<h1><strong>Order Number: " & atopic & "</h1>"
 
 ' User Information
 HTML = HTML & "<p>Requested by <strong>" & Request.Form("name") & "</strong> in <strong>" & Request.Form("department") & "</strong>.<br />"
-HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
-HTML = HTML & "Account: " & Request.Form("account") & "</p>"
+HTML = HTML &  "Phone: " & stripNonNumeric(Request.Form("phone")) & "<br />"
+HTML = HTML & "Account: " & stripNonNumeric(Request.Form("account")) & "</p>"
 
 ' Photography Services
 
