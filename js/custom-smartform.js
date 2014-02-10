@@ -149,9 +149,9 @@ $('#isotherspecs').click(function() {
 // 
 // 
 
-// $('#is2dselected, #is3dselected, #isotherserviceselected, #iscollectionsselected').click(function() {
-//     $("#restrictions").show(this.checked);
-// });
+$('#is2dselected, #is3dselected, #isotherserviceselected, #iscollectionsselected').click(function() {
+     $("#restrictions").show(this.checked);
+});
 
 
 $('#isotheruse').click(function() {
