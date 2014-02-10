@@ -221,3 +221,8 @@ $('#phone').formatter({
   'pattern': '({{999}}) {{999}}-{{9999}}',
   'persistent': true
 });
+
+$('#account').formatter({
+  'pattern': '{{999}}-{{999}}-{{9999}}-{{9999}}',
+  'persistent': true
+});
