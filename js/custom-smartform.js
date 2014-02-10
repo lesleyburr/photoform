@@ -217,10 +217,6 @@ $('#isnewimagesselected').click(function() {
 // 
 // 
 
-new Formatter(document.getElementById('phone'), {
-  'pattern': '({{999}}) {{999}}-{{9999}}',
-  'persistent': true
-});
 $('#phone').formatter({
   'pattern': '({{999}}) {{999}}-{{9999}}',
   'persistent': true
