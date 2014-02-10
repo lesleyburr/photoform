@@ -149,6 +149,11 @@ $('#isotherspecs').click(function() {
 // 
 // 
 
+// $('#is2dselected, #is3dselected, #isotherserviceselected, #iscollectionsselected').click(function() {
+//     $("#restrictions").show(this.checked);
+// });
+
+
 $('#isotheruse').click(function() {
     $("#labelfor_use_other_textarea").toggle(this.checked);
 });
