@@ -75,10 +75,11 @@ HTML = HTML &  "Phone: " & stripNonNumeric(Request.Form("phone")) & "<br />"
 HTML = HTML & "Account: " & stripNonNumeric(Request.Form("account")) & "</p>"
 
 ' Photography Services
+HTML = HTML & "<h2>Photography and Imaging Needs</h2>"
 
 ' - New Images Requested
 If Request.Form("new_images") = "on" Then
-	HTML = HTML & "<h2>New Images Needed</h2>"
+	HTML = HTML & "<h3>New Images</h3>"
 
 	' -- 2D Collection Items
 	If Request.Form("service_2d_items") <> "" then
@@ -92,9 +93,11 @@ If Request.Form("new_images") = "on" Then
 
 	' -- Exhibition Documentation
 	If Request.Form("service_exhibition_documentation") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
+		HTML = HTML & "<h4>" & Request.Form("service_exhibition_documentation") & "</h4>"
 		Dim exhibition_documentation_details, exhibition_documentation_detail
 		exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
+
+			HTML = HTML & "<p>"
 
 		For Each exhibition_documentation_detail in exhibition_documentation_details
 			HTML = HTML & "<br />" & exhibition_documentation_detail
@@ -104,9 +107,11 @@ If Request.Form("new_images") = "on" Then
 
 	' -- Photography for Exhibitions
 	If Request.Form("service_photography_exhibitions") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_photography_exhibitions")
+		HTML = HTML & "<h4>" & Request.Form("service_photography_exhibitions") & "</h4>"
 		Dim exhibition_photography_details, exhibition_photography_detail
 		exhibition_photography_details = split(Request.Form("service_photography_exhibitions_details"),",")
+
+			HTML = HTML & "<p>"
 
 		For Each exhibition_photography_detail in exhibition_photography_details
 			HTML = HTML & "<br />" & exhibition_photography_detail
@@ -116,9 +121,11 @@ If Request.Form("new_images") = "on" Then
 
 	' -- Marketing Photography
 	If Request.Form("service_marketing") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_marketing")
+		HTML = HTML & "<h4>" & Request.Form("service_marketing") & "</h4>"
 		Dim marketing_details, marketing_detail
 		marketing_details = split(Request.Form("service_marketing_details"),",")
+
+			HTML = HTML & "<p>"
 
 		For Each marketing_detail in marketing_details
 			HTML = HTML & "<br />" & marketing_detail
@@ -128,9 +135,11 @@ If Request.Form("new_images") = "on" Then
 
 	' -- Event Photography
 	If Request.Form("service_event") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_event")
+		HTML = HTML & "<h4>" & Request.Form("service_event") & "</h4>"
 		Dim event_details, event_detail
 		event_details = split(Request.Form("service_event_details"),",")
+
+			HTML = HTML & "<p>"
 
 		For Each event_detail in event_details
 			HTML = HTML & "<br />" & event_detail
@@ -149,41 +158,22 @@ End If
 
 If Request.Form("existing_images") = "on" Then
 
-	HTML = HTML & "<h2>Existing Images Needed</h2>"
+	HTML = HTML & "<h3>Existing Images Needed</h3>"
 
 	' -- Collection Items
 	If Request.Form("service_collections_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_collections_items") & "<br />"
-		HTML = HTML & Request.Form("service_collections_items_details") & "</p>"
+		HTML = HTML & "<h4>" & Request.Form("service_collections_items") & "</h4>"
+		HTML = HTML & "<p>" & Request.Form("service_collections_items_details") & "</p>"
 	End If
 
 	' -- Non-Collection Items
 	If Request.Form("service_noncollections_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_noncollections_items") & "</p>"
+		HTML = HTML & "<h4>" & Request.Form("service_noncollections_items") & "</h4>"
+		HTML = HTML & "<p>" & Request.Form("service_noncollections_items_details") & "</p>"
 	End If
 
 
 End If
-
-
-
-' Digital File Specs
-HTML = HTML & "<h2>File Specifications</h2>"
-
-HTML = HTML & "<h3>Image Quality</h3>"
-
-dim quality
-quality = Request.Form("imgquality")
-
-If quality = "Other" Then
-	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & "</em></p>"
-Else
-	HTML = HTML & "<p><em>" & quality & "</em></p>"
-End If
-
-' File Type
-HTML = HTML & "<h3>File Type</h3>"
-HTML = HTML & "<p><em>" & Request.Form("filetype") & "</em></p>"
 
 
 'Planned Use
@@ -214,8 +204,24 @@ Else
 End If
 
 
+' Digital File Specs: Quality and File Type
+HTML = HTML & "<h2>File Specifications</h2>"
+
+HTML = HTML & "<h3>Image Type</h3>"
+
+dim quality
+quality = Request.Form("imgquality")
+
+If quality = "Other" Then
+	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & ", " & Request.Form("filetype") & "</em>.</p>"
+Else
+	HTML = HTML & "<p><em>" & quality & ", " & Request.Form("filetype") &  "</em>.</p>"
+End If
+
+
+
 ' Delivery Methods
-HTML = HTML & "<h2>Delivery</h2>"
+HTML = HTML & "<h3>Delivery</h3>"
 
 Dim delivery_methods, delivery_method
 delivery_methods = split(Request.Form("delivery"),",")
