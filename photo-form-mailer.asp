@@ -4,7 +4,7 @@
 
 <%
 ' *******************************************************
-' Setup the order number counter and file storage for it.
+' Setup the order number counter and its file storage.
 ' *******************************************************
 dim dicKey, dicVal, dicObj, navfile, fileObj, strFilePath, nav, atopic
 set dicObj = createobject("Scripting.Dictionary")
@@ -19,14 +19,14 @@ navfile.close
 set fileObj = nothing
 
 ' -Set up Constants
-Const ForWriting = 2   ' Input OutPut mode
+Const ForWriting = 2
 Const Create = True
 
 ' -Dimension local variables
 Dim MyFile
 MyFile = strFilePath
 Dim FSO
-Dim TS  ' TextStreamObject
+Dim TS
 
 Set FSO = Server.CreateObject("Scripting.FileSystemObject")
 Set TS = FSO.OpenTextFile(MyFile, ForWriting, Create)
@@ -137,8 +137,8 @@ If Request.Form("new_images") = "on" Then
 	Next
 End If
 
-' - Existing Images Requested
 
+' - Existing Images Requested
 If Request.Form("existing_images") = "on" Then
 
 	HTML = HTML & "<h2>Existing Images</h2>"
@@ -267,6 +267,9 @@ HTML = HTML & "<p>" & Request.Form("date") & "</p>"
 HTML = HTML & "</section>"
 
 
+' *************************************
+' Close the e-mail and clear memory.
+' *************************************
 HTML = HTML & "</body>"
 HTML = HTML & "</html>"
 
@@ -296,8 +299,7 @@ Create the Response Web Page
 	<main>
     	<div class="row">
       		<div class="large-12 columns">
-        		<header><h1>Photography and Imaging Orders</h1></header>
-        		<p>Thank you for submitting your photo order.</p>
+        		<header><h1>Thank you for the Photography and Imaging Order</h1></header>
 				<p>Your order tracking number is <strong><% Response.Write atopic %></strong>.</p>
 				<p><em>Please keep this number for your records it will be the primary means of retrieving your digital images should you need them again.</em></p>
 			</div>
