@@ -43,15 +43,17 @@ fieldset {
 	margin-top: 2em;
 }
 
-.box {
-	margin-left: 1em;
+/*.box {
+	margin-left: 2em;
 }
+*/
 
 input {
 	vertical-align: bottom;
 	position: relative;
 	margin: 0;
-	top: 14px;
+	top: 30px;
+	left: -20px;
 }
 
 /*.tabs dd {
@@ -63,8 +65,13 @@ p {
 	margin-bottom: 0;
 }
 
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display: block;
+}
+
+
 #newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
-#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #labelfor_photography_exhibitions_description, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
+#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
 #labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing, 
 #marketing, #labelfor_datetime_marketing, #datetime_marketing, 
 #event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea, 

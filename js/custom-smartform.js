@@ -41,14 +41,6 @@ $('#isphotographyexhibitions').click(function() {
 });
 
 $('#isphotographyexhibitions').click(function() {
-    $("#labelfor_photography_exhibitions_description").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
-    $("#photography_exhibitions_description").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
     $("#labelfor_photography_exhibitions_details").toggle(this.checked);
 });
 
