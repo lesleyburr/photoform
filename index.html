@@ -68,27 +68,27 @@
                         <legend>Photography Services</legend>
                             <fieldset>
                                 <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
-                                <label class="box biglabel">I need new images</label>
+                                <label class="selectlabel biglabel">I need new images</label>
                                     
                                     <section id="newchoices">
                                     <label>What type of images?</label>
                                     
                                     <input type="checkbox" name="new_image_service" value="2D collection items" id="is2dselected"> 
-                                    <label class="box">2D collection items</label>
+                                    <label class="selectlabel">2D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt2dinstructions">
                                             Bring materials to the Rights &amp; Reproductions department.
                                             <a href="#" class="close">&times;</a>
                                         </p>
                                     
                                     <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected"> 
-                                    <label class="box">3D collection items</label>
+                                    <label class="selectlabel">3D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">
                                             Coordinate material delivery to the photo lab with collection managers. 
                                             <a href="#" class="close">&times;</a>
                                         </p>      
                                     
                                     <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="isexhibitiondocumentation"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                             <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space.">
                                                 Exhibition documentation
                                             </span>
@@ -103,7 +103,7 @@
                                             <input type="date" name="new_exdoc_date" id="datetime_exhibitiondoc">
                                     
                                     <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
                                             Photography for exhibitions
                                         </span>
@@ -124,7 +124,7 @@
                                             <input type="date" name="new_photo_for_ex_date" id="datetime_photographyexhibitions">
                                     
                                     <input type="checkbox" name="new_image_service" value="Marketing photography" id="ismarketingselected"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         Marketing photography
                                     </label>
                                         <label for="marketing" id="labelfor_marketing">
@@ -137,7 +137,7 @@
                                             <input type="date" name="new_marketing_date" id="datetime_marketing">
                                     
                                     <input type="checkbox" name="new_image_service" value="Event photography" id="iseventselected"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         Event photography
                                     </label>
                                         <label for="event" id="labelfor_event">
@@ -150,7 +150,7 @@
                                             <input type="date" name="new_event_date" id="datetime_event">
                                     
                                     <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         Other
                                     </label>
                                         <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
@@ -162,7 +162,7 @@
 
                             <fieldset>                                
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
-                                <label class="box biglabel">
+                                <label class="selectlabel biglabel">
                                     I need copies of existing images
                                 </label>
 
@@ -173,7 +173,7 @@
                                     </label>
                                     
                                     <input type="checkbox" name="existing_image_service" value="Collections items" id="iscollectionsselected"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         Collection items
                                     </label>
                                         <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">
@@ -182,7 +182,7 @@
                                             <textarea name="collection_item_ids" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
                                     
                                     <input type="checkbox" name="existing_image_service" value="Non-collections items" id="isservicenoncollectionsselected"> 
-                                    <label class="box">
+                                    <label class="selectlabel">
                                         Non-collection items
                                     </label>
                                         <label for="service_noncollections_items_details_textarea" id="labelfor_service_noncollections_items_details_textarea">
@@ -209,34 +209,34 @@
                             </p>
 
                             <input type="checkbox" name="use" value="Social media">
-                            <label class="box">
+                            <label class="selectlabel">
                                 <span data-tooltip class="has-tip tip-right" title="Facebook, Tumblr, Blog, etc.">
                                     Social media
                                 </span>
                             </label>
                             
                             <input type="checkbox" name="use" value="Website">
-                            <label class="box">
+                            <label class="selectlabel">
                                 Website
                             </label>
 
                             <input type="checkbox" name="use" value="Publication">
-                            <label class="box">
+                            <label class="selectlabel">
                                 Publication
                             </label>
 
                             <input type="checkbox" name="use" value="Exhibition">
-                            <label class="box">
+                            <label class="selectlabel">
                                 Exhibition
                             </label>
 
                             <input type="checkbox" name="use" value="Advertising and Marketing">
-                            <label class="box">
+                            <label class="selectlabel">
                                 Advertising &amp; Marketing
                             </label>
 
                             <input type="checkbox" name="use" value="Other" id="isotheruse">
-                            <label class="box">
+                            <label class="selectlabel">
                                 Other
                             </label>
                                 <label for="use_other_textarea" id="labelfor_use_other_textarea">
@@ -249,12 +249,12 @@
                         <legend>Who are the images for?</legend>
                             
                             <input type="radio" name="client" value="the Museum" required>
-                            <label class="box">
+                            <label class="selectlabel">
                                 Chicago History Museum
                             </label>
 
                             <input type="radio" name="client" value="external client" id="isexternalclient" required>
-                            <label class="box">
+                            <label class="selectlabel">
                                 External Client
                             </label>
                                 <label for="externalclient_name" id="labelfor_externalclient_name">
@@ -277,21 +277,21 @@
                             <fieldset>
                             <label>Image Quality</label>
                                 <input type="radio" name="imgquality" value="Low resolution" required> 
-                                <label class="box">
+                                <label class="selectlabel">
                                     <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi.">
                                         Low resolution
                                     </span>
                                 </label>
 
                                 <input type="radio" name="imgquality" value="Editorial quality" required> 
-                                <label class="box">
+                                <label class="selectlabel">
                                     <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi.">
                                         Editorial quality
                                     </span>
                                 </label>
 
                                 <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> 
-                                <label class="box">
+                                <label class="selectlabel">
                                     Other
                                 </label>
                                     <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">
@@ -303,14 +303,14 @@
                             <fieldset>
                             <label>File Type</label>
                                 <input type="radio" name="filetype" value="JPEG" required>
-                                <label class="box">
+                                <label class="selectlabel">
                                     <span data-tooltip class="has-tip tip-right" title="Recommended for web or research.">
                                         JPEG
                                     </span>
                                 </label>
 
                                 <input type="radio" name="filetype" value="TIFF" required>
-                                <label class="box">
+                                <label class="selectlabel">
                                     <span data-tooltip class="has-tip tip-right" title="Recommended for print.">
                                         TIFF
                                     </span>
@@ -321,7 +321,7 @@
                         <fieldset>
                         <legend>File Delivery Method</legend>
                             <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> 
-                            <label class="box">
+                            <label class="selectlabel">
                                 Save on server
                             </label>
                                 <label for="folderlocation" id="labelfor_folderlocation">
@@ -329,13 +329,14 @@
                                 </label>
                                     <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="textbox" id="folderlocation">
                             
-                            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected"><label class="box">
+                            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected">
+                            <label class="selectlabel">
                                 E-mail
                             </label>
                                 <input type="email" name="delivery_email" placeholder="name@mail.com" class="textbox" id="deliveryemail">
                             
                             <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> 
-                            <label class="box">
+                            <label class="selectlabel">
                                 Burn to disc
                             </label>
                                 <p data-alert class="alert-box info radius" id="txtburninstructions"> 
@@ -344,7 +345,7 @@
                                 </p>
                             
                             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> 
-                            <label class="box">
+                            <label class="selectlabel">
                                 Other
                             </label>
                                 <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">

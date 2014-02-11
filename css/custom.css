@@ -12,6 +12,12 @@ label {
 	color: #000;
 }
 
+.selectlabel {
+	position: relative;
+	left: 20px;
+	top: -30px;
+}
+
 /*.biglabel {
 	font-size: 1.2em;
 	padding-bottom: 1em;
@@ -43,22 +49,12 @@ fieldset {
 	margin-top: 2em;
 }
 
-/*.box {
-	margin-left: 2em;
-}
-*/
 
 input {
 	vertical-align: bottom;
 	position: relative;
 	margin: 0;
-	top: 30px;
-	left: -20px;
 }
-
-/*.tabs dd {
-	width: 20%;
-}*/
 
 p {
 	margin-top: 1em;
