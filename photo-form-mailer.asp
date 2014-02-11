@@ -205,9 +205,7 @@ End If
 
 
 ' Digital File Specs: Quality and File Type
-HTML = HTML & "<h2>File Specifications</h2>"
-
-HTML = HTML & "<h3>Image Type</h3>"
+HTML = HTML & "<h2>File Type</h2>"
 
 dim quality
 quality = Request.Form("imgquality")
@@ -221,7 +219,7 @@ End If
 
 
 ' Delivery Methods
-HTML = HTML & "<h3>Delivery</h3>"
+HTML = HTML & "<h2>File Delivery</h2>"
 
 Dim delivery_methods, delivery_method
 delivery_methods = split(Request.Form("delivery"),",")
