@@ -191,7 +191,7 @@ $('#isserverselected').click(function() {
 });
 
 $('#isemailselected').click(function() {
-    $("#email").toggle(this.checked);
+    $("#deliveryemail").toggle(this.checked);
 });
 
 $('#isburnselected').click(function() {

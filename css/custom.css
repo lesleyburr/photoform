@@ -71,7 +71,7 @@ p {
 #photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
 #photoservice_collections_textarea, #labelfor_service_noncollections_items_details_textarea, #service_noncollections_items_details_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea, 
 #use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation, 
-#email, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event, #restrictions, #largebatches {
+#deliveryemail, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event, #restrictions, #largebatches {
 	display: none;
 }
 
