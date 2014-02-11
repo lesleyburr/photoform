@@ -73,21 +73,21 @@
                                     <section id="newchoices">
                                     <label>What type of images?</label>
                                     
-                                    <input type="checkbox" name="service_2d_items" value="2D collection items" id="is2dselected"> 
+                                    <input type="checkbox" name="new_image_service" value="2D collection items" id="is2dselected"> 
                                     <label class="box">2D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt2dinstructions">
                                             Bring materials to the Rights &amp; Reproductions department.
                                             <a href="#" class="close">&times;</a>
                                         </p>
                                     
-                                    <input type="checkbox" name="service_3d_items" value="3D collection items" id="is3dselected"> 
+                                    <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected"> 
                                     <label class="box">3D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">
                                             Coordinate material delivery to the photo lab with collection managers. 
                                             <a href="#" class="close">&times;</a>
                                         </p>      
                                     
-                                    <input type="checkbox" name="service_exhibition_documentation" value="Exhibition documentation" id="isexhibitiondocumentation"> 
+                                    <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="isexhibitiondocumentation"> 
                                     <label class="box">
                                             <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space.">
                                                 Exhibition documentation
@@ -96,13 +96,13 @@
                                         <label for="exhibitiondocumentation" id="labelfor_exhibitiondocumentation">
                                             What is the name of the exhibition you want photographed?
                                         </label>
-                                            <input type="text" name="service_exhibition_documentation_details" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation">
+                                            <input type="text" name="exdoc_exhibition_title" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation">
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">
                                             When should photography occur?
                                         </label>
-                                            <input type="date" name="service_exhibition_documentation_details" id="datetime_exhibitiondoc">
+                                            <input type="date" name="exdoc_photo_date" id="datetime_exhibitiondoc">
                                     
-                                    <input type="checkbox" name="service_photography_exhibitions" value="Photography for exhibitions" id="isphotographyexhibitions"> 
+                                    <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions"> 
                                     <label class="box">
                                         <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
                                             Photography for exhibitions
@@ -111,23 +111,23 @@
                                         <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
                                             What is the exhibition title?
                                         </label>
-                                            <input type="text" name="service_photography_exhibitions_details" placeholder="Facing Freedom" id="photographyexhibitions"></text>
+                                            <input type="text" name="photography_exhibitions_title" placeholder="Facing Freedom" id="photographyexhibitions"></text>
                                         <label for="photography_exhibitions_description" id="labelfor_photography_exhibitions_description">
                                             Describe the exhibition.
                                         </label>
-                                            <textarea name="service_photography_exhibitions_details" placeholder="Based on the central idea that the history of the United States has been shaped by conflicts over what it means to be free, this exhibition uses images, artifacts, and interactivity to explore stories from the nation’s past, and highlights some of the ways Americans have struggled over the true meaning of freedom." id="photography_exhibitions_description"></textarea>
+                                            <textarea name="photography_exhibitions_description" placeholder="Based on the central idea that the history of the United States has been shaped by conflicts over what it means to be free, this exhibition uses images, artifacts, and interactivity to explore stories from the nation’s past, and highlights some of the ways Americans have struggled over the true meaning of freedom." id="photography_exhibitions_description"></textarea>
                                          <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">
                                             <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed.">
                                                 Photography details
                                             </span>
                                         </label>
-                                            <textarea name="service_photography_exhibitions_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="photography_exhibitions_details"></textarea>
+                                            <textarea name="photography_exhibitions_photo_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="photography_exhibitions_details"></textarea>
                                         <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">
                                             When should photography occur?
                                         </label>
-                                            <input type="date" name="service_photography_exhibitions_details" id="datetime_photographyexhibitions">
+                                            <input type="date" name="photography_exhibitions_date" id="datetime_photographyexhibitions">
                                     
-                                    <input type="checkbox" name="service_marketing" value="Marketing photography" id="ismarketingselected"> 
+                                    <input type="checkbox" name="new_image_service" value="Marketing photography" id="ismarketingselected"> 
                                     <label class="box">
                                         Marketing photography
                                     </label>
@@ -140,27 +140,27 @@
                                         </label>
                                             <input type="date" name="service_marketing_details" id="datetime_marketing">
                                     
-                                    <input type="checkbox" name="service_event" value="Event photography" id="iseventselected"> 
+                                    <input type="checkbox" name="new_image_service" value="Event photography" id="iseventselected"> 
                                     <label class="box">
                                         Event photography
                                     </label>
                                         <label for="event" id="labelfor_event">
                                             What is the event name?
                                         </label>
-                                            <textarea name="service_event_details" placeholder="The Members' open house" id="event"></textarea>
+                                            <textarea name="event_name" placeholder="The Members' open house" id="event"></textarea>
                                         <label for="datetime_event" id="labelfor_datetime_event">
                                             When should photography occur?
                                         </label>
-                                            <input type="date" name="service_event_details" id="datetime_event">
+                                            <input type="date" name="event_photo_date" id="datetime_event">
                                     
-                                    <input type="checkbox" name="service_other" value="Other" id="isotherserviceselected">
+                                    <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
                                     <label class="box">
                                         Other
                                     </label>
                                         <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
                                             Describe the service request.
                                         </label>
-                                            <textarea name="service_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea"></textarea>
+                                            <textarea name="other_photo_service_date" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea"></textarea>
                                 </section>
                             </fieldset>
 
@@ -176,23 +176,23 @@
                                         What type of images?
                                     </label>
                                     
-                                    <input type="checkbox" name="service_collections_items" value="Collections items" id="iscollectionsselected"> 
+                                    <input type="checkbox" name="existing_image_service" value="Collections items" id="iscollectionsselected"> 
                                     <label class="box">
                                         Collection items
                                     </label>
                                         <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">
                                             What are the ICHi, DN, SDN, or HB numbers?
                                         </label>
-                                            <textarea name="service_collections_items_details" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
+                                            <textarea name="collection_item_number" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
                                     
-                                    <input type="checkbox" name="service_noncollections_items" value="Non-collections items" id="isservicenoncollectionsselected"> 
+                                    <input type="checkbox" name="existing_image_service" value="Non-collections items" id="isservicenoncollectionsselected"> 
                                     <label class="box">
                                         Non-collection items
                                     </label>
                                         <label for="service_noncollections_items_details_textarea" id="labelfor_service_noncollections_items_details_textarea">
                                             Describe the items.
                                         </label>
-                                            <textarea name="service_noncollections_items_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="service_noncollections_items_details_textarea"></textarea>
+                                            <textarea name="noncollection_item_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="service_noncollections_items_details_textarea"></textarea>
                                 </section>
                             </fieldset>
                         </fieldset>
