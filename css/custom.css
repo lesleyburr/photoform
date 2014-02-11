@@ -7,6 +7,10 @@ header {
 	display: block;
 }
 
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"], textarea {
+	width: 50%;
+}
+
 label {
 	font-size: 1em;
 	color: #000;
