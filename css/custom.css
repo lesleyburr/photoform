@@ -78,3 +78,12 @@ p {
 	display: none;
 }
 
+.has-tip {
+	font-weight: normal;
+	border-bottom: none;
+}
+
+.has-tip:hover, .has-tip:focus {
+	border-bottom: none;
+	color: #000;
+}
