@@ -108,24 +108,22 @@ If Request.Form("new_images") = "on" Then
 				HTML = HTML & "<p>Photographs of 3D objects from the collection.</p>"
 
 			Case "Exhibition documentation"
-				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("exdoc_exhibition_title") & "</em> exhibitiion.<br />"
-				HTML = HTML & "Please photograph the gallery on " & Request.Form("exdoc_photo_date") & ".</p>"
+				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("new_exdoc_title") & "</em> exhibitiion.<br />"
+				HTML = HTML & "Please photograph the gallery on " & Request.Form("new_exdoc_date") & ".</p>"
 
 			Case "Photography for exhibitions"
-				HTML = HTML & "<p>The <em>" & Request.Form("photography_exhibitions_title") & "</em> exhibition is "
-				HTML = HTML & "about " & Request.Form("photography_exhibitions_description") & ".</p>"
-				HTML = HTML & "<p>Photograph " & Request.Form("photography_exhibitions_photo_details") & "<br />"
-				HTML = HTML & "for the <em>" & Request.Form("photography_exhibitions_title") & "</em> exhibition.</p>"
-				HTML = HTML & "<p>The photography should take place on " & Request.Form("exhibitions_photo_date") & ".</p>"
+				HTML = HTML & "<p>Photograph " & Request.Form("new_photo_for_ex_details") & "<br />"
+				HTML = HTML & "for the <em>" & Request.Form("new_photo_for_ex_title") & "</em> exhibition.</p>"
+				HTML = HTML & "<p>The photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
 
 			Case "Marketing photography"
-				HTML = HTML & "<p>Photograph " & Request.Form("service_marketing_details") & " for Marketing on " & Request.Form("marketing_photo_date") & ".</p>"
+				HTML = HTML & "<p>Photograph " & Request.Form("new_marketing_details") & " for Marketing on " & Request.Form("new_marketing_date") & ".</p>"
 
 			Case "Event Photography"
-				HTML = HTML & "<p>Photograph the " & Request.Form("event_name") & " event on " & Request.Form("event_photo_date") & ".</p>"
+				HTML = HTML & "<p>Photograph the " & Request.Form("new_event") & " event on " & Request.Form("new_event_date") & ".</p>"
 
 			Case "Other"
-				HTML = HTML & "<p>" & Request.Form("other_photo_service") & ".</p>"
+				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other") & ".</p>"
 
 			Case else
 				HTML = HTML & "<p>" & new_image_service & ".</p>"
