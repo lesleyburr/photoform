@@ -57,7 +57,8 @@ Dim regEx
 Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
-objCDOMail.To = "gonzalez@chicagohistory.org, burr@chicagohistory.org"
+objCDOMail.To = "" & Request.Form("email") & ""
+objCDOMail.Bcc = "gonzalez@chicagohistory.org, burr@chicagohistory.org"
 
 strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
@@ -75,7 +76,7 @@ HTML = HTML & "<header>"
 HTML = HTML & "<h1><strong>Order Number: " & atopic & "</h1>"
 HTML = HTML & "</header>"
 HTML = HTML & "<p>Requested by <strong>" & Request.Form("name") & "</strong> in <strong>" & Request.Form("department") & "</strong>.<br />"
-HTML = HTML &  "E-mail: " & stripNonNumeric(Request.Form("email")) & "<br />"
+HTML = HTML &  "E-mail: " & Request.Form("email") & "<br />"
 HTML = HTML &  "Phone: " & stripNonNumeric(Request.Form("phone")) & "<br />"
 HTML = HTML & "Account: " & stripNonNumeric(Request.Form("account")) & "</p>"
 HTML = HTML & "</section>"
@@ -92,7 +93,7 @@ HTML = HTML & "<p><em><strong>*</strong> indicates a custom request.</em></p>"
 
 ' - New Images Requested
 If Request.Form("new_images") = "on" Then
-	HTML = HTML & "<h2>I Need New Images</h2>"
+	HTML = HTML & "<h2>New Images</h2>"
 
 	Dim new_image_services, new_image_service
 	new_image_services = split(Request.Form("new_image_service"),",")
@@ -108,19 +109,23 @@ If Request.Form("new_images") = "on" Then
 				HTML = HTML & "<p>Photographs of 3D objects from the collection.</p>"
 
 			Case "Exhibition documentation"
+				HTML = HTML & "<h3>Exhibition Documentation</h3>"
 				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("new_exdoc_title") & "</em> exhibitiion.<br />"
 				HTML = HTML & "Please photograph the gallery on " & Request.Form("new_exdoc_date") & ".</p>"
 
 			Case "Photography for exhibitions"
-				HTML = HTML & "<p>Photograph " & Request.Form("new_photo_for_ex_details") & "<br />"
-				HTML = HTML & "for the <em>" & Request.Form("new_photo_for_ex_title") & "</em> exhibition.</p>"
-				HTML = HTML & "<p>The photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
+				HTML = HTML & "<h3>Photography for Exhibitions</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_photo_for_ex_details")
+				HTML = HTML & " for the <em>" & Request.Form("new_photo_for_ex_title") & "</em> exhibition.<br />"
+				HTML = HTML & "the photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
 
 			Case "Marketing photography"
-				HTML = HTML & "<p>Photograph " & Request.Form("new_marketing_details") & " for Marketing on " & Request.Form("new_marketing_date") & ".</p>"
+				HTML = HTML & "<h3>Marketing Photography</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_marketing_details") & " on " & Request.Form("new_marketing_date") & ".</p>"
 
-			Case "Event Photography"
-				HTML = HTML & "<p>Photograph the " & Request.Form("new_event") & " event on " & Request.Form("new_event_date") & ".</p>"
+			Case "Event photography"
+				HTML = HTML & "<h3>Event Photography</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_event") & " on " & Request.Form("new_event_date") & ".</p>"
 
 			Case "Other"
 				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other") & ".</p>"
@@ -136,7 +141,7 @@ End If
 
 If Request.Form("existing_images") = "on" Then
 
-	HTML = HTML & "<h2>Existing Images Needed</h2>"
+	HTML = HTML & "<h2>Existing Images</h2>"
 
 	Dim existing_image_services, existing_image_service
 	existing_image_services = split(Request.Form("existing_image_service"),",")
@@ -145,13 +150,13 @@ If Request.Form("existing_images") = "on" Then
 
 		Select Case Trim(existing_image_service)
 
-			Case "Collection items"
-				HTML = HTML & "<p>Photographs of the following collection items:</p>"
-				HTML = HTML & "<p>" & Request.Form("collection_item_ids") & "</p>"
+			Case "Collections items"
+				HTML = HTML & "<p>Photographs of the following collection items:<br />"
+				HTML = HTML & Request.Form("collection_item_ids") & "</p>"
 
 			Case "Non-collections items"
-				HHTML = HTML & "<p>Photographs of the following non-collection items:</p>"
-				HTML = HTML & "<p>" & Request.Form("noncollection_item_description") & "</p>"
+				HTML = HTML & "<p>Photographs of the following non-collection items:<br />"
+				HTML = HTML & Request.Form("noncollection_item_description") & "</p>"
 
 			Case else
 				HTML = HTML & "<p>" & existing_image_service & ".</p>"
@@ -176,7 +181,7 @@ uses = split(Request.Form("use"),",")
 
 For Each use in uses
 	If Trim(use) = "Other" Then
-		HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other") & "</p>"
 	Else
 		HTML = HTML & "<p>" & use & "</p>"
 	End If
@@ -240,7 +245,7 @@ For Each delivery_method in delivery_methods
 		HTML = HTML & "<p>Burn the files to disc.</p>"
 
 	Case "Other"
-		HTML = HTML & "<p>" & Request.Form("delivery_other") & ".</p>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("delivery_other") & ".</p>"
 
 	Case else
 		HTML = HTML & "<p>" & delivery_method & ".</p>"
