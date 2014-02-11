@@ -132,24 +132,32 @@ If Request.Form("new_images") = "on" Then
 	Next
 End If
 
-' - Exhisting Images Requested
+' - Existing Images Requested
 
 If Request.Form("existing_images") = "on" Then
 
 	HTML = HTML & "<h2>Existing Images Needed</h2>"
 
-	' -- Collection Items
-	If Request.Form("service_collections_items") <> "" then
-		HTML = HTML & "<h3>" & Request.Form("service_collections_items") & "</h3>"
-		HTML = HTML & "<p>" & Request.Form("service_collections_items_details") & "</p>"
-	End If
+	Dim existing_image_services, existing_image_service
+	existing_image_services = split(Request.Form("existing_image_service"),",")
 
-	' -- Non-Collection Items
-	If Request.Form("service_noncollections_items") <> "" then
-		HTML = HTML & "<h3>" & Request.Form("service_noncollections_items") & "</h3>"
-		HTML = HTML & "<p>" & Request.Form("service_noncollections_items_details") & "</p>"
-	End If
+	For Each existing_image_service in existing_image_services
 
+		Select Case Trim(existing_image_service)
+
+			Case "Collection items"
+				HTML = HTML & "<p>Photographs of the following collection items:</p>"
+				HTML = HTML & "<p>" & Request.Form("collection_item_ids") & "</p>"
+
+			Case "Non-collections items"
+				HHTML = HTML & "<p>Photographs of the following non-collection items:</p>"
+				HTML = HTML & "<p>" & Request.Form("noncollection_item_description") & "</p>"
+
+			Case else
+				HTML = HTML & "<p>" & existing_image_service & ".</p>"
+
+		End Select
+	Next
 End If
 HTML = HTML & "</section>"
 
