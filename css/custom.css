@@ -16,11 +16,11 @@ label {
 	color: #000;
 }
 
-.selectlabel {
+/*.selectlabel {
 	position: relative;
 	left: 20px;
 	top: -30px;
-}
+}*/
 
 /*.biglabel {
 	font-size: 1.2em;
@@ -65,9 +65,9 @@ p {
 	margin-bottom: 0;
 }
 
-input[type="checkbox"] + label, input[type="radio"] + label {
+/*input[type="checkbox"] + label, input[type="radio"] + label {
 	display: block;
-}
+}*/
 
 
 #newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
