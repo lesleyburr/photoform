@@ -117,7 +117,7 @@ If Request.Form("new_images") = "on" Then
 				HTML = HTML & "<h3>Photography for Exhibitions</h3>"
 				HTML = HTML & "<p>" & Request.Form("new_photo_for_ex_details")
 				HTML = HTML & " for the <em>" & Request.Form("new_photo_for_ex_title") & "</em> exhibition.<br />"
-				HTML = HTML & "the photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
+				HTML = HTML & "The photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
 
 			Case "Marketing photography"
 				HTML = HTML & "<h3>Marketing Photography</h3>"
@@ -151,12 +151,12 @@ If Request.Form("existing_images") = "on" Then
 		Select Case Trim(existing_image_service)
 
 			Case "Collections items"
-				HTML = HTML & "<p>Photographs of the following collection items:<br />"
-				HTML = HTML & Request.Form("collection_item_ids") & "</p>"
+				HTML = HTML & "<h3>Collection Items</h3>"
+				HTML = HTML & "<p>" & Request.Form("collection_item_ids") & "</p>"
 
 			Case "Non-collections items"
-				HTML = HTML & "<p>Photographs of the following non-collection items:<br />"
-				HTML = HTML & Request.Form("noncollection_item_description") & "</p>"
+				HTML = HTML & "<h3>Non-Collection Items</h3>"
+				HTML = HTML & "<p>" & Request.Form("noncollection_item_description") & "</p>"
 
 			Case else
 				HTML = HTML & "<p>" & existing_image_service & ".</p>"
