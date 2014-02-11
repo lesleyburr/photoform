@@ -200,7 +200,10 @@ HTML = HTML & "</section>"
 ' *************************************
 ' File Quality and File Type
 ' *************************************
-HTML = HTML & "<h2>File Type</h2>"
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>File Type</h1>"
+HTML = HTML & "</header>"
 
 dim quality
 quality = Request.Form("imgquality")
@@ -210,12 +213,15 @@ If quality = "Other" Then
 Else
 	HTML = HTML & "<p><em>" & quality & ", " & Request.Form("filetype") &  "</em>.</p>"
 End If
-
+HTML = HTML & "</section>"
 
 ' *************************************
 ' File Delivery Methods
 ' *************************************
-HTML = HTML & "<h2>File Delivery</h2>"
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>File Delivery</h1>"
+HTML = HTML & "</header>"
 
 Dim delivery_methods, delivery_method
 delivery_methods = split(Request.Form("delivery"),",")
@@ -242,11 +248,18 @@ For Each delivery_method in delivery_methods
 	End Select
 
 Next
+HTML = HTML & "</section>"
 
+
+' *************************************
 ' Due Date
-HTML = HTML & "<h2>Due Date</h2>"
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>Due Date</h1>"
+HTML = HTML & "</header>"
 HTML = HTML & "<p>" & Request.Form("date") & "</p>"
-
+HTML = HTML & "</section>"
 
 
 HTML = HTML & "</body>"
