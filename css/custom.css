@@ -147,6 +147,7 @@ p {
 
 .alert-box {
 	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+	font-size: 1em;
 }
 
 .alert-box-2d {
@@ -159,6 +160,7 @@ p {
 
 .alert-box-restrictions {
 	width: 55em;
+	padding-right: 2em;
 }
 
 .alert-box-cd {
@@ -171,7 +173,8 @@ p {
 
 
 
-
-
+.alert-box .close {
+	padding-left: 3em;
+}
 
 
