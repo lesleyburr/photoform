@@ -148,3 +148,30 @@ p {
 .alert-box {
 	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
 }
+
+.alert-box-2d {
+	width: 30em;
+}
+
+.alert-box-3d {
+	width: 45em;
+}
+
+.alert-box-restrictions {
+	width: 55em;
+}
+
+.alert-box-cd {
+	width: 40em;
+}
+
+.alert-box-batches {
+	width: 35em;
+}
+
+
+
+
+
+
+
