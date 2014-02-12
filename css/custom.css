@@ -61,9 +61,13 @@ legend {
 	font-size: 1em;
 }
 
+.indent {
+	margin-left: 1em;
+}
+
 fieldset {
-	/*background-color: #eee;*/
-	/*border: none;*/
+	/*background-color: #eee;
+	border: none;*/
 	margin-top: 2em;
 }
 
