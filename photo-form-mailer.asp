@@ -304,6 +304,9 @@ Create the Response Web Page
         		<h2>Thank You!</h2>
 				<p>Your order number is <strong><% Response.Write atopic %></strong>.</p>
 				<p>A copy of the order has been e-mailed to you. Please contact the photolab for further assistance.</p>
+				<p>
+					Some of the images in our collection have restrictions. The Rights &amp; Reproductions department will verify if the images you have requested are cleared for their intended use. If you require further assistance, please contact the Photo Lab, or the Rights &amp; Reproductions department.
+				</p>
 			</div>
 		</div>
 	</main>
