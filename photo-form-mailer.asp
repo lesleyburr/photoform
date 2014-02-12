@@ -299,9 +299,10 @@ Create the Response Web Page
 	<main>
     	<div class="row">
       		<div class="large-12 columns">
-        		<header><h1>Thank you for the Photography and Imaging Order</h1></header>
-				<p>Your order tracking number is <strong><% Response.Write atopic %></strong>.</p>
-				<p><em>Please keep this number for your records it will be the primary means of retrieving your digital images should you need them again.</em></p>
+        		<header><h1>Photography and Imaging Orders</h1></header>
+        		<h2>Thank You!</h2>
+				<p>Your order number is <strong><% Response.Write atopic %></strong>.</p>
+				<p>A copy of the order has been e-mailed to you. Please contact the photolab for further assistance.</p>
 			</div>
 		</div>
 	</main>
