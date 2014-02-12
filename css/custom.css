@@ -7,9 +7,23 @@ header {
 	display: block;
 }
 
-input[type="text"], input[type="email"], input[type="date"], input[type="tel"], textarea {
-	width: 50%;
+input[type="text"], input[type="email"] {
+	width: 20em;
 }
+
+textarea {
+	height: 5em;
+	width: 30em;
+}
+
+input[type="date"], input[type="tel"], input.accountnumber {
+	width: 12em;
+}
+
+input.folder {
+	width: 30em;
+}
+
 
 label {
 	font-size: 1em;
@@ -86,4 +100,8 @@ p {
 .has-tip:hover, .has-tip:focus {
 	border-bottom: none;
 	color: #000;
+}
+
+.alert-box {
+	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
 }
