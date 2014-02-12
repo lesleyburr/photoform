@@ -24,8 +24,8 @@
 
                 <dl class="accordion" data-accordion>
                     
-                    <dd><a href="#panel1">Personal Info</a>
-                    <div id="panel1" class="content active">
+                    <dd><a href="#panel1"><span class="tab">Personal Info</span></a>
+                    <div id="panel1" class="content">
                     
                     <!--  -->
                     <!-- Personal Info -->
@@ -53,23 +53,45 @@
                     </div>
                     </dd>
   
-                    <dd><a href="#panel2">Services</a>
+                    <dd><a href="#panel2"><span class="tab">Services</span></a>
                     <div id="panel2" class="content">
+
                     <!--  -->
                     <!-- Services -->
                     <!--  -->                    
                   
                         <fieldset>
                         <legend>Photography Services</legend>
+
+                            
+                        <dl class="accordion" data-accordion>
+                            
+                            <dd>
+                                <a href="#panel1">I need new images.</a>
+                                <div id="panel1" class="content">
+                                </div>
+                            </dd>
+
+                            <dd>
+                                <a href="#panel2">I need copies of exisiting images.</a>
+                                <div id="panel2" class="content">
+
+                                </div>
+                            </dd>
+
+                        </dl>
+
+
+
                             <fieldset class="innerfieldset">
                                 <div>
                                 <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
-                                <label class="selectlabel">I need new images</label>
+                                <label class="selectlabel">I need new images.</label>
                                 </div>
                                     
                                     <section class="indent" id="newchoices">
                                     <label class="bottomspace">
-                                        What type of images?
+                                        What type of new images?
                                     </label>
                                     
                                     <div>
@@ -85,7 +107,7 @@
                                     <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected"> 
                                     <label class="selectlabel">3D collection items</label>
                                         <p data-alert class="alert-box info radius" id="txt3dinstructions">
-                                            Coordinate material delivery to the photo lab with collection managers. 
+                                            You will need to coordinate material delivery to the photo lab with collection managers. 
                                             <a href="#" class="close">&times;</a>
                                         </p>      
                                     </div>
@@ -102,7 +124,7 @@
                                         </label>
                                             <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation">
                                         <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">
-                                            When should photography occur?
+                                            When should the photography occur?
                                         </label>
                                             <input type="date" name="new_exdoc_date" id="datetime_exhibitiondoc">
                                     </div>
@@ -117,15 +139,15 @@
                                         <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
                                             What is the exhibition title?
                                         </label>
-                                            <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="photographyexhibitions"></text>
+                                            <input type="text" name="new_photo_for_ex_title" placeholder="Hot Dogs" id="photographyexhibitions"></text>
                                          <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">
                                             <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed.">
                                                 Photography details
                                             </span>
                                         </label>
-                                            <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="photography_exhibitions_details"></textarea>
+                                            <textarea name="new_photo_for_ex_details" placeholder="Photograph a hot dog mascot eating a hot dog, while laying in the Sensing Chicago hot dog." id="photography_exhibitions_details"></textarea>
                                         <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">
-                                            When should photography occur?
+                                            When should the photography occur?
                                         </label>
                                             <input type="date" name="new_photo_for_ex_date" id="datetime_photographyexhibitions">
                                     </div>
@@ -138,9 +160,9 @@
                                         <label for="marketing" id="labelfor_marketing">
                                             Describe what you would liked photographed.
                                         </label>
-                                            <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="marketing"></textarea>
+                                            <textarea name="new_marketing_details" placeholder="Photograph kids playing in the Chicago room." id="marketing"></textarea>
                                         <label for="datetime_marketing" id="labelfor_datetime_marketing">
-                                            When should photography occur?
+                                            When should the photography occur?
                                         </label>
                                             <input type="date" name="new_marketing_date" id="datetime_marketing">
                                     </div>
@@ -153,9 +175,9 @@
                                         <label for="event" id="labelfor_event">
                                             What is the event name?
                                         </label>
-                                            <textarea name="new_event" placeholder="The Members' open house" id="event"></textarea>
+                                            <textarea name="new_event" placeholder="Out at CHM" id="event"></textarea>
                                         <label for="datetime_event" id="labelfor_datetime_event">
-                                            When should photography occur?
+                                            When should the photography occur?
                                         </label>
                                             <input type="date" name="new_event_date" id="datetime_event">
                                     </div>
@@ -166,9 +188,9 @@
                                         Other
                                     </label>
                                         <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
-                                            Describe the service request.
+                                            Describe the new images that you need.
                                         </label>
-                                            <textarea name="new_other" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea"></textarea>
+                                            <textarea name="new_other" placeholder="I want pictures of cats in Chicago." id="photoservice_other_textarea"></textarea>
                                     </div>
                                 </section>
                             </fieldset>
@@ -177,14 +199,14 @@
                                 <div>
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
                                 <label class="selectlabel">
-                                    I need copies of existing images
+                                    I need copies of existing images.
                                 </label>
                             </div>
 
                                 <section id= "existingchoices">
 
                                     <label class="bottomspace">
-                                        What type of images?
+                                        What type of existing images?
                                     </label>
                                     
                                     <div>
@@ -193,7 +215,7 @@
                                         Collection items
                                     </label>
                                         <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">
-                                            What are the ICHi, DN, SDN, or HB numbers?
+                                            Provide the ICHi, DN, SDN, or HB numbers.
                                         </label>
                                             <textarea name="collection_item_ids" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
                                     </div>
@@ -214,7 +236,7 @@
                     </div>
                     </dd>
   
-                    <dd><a href="#panel3">Use</a>
+                    <dd><a href="#panel3"><span class="tab">Use</span></a>
                     <div id="panel3" class="content">
                      <!--  -->
                     <!-- Use -->
@@ -268,7 +290,7 @@
                             <div>
                             <input type="checkbox" name="use" value="Other" id="isotheruse">
                             <label class="selectlabel">
-                                Other
+                                Other use
                             </label>
                                 <label for="use_other_textarea" id="labelfor_use_other_textarea">
                                     What will these images be used for?
@@ -283,14 +305,14 @@
                             <div>
                             <input type="radio" name="client" value="the Museum" required>
                             <label class="selectlabel">
-                                Chicago History Museum
+                                The Museum
                             </label>
                             </div>
 
                             <div>
                             <input type="radio" name="client" value="external client" id="isexternalclient" required>
                             <label class="selectlabel">
-                                External Client
+                                An External Client
                             </label>
                                 <label for="externalclient_name" id="labelfor_externalclient_name">
                                     What is the name of the external client?
@@ -302,7 +324,7 @@
                     </div>
                     </dd>
 
-                    <dd><a href="#panel4">Files</a>
+                    <dd><a href="#panel4"><span class="tab">Files</span></a>
                     <div id="panel4" class="content">
                     <!--  -->
                     <!-- Files -->
@@ -340,7 +362,7 @@
                                     Other
                                 </label>
                                     <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">
-                                        Describe the image quality you need.
+                                        Describe the image quality needed.
                                     </label>
                                         <textarea name="imgquality_other" placeholder="I need the files to be 600dpi." id="imgquality_other_textarea"></textarea>
                                 </div>
@@ -405,17 +427,17 @@
                             <div>
                             <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> 
                             <label class="selectlabel">
-                                Other
+                                Other delivery method
                             </label>
                                 <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">
                                     How would you like the files delivered?
                                 </label>
-                                    <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="delivery_other_textarea"></textarea>
+                                    <textarea name="delivery_other" placeholder="Teleportation, please." id="delivery_other_textarea"></textarea>
                             </div>
                         </fieldset>
 
                         <fieldset>
-                            <legend>Due Date</legend>
+                            <legend>File Delivery Date</legend>
                             <p class="instructions">
                                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
                             </p>
