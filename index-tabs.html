@@ -1,0 +1,482 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/foundation-icons.css"/>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <title>Photo Order Form</title>
+  </head>
+  
+  <body>
+    <main>
+
+        <div class="row">
+            <div class="large-12 columns">
+                
+                <header><h1>Request Digital Photography and Imaging</h1></header>
+
+                <form method="post" action="photo-form-mailer.asp">
+
+                <dl class="tabs" data-tab>
+                    <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
+                    <dd><a href="#panel2-2">Services</a></dd>
+                    <dd><a href="#panel2-3">Use</a></dd>
+                    <dd><a href="#panel2-4">Files</a></dd>
+                </dl>
+
+                <div class="tabs-content large-12 columns">
+          
+                    <!--  -->
+                    <!-- Personal Info -->
+                    <!--  -->
+
+                    <div class="content active large-12 columns" id="panel2-1">
+
+                        <fieldset>
+                        
+                        <label for="name" class="labelspace">Full Name</label>
+                            <input type="text" name="name" placeholder="Bill Murray" id="name" required>
+
+                        <label for="email" class="labelspace">E-mail</label>
+                            <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+  
+                        <label for="phone" class="labelspace">Phone</label>
+                            <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required>
+   
+                        <label for="department" class="labelspace">Department</label>
+                            <input type="text" name="department" placeholder="Publications" id="department" required>
+    
+                        <label for="account" class="labelspace"><span data-tooltip class="has-tip tip-right" title="If this request is not project-based, then make the last four digits 0000.">Account Number <i class="fi-info"></i></span></label>
+                            <input type="text" name="account" placeholder="111-111-1111-0000" class="accountnumber" id="account" required>
+                        
+                        </fieldset>
+
+                    </div>
+    
+        
+                    <!--  -->
+                    <!-- Services -->
+                    <!--  -->
+                    
+
+                    <div class="content large-12 columns" id="panel2-2">
+                  
+                        <fieldset>
+                        <legend>Photography Services</legend>
+                            <fieldset>
+
+<!-- <dl class="accordion" data-accordion>
+  <dd>
+    <a href="#panel1">Accordion 1</a>
+    <div id="panel1" class="content active">
+    </div>
+  </dd>
+  
+  <dd>
+    <a href="#panel2">Accordion 2</a>
+    <div id="panel2" class="content">
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </dd>
+  
+  <dd>
+    <a href="#panel3">Accordion 3</a>
+    <div id="panel3" class="content">
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </dd>
+</dl> -->
+
+
+                                <div>
+                                <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
+                                <label class="selectlabel">I need new images</label>
+                                </div>
+                                    
+                                    <section class="indent" id="newchoices">
+                                    <label class="bottomspace">
+                                        What type of images?
+                                    </label>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="2D collection items" id="is2dselected"> 
+                                    <label class="selectlabel">2D collection items</label>
+                                        <p data-alert class="alert-box info radius" id="txt2dinstructions">
+                                            Bring materials to the Rights &amp; Reproductions department.
+                                            <a href="#" class="close">&times;</a>
+                                        </p>
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected"> 
+                                    <label class="selectlabel">3D collection items</label>
+                                        <p data-alert class="alert-box info radius" id="txt3dinstructions">
+                                            Coordinate material delivery to the photo lab with collection managers. 
+                                            <a href="#" class="close">&times;</a>
+                                        </p>      
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="isexhibitiondocumentation"> 
+                                    <label class="selectlabel">
+                                            <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space.">
+                                                Exhibition documentation <i class="fi-info"></i>
+                                            </span>
+                                    </label>
+                                        <label for="exhibitiondocumentation" id="labelfor_exhibitiondocumentation">
+                                            What is the name of the exhibition you want photographed?
+                                        </label>
+                                            <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation">
+                                        <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">
+                                            When should photography occur?
+                                        </label>
+                                            <input type="date" name="new_exdoc_date" id="datetime_exhibitiondoc">
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions"> 
+                                    <label class="selectlabel">
+                                        <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
+                                            Photography for exhibitions <i class="fi-info"></i>
+                                        </span>
+                                    </label>
+                                        <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
+                                            What is the exhibition title?
+                                        </label>
+                                            <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="photographyexhibitions"></text>
+                                         <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">
+                                            <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed.">
+                                                Photography details
+                                            </span>
+                                        </label>
+                                            <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="photography_exhibitions_details"></textarea>
+                                        <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">
+                                            When should photography occur?
+                                        </label>
+                                            <input type="date" name="new_photo_for_ex_date" id="datetime_photographyexhibitions">
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="Marketing photography" id="ismarketingselected"> 
+                                    <label class="selectlabel">
+                                        Marketing photography
+                                    </label>
+                                        <label for="marketing" id="labelfor_marketing">
+                                            Describe what you would liked photographed.
+                                        </label>
+                                            <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="marketing"></textarea>
+                                        <label for="datetime_marketing" id="labelfor_datetime_marketing">
+                                            When should photography occur?
+                                        </label>
+                                            <input type="date" name="new_marketing_date" id="datetime_marketing">
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="Event photography" id="iseventselected"> 
+                                    <label class="selectlabel">
+                                        Event photography
+                                    </label>
+                                        <label for="event" id="labelfor_event">
+                                            What is the event name?
+                                        </label>
+                                            <textarea name="new_event" placeholder="The Members' open house" id="event"></textarea>
+                                        <label for="datetime_event" id="labelfor_datetime_event">
+                                            When should photography occur?
+                                        </label>
+                                            <input type="date" name="new_event_date" id="datetime_event">
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
+                                    <label class="selectlabel">
+                                        Other
+                                    </label>
+                                        <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
+                                            Describe the service request.
+                                        </label>
+                                            <textarea name="new_other" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea"></textarea>
+                                    </div>
+                                </section>
+                            </fieldset>
+
+                            <fieldset>                                
+                                <div>
+                                <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
+                                <label class="selectlabel">
+                                    I need copies of existing images
+                                </label>
+                            </div>
+
+                                <section id= "existingchoices">
+
+                                    <label class="bottomspace">
+                                        What type of images?
+                                    </label>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="existing_image_service" value="Collections items" id="iscollectionsselected"> 
+                                    <label class="selectlabel">
+                                        Collection items
+                                    </label>
+                                        <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">
+                                            What are the ICHi, DN, SDN, or HB numbers?
+                                        </label>
+                                            <textarea name="collection_item_ids" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
+                                    </div>
+                                    
+                                    <div>
+                                    <input type="checkbox" name="existing_image_service" value="Non-collections items" id="isservicenoncollectionsselected"> 
+                                    <label class="selectlabel">
+                                        Non-collection items
+                                    </label>
+                                        <label for="service_noncollections_items_details_textarea" id="labelfor_service_noncollections_items_details_textarea">
+                                            Describe the items.
+                                        </label>
+                                            <textarea name="noncollection_item_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="service_noncollections_items_details_textarea"></textarea>
+                                    </div>
+                                </section>
+                            </fieldset>
+                        </fieldset>
+                    </div>
+      
+        
+                    <!--  -->
+                    <!-- Use -->
+                    <!--  -->
+
+                    <div class="content large-12 columns" id="panel2-3">
+                        <fieldset>
+                        <legend>How are you planning to use the images?</legend>
+                            
+                            <p data-alert class="alert-box info radius" id="restrictions">
+                                You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+                                <a href="#" class="close">&times;</a>
+                            </p>
+
+                            <div>
+                            <input type="checkbox" name="use" value="Social media">
+                            <label class="selectlabel">
+                                <span data-tooltip class="has-tip tip-right" title="Facebook, Tumblr, Blog, etc.">
+                                    Social media <i class="fi-info"></i>
+                                </span>
+                            </label>
+                            </div>
+                            
+                            <div>
+                            <input type="checkbox" name="use" value="Website">
+                            <label class="selectlabel">
+                                Website
+                            </label>
+                            </div>
+
+                            <div>
+                            <input type="checkbox" name="use" value="Publication">
+                            <label class="selectlabel">
+                                Publication
+                            </label>
+                            </div>
+
+                            <div>
+                            <input type="checkbox" name="use" value="Exhibition">
+                            <label class="selectlabel">
+                                Exhibition
+                            </label>
+                            </div>
+
+                            <div>
+                            <input type="checkbox" name="use" value="Advertising and Marketing">
+                            <label class="selectlabel">
+                                Advertising &amp; Marketing
+                            </label>
+                            </div>
+
+                            <div>
+                            <input type="checkbox" name="use" value="Other" id="isotheruse">
+                            <label class="selectlabel">
+                                Other
+                            </label>
+                                <label for="use_other_textarea" id="labelfor_use_other_textarea">
+                                    What will these images be used for?
+                                </label>
+                                    <textarea name="use_other" placeholder="The images will be used for the Peer Recogition awards." id="use_other_textarea"></textarea>
+                            </div>
+                        </fieldset>
+      
+                        <fieldset>
+                        <legend>Who are the images for?</legend>
+                            
+                            <div>
+                            <input type="radio" name="client" value="the Museum" required>
+                            <label class="selectlabel">
+                                Chicago History Museum
+                            </label>
+                            </div>
+
+                            <div>
+                            <input type="radio" name="client" value="external client" id="isexternalclient" required>
+                            <label class="selectlabel">
+                                External Client
+                            </label>
+                                <label for="externalclient_name" id="labelfor_externalclient_name">
+                                    What is the name of the external client?
+                                </label>
+                                    <input type="text" name="external_client_name" placeholder="Motorola" id="externalclient_name">
+                            </div>
+                        </fieldset>
+
+                    </div>
+
+                    <!--  -->
+                    <!-- Files -->
+                    <!--  -->
+
+                    <div class="content large-12 columns" id="panel2-4">
+      
+                        <fieldset>
+                        <legend>File Specs</legend>
+
+                            <fieldset>
+                            <div>
+                            <label class="bottomspace">Image Quality</label>
+                            </div>
+                                
+                                <div>
+                                <input type="radio" name="imgquality" value="Low resolution" required> 
+                                <label class="selectlabel">
+                                    <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi.">
+                                        Low resolution <i class="fi-info"></i>
+                                    </span>
+                                </label>
+                                </div>
+
+                                <div>
+                                <input type="radio" name="imgquality" value="Editorial quality" required> 
+                                <label class="selectlabel">
+                                    <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi.">
+                                        Editorial quality <i class="fi-info"></i>
+                                    </span>
+                                </label>
+                                </div>
+
+                                <div>
+                                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required> 
+                                <label class="selectlabel">
+                                    Other
+                                </label>
+                                    <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">
+                                        Describe the image quality you need.
+                                    </label>
+                                        <textarea name="imgquality_other" placeholder="I need the files to be 600dpi." id="imgquality_other_textarea"></textarea>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                            <label class="bottomspace">File Type</label>
+                                <div>
+                                <input type="radio" name="filetype" value="JPEG" required>
+                                <label class="selectlabel">
+                                    <span data-tooltip class="has-tip tip-right" title="Recommended for web or research.">
+                                        JPEG <i class="fi-info"></i>
+                                    </span>
+                                </label>
+                                </div>
+
+                                <div>
+                                <input type="radio" name="filetype" value="TIFF" required>
+                                <label class="selectlabel">
+                                    <span data-tooltip class="has-tip tip-right" title="Recommended for print.">
+                                        TIFF <i class="fi-info"></i>
+                                    </span>
+                                </label>
+                                </div>
+                            </fieldset>
+                        </fieldset>
+
+                        <fieldset>
+                        <legend>File Delivery Method</legend>
+                            <div>
+                            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected"> 
+                            <label class="selectlabel">
+                                Save on server
+                            </label>
+                                <label for="folderlocation" id="labelfor_folderlocation">
+                                    Provide the folder location.
+                                </label>
+                                    <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="folderlocation">
+                            </div>
+                            
+                            <div>
+                            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected">
+                            <label class="selectlabel">
+                                E-mail
+                            </label>
+                            </div>
+                            <div>
+                                <input type="email" name="delivery_email" placeholder="name@mail.com" id="deliveryemail">
+                            </div>
+                            
+                            <div>
+                            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected"> 
+                            <label class="selectlabel">
+                                Burn to disc
+                            </label>
+                                <p data-alert class="alert-box info radius" id="txtburninstructions"> 
+                                    CDs and DVDs with labels are $2 each and are charged to your account.
+                                    <a href="#" class="close">&times;</a>
+                                </p>
+                            </div>
+                            
+                            <div>
+                            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother"> 
+                            <label class="selectlabel">
+                                Other
+                            </label>
+                                <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">
+                                    How would you like the files delivered?
+                                </label>
+                                    <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="delivery_other_textarea"></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Due Date</legend>
+                            <p class="instructions">
+                                Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
+                            </p>
+                            <p data-alert class="alert-box info radius" id="largebatches">
+                                Requests for large batches of new images will take additional time.
+                            </p>
+                            
+                            <input type="date" name="date" id="date" required>
+                            
+                            <input type="submit" name="submit" value="PLACE MY ORDER" class="button labelspace">
+
+                        </fieldset>
+
+                    </div>
+
+      
+                </div>
+
+                </form>
+
+            </div>
+        </div>
+
+  </main>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/placeholders.min.js"></script>
+    <script type="text/javascript" src="js/jquery.formatter.min.js"></script>
+    <script type="text/javascript" src="js/custom-smartform.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
