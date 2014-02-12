@@ -292,6 +292,7 @@ Create the Response Web Page
 <head>
 <title>Photo Order Submitted</title>
 <link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/custom.css" />
 <script src="js/modernizr.js"></script>
 </head>
 

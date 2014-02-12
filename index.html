@@ -21,20 +21,15 @@
 
                 <form method="post" action="photo-form-mailer.asp">
 
-                <dl class="tabs" data-tab>
-                    <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
-                    <dd><a href="#panel2-2">Services</a></dd>
-                    <dd><a href="#panel2-3">Use</a></dd>
-                    <dd><a href="#panel2-4">Files</a></dd>
-                </dl>
 
-                <div class="tabs-content large-12 columns">
-          
+                <dl class="accordion" data-accordion>
+                    
+                    <dd><a href="#panel1">Personal Info</a>
+                    <div id="panel1" class="content active">
+                    
                     <!--  -->
                     <!-- Personal Info -->
                     <!--  -->
-
-                    <div class="content active large-12 columns" id="panel2-1">
 
                         <fieldset>
                         
@@ -56,42 +51,17 @@
                         </fieldset>
 
                     </div>
-    
-        
+                    </dd>
+  
+                    <dd><a href="#panel2">Services</a>
+                    <div id="panel2" class="content">
                     <!--  -->
                     <!-- Services -->
-                    <!--  -->
-                    
-
-                    <div class="content large-12 columns" id="panel2-2">
+                    <!--  -->                    
                   
                         <fieldset>
                         <legend>Photography Services</legend>
-                            <fieldset>
-
-<!-- <dl class="accordion" data-accordion>
-  <dd>
-    <a href="#panel1">Accordion 1</a>
-    <div id="panel1" class="content active">
-    </div>
-  </dd>
-  
-  <dd>
-    <a href="#panel2">Accordion 2</a>
-    <div id="panel2" class="content">
-      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-  </dd>
-  
-  <dd>
-    <a href="#panel3">Accordion 3</a>
-    <div id="panel3" class="content">
-      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-  </dd>
-</dl> -->
-
-
+                            <fieldset class="innerfieldset">
                                 <div>
                                 <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
                                 <label class="selectlabel">I need new images</label>
@@ -203,7 +173,7 @@
                                 </section>
                             </fieldset>
 
-                            <fieldset>                                
+                            <fieldset class="innerfieldset">                                
                                 <div>
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
                                 <label class="selectlabel">
@@ -242,13 +212,14 @@
                             </fieldset>
                         </fieldset>
                     </div>
-      
-        
-                    <!--  -->
+                    </dd>
+  
+                    <dd><a href="#panel3">Use</a>
+                    <div id="panel3" class="content">
+                     <!--  -->
                     <!-- Use -->
                     <!--  -->
 
-                    <div class="content large-12 columns" id="panel2-3">
                         <fieldset>
                         <legend>How are you planning to use the images?</legend>
                             
@@ -329,18 +300,19 @@
                         </fieldset>
 
                     </div>
+                    </dd>
 
+                    <dd><a href="#panel4">Files</a>
+                    <div id="panel4" class="content">
                     <!--  -->
                     <!-- Files -->
                     <!--  -->
-
-                    <div class="content large-12 columns" id="panel2-4">
       
                         <fieldset>
                         <legend>File Specs</legend>
 
-                            <fieldset>
-                            <div>
+                            <fieldset class="noborder">
+                             <div>
                             <label class="bottomspace">Image Quality</label>
                             </div>
                                 
@@ -374,7 +346,7 @@
                                 </div>
                             </fieldset>
 
-                            <fieldset>
+                            <fieldset class="noborder">
                             <label class="bottomspace">File Type</label>
                                 <div>
                                 <input type="radio" name="filetype" value="JPEG" required>
@@ -456,8 +428,11 @@
                             <input type="submit" name="submit" value="PLACE MY ORDER" class="button labelspace">
 
                         </fieldset>
-
+   
                     </div>
+                    </dd>
+                </dl>          
+
 
       
                 </div>
