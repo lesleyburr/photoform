@@ -39,19 +39,19 @@
                         <fieldset>
                         
                         <label for="name" class="labelspace">Full Name</label>
-                            <input type="text" name="name" placeholder="Bill Murray" class="textbox" id="name" required>
+                            <input type="text" name="name" placeholder="Bill Murray" id="name" required>
 
                         <label for="email" class="labelspace">E-mail</label>
-                            <input type="email" name="email" placeholder="name@mail.com" class="textbox" id="email" required>
+                            <input type="email" name="email" placeholder="name@mail.com" id="email" required>
   
                         <label for="phone" class="labelspace">Phone</label>
-                            <input type="tel" name="phone" placeholder="312-799-0000" class="textbox" id="phone" required>
+                            <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required>
    
                         <label for="department" class="labelspace">Department</label>
-                            <input type="text" name="department" placeholder="Publications" class="textbox" id="department" required>
+                            <input type="text" name="department" placeholder="Publications" id="department" required>
     
                         <label for="account" class="labelspace"><span data-tooltip class="has-tip tip-right" title="If this request is not project-based, then make the last four digits 0000.">Account Number <i class="fi-info"></i></span></label>
-                            <input type="text" name="account" placeholder="111-111-1111-0000" class="textbox accountnumber" id="account" required>
+                            <input type="text" name="account" placeholder="111-111-1111-0000" class="accountnumber" id="account" required>
                         
                         </fieldset>
 
@@ -70,11 +70,11 @@
                             <fieldset>
                                 <div>
                                 <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
-                                <label class="selectlabel biglabel">I need new images</label>
+                                <label class="selectlabel">I need new images</label>
                                 </div>
                                     
                                     <section id="newchoices">
-                                    <label>
+                                    <label class="bottomspace">
                                         What type of images?
                                     </label>
                                     
@@ -182,14 +182,14 @@
                             <fieldset>                                
                                 <div>
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
-                                <label class="selectlabel biglabel">
+                                <label class="selectlabel">
                                     I need copies of existing images
                                 </label>
                             </div>
 
                                 <section id= "existingchoices">
 
-                                    <label>
+                                    <label class="bottomspace">
                                         What type of images?
                                     </label>
                                     
@@ -317,7 +317,7 @@
 
                             <fieldset>
                             <div>
-                            <label>Image Quality</label>
+                            <label class="bottomspace">Image Quality</label>
                             </div>
                                 
                                 <div>
@@ -351,7 +351,7 @@
                             </fieldset>
 
                             <fieldset>
-                            <label>File Type</label>
+                            <label class="bottomspace">File Type</label>
                                 <div>
                                 <input type="radio" name="filetype" value="JPEG" required>
                                 <label class="selectlabel">
@@ -382,7 +382,7 @@
                                 <label for="folderlocation" id="labelfor_folderlocation">
                                     Provide the folder location.
                                 </label>
-                                    <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="textbox folder" id="folderlocation">
+                                    <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="folderlocation">
                             </div>
                             
                             <div>
@@ -392,7 +392,7 @@
                             </label>
                             </div>
                             <div>
-                                <input type="email" name="delivery_email" placeholder="name@mail.com" class="textbox" id="deliveryemail">
+                                <input type="email" name="delivery_email" placeholder="name@mail.com" id="deliveryemail">
                             </div>
                             
                             <div>
@@ -419,7 +419,7 @@
                         </fieldset>
 
                         <fieldset>
-                        <label for="date">Due Date</label>
+                            <legend>Due Date</legend>
                             <p class="instructions">
                                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
                             </p>
