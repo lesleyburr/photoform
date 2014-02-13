@@ -39,13 +39,17 @@
 
                         <fieldset>
                         
+                        <div>
                         <label for="name" class="labelspace">Full Name</label>
                             <input type="text" name="name" placeholder="Bill Murray" id="name" required pattern="[a-zA-Z]+">
                              <small class="error">Name is required.</small>
+                        </div>
 
+                        <div>
                         <label for="email" class="labelspace">E-mail</label>
-                            <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+                            <input type="email" name="email" placeholder="name@mail.com" id="email" required pattern="email">
                             <small class="error">An email address is required.</small>
+                        </div>
   
                         <label for="phone" class="labelspace">Phone</label>
                             <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required>
@@ -454,7 +458,10 @@
                                 Requests for large batches of new images will take additional time.
                             </p>
                             
-                            <input type="date" name="date" id="date" required>
+                            <div>
+                            <input type="date" name="date" id="date" required pattern="month_day_year">
+                            <small class="error">A due date is required.</small>
+                            </div>
                             
                             <input type="submit" name="submit" value="PLACE MY ORDER" class="button labelspace">
 
