@@ -20,7 +20,7 @@
                 
                 <header><h1>Request Digital Photography and Imaging</h1></header>
 
-                <form method="post" action="photo-form-mailer.asp">
+                <form data-abide method="post" action="photo-form-mailer.asp">
 
                 <dl class="tabs" data-tab>
                     <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
@@ -40,10 +40,12 @@
                         <fieldset>
                         
                         <label for="name" class="labelspace">Full Name</label>
-                            <input type="text" name="name" placeholder="Bill Murray" id="name" required>
+                            <input type="text" name="name" placeholder="Bill Murray" id="name" required pattern="[a-zA-Z]+">
+                             <small class="error">Name is required.</small>
 
                         <label for="email" class="labelspace">E-mail</label>
                             <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+                            <small class="error">An email address is required.</small>
   
                         <label for="phone" class="labelspace">Phone</label>
                             <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required>
@@ -475,6 +477,7 @@
     <script type="text/javascript" src="js/placeholders.min.js"></script>
     <script type="text/javascript" src="js/jquery.formatter.min.js"></script>
     <script type="text/javascript" src="js/webforms2-master/webforms2-p.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
     <script type="text/javascript" src="js/custom-smartform.js"></script>
     <script>
       $(document).foundation();

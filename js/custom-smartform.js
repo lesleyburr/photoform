@@ -219,10 +219,10 @@ $('#account').formatter({
   'persistent': true
 });
 
-$('#date').formatter({
-  'pattern': '{{99}}-{{99}}-{{9999}}',
-  'persistent': true
-});
+// $('#date').formatter({
+//   'pattern': '{{99}}-{{99}}-{{9999}}',
+//   'persistent': true
+// });
 
 
 
