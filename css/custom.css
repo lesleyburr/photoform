@@ -159,7 +159,7 @@ p {
 }
 
 .alert-box-restrictions {
-	width: 55em;
+	width: 50em;
 	padding-right: 2em;
 }
 
@@ -172,9 +172,8 @@ p {
 }
 
 
-
 .alert-box .close {
-	padding-left: 3em;
+	padding-left: 2em;
 }
 
 
