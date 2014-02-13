@@ -218,3 +218,8 @@ $('#account').formatter({
   'pattern': '{{999}}-{{999}}-{{9999}}-{{9999}}',
   'persistent': true
 });
+
+$('#date').formatter({
+  'pattern': '{{99}}-{{99}}-{{9999}}',
+  'persistent': true
+});
