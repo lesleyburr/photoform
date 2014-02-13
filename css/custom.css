@@ -18,20 +18,20 @@ header {
 	margin-bottom: 3em;
 }
 
-h1 {
+/*h1 {
 	font-family: "Quaver Serif";
 	font-size: 3.3em;
 	font-weight: bold;
-}
+}*/
 
 /*dd {
 	background-color: #fdfdfd;
 }*/
 
-.tab {
+/*.tab {
 	font-family: "Quaver Serif";
 	font-size: 1.5em;
-}
+}*/
 
 input[type="text"], input[type="email"] {
 	width: 20em;
@@ -85,7 +85,7 @@ label {
 legend {
 	/*color: #555;*/
 	font-size: 1.8em;
-	font-family: "Quaver Sans";
+/*	font-family: "Quaver Sans";*/
 	font-weight: 900;
 }
 
