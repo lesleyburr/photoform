@@ -1,93 +1,103 @@
-@font-face {
-font-family: "Quaver Sans";
-src: url(../fonts/QuaverSans.otf);
-}
-
-@font-face {
-font-family: "Quaver Serif";
-src: url(../fonts/QuaverSerif.otf);
-}
+/***************************************************/
+/* BASE */
+/***************************************************/
 
 body {
 	/*background-image:url("../img/light_wool.png");*/
 	padding-bottom: 5em;
 }
 
-header {
-	margin-top: 5em;
-	margin-bottom: 3em;
+
+
+small {
+	font-style: italic;
 }
 
-/*h1 {
-	font-family: "Quaver Serif";
-	font-size: 3.3em;
-	font-weight: bold;
-}*/
 
-/*dd {
-	background-color: #fdfdfd;
-}*/
+/***************************************************/
+/* LAYOUT */
+/***************************************************/
 
-/*.tab {
-	font-family: "Quaver Serif";
-	font-size: 1.5em;
-}*/
 
-input[type="text"], input[type="email"] {
-	width: 20em;
+.space-bottom_1 {
+	margin-bottom: 1em;
 }
 
-textarea {
+.space-bottom_2 {
+	margin-bottom: 2em;
+}
+
+.space-top_1 {
+	margin-top: 1em;
+}
+
+.space-top_2 {
+	margin-top: 2em;
+}
+
+/***************************************************/
+/* MODULES */
+/***************************************************/
+
+/* Inputs */
+
+.account_number {
+	width: 15em;
+}
+
+.date {
+	width: 15em;
+}
+
+.description {
 	height: 5em;
 	width: 30em;
 }
 
-input[type="date"], input[type="tel"], input.accountnumber {
-	width: 12em;
+.email {
+	width: 20em;
 }
 
-input.folder {
-	width: 30em;
+.header-form {
+	margin-top: 5em;
+	margin-bottom: 3em;
+}
+
+.header-new_choices {
+	
+}
+
+.service {
+	font-size: 2em;
+}
+
+.service-main_question {
+	font-size: 1.5em;
+	
+}
+
+.tel {
+	width: 15em;
+}
+
+.text {
+	width: 20em;
+}
+
+/* labels */
+
+
+.field-label {
+	font-size: 1.25em;
+
 }
 
 
-label {
-	font-size: 1em;
-	color: #000;
-}
+/***************************************************/
+/* STATE */
+/***************************************************/
 
-.selectlabel {
-	position: relative;
-	left: 20px;
-	top: -15px;
-}
 
-/*.biglabel {
-	font-size: 1.2em;
-	padding-bottom: 1em;
-}*/
-
-/*#isnewimagesselected, #isexistingimagesselected {
-	vertical-align: bottom;
-	position: relative;
-	margin: 0;
-	top: -30px;
-}*/
-
-.labelspace {
-	margin-top: 2em;
-}
-
-.bottomspace {
-	margin-bottom: 1.5em;
-}
-
-legend {
-	/*color: #555;*/
-	font-size: 1.8em;
-/*	font-family: "Quaver Sans";*/
-	font-weight: 900;
-}
 
 .instructions {
 	font-size: 1em;
@@ -95,12 +105,6 @@ legend {
 
 .indent {
 	margin-left: 1em;
-}
-
-fieldset {
-	/*background-color: #fdfdfd;
-	border: none;*/
-	margin-top: 1em;
 }
 
 .innerfieldset {
@@ -142,7 +146,7 @@ p {
 
 .has-tip:hover, .has-tip:focus {
 	border-bottom: none;
-	color: #000;
+	color: #222;
 }
 
 .alert-box {
@@ -177,3 +181,20 @@ p {
 }
 
 
+/*	Foundation Overrides*/
+[data-abide] .error small.error, {
+	font-size: 3em;
+}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+	margin: 0;
+}
+
+.tabs dd > a {
+/*	background: Azure;*/
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+	font-size: 1.35em;
+	text-transform: uppercase;
+}
