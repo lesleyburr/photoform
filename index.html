@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/foundation-icons.css"/>
     <script type="text/javascript" src="js/modernizr.js"></script>
-    <title>Digital Photography and Imaging: Place Orders</title>
+    <title>Photo Order Form</title>
   </head>
 
   <body>
@@ -19,25 +19,36 @@
 
                 <header><h1>Request Digital Photography and Imaging</h1></header>
 
-                <form method="post" action="photo-form-mailer.asp">
+                <form data-abide method="post" action="photo-form-mailer.asp">
 
+                <dl class="tabs" data-tab>
+                    <dd class="active"><a href="#panel2-1">Personal Info</a></dd>
+                    <dd><a href="#panel2-2">Services</a></dd>
+                    <dd><a href="#panel2-3">Use</a></dd>
+                    <dd><a href="#panel2-4">Files</a></dd>
+                </dl>
 
-                <dl class="accordion" data-accordion>
-
-                    <dd><a href="#panel1"><span class="tab">Personal Info</span></a>
-                    <div id="panel1" class="content">
+                <div class="tabs-content large-12 columns">
 
                     <!--  -->
                     <!-- Personal Info -->
                     <!--  -->
 
+                    <div class="content active large-12 columns" id="panel2-1">
+
                         <fieldset>
 
+                        <div>
                         <label for="name" class="labelspace">Full Name</label>
-                            <input type="text" name="name" placeholder="Bill Murray" id="name" required>
+                            <input type="text" name="name" placeholder="Bill Murray" id="name" required pattern="[a-zA-Z]+">
+                             <small class="error">Name is required.</small>
+                        </div>
 
+                        <div>
                         <label for="email" class="labelspace">E-mail</label>
-                            <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+                            <input type="email" name="email" placeholder="name@mail.com" id="email" required pattern="email">
+                            <small class="error">An email address is required.</small>
+                        </div>
 
                         <label for="phone" class="labelspace">Phone</label>
                             <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required>
@@ -51,39 +62,42 @@
                         </fieldset>
 
                     </div>
-                    </dd>
 
-                    <dd><a href="#panel2"><span class="tab">Services</span></a>
-                    <div id="panel2" class="content">
 
                     <!--  -->
                     <!-- Services -->
                     <!--  -->
 
+
+                    <div class="content large-12 columns" id="panel2-2">
+
                         <fieldset>
                         <legend>Photography Services</legend>
+                            <fieldset>
+
+<!-- <dl class="accordion" data-accordion>
+  <dd>
+    <a href="#panel1">Accordion 1</a>
+    <div id="panel1" class="content active">
+    </div>
+  </dd>
+
+  <dd>
+    <a href="#panel2">Accordion 2</a>
+    <div id="panel2" class="content">
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </dd>
+
+  <dd>
+    <a href="#panel3">Accordion 3</a>
+    <div id="panel3" class="content">
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </dd>
+</dl> -->
 
 
-                        <dl class="accordion" data-accordion>
-
-                            <dd>
-                                <a href="#panel1">I need new images.</a>
-                                <div id="panel1" class="content">
-                                </div>
-                            </dd>
-
-                            <dd>
-                                <a href="#panel2">I need copies of exisiting images.</a>
-                                <div id="panel2" class="content">
-
-                                </div>
-                            </dd>
-
-                        </dl>
-
-
-
-                            <fieldset class="innerfieldset">
                                 <div>
                                 <input type="checkbox" name="new_images" value="on" id="isnewimagesselected">
                                 <label class="selectlabel">I need new images.</label>
@@ -97,7 +111,7 @@
                                     <div>
                                     <input type="checkbox" name="new_image_service" value="2D collection items" id="is2dselected">
                                     <label class="selectlabel">2D collection items</label>
-                                        <p data-alert class="alert-box info radius alert-box-2d" id="txt2dinstructions">
+                                        <p data-alert class="alert-box info radius" id="txt2dinstructions">
                                             Bring materials to the Rights &amp; Reproductions department.
                                             <a href="#" class="close">&times;</a>
                                         </p>
@@ -106,7 +120,7 @@
                                     <div>
                                     <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected">
                                     <label class="selectlabel">3D collection items</label>
-                                        <p data-alert class="alert-box info radius alert-box-3d" id="txt3dinstructions">
+                                        <p data-alert class="alert-box info radius" id="txt3dinstructions">
                                             You will need to coordinate material delivery to the photo lab with collection managers.
                                             <a href="#" class="close">&times;</a>
                                         </p>
@@ -139,13 +153,13 @@
                                         <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
                                             What is the exhibition title?
                                         </label>
-                                            <input type="text" name="new_photo_for_ex_title" placeholder="Hot Dogs" id="photographyexhibitions"></text>
+                                            <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="photographyexhibitions"></text>
                                          <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">
                                             <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed.">
                                                 Photography details
                                             </span>
                                         </label>
-                                            <textarea name="new_photo_for_ex_details" placeholder="Photograph a hot dog mascot eating a hot dog, while laying in the Sensing Chicago hot dog." id="photography_exhibitions_details"></textarea>
+                                            <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="photography_exhibitions_details"></textarea>
                                         <label for="datetime_photographyexhibitions" id="labelfor_datetime_photographyexhibitions">
                                             When should the photography occur?
                                         </label>
@@ -160,7 +174,7 @@
                                         <label for="marketing" id="labelfor_marketing">
                                             Describe what you would liked photographed.
                                         </label>
-                                            <textarea name="new_marketing_details" placeholder="Photograph kids playing in the Chicago room." id="marketing"></textarea>
+                                            <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="marketing"></textarea>
                                         <label for="datetime_marketing" id="labelfor_datetime_marketing">
                                             When should the photography occur?
                                         </label>
@@ -177,7 +191,7 @@
                                         </label>
                                             <textarea name="new_event" placeholder="Out at CHM" id="event"></textarea>
                                         <label for="datetime_event" id="labelfor_datetime_event">
-                                            When should the photography occur?
+                                            When should photography occur?
                                         </label>
                                             <input type="date" name="new_event_date" id="datetime_event">
                                     </div>
@@ -190,12 +204,12 @@
                                         <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
                                             Describe the new images that you need.
                                         </label>
-                                            <textarea name="new_other" placeholder="I want pictures of cats in Chicago." id="photoservice_other_textarea"></textarea>
+                                            <textarea name="new_other" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea"></textarea>
                                     </div>
                                 </section>
                             </fieldset>
 
-                            <fieldset class="innerfieldset">
+                            <fieldset>
                                 <div>
                                 <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
                                 <label class="selectlabel">
@@ -234,18 +248,17 @@
                             </fieldset>
                         </fieldset>
                     </div>
-                    </dd>
 
-                    <dd><a href="#panel3"><span class="tab">Use</span></a>
-                    <div id="panel3" class="content">
-                     <!--  -->
+
+                    <!--  -->
                     <!-- Use -->
                     <!--  -->
 
+                    <div class="content large-12 columns" id="panel2-3">
                         <fieldset>
                         <legend>How are you planning to use the images?</legend>
 
-                            <p data-alert class="alert-box info radius alert-box-restrictions" id="restrictions">
+                            <p data-alert class="alert-box info radius" id="restrictions">
                                 You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
                                 <a href="#" class="close">&times;</a>
                             </p>
@@ -290,7 +303,7 @@
                             <div>
                             <input type="checkbox" name="use" value="Other" id="isotheruse">
                             <label class="selectlabel">
-                                Other use
+                                Other Use
                             </label>
                                 <label for="use_other_textarea" id="labelfor_use_other_textarea">
                                     What will these images be used for?
@@ -322,19 +335,18 @@
                         </fieldset>
 
                     </div>
-                    </dd>
 
-                    <dd><a href="#panel4"><span class="tab">Files</span></a>
-                    <div id="panel4" class="content">
                     <!--  -->
                     <!-- Files -->
                     <!--  -->
 
+                    <div class="content large-12 columns" id="panel2-4">
+
                         <fieldset>
                         <legend>File Specs</legend>
 
-                            <fieldset class="noborder">
-                             <div>
+                            <fieldset>
+                            <div>
                             <label class="bottomspace">Image Quality</label>
                             </div>
 
@@ -368,7 +380,7 @@
                                 </div>
                             </fieldset>
 
-                            <fieldset class="noborder">
+                            <fieldset>
                             <label class="bottomspace">File Type</label>
                                 <div>
                                 <input type="radio" name="filetype" value="JPEG" required>
@@ -418,7 +430,7 @@
                             <label class="selectlabel">
                                 Burn to disc
                             </label>
-                                <p data-alert class="alert-box info radius alert-box-cd" id="txtburninstructions">
+                                <p data-alert class="alert-box info radius" id="txtburninstructions">
                                     CDs and DVDs with labels are $2 each and are charged to your account.
                                     <a href="#" class="close">&times;</a>
                                 </p>
@@ -432,7 +444,7 @@
                                 <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">
                                     How would you like the files delivered?
                                 </label>
-                                    <textarea name="delivery_other" placeholder="Teleportation, please." id="delivery_other_textarea"></textarea>
+                                    <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="delivery_other_textarea"></textarea>
                             </div>
                         </fieldset>
 
@@ -441,21 +453,20 @@
                             <p class="instructions">
                                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
                             </p>
-                            <p data-alert class="alert-box info radius alert-box-batches" id="largebatches">
+                            <p data-alert class="alert-box info radius" id="largebatches">
                                 Requests for large batches of new images will take additional time.
-                                <a href="#" class="close">&times;</a>
                             </p>
 
-                            <input type="date" name="date" id="date" required>
+                            <div>
+                            <input type="date" name="date" id="date" required pattern="month_day_year">
+                            <small class="error">A due date is required.</small>
+                            </div>
 
                             <input type="submit" name="submit" value="PLACE MY ORDER" class="button labelspace">
 
                         </fieldset>
 
                     </div>
-                    </dd>
-                </dl>
-
 
 
                 </div>
@@ -471,6 +482,8 @@
     <script type="text/javascript" src="js/foundation.min.js"></script>
     <script type="text/javascript" src="js/placeholders.min.js"></script>
     <script type="text/javascript" src="js/jquery.formatter.min.js"></script>
+    <script type="text/javascript" src="js/webforms2-master/webforms2-p.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
     <script type="text/javascript" src="js/custom-smartform.js"></script>
     <script>
       $(document).foundation();
