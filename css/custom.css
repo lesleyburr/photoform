@@ -1,23 +1,87 @@
+/*
+
+BEM NOTATION
+.block {}
+.block__element {} part of block which makes it a whole
+.block--modifier {} diferrent version or stat of block
+
+.person {}
+.person__hand {}
+.person--female {}
+.person--female__hand {}
+.person__hand--left {}
+
+*/
+
 /***************************************************/
 /* BASE */
 /***************************************************/
-
-body {
-	/*background-image:url("../img/light_wool.png");*/
-	padding-bottom: 5em;
-}
-
-
-
-small {
-	font-style: italic;
-}
-
-
 /***************************************************/
 /* LAYOUT */
 /***************************************************/
+/***************************************************/
+/* MODULES */
+/***************************************************/
 
+/* FORM */
+	/* --Headers */
+	.form__header {
+		margin-top: 5em;
+		margin-bottom: 3em;
+	}
+
+	.form__header--new-choices {}
+
+	/* --Inputs */
+	.field--account-number {
+		width: 15em;
+	}
+
+	.field--date {
+		width: 15em;
+	}
+
+	.field--description {
+		height: 5em;
+		width: 30em;
+	}
+
+	.field--email {
+		width: 20em;
+	}
+
+	.field--tel {
+		width: 15em;
+	}
+
+	.field--text {
+		width: 20em;
+	}
+
+
+
+/*	Foundation Overrides
+[data-abide] .error small.error, {
+	font-size: 3em;
+}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+	margin: 0;
+}
+
+.tabs dd > a {
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+	font-size: 1.35em;
+	text-transform: uppercase;
+}
+*/
+
+
+
+/*
+DELETE LATER
 
 .space-bottom_1 {
 	margin-bottom: 1em;
@@ -35,68 +99,29 @@ small {
 	margin-top: 2em;
 }
 
-/***************************************************/
-/* MODULES */
-/***************************************************/
 
-/* Inputs */
-
-.account_number {
-	width: 15em;
-}
-
-.date {
-	width: 15em;
-}
-
-.description {
-	height: 5em;
-	width: 30em;
-}
-
-.email {
-	width: 20em;
-}
-
-.header-form {
-	margin-top: 5em;
-	margin-bottom: 3em;
-}
-
-.header-new_choices {
-	
-}
-
-.service {
-	font-size: 2em;
-}
-
-.service-main_question {
-	font-size: 1.5em;
-	
-}
-
-.tel {
-	width: 15em;
-}
-
-.text {
-	width: 20em;
-}
-
-/* labels */
-
-
-.field-label {
-	font-size: 1.25em;
-
+body {
+	background-image:url("../img/light_wool.png");
+	padding-bottom: 5em;
 }
 
 
-/***************************************************/
-/* STATE */
-/***************************************************/
 
+small {
+	font-style: italic;
+}
+
+	.label {
+		font-size: 1.25em;
+	}
+
+	.field--service {
+		font-size: 2em;
+	}
+
+	.field--service__main-question {
+		font-size: 1.5em;
+	}
 
 
 .instructions {
@@ -124,22 +149,22 @@ input {
 
 p {
 	margin-bottom: 0;
-}
+}*/
 
 
-#newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
-#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
-#labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing, 
-#marketing, #labelfor_datetime_marketing, #datetime_marketing, 
-#event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea, 
+/*#newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc,
+#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details,
+#labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing,
+#marketing, #labelfor_datetime_marketing, #datetime_marketing,
+#event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea,
 #photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
-#photoservice_collections_textarea, #labelfor_service_noncollections_items_details_textarea, #service_noncollections_items_details_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea, 
-#use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation, 
+#photoservice_collections_textarea, #labelfor_service_noncollections_items_details_textarea, #service_noncollections_items_details_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea,
+#use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation,
 #deliveryemail, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event, #restrictions, #largebatches {
 	display: none;
 }
 
-.has-tip {
+.has-tool-tip {
 	font-weight: normal;
 	border-bottom: none;
 }
@@ -179,22 +204,6 @@ p {
 .alert-box .close {
 	padding-left: 2em;
 }
+*/
 
 
-/*	Foundation Overrides*/
-[data-abide] .error small.error, {
-	font-size: 3em;
-}
-
-input[type="file"], input[type="checkbox"], input[type="radio"], select {
-	margin: 0;
-}
-
-.tabs dd > a {
-/*	background: Azure;*/
-	border-top: 1px solid #999;
-	border-right: 1px solid #999;
-	border-left: 1px solid #999;
-	font-size: 1.35em;
-	text-transform: uppercase;
-}
