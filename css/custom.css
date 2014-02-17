@@ -1,82 +1,200 @@
-header {
-	margin-top: 4em;
+/***************************************************/
+/* BASE */
+/***************************************************/
+
+body {
+	/*background-image:url("../img/light_wool.png");*/
+	padding-bottom: 5em;
+}
+
+
+
+small {
+	font-style: italic;
+}
+
+
+/***************************************************/
+/* LAYOUT */
+/***************************************************/
+
+
+.space-bottom_1 {
 	margin-bottom: 1em;
 }
 
-.textbox {
-	display: block;
-}
-
-.purpose {
-	font-size: 1.3em;
+.space-bottom_2 {
 	margin-bottom: 2em;
 }
 
-label {
-	font-size: 1em;
-	color: #000;
+.space-top_1 {
+	margin-top: 1em;
 }
 
-/*.biglabel {
-	font-size: 1.2em;
-	padding-bottom: 1em;
-}*/
-
-/*#isnewimagesselected, #isexistingimagesselected {
-	vertical-align: bottom;
-	position: relative;
-	margin: 0;
-	top: -30px;
-}*/
-
-.labelspace {
+.space-top_2 {
 	margin-top: 2em;
 }
 
-legend {
-	color: #555;
-	font-size: 1.5em;
+/***************************************************/
+/* MODULES */
+/***************************************************/
+
+/* Inputs */
+
+.account_number {
+	width: 15em;
 }
+
+.date {
+	width: 15em;
+}
+
+.description {
+	height: 5em;
+	width: 30em;
+}
+
+.email {
+	width: 20em;
+}
+
+.header-form {
+	margin-top: 5em;
+	margin-bottom: 3em;
+}
+
+.header-new_choices {
+	
+}
+
+.service {
+	font-size: 2em;
+}
+
+.service-main_question {
+	font-size: 1.5em;
+	
+}
+
+.tel {
+	width: 15em;
+}
+
+.text {
+	width: 20em;
+}
+
+/* labels */
+
+
+.field-label {
+	font-size: 1.25em;
+
+}
+
+
+/***************************************************/
+/* STATE */
+/***************************************************/
+
+
 
 .instructions {
 	font-size: 1em;
 }
 
-fieldset {
-	/*background-color: #eee;*/
-	/*border: none;*/
-	margin-top: 2em;
-}
-
-.box {
+.indent {
 	margin-left: 1em;
 }
+
+.innerfieldset {
+	padding-top: 3em;
+}
+
+.noborder {
+	border: none;
+}
+
 
 input {
 	vertical-align: bottom;
 	position: relative;
 	margin: 0;
-	top: 14px;
 }
 
-/*.tabs dd {
-	width: 20%;
-}*/
-
 p {
-	margin-top: 1em;
 	margin-bottom: 0;
 }
 
+
 #newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc, 
-#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #labelfor_photography_exhibitions_description, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
+#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details, 
 #labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing, 
 #marketing, #labelfor_datetime_marketing, #datetime_marketing, 
 #event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea, 
 #photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
 #photoservice_collections_textarea, #labelfor_service_noncollections_items_details_textarea, #service_noncollections_items_details_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea, 
 #use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation, 
-#email, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event {
+#deliveryemail, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event, #restrictions, #largebatches {
 	display: none;
 }
 
+.has-tip {
+	font-weight: normal;
+	border-bottom: none;
+}
+
+.has-tip:hover, .has-tip:focus {
+	border-bottom: none;
+	color: #222;
+}
+
+.alert-box {
+	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+	font-size: 1em;
+}
+
+.alert-box-2d {
+	width: 30em;
+}
+
+.alert-box-3d {
+	width: 45em;
+}
+
+.alert-box-restrictions {
+	width: 50em;
+	padding-right: 2em;
+}
+
+.alert-box-cd {
+	width: 40em;
+}
+
+.alert-box-batches {
+	width: 35em;
+}
+
+
+.alert-box .close {
+	padding-left: 2em;
+}
+
+
+/*	Foundation Overrides*/
+[data-abide] .error small.error, {
+	font-size: 3em;
+}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+	margin: 0;
+}
+
+.tabs dd > a {
+/*	background: Azure;*/
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+	font-size: 1.35em;
+	text-transform: uppercase;
+}
