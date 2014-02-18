@@ -100,68 +100,95 @@
                         </header>
 
                         <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="2D collection items" id="ServiceNew2D">
-                            <label for="ServiceNew2D" class="label">2D collection items</label>
-                            <p data-alert class="alert-box info radius" id="ServiceNew2DAlert">
+                            <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
+                            <label for="New2D" class="label">2D collection items</label>
+                            <p data-alert class="alert-box info radius" id="New2DAlert">
                                 Bring materials to the Rights &amp; Reproductions department.
                                 <a href="#" class="close">&times;</a>
                             </p>
                         </div>
 
                         <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="3D collection items" id="ServiceNew3D">
-                            <label for="ServiceNew3D" class="label">3D collection items</label>
-                            <p data-alert class="alert-box info radius" id="ServiceNew3DAlert">
+                            <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
+                            <label for="New3D" class="label">3D collection items</label>
+                            <p data-alert class="alert-box info radius" id="New3DAlert">
                                 You will need to coordinate material delivery to the photo lab with collection managers.
                                 <a href="#" class="close">&times;</a>
                             </p>
                         </div>
 
                         <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="ServiceNewExibitionDoc">
-                            <label for="ServiceNewExibitionDoc" class="label">
+                            <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="NewExibitionDoc">
+                            <label for="NewExibitionDoc" class="label">
                                 Exhibition documentation
                                 <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space."><i class="fi-info"></i></span>
                             </label>
+                            
+                            <div id="NewExhibitionDocDetails">
                             <!-- *********************** -->
-                            <!-- CREATE BELOW VIA JQUERY -->
-                            <div id="ServicesExhibitionDocDetails">
-                                <label for="ServiceNewExhibitionDocTitle" class="label">
+                            <!-- CREATE BELOW VIA JQUERY 
+                            
+                                <label for="NewExhibitionDocTitle" class="label">
                                     What is the name of the exhibition you want photographed?
                                 </label>
-                                <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="ServiceNewExhibitionDocTitle" required>
-                                <label for="ServiceNewExhibitionDocDate" class="label">
+                                <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>
+                                <label for="NewExhibitionDocDate" class="label">
                                     When should the photography occur?
                                 </label>
-                                <input type="date" name="new_exdoc_date" id="ServiceNewExhibitionDocDate" required pattern="month_day_year">
-                            </div>
-                            <!-- CREATE ABOVE VIA JQUERY -->
+                                <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">
+
+                             CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
+                            </div>
                         </div>
 
 
                         <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="ServiceNewPhotoForExhibition">
-                            <label  for="ServiceNewPhotoForExhibition" class="label">
+                            <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="NewPhotoForExhibition">
+                            <label  for="NewPhotoForExhibition" class="label">
                                 Photography for exhibitions
                                 <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition."><i class="fi-info"></i></span>
                             </label>
-                            <div id="ServicesPhotoForExhibitionDetails">
+                            <div id="NewPhotoForExhibitionDetails">
                             <!-- *********************** -->
                             <!-- CREATE BELOW VIA JQUERY -->
-                                <label for="ServiceNewPhotoForExhibitionTitle" class="label">
+                                <label for="NewPhotoForExhibitionTitle" class="label">
                                     What is the exhibition title?
                                 </label>
-                                <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="ServiceNewPhotoForExhibitionTitle"></text>
-                                <label class="label" for="ServiceNewPhotoForExhibitionDescription">
+                                <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="NewPhotoForExhibitionTitle">
+                                <label class="label" for="NewPhotoForExhibitionDescription">
                                     Provide Photography details:
                                     <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
                                 </label>
-                                <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="ServiceNewPhotoForExhibitionDescription" required></textarea>
-                                <label for="ServiceNewPhotoForExhibitionDate">
+                                <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>
+                                <label for="NewPhotoForExhibitionDate">
                                     When should the photography occur?
                                 </label>
-                                <input type="date" name="new_photo_for_ex_date" id="ServiceNewPhotoForExhibitionDate" required pattern="month_day_year">
+                                <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">
+                            <!-- CREATE ABOVE VIA JQUERY -->
+                            <!-- *********************** -->
+                            </div>
+                        </div>
+
+
+                        <div class="services__option">
+                            <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="ServiceNewPhotoForMarketing">
+                            <label  for="ServiceNewPhotoForMarketing" class="label">
+                                Marketing photography
+                                <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition."><i class="fi-info"></i></span>
+                            </label>
+                            <div id="ServicesPhotoForMarketingDetails">
+                            <!-- *********************** -->
+                            <!-- CREATE BELOW VIA JQUERY -->
+                                <label class="label" for="ServiceNewPhotoForMarketingDescription">
+                                    Provide Photography details:
+                                    <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
+                                </label>
+                                <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="ServiceNewPhotoForMarketingDescription" required></textarea>
+                                <label for="ServiceNewPhotoForMarketingDate">
+                                    When should the photography occur?
+                                </label>
+                                <input type="date" name="new_photo_for_ex_date" id="ServiceNewPhotoForMarketingDate" required pattern="month_day_year">
                             <!-- CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
                             </div>
