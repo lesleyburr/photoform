@@ -21,11 +21,15 @@ $( "#GoToFiles" ).click(function( event ) {
 // SERVICES
 
 
-
-
+// Show New Images menu
 $('#ServicesNew').click(function() {
-     $("#ServicesNewOptions").toggle(this.checked);
+     $("#ServicesNewMenu").toggle(this.checked);
 });
+
+
+// Show Exhibition Documentation questions
+
+
 
 
 // ********************************
