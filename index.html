@@ -86,14 +86,13 @@
         <!-- ***************************************************** -->
         <div class="content large-12 columns" id="panel1-2">
             <fieldset>
+                <!-- NEW -->
                 <fieldset>
                     <div class="services">
                         <input type="checkbox" name="new_images" value="on" id="ServicesNew">
                         <label for="ServicesNew" class="label">I need new images.</label>
                     </div>
 
-                    <!-- ************* -->
-                    <!-- DISPLAY: NONE -->
                     <section class="services--new" id="ServicesNewMenu">
                         <header>
                             <h1 class="services__header--new">What type of new images?</h1>
@@ -305,21 +304,33 @@
                     </section>
                 </fieldset>
 
-                            <fieldset class="space-top_1">
-                                <div>
-                                <input type="checkbox" name="existing_images" value="on" id="isexistingimagesselected">
-                                <label class="field-label space-bottom_1 ">
+
+                            <!-- Existing -->
+
+                        <div class="services__option">
+                            <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
+                            <label for="New2D" class="label">2D collection items</label>
+                            <p data-alert class="alert-box info radius" id="New2DAlert">
+                                Bring materials to the Rights &amp; Reproductions department.
+                                <a href="#" class="close">&times;</a>
+                            </p>
+                        </div>
+
+
+
+
+                            <fieldset>
+                                <div class="services">
+                                <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
+                                <label for="ServicesExisting" class="label">
                                     I need copies of existing images.
                                 </label>
                             </div>
 
-
-
-                                <section id= "existingchoices">
-
-                                    <label class="space-bottom_2">
-                                        What type of existing images?
-                                    </label>
+                                <section class="services--existing" id= "ServicesExistingMenu"> 
+                                    <header>
+                                        <h1 class="services__header--existing">What type of existing images?</h1>
+                                    </header>
 
                                     <div>
                                     <input type="checkbox" name="existing_image_service" value="Collections items" id="iscollectionsselected">
