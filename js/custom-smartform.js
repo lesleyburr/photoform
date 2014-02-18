@@ -31,8 +31,8 @@ $("#NewExibitionDoc").click(function(){
 		$( "#NewExhibitionDocDetails" ).slideToggle( "slow", function() {
   			$("#NewExhibitionDocDetails").html('<div class="field--text">\
   									 				<label for="NewExhibitionDocTitle" class="label">\
-  									 				What is the name of the exhibition you want photographed?\
-  									 				<small>required</small>\
+  									 				  What is the name of the exhibition you want photographed?\
+  									 				  <small>required</small>\
   									 				</label>\
   									  				<input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>\
   													<small class="error">\

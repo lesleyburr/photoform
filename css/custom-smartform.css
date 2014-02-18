@@ -93,7 +93,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 		text-transform: uppercase;
 	}
 
-	.services--new {
+	.hide {
 		display: none;
 	}
 
