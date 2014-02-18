@@ -1,11 +1,24 @@
 // FORM NAVIGATION
-$('#go-to-services').click(function() {
-    $('#tab1-2').click();
+$( "#GoToServices" ).click(function( event ) {
+  event.preventDefault();
+  $('#tab1-2').click();
+});
+
+$( "#GoToUse" ).click(function( event ) {
+  event.preventDefault();
+  $('#tab1-3').click();
+});
+
+$( "#GoToFiles" ).click(function( event ) {
+  event.preventDefault();
+  $('#tab1-4').click();
 });
 
 
 
 
+// CONDITIONAL SECTIONS 
+// SERVICES
 
 
 

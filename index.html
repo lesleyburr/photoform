@@ -32,7 +32,7 @@
         <!-- TAB CONTENT SECTIONS -->
         <div class="tabs-content large-12 columns">
 
-        <!-- ********************************************************** -->
+        <!-- ***************************************************** -->
         <!--               PERSONAL INFORMATION                    -->
         <!-- ***************************************************** -->
         <div class="content active large-12 columns" id="panel1-1">
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="navigation--bottom">
-                    <a href="#" class="button radius uppercase" id="go-to-services">Services <i class="fi-play"></i></a>
+                    <a href="#" class="button radius uppercase" id="GoToServices">Services <i class="fi-play"></i></a>
                 </div>
 
             </fieldset>
@@ -124,8 +124,8 @@
                                     Exhibition documentation <i class="fi-info"></i>
                                 </span>
                             </label>
-                            <!-- ***************** -->
-                            <!-- CREATE VIA JQUERY -->
+                            <!-- *********************** -->
+                            <!-- CREATE BELOW VIA JQUERY -->
                             <div class="services__description">
                                 <label for="ServiceNewExhibitionDocTitle" class="label">
                                     What is the name of the exhibition you want photographed?
@@ -134,22 +134,23 @@
                                 <label for="ServiceNewExhibitionDocDate" class="label">
                                     When should the photography occur?
                                 </label>
-                                <!-- ***************************** -->
-                                <!-- Should pattern be month_day_year or date? -->
-                                <!-- LEFT OFF HERE -->
                                 <input type="date" name="new_exdoc_date" id="ServiceNewExhibitionDocDate" required pattern="month_day_year">
                             </div>
+                            <!-- CREATE ABOVE VIA JQUERY -->
+                            <!-- *********************** -->
                         </div>
 
+
+
                         <div class="services__option">
-                                    <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions">
-                                    <label class="field-label space-bottom_1 ">
-                                        <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
-                                            Photography for exhibitions <i class="fi-info"></i>
-                                        </span>
-                                    </label>
-                                        <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
-                                            What is the exhibition title?
+                            <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions">
+                            <label class="field-label space-bottom_1 ">
+                                <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
+                                    Photography for exhibitions <i class="fi-info"></i>
+                                </span>
+                            </label>
+                            <label for="photographyexhibitions" id="labelfor_photographyexhibitions">
+                                What is the exhibition title?
                                         </label>
                                             <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="photographyexhibitions"></text>
                                          <label for="photography_exhibitions_details" id="labelfor_photography_exhibitions_details">

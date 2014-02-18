@@ -3,7 +3,7 @@
 BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 .block {}
 .block__element {} part of block which makes it a whole
-.block--modifier {} diferrent version or stat of block
+.block--modifier {} diferrent version or state of block
 
 .person {}
 .person__hand {}
