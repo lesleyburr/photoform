@@ -26,11 +26,10 @@ $('#ServicesNew').click(function() {
      $("#ServicesNewMenu").toggle(this.checked);
 });
 
-$("#NewExibitionDoc").click(function(){
-  $("#NewExhibitionDocDetails").append("<h1>Hello</h1>");
-});
-
 // Show Exhibition Documentation questions
+$("#NewExibitionDoc").click(function(){
+  $("#NewExhibitionDocDetails").append('<label for="NewExhibitionDocTitle" class="label">What is the name of the exhibition you want photographed?</label><input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required><label for="NewExhibitionDocDate" class="label">When should the photography occur?</label><input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">');
+});
 
 // $( "<h1>Hello</h1>" ).appendTo("#ServicesExhibitionDocDetails");
 
