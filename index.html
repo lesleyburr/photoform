@@ -127,15 +127,24 @@
                             <div id="NewExhibitionDocDetails">
                             <!-- *********************** -->
                             <!-- CREATE BELOW VIA JQUERY 
-                            
-                                <label for="NewExhibitionDocTitle" class="label">
-                                    What is the name of the exhibition you want photographed?
-                                </label>
-                                <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>
-                                <label for="NewExhibitionDocDate" class="label">
-                                    When should the photography occur?
-                                </label>
-                                <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">
+
+                                <div class="field--text">
+                                    <label for="NewExhibitionDocTitle" class="label">
+                                        What is the name of the exhibition you want photographed? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>
+                                    <small class="error">How should I refer to this exhibition?</small>
+                                </div>
+
+                                <div class="field--date">
+                                    <label for="NewExhibitionDocDate" class="label">
+                                        When should the photography occur? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">
+                                    <small class="error">Use the MM/DD/YYYY date format.</small>
+                                </div>
 
                              CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
@@ -152,19 +161,34 @@
                             <div id="NewPhotoForExhibitionDetails">
                             <!-- *********************** -->
                             <!-- CREATE BELOW VIA JQUERY 
-                                <label for="NewPhotoForExhibitionTitle" class="label">
-                                    What is the exhibition title?
-                                </label>
-                                <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="NewPhotoForExhibitionTitle">
-                                <label class="label" for="NewPhotoForExhibitionDescription">
-                                    Provide Photography details:
-                                    <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
-                                </label>
-                                <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>
-                                <label for="NewPhotoForExhibitionDate">
-                                    When should the photography occur?
-                                </label>
-                                <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">
+
+                                <div class="field--text">
+                                    <label for="NewPhotoForExhibitionTitle" class="label">
+                                        What is the exhibition title? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="NewPhotoForExhibitionTitle" required>
+                                    <small class="error">How should I refer to this exhibition?</small>
+                                </div>
+
+                                <div class="field--description">
+                                    <label class="label" for="NewPhotoForExhibitionDescription">
+                                        Provide Photography details: 
+                                        <small>required</small>
+                                        <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
+                                    </label>
+                                    <textarea name="new_photo_for_ex_details" placeholder="Photograph the women's suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>
+                                    <small class="error">Please provide some context on the exhibition.</small>
+                                </div>
+
+                                <div class="field--date">
+                                    <label for="NewPhotoForExhibitionDate">
+                                        When should the photography occur? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">
+                                    <small class="error">Use the MM/DD/YYYY date format.</small>
+                                </div>
                              CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
                             </div>
@@ -179,15 +203,26 @@
                             <div id="NewPhotoForMarketingDetails">
                             <!-- *********************** -->
                             <!-- CREATE BELOW VIA JQUERY
-                                <label class="label" for="NewPhotoForMarketingDescription">
-                                    Provide Photography details:
-                                    <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
-                                </label>
-                                <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="NewPhotoForMarketing"></textarea>
-                                <label for="ServiceNewPhotoForMarketingDate">
-                                    When should the photography occur?
-                                </label>
-                                <input type="date" name="new_marketing_date" id="ServiceNewPhotoForMarketingDate" required pattern="month_day_year">
+                                
+                                <div class="field--description">
+                                    <label class="label" for="NewPhotoForMarketingDescription">
+                                        Provide Photography details: 
+                                        <small>required</small>
+                                        <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
+                                    </label>
+                                    <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="NewPhotoForMarketing" required></textarea>
+                                    <small class="error">What would you like photographed?</small>
+                                </div>
+
+                                <div class="field--date">
+                                    <label for="NewPhotoForMarketingDate">
+                                        When should the photography occur? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="date" name="new_marketing_date" id="NewPhotoForMarketingDate" required pattern="month_day_year">
+                                    <small class="error">Use the MM/DD/YYYY date format.</small>
+                                </div>
+
                              CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
                             </div>
@@ -195,42 +230,47 @@
 
 
                         <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Event photography" id="ServiceNewPhotoForEvents">
-                            <label  for="ServiceNewPhotoForMarketing" class="label">
-                                Eventphotography
+                            <input type="checkbox" name="new_image_service" value="Event photography" id="ServiceNewPhotoForEvent">
+                            <label  for="ServiceNewPhotoForEvent" class="label">
+                                Event photography
                             </label>
-                            <div id="ServicesPhotoForMarketingDetails">
+                            <div id="NewPhotoForEventDetails">
                             <!-- *********************** -->
                             <!-- CREATE BELOW VIA JQUERY
-                                <label class="label" for="NewPhotoForMarketingDescription">
-                                    Provide Photography details:
+
+                                <div class="field--text">
+                                    <label for="NewPhotoForEventTitle" class="label">
+                                        What is the event name? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>
+                                    <small class="error">How should I refer to this exhibition?</small>
+                                </div>
+
+                                <div class="field--description">
+                                    <label class="label" for="NewPhotoForEventDescription">
+                                        Provide Photography details: 
+                                        <small>required</small>
                                     <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
-                                </label>
-                                <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="NewPhotoForMarketing"></textarea>
-                                <label for="ServiceNewPhotoForMarketingDate">
-                                    When should the photography occur?
-                                </label>
-                                <input type="date" name="new_marketing_date" id="ServiceNewPhotoForMarketingDate" required pattern="month_day_year">
+                                    </label>
+                                    <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>
+                                    <small class="error">Please provide some context on the exhibition.</small>
+                                </div>
+
+                                <div class="field--date">
+                                    <label for="NewPhotoForEventDate">
+                                        When should the photography occur? 
+                                        <small>required</small>
+                                    </label>
+                                    <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">
+                                    <small class="error">Use the MM/DD/YYYY date format.</small>
+                                </div>
+                                
                              CREATE ABOVE VIA JQUERY -->
                             <!-- *********************** -->
                             </div>
                         </div>
 
-
-                        <div class="services__option">
-                                    <input type="checkbox" name="new_image_service" value="Event photography" id="iseventselected">
-                                    <label class="field-label space-bottom_1 ">
-                                        Event photography
-                                    </label>
-                                        <label for="event" id="labelfor_event">
-                                            What is the event name?
-                                        </label>
-                                            <textarea name="new_event" placeholder="Out at CHM" id="event"></textarea>
-                                        <label for="datetime_event" id="labelfor_datetime_event">
-                                            When should photography occur?
-                                        </label>
-                                            <input type="date" name="new_event_date" id="datetime_event">
-                        </div>
 
                         <div class="services__option">
                                     <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
