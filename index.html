@@ -307,19 +307,6 @@
 
 
                             <!-- Existing -->
-
-                        <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
-                            <label for="New2D" class="label">2D collection items</label>
-                            <p data-alert class="alert-box info radius" id="New2DAlert">
-                                Bring materials to the Rights &amp; Reproductions department.
-                                <a href="#" class="close">&times;</a>
-                            </p>
-                        </div>
-
-
-
-
                             <fieldset>
                                 <div class="services">
                                 <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
@@ -333,26 +320,79 @@
                                         <h1 class="services__header--existing">What type of existing images?</h1>
                                     </header>
 
-                                    <div>
-                                    <input type="checkbox" name="existing_image_service" value="Collections items" id="iscollectionsselected">
-                                    <label class="field-label space-bottom_1 ">
-                                        Collection items
-                                    </label>
-                                        <label for="photoservice_collections_textarea" id="labelfor_photoservice_collections_textarea">
-                                            Provide the ICHi, DN, SDN, or HB numbers.
-                                        </label>
-                                            <textarea name="collection_item_ids" placeholder="ICHi-39255" id="photoservice_collections_textarea"></textarea>
+
+
+                                    <div id="NewPhotoForOtherDetails">
+                                    <!-- *********************** -->
+                                    <!-- CREATE BELOW VIA JQUERY
+                                        
+                                        <div class="field--description">
+                                            <label class="label" for="NewPhotoForOtherDescription">
+                                                Describe the new images that you need.<small>required</small>
+                                            </label>
+
+                                            <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea><small class="error">What would you like photographed?</small>
+                                        </div>
+
+                                        <div class="field--date">
+                                            <label for="NewPhotoForOtherDate">
+                                                When should the photography occur? 
+                                                <small>required</small>
+                                            </label>
+                                            <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">
+                                            <small class="error">Use the MM/DD/YYYY date format.</small>
+                                </div>
+
+                                    CREATE ABOVE VIA JQUERY -->
+                                    <!-- *********************** -->
                                     </div>
 
-                                    <div>
-                                    <input type="checkbox" name="existing_image_service" value="Non-collections items" id="isservicenoncollectionsselected">
-                                    <label class="field-label space-bottom_1 ">
-                                        Non-collection items
-                                    </label>
-                                        <label for="service_noncollections_items_details_textarea" id="labelfor_service_noncollections_items_details_textarea">
-                                            Describe the items.
+                                    <div class="services__option">
+                                        <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
+                                        <label for="ExistingCollectionItem" class="label">
+                                        Collection items
                                         </label>
-                                            <textarea name="noncollection_item_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="service_noncollections_items_details_textarea"></textarea>
+
+                                        <div id="ExistingPhotoForCollection">
+                                        <!-- *********************** -->
+                                        <!-- CREATE BELOW VIA JQUERY
+                                            
+                                            <div class="field--description">
+                                                <label class="label" for="NewPhotoForCollectionNumber">
+                                                    Provide the ICHi, DN, SDN, or HB numbers.<small>required</small>
+                                                </label>
+                                            
+                                                <textarea name="existing_collection_number" placeholder="ICHi-39255" id="ExisitingPhotoForCollectionNumber"></textarea>
+                                            </div>
+                                        
+                                        CREATE ABOVE VIA JQUERY -->
+                                        <!-- *********************** -->
+                                    </div>
+
+                                    <div class="services__option">
+                                        <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
+                                        <label for="ExistingNonCollectionItem" class="label">
+                                        Non-collection items
+                                        </label>
+
+                                        <div id="ExistingPhotoForNonCollection">
+                                        <!-- *********************** -->
+                                        <!-- CREATE BELOW VIA JQUERY
+
+                                            <div class="field--description">
+
+                                                <label class="label" for="ExistingPhotoForNonCollectionDescription">
+                                                Describe the items.<small>required</small>
+                                                </label>
+                                        
+                                                <textarea name="exisiting_non_collection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingPhotoForNonCollectionDescription"></textarea>
+
+                                            </div>
+
+                                        CREATE ABOVE VIA JQUERY -->
+                                        <!-- *********************** -->
+                                        </div>
+
                                     </div>
                                 </section>
                             </fieldset>
