@@ -28,12 +28,28 @@ $('#ServicesNew').click(function() {
 
 // Show Exhibition Documentation questions
 $("#NewExibitionDoc").click(function(){
-  $("#NewExhibitionDocDetails").html('<div class="field--text"><label for="NewExhibitionDocTitle" class="label">What is the name of the exhibition you want photographed?<small>required</small></label><input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required><small class="error">How should I refer to this exhibition?</small></div><div class="field--date"><label for="NewExhibitionDocDate" class="label">When should the photography occur?<small>required</small></label><input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year"><small class="error">Use the MM/DD/YYYY date format.</small></div>');
-  	("#NewExibitionDoc").toggle(this.checked);
+		$( "#NewExhibitionDocDetails" ).slideToggle( "slow", function() {
+  			$("#NewExhibitionDocDetails").html('<div class="field--text">\
+  									 				<label for="NewExhibitionDocTitle" class="label">\
+  									 				What is the name of the exhibition you want photographed?\
+  									 				<small>required</small>\
+  									 				</label>\
+  									  				<input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>\
+  													<small class="error">\
+  													How should I refer to this exhibition?\
+  													</small>\
+  									   			</div>\
+  									   			<div class="field--date">\
+  													<label for="NewExhibitionDocDate" class="label">\
+  													When should the photography occur?\
+  													<small>required</small></label>\
+  													<input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
+  													<small class="error">\
+  													Use the MM/DD/YYYY date format.\
+  													</small>\
+  												</div>');
+  		});
 });
-
-
-
 
 
 
