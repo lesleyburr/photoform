@@ -25,7 +25,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 
 /* DOCUMENT */
 .document__title {
-	margin: 2em 0 3em 0;
+	margin: .75em 0 1.25em 0;
 }
 
 /* TABS Foundation Override */
@@ -87,6 +87,10 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	/* Field__Error-Message Foundation Override */
 	[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
 		font-size: 1rem;
+	}
+
+	.uppercase {
+		text-transform: uppercase;
 	}
 
 /*input[type="file"], input[type="checkbox"], input[type="radio"], select {

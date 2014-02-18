@@ -15,8 +15,8 @@
 <main>
     <div class="row">
     <div class="large-12 columns">
-        <header class="document__title">
-            <h1>Request Digital Photography and Imaging</h1>
+        <header>
+            <h1 class="document__title">Request Digital Photography and Imaging</h1>
         </header>
 
         <form data-abide method="post" action="photo-form-mailer.asp">
@@ -24,7 +24,7 @@
         <!-- TAB NAVIGATION -->
         <dl class="tabs" data-tab>
             <dd class="active"><a href="#panel1-1" >Personal Info</a></dd>
-            <dd><a href="#panel1-2"  id="panel1-2">Services</a></dd>
+            <dd><a href="#panel1-2"  id="tab1-2">Services</a></dd>
             <dd><a href="#panel1-3">Use</a></dd>
             <dd><a href="#panel1-4">Files</a></dd>
         </dl>
@@ -74,63 +74,74 @@
                     <small class="error">Nothing's free!</small>
                 </div>
 
+                <div class="navigation--bottom">
+                    <a href="#" class="button radius uppercase" id="go-to-services">Services <i class="fi-play"></i></a>
+                </div>
+
             </fieldset>
         </div>
 
-
-            <!-- Services -->
-            <div class="content large-12 columns" id="panel1-2">
-            <fieldset class="space-top_1">
-                <fieldset class="space-top_1">
-                    <div>
-                        <input type="checkbox"
-                               name="new_images"
-                               value="on"
-                               id="isnewimagesselected">
-                        <label class="service">I need new images.</label>
+        <!-- ********************************************************** -->
+        <!--                    SERVICES                                -->
+        <!-- ********************************************************** -->
+        <div class="content large-12 columns" id="panel1-2">
+            <fieldset>
+                <fieldset>
+                    <div class="services">
+                        <input type="checkbox" name="new_images" value="on" id="ServicesNew">
+                        <label for="ServicesNew" class="label">I need new images.</label>
                     </div>
 
-                    <section id="newchoices">
-                        <header class="header-new_choices space-top_2 ">
-                            <h1 class="service-main_question">What type of new images?</h1>
+                    <!-- ************* -->
+                    <!-- DISPLAY: NONE -->
+                    <section class="services--new" id="ServicesNewOptions">
+                        <header>
+                            <h1 class="services__header--new">What type of new images?</h1>
                         </header>
 
-                        <div class="space-bottom_1">
-                            <input type="checkbox" name="new_image_service" value="2D collection items" id="is2dselected">
-                            <label class="field-label space-bottom_1 ">2D collection items</label>
-                            <p data-alert class="alert-box info radius" id="txt2dinstructions">
+                        <div class="services__option">
+                            <input type="checkbox" name="new_image_service" value="2D collection items" id="ServiceNew2D">
+                            <label for="ServiceNew2D" class="label">2D collection items</label>
+                            <p data-alert class="alert-box info radius" id="ServiceNew2DAlert">
                                 Bring materials to the Rights &amp; Reproductions department.
                                 <a href="#" class="close">&times;</a>
                             </p>
                         </div>
 
-                        <div class="space-bottom_1">
-                            <input type="checkbox" name="new_image_service" value="3D collection items" id="is3dselected">
-                            <label class="field-label space-bottom_1 ">3D collection items</label>
-                            <p data-alert class="alert-box info radius" id="txt3dinstructions">
+                        <div class="services__option">
+                            <input type="checkbox" name="new_image_service" value="3D collection items" id="ServiceNew3D">
+                            <label for="ServiceNew3D" class="label">3D collection items</label>
+                            <p data-alert class="alert-box info radius" id="ServiceNew3DAlert">
                                 You will need to coordinate material delivery to the photo lab with collection managers.
                                 <a href="#" class="close">&times;</a>
                             </p>
                         </div>
 
-                                    <div class="input">
-                                    <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="isexhibitiondocumentation">
-                                    <label class="field-label space-bottom_1 ">
-                                            <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space.">
-                                                Exhibition documentation <i class="fi-info"></i>
-                                            </span>
-                                    </label>
-                                        <label for="exhibitiondocumentation" id="labelfor_exhibitiondocumentation">
-                                            What is the name of the exhibition you want photographed?
-                                        </label>
-                                            <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="exhibitiondocumentation">
-                                        <label for="datetime_exhibitiondoc" id="labelfor_datetime_exhibitiondoc">
-                                            When should the photography occur?
-                                        </label>
-                                            <input type="date" name="new_exdoc_date" id="datetime_exhibitiondoc">
-                                    </div>
+                        <div class="services__option">
+                            <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="ServiceNewExibitionDoc">
+                            <label for="ServiceNewExibitionDoc" class="label">
+                                <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space.">
+                                    Exhibition documentation <i class="fi-info"></i>
+                                </span>
+                            </label>
+                            <!-- ***************** -->
+                            <!-- CREATE VIA JQUERY -->
+                            <div class="services__description">
+                                <label for="ServiceNewExhibitionDocTitle" class="label">
+                                    What is the name of the exhibition you want photographed?
+                                </label>
+                                <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="ServiceNewExhibitionDocTitle" required>
+                                <label for="ServiceNewExhibitionDocDate" class="label">
+                                    When should the photography occur?
+                                </label>
+                                <!-- ***************************************** -->
+                                <!-- Should pattern be month_day_year or date? -->
+                                <!-- LEFT OFF HERE -->
+                                <input type="date" name="new_exdoc_date" id="ServiceNewExhibitionDocDate" required pattern="month_day_year">
+                            </div>
+                        </div>
 
-                                    <div>
+                        <div class="services__option">
                                     <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="isphotographyexhibitions">
                                     <label class="field-label space-bottom_1 ">
                                         <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition.">
@@ -151,9 +162,9 @@
                                             When should the photography occur?
                                         </label>
                                             <input type="date" name="new_photo_for_ex_date" id="datetime_photographyexhibitions">
-                                    </div>
+                        </div>
 
-                                    <div>
+                        <div class="services__option">
                                     <input type="checkbox" name="new_image_service" value="Marketing photography" id="ismarketingselected">
                                     <label class="field-label space-bottom_1 ">
                                         Marketing photography
@@ -166,9 +177,9 @@
                                             When should the photography occur?
                                         </label>
                                             <input type="date" name="new_marketing_date" id="datetime_marketing">
-                                    </div>
+                        </div>
 
-                                    <div>
+                        <div class="services__option">
                                     <input type="checkbox" name="new_image_service" value="Event photography" id="iseventselected">
                                     <label class="field-label space-bottom_1 ">
                                         Event photography
@@ -181,9 +192,9 @@
                                             When should photography occur?
                                         </label>
                                             <input type="date" name="new_event_date" id="datetime_event">
-                                    </div>
+                        </div>
 
-                                    <div>
+                        <div class="services__option">
                                     <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
                                     <label class="field-label space-bottom_1 ">
                                         Other
@@ -192,9 +203,9 @@
                                             Describe the new images that you need.
                                         </label>
                                             <textarea name="new_other" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea" required></textarea>
-                                    </div>
-                                </section>
-                            </fieldset>
+                        </div>
+                    </section>
+                </fieldset>
 
                             <fieldset class="space-top_1">
                                 <div>
@@ -203,6 +214,8 @@
                                     I need copies of existing images.
                                 </label>
                             </div>
+
+
 
                                 <section id= "existingchoices">
 
