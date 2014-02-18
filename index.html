@@ -273,14 +273,25 @@
 
 
                         <div class="services__option">
-                                    <input type="checkbox" name="new_image_service" value="Other" id="isotherserviceselected">
-                                    <label class="field-label space-bottom_1 ">
+                                    <input type="checkbox" name="new_image_service" value="Other" id="ServiceNewPhotoForOther">
+                                    <label for="ServiceNewPhotoForOther" class="label">
                                         Other
                                     </label>
-                                        <label for="photoservice_other_textarea" id="labelfor_photoservice_other_textarea">
-                                            Describe the new images that you need.
-                                        </label>
-                                            <textarea name="new_other" placeholder="Photograph the skyline from North Avenue beach in black and white." id="photoservice_other_textarea" required></textarea>
+                                    <div id="NewPhotoForOtherDetails">
+                                    <!-- *********************** -->
+                                    <!-- CREATE BELOW VIA JQUERY
+                                        
+                                        <div class="field--description">
+                                            <label class="label" for="NewPhotoForOtherDescription">
+                                                Describe the new images that you need.<small>required</small>
+                                            </label>
+
+                                            <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea><small class="error">What would you like photographed?</small>
+                                        </div>
+
+                                    CREATE ABOVE VIA JQUERY -->
+                                    <!-- *********************** -->
+                                    </div>
                         </div>
                     </section>
                 </fieldset>
