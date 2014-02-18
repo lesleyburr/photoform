@@ -26,11 +26,18 @@ $('#ServicesNew').click(function() {
      $("#ServicesNewMenu").toggle(this.checked);
 });
 
+$("#NewExibitionDoc").click(function(){
+  $("#NewExhibitionDocDetails").append("<h1>Hello</h1>");
+});
+
 // Show Exhibition Documentation questions
 
 // $( "<h1>Hello</h1>" ).appendTo("#ServicesExhibitionDocDetails");
 
-$("#ServicesExhibitionDocDetails").append("<h1>Hello</h1><h2>Bye</h2>");
+// $("#ServicesExhibitionDocDetails").append("<h1>Hello</h1><h2>Bye</h2>");
+
+// $("#ServicesExhibitionDocDetails").append("");
+
 
 
 
