@@ -1,6 +1,6 @@
 /*
 
-BEM NOTATION
+BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 .block {}
 .block__element {} part of block which makes it a whole
 .block--modifier {} diferrent version or stat of block
@@ -23,16 +23,20 @@ BEM NOTATION
 /* MODULES */
 /***************************************************/
 
+/* DOCUMENT */
+.document__title {
+	margin: 2em 0 3em 0;
+}
+
+/* TABS Foundation Override */
+.tabs dd > a {
+	font-size: 1.35em;
+	text-transform: uppercase;
+}
+
 /* FORM */
-	/* --Headers */
-	.form__header {
-		margin-top: 5em;
-		margin-bottom: 3em;
-	}
 
-	.form__header--new-choices {}
-
-	/* --Inputs */
+	/* FORM__FIELD */
 	.field--account-number {
 		width: 15em;
 	}
@@ -58,25 +62,39 @@ BEM NOTATION
 		width: 20em;
 	}
 
+		/* FIELD__LABEL Foundation Override */
+		.label {
+			font-weight: normal;
+			font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+			text-align: left;
+			text-decoration: none;
+			line-height: 1.5;
+			white-space: nowrap;
+			display: inline-block;
+			position: relative;
+			margin-bottom: 0.25rem;
+			padding: 0;
+			font-size: 1.25rem;
+			background-color: #fff;
+			color: #222;
+		}
 
 
-/*	Foundation Overrides
-[data-abide] .error small.error, {
-	font-size: 3em;
-}
+/***************************************************/
+/* STATES */
+/***************************************************/
 
-input[type="file"], input[type="checkbox"], input[type="radio"], select {
+	/* Field__Error-Message Foundation Override */
+	[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
+		font-size: 1rem;
+	}
+
+/*input[type="file"], input[type="checkbox"], input[type="radio"], select {
 	margin: 0;
 }
 
-.tabs dd > a {
-	border-top: 1px solid #999;
-	border-right: 1px solid #999;
-	border-left: 1px solid #999;
-	font-size: 1.35em;
-	text-transform: uppercase;
-}
 */
+
 
 
 
