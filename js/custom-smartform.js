@@ -28,6 +28,8 @@ $('#ServicesNew').click(function() {
 
 
 // Show Exhibition Documentation questions
+$("#ServicesExhibitionDocDetails").append('<h1>hello</h1>');
+
 
 
 
