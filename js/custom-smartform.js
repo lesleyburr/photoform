@@ -1,130 +1,77 @@
-// 
-// 
-// New Images
-// 
-// 
-
-$('#isnewimagesselected').click(function() {
-    $("#newchoices").toggle(this.checked);
+// FORM NAVIGATION
+$('#go-to-services').click(function() {
+    $('#tab1-2').click();
 });
 
-$('#is2dselected').click(function() {
-    $("#txt2dinstructions").toggle(this.checked);
-});
 
-$('#is3dselected').click(function() {
-    $("#txt3dinstructions").toggle(this.checked);
-});
 
-$('#isexhibitiondocumentation').click(function() {
-    $("#labelfor_exhibitiondocumentation").toggle(this.checked);
-});
 
-$('#isexhibitiondocumentation').click(function() {
-    $("#exhibitiondocumentation").toggle(this.checked);
-});
-
-$('#isexhibitiondocumentation').click(function() {
-    $("#labelfor_datetime_exhibitiondoc").toggle(this.checked);
-});
-
-$('#isexhibitiondocumentation').click(function() {
-    $("#datetime_exhibitiondoc").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
-    $("#labelfor_photographyexhibitions").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
-    $("#photographyexhibitions").toggle(this.checked);
-});
-
+<<<<<<< HEAD
 $('#isphotographyexhibitions').click(function() {
     $("#labelfor_photography_exhibitions_details").toggle(this.checked);
 });
+=======
 
-$('#isphotographyexhibitions').click(function() {
-    $("#photography_exhibitions_details").toggle(this.checked);
-});
 
-$('#isphotographyexhibitions').click(function() {
-    $("#labelfor_datetime_photographyexhibitions").toggle(this.checked);
-});
+>>>>>>> bd4490d774dd31a812ee2a539ad126016b64e4c8
 
-$('#isphotographyexhibitions').click(function() {
-    $("#datetime_photographyexhibitions").toggle(this.checked);
-});
 
-$('#ismarketingselected').click(function() {
-    $("#labelfor_marketing").toggle(this.checked);
-});
 
-$('#ismarketingselected').click(function() {
-    $("#marketing").toggle(this.checked);
-});
 
-$('#ismarketingselected').click(function() {
-    $("#labelfor_datetime_marketing").toggle(this.checked);
-});
 
-$('#ismarketingselected').click(function() {
-    $("#datetime_marketing").toggle(this.checked);
-});
 
-$('#iseventselected').click(function() {
-    $("#labelfor_event").toggle(this.checked);
-});
 
-$('#iseventselected').click(function() {
-    $("#event").toggle(this.checked);
-});
+// ********************************
+// OLD CODE DELETE LATER
+// ********************************
+//
+// New Images
+//
+//
 
-$('#iseventselected').click(function() {
-    $("#labelfor_datetime_event").toggle(this.checked);
-});
+// $('#isnewimagesselected').click(function() {
+//     $("#newchoices").toggle(this.checked);
+// });
 
-$('#iseventselected').click(function() {
-    $("#datetime_event").toggle(this.checked);
-});
+// $('#is2dselected').click(function() {
+//     $("#txt2dinstructions").toggle(this.checked);
+// });
 
-$('#isotherserviceselected').click(function() {
-    $("#labelfor_photoservice_other_textarea").toggle(this.checked);
-});
+// $('#is3dselected').click(function() {
+//     $("#txt3dinstructions").toggle(this.checked);
+// });
 
-$('#isotherserviceselected').click(function() {
-    $("#photoservice_other_textarea").toggle(this.checked);
-});
+// $('#isexhibitiondocumentation').click(function() {
+//     $("#labelfor_exhibitiondocumentation").toggle(this.checked);
+// });
 
-// 
-// 
-// Existing Images
-// 
-// 
+// $('#isexhibitiondocumentation').click(function() {
+//     $("#exhibitiondocumentation").toggle(this.checked);
+// });
 
-$('#isexistingimagesselected').click(function() {
-    $("#existingchoices").toggle(this.checked);
-});
+// $('#isexhibitiondocumentation').click(function() {
+//     $("#labelfor_datetime_exhibitiondoc").toggle(this.checked);
+// });
 
-$('#iscollectionsselected').click(function() {
-    $("#labelfor_photoservice_collections_textarea").toggle(this.checked);
-});
+// $('#isexhibitiondocumentation').click(function() {
+//     $("#datetime_exhibitiondoc").toggle(this.checked);
+// });
 
-$('#iscollectionsselected').click(function() {
-    $("#photoservice_collections_textarea").toggle(this.checked);
-});
 
-$('#isservicenoncollectionsselected').click(function() {
-    $("#labelfor_service_noncollections_items_details_textarea").toggle(this.checked);
-});
 
-$('#isservicenoncollectionsselected').click(function() {
-    $("#service_noncollections_items_details_textarea").toggle(this.checked);
-});
+// $('#isotherserviceselected').click(function() {
+//     $("#labelfor_photoservice_other_textarea").toggle(this.checked);
+// });
 
-// 
-// 
+// $('#isotherserviceselected').click(function() {
+//     $("#photoservice_other_textarea").toggle(this.checked);
+// });
+
+
+//
+//
 // Image Quality
+<<<<<<< HEAD
 // 
 // 
 $('#isotherspecs').click(function() {
@@ -247,3 +194,15 @@ var initDatepicker = function() {
 if(!Modernizr.inputtypes.date){
     $(document).ready(initDatepicker);
 };
+=======
+//
+//
+// $('#isotherspecs').click(function() {
+//     $("#labelfor_imgquality_other_textarea").toggle(this.checked);
+// });
+
+// $('#isotherspecs').click(function() {
+//     $("#imgquality_other_textarea").toggle(this.checked);
+// });
+
+>>>>>>> bd4490d774dd31a812ee2a539ad126016b64e4c8
