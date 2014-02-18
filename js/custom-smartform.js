@@ -41,14 +41,6 @@ $('#isphotographyexhibitions').click(function() {
 });
 
 $('#isphotographyexhibitions').click(function() {
-    $("#labelfor_photography_exhibitions_description").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
-    $("#photography_exhibitions_description").toggle(this.checked);
-});
-
-$('#isphotographyexhibitions').click(function() {
     $("#labelfor_photography_exhibitions_details").toggle(this.checked);
 });
 
@@ -149,6 +141,11 @@ $('#isotherspecs').click(function() {
 // 
 // 
 
+$('#is2dselected, #is3dselected, #isotherserviceselected, #iscollectionsselected').click(function() {
+     $("#restrictions").toggle(this.checked);
+});
+
+
 $('#isotheruse').click(function() {
     $("#labelfor_use_other_textarea").toggle(this.checked);
 });
@@ -186,7 +183,7 @@ $('#isserverselected').click(function() {
 });
 
 $('#isemailselected').click(function() {
-    $("#email").toggle(this.checked);
+    $("#deliveryemail").toggle(this.checked);
 });
 
 $('#isburnselected').click(function() {
@@ -200,3 +197,53 @@ $('#isdeliveryother').click(function() {
 $('#isdeliveryother').click(function() {
     $("#delivery_other_textarea").toggle(this.checked);
 });
+
+$('#isnewimagesselected').click(function() {
+     $("#largebatches").toggle(this.checked);
+});
+
+
+// 
+// 
+// Formatter
+// 
+// 
+
+$('#phone').formatter({
+  'pattern': '({{999}}) {{999}}-{{9999}}',
+  'persistent': true
+});
+
+$('#account').formatter({
+  'pattern': '{{999}}-{{999}}-{{9999}}-{{9999}}',
+  'persistent': true
+});
+
+// $('#date').formatter({
+//   'pattern': '{{99}}-{{99}}-{{9999}}',
+//   'persistent': true
+// });
+
+
+
+
+// 
+// 
+// Crossbrowser 
+// 
+// 
+
+var initDatepicker = function() {
+    $('input[type=date]').each(function() {
+        var $input = $(this);
+        $input.datepicker({
+            minDate: $input.attr('min'),
+            maxDate: $input.attr('max'),
+            dateFormat: 'yy-mm-dd'
+        });
+    });
+};
+ 
+if(!Modernizr.inputtypes.date){
+    $(document).ready(initDatepicker);
+};

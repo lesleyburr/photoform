@@ -4,7 +4,7 @@
 
 <%
 ' *******************************************************
-' Setup the order number counter and file storage for it.
+' Setup the order number counter and its file storage.
 ' *******************************************************
 dim dicKey, dicVal, dicObj, navfile, fileObj, strFilePath, nav, atopic
 set dicObj = createobject("Scripting.Dictionary")
@@ -19,14 +19,14 @@ navfile.close
 set fileObj = nothing
 
 ' -Set up Constants
-Const ForWriting = 2   ' Input OutPut mode
+Const ForWriting = 2
 Const Create = True
 
 ' -Dimension local variables
 Dim MyFile
 MyFile = strFilePath
 Dim FSO
-Dim TS  ' TextStreamObject
+Dim TS
 
 Set FSO = Server.CreateObject("Scripting.FileSystemObject")
 Set TS = FSO.OpenTextFile(MyFile, ForWriting, Create)
@@ -37,13 +37,28 @@ TS.close
 Set TS = Nothing
 Set FSO = Nothing
 
+
+
+' *******************************************************
+' Remove non-numeric characters from input
+' *******************************************************
+Dim regEx
+
+  Function stripNonNumeric(inputString)
+    Set regEx = New RegExp
+     regEx.Global = True
+     regEx.Pattern = "\D"
+     stripNonNumeric = regEx.Replace(inputString,"")
+  End Function
+
 ' *******************************************************
 ' Setup the Response HTML E-mail and Send it
 ' *******************************************************
 Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
-objCDOMail.To = "gonzalez@chicagohistory.org, burr@chicagohistory.org"
+objCDOMail.To = "" & Request.Form("email") & ""
+objCDOMail.Bcc = "gonzalez@chicagohistory.org, burr@chicagohistory.org"
 
 strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
@@ -52,135 +67,121 @@ HTML = "<html>"
 HTML = HTML & "<head></head>"
 HTML = HTML & "<body>"
 
-' Order Tracking
+
+' *************************************
+' Order Tracking and User Information
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
 HTML = HTML & "<h1><strong>Order Number: " & atopic & "</h1>"
-
-' User Information
+HTML = HTML & "</header>"
 HTML = HTML & "<p>Requested by <strong>" & Request.Form("name") & "</strong> in <strong>" & Request.Form("department") & "</strong>.<br />"
-HTML = HTML &  "Phone: " & Request.Form("phone") & "<br />"
-HTML = HTML & "Account: " & Request.Form("account") & "</p>"
+HTML = HTML &  "E-mail: " & Request.Form("email") & "<br />"
+HTML = HTML &  "Phone: " & stripNonNumeric(Request.Form("phone")) & "<br />"
+HTML = HTML & "Account: " & stripNonNumeric(Request.Form("account")) & "</p>"
+HTML = HTML & "</section>"
 
+
+' *************************************
 ' Photography Services
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>Photography and Imaging Needs</h1>"
+HTML = HTML & "</header>"
+HTML = HTML & "<p><em><strong>*</strong> indicates a custom request.</em></p>"
 
 ' - New Images Requested
 If Request.Form("new_images") = "on" Then
-	HTML = HTML & "<h2>New Images Needed</h2>"
+	HTML = HTML & "<h2>New Images</h2>"
 
-	' -- 2D Collection Items
-	If Request.Form("service_2d_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_2d_items") & "</p>"
-	End If
+	Dim new_image_services, new_image_service
+	new_image_services = split(Request.Form("new_image_service"),",")
 
-	' -- 3D Collection Items
-	If Request.Form("service_3d_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_3d_items") & "</p>"
-	End If
+	For Each new_image_service in new_image_services
 
-	' -- Exhibition Documentation
-	If Request.Form("service_exhibition_documentation") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_exhibition_documentation")
-		Dim exhibition_documentation_details, exhibition_documentation_detail
-		exhibition_documentation_details = split(Request.Form("service_exhibition_documentation_details"),",")
+		Select Case Trim(new_image_service)
 
-		For Each exhibition_documentation_detail in exhibition_documentation_details
-			HTML = HTML & "<br />" & exhibition_documentation_detail
-		Next
-			HTML = HTML & "</p>"
-	End If
+			Case "2D collection items"
+				HTML = HTML & "<p>Photographs of 2D objects from the collection.</p>"
 
-	' -- Photography for Exhibitions
-	If Request.Form("service_photography_exhibitions") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_photography_exhibitions")
-		Dim exhibition_photography_details, exhibition_photography_detail
-		exhibition_photography_details = split(Request.Form("service_photography_exhibitions_details"),",")
+			Case "3D collection items"
+				HTML = HTML & "<p>Photographs of 3D objects from the collection.</p>"
 
-		For Each exhibition_photography_detail in exhibition_photography_details
-			HTML = HTML & "<br />" & exhibition_photography_detail
-		Next
-			HTML = HTML & "</p>"
-	End If
+			Case "Exhibition documentation"
+				HTML = HTML & "<h3>Exhibition Documentation</h3>"
+				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("new_exdoc_title") & "</em> exhibitiion.<br />"
+				HTML = HTML & "Please photograph the gallery on " & Request.Form("new_exdoc_date") & ".</p>"
 
-	' -- Marketing Photography
-	If Request.Form("service_marketing") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_marketing")
-		Dim marketing_details, marketing_detail
-		marketing_details = split(Request.Form("service_marketing_details"),",")
+			Case "Photography for exhibitions"
+				HTML = HTML & "<h3>Photography for Exhibitions</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_photo_for_ex_details")
+				HTML = HTML & " for the <em>" & Request.Form("new_photo_for_ex_title") & "</em> exhibition.<br />"
+				HTML = HTML & "The photography should take place on " & Request.Form("new_photo_for_ex_date") & ".</p>"
 
-		For Each marketing_detail in marketing_details
-			HTML = HTML & "<br />" & marketing_detail
-		Next
-			HTML = HTML & "</p>"
-	End If
+			Case "Marketing photography"
+				HTML = HTML & "<h3>Marketing Photography</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_marketing_details") & " on " & Request.Form("new_marketing_date") & ".</p>"
 
-	' -- Event Photography
-	If Request.Form("service_event") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_event")
-		Dim event_details, event_detail
-		event_details = split(Request.Form("service_event_details"),",")
+			Case "Event photography"
+				HTML = HTML & "<h3>Event Photography</h3>"
+				HTML = HTML & "<p>" & Request.Form("new_event") & " on " & Request.Form("new_event_date") & ".</p>"
 
-		For Each event_detail in event_details
-			HTML = HTML & "<br />" & event_detail
-		Next
-			HTML = HTML & "</p>"
-	End If
+			Case "Other"
+				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other") & ".</p>"
 
-	' -- Other Photography
-	If Request.Form("service_other") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_other_details") & "</p>"
-	End If
+			Case else
+				HTML = HTML & "<p>" & new_image_service & ".</p>"
 
+		End Select
+	Next
 End If
 
-' - Exhisting Images Requested
 
+' - Existing Images Requested
 If Request.Form("existing_images") = "on" Then
 
-	HTML = HTML & "<h2>Existing Images Needed</h2>"
+	HTML = HTML & "<h2>Existing Images</h2>"
 
-	' -- Collection Items
-	If Request.Form("service_collections_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_collections_items") & "<br />"
-		HTML = HTML & Request.Form("service_collections_items_details") & "</p>"
-	End If
+	Dim existing_image_services, existing_image_service
+	existing_image_services = split(Request.Form("existing_image_service"),",")
 
-	' -- Non-Collection Items
-	If Request.Form("service_noncollections_items") <> "" then
-		HTML = HTML & "<p>" & Request.Form("service_noncollections_items") & "</p>"
-	End If
+	For Each existing_image_service in existing_image_services
 
+		Select Case Trim(existing_image_service)
 
+			Case "Collections items"
+				HTML = HTML & "<h3>Collection Items</h3>"
+				HTML = HTML & "<p>" & Request.Form("collection_item_ids") & "</p>"
+
+			Case "Non-collections items"
+				HTML = HTML & "<h3>Non-Collection Items</h3>"
+				HTML = HTML & "<p>" & Request.Form("noncollection_item_description") & "</p>"
+
+			Case else
+				HTML = HTML & "<p>" & existing_image_service & ".</p>"
+
+		End Select
+	Next
 End If
+HTML = HTML & "</section>"
 
 
 
-' Digital File Specs
-HTML = HTML & "<h2>File Specifications</h2>"
-
-HTML = HTML & "<h3>Image Quality</h3>"
-
-dim quality
-quality = Request.Form("imgquality")
-
-If quality = "Other" Then
-	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & "</em></p>"
-Else
-	HTML = HTML & "<p><em>" & quality & "</em></p>"
-End If
-
-' File Type
-HTML = HTML & "<h3>File Type</h3>"
-HTML = HTML & "<p><em>" & Request.Form("filetype") & "</em></p>"
-
-
-'Planned Use
-HTML = HTML & "<h2>Planned Use</h2>"
+' *************************************
+' Planned Use
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>Planned Use</h1>"
+HTML = HTML & "</header>"
 
 Dim uses, use
 uses = split(Request.Form("use"),",")
 
 For Each use in uses
 	If Trim(use) = "Other" Then
-		HTML = HTML & "<p>" & Request.Form("use_other") & "</p>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other") & "</p>"
 	Else
 		HTML = HTML & "<p>" & use & "</p>"
 	End If
@@ -199,9 +200,33 @@ Else
 	HTML = HTML & "<p>This is for <em>" & client & "</em>.</p>"
 End If
 
+HTML = HTML & "</section>"
 
-' Delivery Methods
-HTML = HTML & "<h2>Delivery</h2>"
+' *************************************
+' File Quality and File Type
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>File Type</h1>"
+HTML = HTML & "</header>"
+
+dim quality
+quality = Request.Form("imgquality")
+
+If quality = "Other" Then
+	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & ", " & Request.Form("filetype") & "</em>.</p>"
+Else
+	HTML = HTML & "<p><em>" & quality & ", " & Request.Form("filetype") &  "</em>.</p>"
+End If
+HTML = HTML & "</section>"
+
+' *************************************
+' File Delivery Methods
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>File Delivery</h1>"
+HTML = HTML & "</header>"
 
 Dim delivery_methods, delivery_method
 delivery_methods = split(Request.Form("delivery"),",")
@@ -214,13 +239,13 @@ For Each delivery_method in delivery_methods
 		HTML = HTML & "<p>Save the files on the network at " & Request.Form("folder_location") & ".</p>"
 
 	Case "E-mail"
-		HTML = HTML & "<p>Email the files to " & Request.Form("email") & ".</p>"
+		HTML = HTML & "<p>Email the files to " & Request.Form("delivery_email") & ".</p>"
 
 	Case "Burn to disc"
 		HTML = HTML & "<p>Burn the files to disc.</p>"
 
 	Case "Other"
-		HTML = HTML & "<p>" & Request.Form("delivery_other") & ".</p>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("delivery_other") & ".</p>"
 
 	Case else
 		HTML = HTML & "<p>" & delivery_method & ".</p>"
@@ -228,14 +253,23 @@ For Each delivery_method in delivery_methods
 	End Select
 
 Next
+HTML = HTML & "</section>"
 
 
+' *************************************
 ' Due Date
-HTML = HTML & "<h2>Due Date</h2>"
+' *************************************
+HTML = HTML & "<section>"
+HTML = HTML & "<header>"
+HTML = HTML & "<h1>Due Date</h1>"
+HTML = HTML & "</header>"
 HTML = HTML & "<p>" & Request.Form("date") & "</p>"
+HTML = HTML & "</section>"
 
 
-
+' *************************************
+' Close the e-mail and clear memory.
+' *************************************
 HTML = HTML & "</body>"
 HTML = HTML & "</html>"
 
@@ -248,14 +282,17 @@ Set objCDOMail = Nothing
 %>
 
 
-<!-- *******************************************************
-	 Create the Response Web Page
-     ******************************************************* -->
+<!-- 
+*******************************************************
+Create the Response Web Page
+******************************************************* 
+-->
 
 <html class="no-js" lang="en">
 <head>
 <title>Photo Order Submitted</title>
 <link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/custom.css" />
 <script src="js/modernizr.js"></script>
 </head>
 
@@ -264,9 +301,12 @@ Set objCDOMail = Nothing
     	<div class="row">
       		<div class="large-12 columns">
         		<header><h1>Photography and Imaging Orders</h1></header>
-        		<p>Thank you for submitting your photo order.</p>
-				<p>Your order tracking number is <strong><% Response.Write atopic %></strong>.</p>
-				<p><em>Please keep this number for your records it will be the primary means of retrieving your digital images should you need them again.</em></p>
+        		<h2>Thank You!</h2>
+				<p>Your order number is <strong><% Response.Write atopic %></strong>.</p>
+				<p>A copy of the order has been e-mailed to you. Please contact the photolab for further assistance.</p>
+				<p>
+					Some of the images in our collection have restrictions. The Rights &amp; Reproductions department will verify if the images you have requested are cleared for their intended use. If you require further assistance, please contact the Photo Lab, or the Rights &amp; Reproductions department.
+				</p>
 			</div>
 		</div>
 	</main>
