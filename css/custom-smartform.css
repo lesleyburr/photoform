@@ -93,6 +93,10 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 		text-transform: uppercase;
 	}
 
+	.services--new {
+		display: none;
+	}
+
 /*input[type="file"], input[type="checkbox"], input[type="radio"], select {
 	margin: 0;
 }

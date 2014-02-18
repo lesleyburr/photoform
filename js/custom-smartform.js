@@ -22,6 +22,12 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
+
+$('#ServicesNew').click(function() {
+     $("#ServicesNewOptions").toggle(this.checked);
+});
+
+
 // ********************************
 // OLD CODE DELETE LATER
 // ********************************
