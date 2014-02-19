@@ -18,8 +18,9 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 // CONDITIONAL SECTIONS
+  // *********
   // SERVICES
-
+  // *********
     // NEW IMAGES
     // SHOW New Images Menu ON CHECK
     // UNCHECK all checked checkboxes, DELETE details, and HIDE New Images Menu ON UNCHECK
@@ -121,3 +122,7 @@ $( "#GoToFiles" ).click(function( event ) {
                           .end()
                           .find("[id$=Details]").removeAttr('style').empty();
     });
+  
+  // *********
+  // USE
+  // *********
