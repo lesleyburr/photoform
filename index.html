@@ -423,35 +423,60 @@
             <label class="space-bottom_2">Image Quality</label>
         </div>
 
-            <div>
-                <input type="radio" name="imgquality" value="Low resolution" required>
-                <label class="label">
-                    <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi.">
-                    Low resolution <i class="fi-info"></i>
-                    </span>
-                                </label>
-                                </div>
+        <div class="files__option field--radio">
+            <input type="radio" name="imgquality" value="Low resolution" id="QualityLowRes" required>
+            <label class="label" for="QualityLowRes">
+                    Low resolution <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi."><i class="fi-info"></i></span>
+            </label>
+        </div>
 
-                                <div>
-                                <input type="radio" name="imgquality" value="Editorial quality" required>
-                                <label class="field-label space-bottom_1 ">
-                                    <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi.">
-                                        Editorial quality <i class="fi-info"></i>
-                                    </span>
-                                </label>
-                                </div>
+        <div class="files__option field--radio">
+            <input type="radio" name="imgquality" value="Editorial quality" id="QualityEditorial"required>
+            <label class="label" for="QualityEditorial">
+                Editorial quality <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi."><i class="fi-info"></i></span>
+            </label>
+        </div>
 
-                                <div>
-                                <input type="radio" name="imgquality" value="Other" id="isotherspecs" required>
-                                <label class="field-label space-bottom_1 ">
-                                    Other
-                                </label>
-                                    <label for="imgquality_other_textarea" id="labelfor_imgquality_other_textarea">
-                                        Describe the image quality needed.
-                                    </label>
-                                        <textarea name="imgquality_other" placeholder="I need the files to be 600dpi." id="imgquality_other_textarea"></textarea>
-                                </div>
-                            </fieldset>
+        <div class="files__option">
+            <input type="radio" name="imgquality" value="Other" id="QualityOther" required>
+            <label class="label" for="QualityOther">
+                Other
+            </label>
+                                
+            <div id="QualityOtherDetails">
+            <!-- *********************** -->
+            <!-- CREATE BELOW VIA JQUERY
+        
+                <div class="field--description">
+                    <label class="label" for="ExternalClientName">
+                        What is the name of the external client?
+                        <small>required</small>
+                    </label>
+                    <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>
+                    <small class="error">Who is your external client?</small>
+                </div>
+
+
+                <div class="field--description">
+                    <label class="label" for="QualityOtherDescription">
+                        Describe the image quality needed.
+                        <small>required</small>
+                    </label>
+                    <textarea name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>
+                    <small class="error">What quality do you need you image files to be?</small>
+                </div>
+
+            CREATE ABOVE VIA JQUERY -->
+            <!-- *********************** -->
+            </div>
+
+        </div>
+    </fieldset>
+
+
+
+
+
 
                             <fieldset class="space-top_1">
                             <label class="space-bottom_2">File Type</label>
