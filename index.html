@@ -359,29 +359,29 @@
 <fieldset class="space-top_1">
     <legend class="fieldset-title">Who are the images for?</legend>
 
-    <div class="client__option field--radio">
-        <input type="radio" name="client" value="the Museum" id="ClientMuseum" checked>
-        <label for="ClientMuseum" class="label">
+    <div class="use--client__option field--radio">
+        <input type="radio" name="client" value="the Museum" id="UseClientMuseum" checked>
+        <label for="UseClientMuseum" class="label">
             The Museum
         </label>
     </div>
 
-    <div class="client__option">
-        <input type="radio" name="client" value="external client" id="ClientExternal">
-        <label for="ClientExternal" class="label">
+    <div class="use--client__option">
+        <input type="radio" name="client" value="external client" id="UseClientExternal">
+        <label for="UseClientExternal" class="label">
             An External Client
         </label>
                                 
-        <div id="ClientExternalDetails">
+        <div id="UseClientExternalDetails">
         <!-- *********************** -->
         <!-- CREATE BELOW VIA JQUERY
         
             <div class="field--description">
-                <label class="label" for="ExternalClientName">
+                <label class="label" for="UseExternalClientName">
                     What is the name of the external client?
                     <small>required</small>
                 </label>
-                <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>
+                <input type="text" name="external_client_details" placeholder="Motorola" id="UseExternalClientName" required>
                     <small class="error">Who is your external client?</small>
             </div>
 
@@ -411,26 +411,26 @@
         </div>
 
         <div class="files__option field--radio">
-            <input type="radio" name="imgquality" value="Low resolution" id="QualityLowRes">
-            <label class="label" for="QualityLowRes">
+            <input type="radio" name="imgquality" value="Low resolution" id="FileQualityLowRes">
+            <label class="label" for="FileQualityLowRes">
                     Low resolution <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi."><i class="fi-info"></i></span>
             </label>
         </div>
 
         <div class="files__option field--radio">
-            <input type="radio" name="imgquality" value="Editorial quality" id="QualityEditorial"checked>
-            <label class="label" for="QualityEditorial">
+            <input type="radio" name="imgquality" value="Editorial quality" id="FileQualityEditorial"checked>
+            <label class="label" for="FileQualityEditorial">
                 Editorial quality <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi."><i class="fi-info"></i></span>
             </label>
         </div>
 
         <div class="files__option">
-            <input type="radio" name="imgquality" value="Other" id="QualityOther">
-            <label class="label" for="QualityOther">
+            <input type="radio" name="imgquality" value="Other" id="FileQualityOther">
+            <label class="label" for="FileQualityOther">
                 Other
             </label>
                                 
-            <div id="QualityOtherDetails">
+            <div id="FileQualityOtherDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
         
@@ -509,15 +509,16 @@
 
         </div>
 
-                            <div>
-                            <input type="checkbox" name="delivery" value="E-mail" id="isemailselected">
-                            <label class="field-label space-bottom_1 ">
-                                E-mail
-                            </label>
-                            </div>
-                            <div>
-                                <input type="email" name="delivery_email" placeholder="name@mail.com" id="deliveryemail">
-                            </div>
+        <div class="files__option">
+            <input type="checkbox" name="delivery" value="E-mail" id="DeliveryEmail">
+            <label for="DeliveryEmail" class="label">
+                E-mail
+            </label>
+        </div>
+                            
+            <div>
+                <input type="email" name="delivery_email" placeholder="name@mail.com" id="deliveryemail">
+            </div>
 
                             <div>
                             <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected">
