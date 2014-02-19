@@ -404,9 +404,7 @@
     <legend class="fieldset-title">File Specs</legend>
 
     <fieldset>
-        <div>
-            <label class="label">Image Quality</label>
-        </div>
+        <legend>Image Quality</legend>
 
         <div class="files__option field--radio">
             <input type="radio" name="imgquality" value="Low resolution" id="FileQualityLowRes">
@@ -449,7 +447,7 @@
     </fieldset>
 
     <fieldset>
-        <label>File Type</label>
+        <legend>File Type</legend>
 
             <div class="files__option field--radio">
                 <input type="radio" name="filetype" value="JPEG" id="FileTypeJpeg" checked>
@@ -501,7 +499,6 @@
             <input type="checkbox" name="delivery" value="E-mail" id="FileDeliveryEmail">
             <label for="FileDeliveryEmail" class="label">
                 E-mail
-                <small>required</small>
             </label>
         </div>
                             
@@ -556,28 +553,31 @@
             </div>
         </fieldset>
 
-                        <fieldset class="space-top_1">
-                             <legend class="fieldset-title">File Delivery Date</legend>
-                            <p class="instructions">
-                                Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
-                            </p>
-                            <p data-alert class="alert-box info radius" id="largebatches">
-                                Requests for large batches of new images will take additional time.
-                            </p>
+        <fieldset>
+            <legend class="fieldset-title">File Delivery Date</legend>
+            <p class="instructions">
+                Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
+            </p>
+            
+            <p data-alert class="alert-box info radius" id="largebatches">
+            Requests for large batches of new images will take additional time.
+            </p>
 
-                            <div>
-                            <input type="date" name="date" id="date" required pattern="month_day_year">
-                            <small class="error">A due date is required.</small>
-                            </div>
-
-                        </fieldset>
-                        <input type="submit" name="submit" value="PLACE MY ORDER" class="button">
-
-                    </div>
-
-
-
+                <div>
+                    <input type="date" name="date" id="date" required pattern="month_day_year">
+                    <small class="error">A due date is required.</small>
                 </div>
+
+        </fieldset>
+                        
+
+        <input type="submit" name="submit" value="PLACE MY ORDER" class="button">
+
+        </div>
+
+
+
+    </div>
 
                 </form>
 
