@@ -43,69 +43,69 @@
         <small class="error">Hi! What's your name?</small>
     </div>
 
-                <div class="field--email">
-                    <label for="email" class="label">E-mail <small>required</small></label>
-                    <input type="email" name="email" placeholder="name@mail.com" id="email" required>
-                    <small class="error">I need this to send you things.</small>
-                </div>
+    <div class="field--email">
+        <label for="email" class="label">E-mail <small>required</small></label>
+        <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+        <small class="error">I need this to send you things.</small>
+    </div>
 
-                <div class="field--tel">
-                    <label for="phone" class="label">Phone <small>required</small></label>
-                    <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$">
-                    <small class="error">We need to talk, sometimes.</small>
-                </div>
+    <div class="field--tel">
+        <label for="phone" class="label">Phone <small>required</small></label>
+        <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$">
+         <small class="error">We need to talk, sometimes.</small>
+    </div>
 
-                <div class="field--text">
-                    <label for="department" class="label">Department <small>required</small></label>
-                    <input type="text" name="department" placeholder="Publications" id="department" required>
-                    <small class="error">Do you work here?</small>
-                </div>
+    <div class="field--text">
+        <label for="department" class="label">Department <small>required</small></label>
+        <input type="text" name="department" placeholder="Publications" id="department" required>
+        <small class="error">Do you work here?</small>
+    </div>
 
-                <div class="field--account-number">
-                    <label for="account" class="label">
-                        Account Number <small>required</small>
-                        <span data-tooltip class="has-tip tip-right"
-                              title="If this request is not project-based, then make the last four digits 0000.">
-                            <i class="fi-info"></i>
-                        </span>
-                    </label>
-                    <input type="text" name="account" placeholder="111-111-1111-0000" id="account" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$">
-                    <small class="error">Nothing's free!</small>
-                </div>
+    <div class="field--account-number">
+        <label for="account" class="label">
+            Account Number <small>required</small>
+            <span data-tooltip class="has-tip tip-right" title="If this request is not project-based, then make the last four digits 0000.">
+                <i class="fi-info"></i>
+            </span>
+        </label>
+        <input type="text" name="account" placeholder="111-111-1111-0000" id="account" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$">
+        <small class="error">Nothing's free!</small>
+    </div>
 
-                <div class="navigation--bottom">
-                    <a href="#" class="button radius uppercase" id="GoToServices">Services <i class="fi-play"></i></a>
-                </div>
+    <div class="navigation--bottom">
+        <a href="#" class="button radius uppercase" id="GoToServices">Services <i class="fi-play"></i></a>
+    </div>
 
-            </fieldset>
+</fieldset>
+</div>
+
+<!-- ***************************************************** -->
+<!--               SERVICES                                -->
+<!-- ***************************************************** -->
+<div class="content large-12 columns" id="panel1-2">
+<fieldset>
+    <!-- ************************************ -->
+    <!--                 NEW                  -->
+    <!-- ************************************ -->
+    <fieldset>
+        <div class="services field--checkbox">
+            <input type="checkbox" name="new_images" value="on" id="ServicesNew">
+            <label for="ServicesNew" class="label">I need new images.</label>
         </div>
+        
+        <section class="services--new hide" id="ServicesNewMenu">
+            <header>
+                <h1 class="services__header--new">What type of new images?</h1>
+            </header>
 
-        <!-- ***************************************************** -->
-        <!--               SERVICES                                -->
-        <!-- ***************************************************** -->
-        <div class="content large-12 columns" id="panel1-2">
-            <fieldset>
-                <!-- ************************************ -->
-                <!--                 NEW                  -->
-                <!-- ************************************ -->
-                <fieldset>
-                    <div class="services field--checkbox">
-                        <input type="checkbox" name="new_images" value="on" id="ServicesNew">
-                        <label for="ServicesNew" class="label">I need new images.</label>
-                    </div>
-                    <section class="services--new hide" id="ServicesNewMenu">
-                        <header>
-                            <h1 class="services__header--new">What type of new images?</h1>
-                        </header>
-
-                        <div class="services__option field--checkbox">
-                                <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
-                                <label for="New2D" class="label">2D collection items</label>
-                                <p data-alert class="alert-box info radius" id="New2DAlert">
-                                    Bring materials to the Rights &amp; Reproductions department.
-                                    <a href="#" class="close">&times;</a>
-                                </p>
-                        </div>
+            <div class="services__option field--checkbox">
+                <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
+                <label for="New2D" class="label">2D collection items</label>
+                 <p data-alert class="alert-box info radius" id="New2DAlert">
+                    Bring materials to the Rights &amp; Reproductions department.
+                    <a href="#" class="close">&times;</a>
+                </p>
+            </div>
 
                         <div class="services__option field--checkbox">
                             <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
