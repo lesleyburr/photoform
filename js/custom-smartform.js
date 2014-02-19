@@ -31,6 +31,13 @@ $( "#GoToFiles" ).click(function( event ) {
                           .find("[id$=Details]").removeAttr('style').empty();
     });
 
+
+// Do not use slide toggle.
+// slide up does something
+// slide down does something else
+// try this
+// http://stackoverflow.com/questions/19657230/slidetoggle-can-detect-slideup-or-slidedown
+
     // Show Exhibition Documentation Details and
     // REINITIALIZE Abide
     $("#NewExibitionDoc").click(function() {
@@ -53,7 +60,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                 Use the MM/DD/YYYY date format.\
                                               </small>\
                                             </div>')
-                              .slideToggle(this.checked).empty();
+                                      .slideToggle('slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
     });
 
