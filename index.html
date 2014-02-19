@@ -301,7 +301,7 @@
 <!-- ***************************************************** -->
 <div class="content large-12 columns" id="panel1-3">
 <fieldset>
-    <legend class="fieldset__title">How are you planning to use the images?</legend>
+    <legend>How are you planning to use the images?</legend>
     <p data-alert class="alert-box info radius" id="restrictions">
         You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
         <a href="#" class="close">&times;</a>
@@ -401,7 +401,7 @@
 <!-- ***************************************************** -->
 <div class="content large-12 columns" id="panel1-4">
 <fieldset>
-    <legend class="fieldset-title">File Specs</legend>
+    <legend>File Specs</legend>
 
     <fieldset>
         <legend>Image Quality</legend>
@@ -468,7 +468,7 @@
 </fieldset>
 
 <fieldset>
-    <legend class="fieldset-title">File Delivery Method</legend>
+    <legend>File Delivery Method</legend>
         
         <div class="files__option">
             <input type="checkbox" name="delivery" value="Save on server" id="FileDeliveryServer">
@@ -554,8 +554,8 @@
         </fieldset>
 
         <fieldset>
-            <legend class="fieldset-title">File Delivery Date</legend>
-            <p class="instructions">
+            <legend>File Delivery Date</legend>
+            <p>
                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
             </p>
             
@@ -563,8 +563,12 @@
             Requests for large batches of new images will take additional time.
             </p>
 
-                <div>
-                    <input type="date" name="date" id="date" required pattern="month_day_year">
+                <div class="field--date">
+                    <label class="label" for="FileDeliveryDate">
+                        When do you need the files?
+                        <small>required</small>
+                    </label>
+                    <input type="date" name="date" id="FileDeliveryDate" required pattern="month_day_year">
                     <small class="error">A due date is required.</small>
                 </div>
 
