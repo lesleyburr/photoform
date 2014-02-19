@@ -18,19 +18,19 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 // CONDITIONAL SECTIONS 
-  // SERVICES 
+  // SERVICES
 
     // NEW IMAGES
-    // Show New Images menu
+    // Show New Images Menu
     $('#ServicesNew').click(function() {
-      $("#ServicesNewMenu").toggle(this.checked);
+      $("#ServicesNewMenu").slideToggle(this.checked);
     });
 
-    // Show Exhibition Documentation questions
+    // Show Exhibition Documentation Details
     $("#NewExibitionDoc").click(function() {
       $( "#NewExhibitionDocDetails" ).html('<div class="field--text">\
                                               <label for="NewExhibitionDocTitle" class="label">\
-                                                What is the name of the exhibition you want photographed?\
+                                                What is the exhibition title?\
                                                 <small>required</small>\
                                               </label>\
                                               <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>\
@@ -50,51 +50,40 @@ $( "#GoToFiles" ).click(function( event ) {
                               .slideToggle( 'slow');
     });
 
+    // Show Photography for Exhibition Details
+    $("#NewPhotoForExhibition").click(function() {
+      $( "#NewPhotoForExhibitionDetails" ).html('<div class="field--text">\
+                                    <label for="NewPhotoForExhibitionTitle" class="label">\
+                                        What is the exhibition title?\
+                                        <small>required</small>\
+                                    </label>\
+                                    <input type="text" name="new_photo_for_ex_title" placeholder="Facing Freedom" id="NewPhotoForExhibitionTitle" required>\
+                                    <small class="error">How should I refer to this exhibition?</small>\
+                                </div>\
+                                <div class="field--description">\
+                                    <label class="label" for="NewPhotoForExhibitionDescription">\
+                                        Provide Photography details:\
+                                        <small>required</small>\
+                                        <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
+                                    </label>\
+                                    <textarea name="new_photo_for_ex_details" placeholder="Photograph the women&rsquo;s suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>\
+                                    <small class="error">Please provide some context on the exhibition.</small>\
+                                </div>\
+                                <div class="field--date">\
+                                    <label for="NewPhotoForExhibitionDate">\
+                                        When should the photography occur? \
+                                        <small>required</small>\
+                                    </label>\
+                                    <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
+                                    <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                </div>')
+                              .slideToggle( 'slow');
+    });
 
 
 
-// ********************************
-// OLD CODE DELETE LATER
-// ********************************
-//
-// New Images
-//
-//
-
-// $('#isnewimagesselected').click(function() {
-//     $("#newchoices").toggle(this.checked);
-// });
-
-// $('#is2dselected').click(function() {
-//     $("#txt2dinstructions").toggle(this.checked);
-// });
-
-// $('#is3dselected').click(function() {
-//     $("#txt3dinstructions").toggle(this.checked);
-// });
-
-// $('#isexhibitiondocumentation').click(function() {
-//     $("#labelfor_exhibitiondocumentation").toggle(this.checked);
-// });
-
-// $('#isexhibitiondocumentation').click(function() {
-//     $("#exhibitiondocumentation").toggle(this.checked);
-// });
-
-// $('#isexhibitiondocumentation').click(function() {
-//     $("#labelfor_datetime_exhibitiondoc").toggle(this.checked);
-// });
-
-// $('#isexhibitiondocumentation').click(function() {
-//     $("#datetime_exhibitiondoc").toggle(this.checked);
-// });
-
-
-
-// $('#isotherserviceselected').click(function() {
-//     $("#labelfor_photoservice_other_textarea").toggle(this.checked);
-// });
-
-// $('#isotherserviceselected').click(function() {
-//     $("#photoservice_other_textarea").toggle(this.checked);
-// });
+    // EXISTING IMAGES
+    // Show Existing Images Menu
+    $('#ServicesExisting').click(function() {
+      $("#ServicesExistingMenu").slideToggle(this.checked);
+    });

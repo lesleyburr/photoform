@@ -28,6 +28,11 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	margin: .75em 0 1.25em 0;
 }
 
+/* ALERTS Foundation Override */
+.alert-box {
+	font-size: 1.25em;
+}
+
 /* TABS Foundation Override */
 .tabs dd > a {
 	font-size: 1.35em;
@@ -39,6 +44,10 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	/* FORM__FIELD */
 	.field--account-number {
 		width: 15em;
+	}
+
+	.field--checkbox {
+		width: 30em;
 	}
 
 	.field--date {
@@ -80,157 +89,21 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 		}
 
 
+
 /***************************************************/
 /* STATES */
 /***************************************************/
 
-	/* Field__Error-Message Foundation Override */
+	/* Field__Message--Error Foundation Override */
 	[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
 		font-size: 1rem;
 	}
 
-	.uppercase {
-		text-transform: uppercase;
-	}
 
-	.hide {
-		display: none;
-	}
-
-
-/*input[type="file"], input[type="checkbox"], input[type="radio"], select {
-	margin: 0;
-}
-
-*/
-
-
-
-
-/*
-DELETE LATER
-
-.space-bottom_1 {
-	margin-bottom: 1em;
-}
-
-.space-bottom_2 {
-	margin-bottom: 2em;
-}
-
-.space-top_1 {
-	margin-top: 1em;
-}
-
-.space-top_2 {
-	margin-top: 2em;
-}
-
-
-body {
-	background-image:url("../img/light_wool.png");
-	padding-bottom: 5em;
-}
-
-
-
-small {
-	font-style: italic;
-}
-
-	.label {
-		font-size: 1.25em;
-	}
-
-	.field--service {
-		font-size: 2em;
-	}
-
-	.field--service__main-question {
-		font-size: 1.5em;
-	}
-
-
-.instructions {
-	font-size: 1em;
-}
-
-.indent {
-	margin-left: 1em;
-}
-
-.innerfieldset {
-	padding-top: 3em;
-}
-
-.noborder {
-	border: none;
-}
-
-
-input {
-	vertical-align: bottom;
-	position: relative;
-	margin: 0;
-}
-
-p {
-	margin-bottom: 0;
-}*/
-
-
-/*#newchoices, #txt2dinstructions, #txt3dinstructions, #labelfor_exhibitiondocumentation, #exhibitiondocumentation, #labelfor_datetime_exhibitiondoc,
-#datetime_exhibitiondoc, #labelfor_photographyexhibitions, #photographyexhibitions, #photography_exhibitions_description, #labelfor_photography_exhibitions_details, #photography_exhibitions_details,
-#labelfor_datetime_photographyexhibitions, #datetime_photographyexhibitions, #labelfor_marketing,
-#marketing, #labelfor_datetime_marketing, #datetime_marketing,
-#event, #labelfor_datetime_event, #datetime_event, #labelfor_photoservice_other_textarea,
-#photoservice_other_textarea, #existingchoices, #labelfor_photoservice_collections_textarea,
-#photoservice_collections_textarea, #labelfor_service_noncollections_items_details_textarea, #service_noncollections_items_details_textarea, #labelfor_imgquality_other_textarea, #imgquality_other_textarea, #labelfor_use_other_textarea,
-#use_other_textarea, #labelfor_externalclient_name, #externalclient_name, #labelfor_folderlocation, #folderlocation,
-#deliveryemail, #txtburninstructions, #labelfor_delivery_other_textarea, #delivery_other_textarea, #labelfor_event, #restrictions, #largebatches {
+.hide {
 	display: none;
 }
 
-.has-tool-tip {
-	font-weight: normal;
-	border-bottom: none;
+.uppercase {
+	text-transform: uppercase;
 }
-
-.has-tip:hover, .has-tip:focus {
-	border-bottom: none;
-	color: #222;
-}
-
-.alert-box {
-	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
-	font-size: 1em;
-}
-
-.alert-box-2d {
-	width: 30em;
-}
-
-.alert-box-3d {
-	width: 45em;
-}
-
-.alert-box-restrictions {
-	width: 50em;
-	padding-right: 2em;
-}
-
-.alert-box-cd {
-	width: 40em;
-}
-
-.alert-box-batches {
-	width: 35em;
-}
-
-
-.alert-box .close {
-	padding-left: 2em;
-}
-*/
-
-
