@@ -39,56 +39,58 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	text-transform: uppercase;
 }
 
-/* FORM */
 
-	/* FORM__FIELD */
-	.field--account-number {
-		width: 15em;
+/* FORM__FIELD */
+.field--account-number {
+	width: 15em;
+}
+
+.field--checkbox {
+	width: 30em;
+}
+
+.field--date {
+	width: 15em;
+}
+
+.field--description {
+	height: 5em;
+	width: 30em;
+	margin-bottom: 1em;
+}
+
+.field--email {
+	width: 20em;
+}
+
+.field--tel {
+	width: 15em;
+}
+
+.field--text {
+	width: 20em;
+}
+
+	/* FIELD__LABEL Foundation Override */
+	.label {
+		font-weight: normal;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		text-align: left;
+		text-decoration: none;
+		line-height: 1.5;
+		white-space: nowrap;
+		display: inline-block;
+		position: relative;
+		margin-bottom: 0.25rem;
+		padding: 0;
+		font-size: 1.25rem;
+		background-color: #fff;
+		color: #222;
 	}
 
-	.field--checkbox {
-		width: 30em;
-	}
+.services__option {
 
-	.field--date {
-		width: 15em;
-	}
-
-	.field--description {
-		height: 5em;
-		width: 30em;
-		margin-bottom: 1em;
-	}
-
-	.field--email {
-		width: 20em;
-	}
-
-	.field--tel {
-		width: 15em;
-	}
-
-	.field--text {
-		width: 20em;
-	}
-
-		/* FIELD__LABEL Foundation Override */
-		.label {
-			font-weight: normal;
-			font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-			text-align: left;
-			text-decoration: none;
-			line-height: 1.5;
-			white-space: nowrap;
-			display: inline-block;
-			position: relative;
-			margin-bottom: 0.25rem;
-			padding: 0;
-			font-size: 1.25rem;
-			background-color: #fff;
-			color: #222;
-		}
-
+}
 
 
 /***************************************************/
