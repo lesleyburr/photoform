@@ -36,7 +36,7 @@
 <!--               PERSONAL INFORMATION                    -->
 <!-- ***************************************************** -->
 <div class="content active large-12 columns" id="panel1-1">
-<fieldset class="fieldset--personal">
+<fieldset>
     <div class="field--text">
         <label for="name" class="label">Full Name <small>required</small></label>
         <input type="text" name="name" placeholder="Bill Murray" id="name" required pattern="[a-zA-Z]+">
@@ -267,7 +267,7 @@
             <div class="services__option">
                 <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
                 <label for="ExistingNonCollectionItem" class="label">
-                Non-collection items
+                    Non-collection items
                 </label>
 
                 <div class="hide" id="ExistingNonCollectionDetails">
@@ -359,11 +359,11 @@
     </div>
 </fieldset>
 
-<fieldset class="space-top_1">
+<fieldset>
     <!-- ************************************ -->
     <!--              CLIENT                  -->
     <!-- ************************************ -->
-<legend class="fieldset-title">Who are the images for?</legend>
+<legend>Who are the images for?</legend>
 
     <div class="use__option field--radio">
         <input type="radio" name="client" value="the Museum" id="UseClientMuseum" checked>
@@ -421,7 +421,7 @@
                 Other
             </label>
                                 
-            <div id="FileQualityOtherDetails">
+            <div class="hide" id="FileQualityOtherDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
 
@@ -477,7 +477,7 @@
                 Save on server
             </label>
                         
-            <div id="FileDeliveryServerDetails">
+            <div class="hide" id="FileDeliveryServerDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
         
@@ -503,7 +503,7 @@
             </label>
         </div>
                             
-            <div id="FileDeliveryEmailDetails">
+            <div class="hide" id="FileDeliveryEmailDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
         
@@ -534,7 +534,7 @@
                     Other delivery method
                 </label>
 
-                <div id="FileDeliveryOtherDetails">
+                <div class="hide" id="FileDeliveryOtherDetails">
                 <!-- *********************** -->
                 <!-- CREATE BELOW VIA JQUERY
 
