@@ -359,14 +359,14 @@
 <fieldset class="space-top_1">
     <legend class="fieldset-title">Who are the images for?</legend>
 
-    <div class="use--client__option field--radio">
+    <div class="use__option field--radio">
         <input type="radio" name="client" value="the Museum" id="UseClientMuseum" checked>
         <label for="UseClientMuseum" class="label">
             The Museum
         </label>
     </div>
 
-    <div class="use--client__option">
+    <div class="use__option">
         <input type="radio" name="client" value="external client" id="UseClientExternal">
         <label for="UseClientExternal" class="label">
             An External Client
@@ -417,16 +417,6 @@
             <div id="FileQualityOtherDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
-        
-                <div class="field--description">
-                    <label class="label" for="ExternalClientName">
-                        What is the name of the external client?
-                        <small>required</small>
-                    </label>
-                    <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>
-                    <small class="error">Who is your external client?</small>
-                </div>
-
 
                 <div class="field--description">
                     <label class="label" for="QualityOtherDescription">
@@ -454,9 +444,9 @@
                 </label>
             </div>
 
-            <div>
-                <input type="radio" name="filetype" value="TIFF">
-                <label class="label">
+            <div class="files__option field--radio">
+                <input type="radio" name="filetype" value="TIFF" id="FileTypeTiff">
+                <label class="label" for="FileTypeTiff">
                 <span data-tooltip class="has-tip tip-right" title="Recommended for print.">
                 TIFF <i class="fi-info"></i></span>
                 </label>
@@ -469,21 +459,21 @@
     <legend class="fieldset-title">File Delivery Method</legend>
         
         <div class="files__option">
-            <input type="checkbox" name="delivery" value="Save on server" id="DeliveryServer">
-            <label for="DeliveryServer" class="label">
+            <input type="checkbox" name="delivery" value="Save on server" id="FileDeliveryServer">
+            <label for="FileDeliveryServer" class="label">
                 Save on server
             </label>
                         
-            <div id="DeliveryServerDetails">
+            <div id="FileDeliveryServerDetails">
             <!-- *********************** -->
             <!-- CREATE BELOW VIA JQUERY
         
                 <div class="field--description">
-                    <label for="FolderLocation" class="label">
+                    <label for="FileFolderLocation" class="label">
                         Provide the folder location.
                         <small>required</small>
                     </label>
-                    <input type="text" name="folder_location_details" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="FolderLocation" required>
+                    <input type="text" name="folder_location_details" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="FileFolderLocation" required>
                     <small class="error">Where should we save the image files?</small>
                 </div>
 
@@ -494,38 +484,63 @@
         </div>
 
         <div class="files__option">
-            <input type="checkbox" name="delivery" value="E-mail" id="DeliveryEmail">
-            <label for="DeliveryEmail" class="label">
+            <input type="checkbox" name="delivery" value="E-mail" id="FileDeliveryEmail">
+            <label for="FileDeliveryEmail" class="label">
                 E-mail
+                <small>required</small>
             </label>
         </div>
                             
-            <div>
-                <input type="email" name="delivery_email" placeholder="name@mail.com" id="deliveryemail">
+            <div id="FileDeliveryEmailDetails">
+            <!-- *********************** -->
+            <!-- CREATE BELOW VIA JQUERY
+        
+                <div class="field--description">
+    
+                    <input type="email" name="delivery_email_details" placeholder="name@mail.com" required>
+                    <small class="error">What email address should we send the files to?</small>
+                </div>
+
+            CREATE ABOVE VIA JQUERY -->
+            <!-- *********************** -->
             </div>
 
-                            <div>
-                            <input type="checkbox" name="delivery" value="Burn to disc" id="isburnselected">
-                            <label class="field-label space-bottom_1 ">
-                                Burn to disc
-                            </label>
-                                <p data-alert class="alert-box info radius" id="txtburninstructions">
-                                    CDs and DVDs with labels are $2 each and are charged to your account.
-                                    <a href="#" class="close">&times;</a>
-                                </p>
-                            </div>
+            <div class="files__option field--checkbox">
+                <input type="checkbox" name="delivery" value="Burn to disc" id="FileDeliveryDisc">
+                <label for="FileDeliveryDisc" class="label">
+                    Burn to disc
+                </label>
+                <p data-alert class="alert-box info radius" id="FileDiscAlert">
+                    CDs and DVDs with labels are $2 each and are charged to your account.
+                    <a href="#" class="close">&times;</a>
+                </p>
+            </div>
 
-                            <div>
-                            <input type="checkbox" name="delivery" value="Other" id="isdeliveryother">
-                            <label class="field-label space-bottom_1 ">
-                                Other delivery method
-                            </label>
-                                <label for="delivery_other_textarea" id="labelfor_delivery_other_textarea">
-                                    How would you like the files delivered?
-                                </label>
-                                    <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="delivery_other_textarea"></textarea>
-                            </div>
-                        </fieldset>
+            <div class="files__option">
+                <input type="checkbox" name="delivery" value="Other" id="FileDeliveryOther">
+                <label for="FileDeliveryOther" class="label">
+                    Other delivery method
+                </label>
+
+                <div id="FileDeliveryOtherDetails">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
+
+                    <div class="field--description">
+                        <label for="FileDeliveryOtherDescription" class="label">
+                            How would you like the files delivered?
+                            <small>required</small>
+                        </label>
+                        <textarea name="delivery_other_details" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>
+                            <small class="error">Describe how you need the files delivered.</small>
+                    </div>
+
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
+                </div>
+
+            </div>
+        </fieldset>
 
                         <fieldset class="space-top_1">
                              <legend class="fieldset-title">File Delivery Date</legend>
