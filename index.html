@@ -101,225 +101,227 @@
             <div class="services__option field--checkbox">
                 <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
                 <label for="New2D" class="label">2D collection items</label>
-                 <p data-alert class="alert-box info radius" id="New2DAlert">
+                <p data-alert class="alert-box info radius" id="New2DAlert">
                     Bring materials to the Rights &amp; Reproductions department.
                     <a href="#" class="close">&times;</a>
                 </p>
             </div>
 
-                        <div class="services__option field--checkbox">
-                            <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
-                            <label for="New3D" class="label">3D collection items</label>
-                            <p data-alert class="alert-box info radius" id="New3DAlert">
-                                Please coordinate material delivery to the photo lab with collection managers.
-                                <a href="#" class="close">&times;</a>
-                            </p>
-                        </div>
+            <div class="services__option field--checkbox">
+                <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
+                <label for="New3D" class="label">3D collection items</label>
+                <p data-alert class="alert-box info radius" id="New3DAlert">
+                    Please coordinate material delivery to the photo lab with collection managers.
+                    <a href="#" class="close">&times;</a>
+                </p>
+            </div>
 
-                        <div class="services__option field--checkbox">
-                            <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="NewExibitionDoc">
-                            <label for="NewExibitionDoc" class="label">
-                                Exhibition documentation
-                                <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space."><i class="fi-info"></i></span>
-                            </label>
+            <div class="services__option field--checkbox">
+                <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="NewExibitionDoc">
+                <label for="NewExibitionDoc" class="label">
+                    Exhibition documentation
+                    <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space."><i class="fi-info"></i></span>
+                </label>
 
-                            <div class="hide" id="NewExhibitionDocDetails">
-                            </div>
-                        </div>
+                <div class="hide" id="NewExhibitionDocDetails">
+                </div>
+            </div>
 
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="NewPhotoForExhibition">
+                <label  for="NewPhotoForExhibition" class="label">
+                    Photography for exhibitions
+                    <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition."><i class="fi-info"></i></span>
+                </label>
+                
+                <div class="hide" id="NewPhotoForExhibitionDetails">
+                </div>
+            </div>
 
-                        <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="NewPhotoForExhibition">
-                            <label  for="NewPhotoForExhibition" class="label">
-                                Photography for exhibitions
-                                <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition."><i class="fi-info"></i></span>
-                            </label>
-                            <div class="hide" id="NewPhotoForExhibitionDetails">
-                            </div>
-                        </div>
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Marketing photography" id="NewPhotoForMarketing">
+                <label  for="NewPhotoForMarketing" class="label">
+                    Marketing photography
+                </label>
+                
+                <div id="NewPhotoForMarketingDetails" class="hide">
+                </div>
+            </div>
 
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Event photography" id="NewPhotoForEvent">
+                <label  for="NewPhotoForEvent" class="label">
+                Event photography
+                </label>
+                
+                <div id="NewPhotoForEventDetails">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
 
-                        <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Marketing photography" id="NewPhotoForMarketing">
-                            <label  for="NewPhotoForMarketing" class="label">
-                                Marketing photography
-                            </label>
-                            <div id="NewPhotoForMarketingDetails" class="hide">
-                            </div>
-                        </div>
-
-
-                        <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Event photography" id="NewPhotoForEvent">
-                            <label  for="NewPhotoForEvent" class="label">
-                                Event photography
-                            </label>
-                            <div id="NewPhotoForEventDetails">
-                            <!-- *********************** -->
-                            <!-- CREATE BELOW VIA JQUERY
-
-                                <div class="field--text">
-                                    <label for="NewPhotoForEventTitle" class="label">
-                                        What is the event name?
-                                        <small>required</small>
-                                    </label>
-                                    <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>
-                                    <small class="error">How should I refer to this exhibition?</small>
-                                </div>
-
-                                <div class="field--description">
-                                    <label class="label" for="NewPhotoForEventDescription">
-                                        Provide Photography details:
-                                        <small>required</small>
-                                    <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
-                                    </label>
-                                    <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>
-                                    <small class="error">Please provide some context on the exhibition.</small>
-                                </div>
-
-                                <div class="field--date">
-                                    <label for="NewPhotoForEventDate">
-                                        When should the photography occur?
-                                        <small>required</small>
-                                    </label>
-                                    <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">
-                                    <small class="error">Use the MM/DD/YYYY date format.</small>
-                                </div>
-
-                             CREATE ABOVE VIA JQUERY -->
-                            <!-- *********************** -->
-                            </div>
-                        </div>
-
-
-                        <div class="services__option">
-                            <input type="checkbox" name="new_image_service" value="Other" id="NewPhotoForOther">
-                            <label for="NewPhotoForOther" class="label">
-                                Other
-                            </label>
-                            <div id="NewPhotoForOtherDetails">
-                            <!-- *********************** -->
-                            <!-- CREATE BELOW VIA JQUERY
-
-                                <div class="field--description">
-                                    <label class="label" for="NewPhotoForOtherDescription">
-                                        Describe the new images that you need.<small>required</small>
-                                    </label>
-                                    <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>
-                                    <small class="error">What would you like photographed?</small>
-                                </div>
-
-                                <div class="field--date">
-                                    <label for="NewPhotoForOtherDate">
-                                        When should the photography occur?
-                                        <small>required</small>
-                                    </label>
-                                    <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">
-                                    <small class="error">Use the MM/DD/YYYY date format.</small>
-                                </div>
-
-                            CREATE ABOVE VIA JQUERY -->
-                            <!-- *********************** -->
-                            </div>
-                        </div>
-                    </section>
-                </fieldset>
-
-
-                <!-- ************************************ -->
-                <!--              EXISTING                -->
-                <!-- ************************************ -->
-                <!-- LEFT OFF HERE -->
-                <fieldset>
-                    <div class="services">
-                        <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
-                            <label for="ServicesExisting" class="label">
-                                I need copies of existing images.
-                            </label>
+                    <div class="field--text">
+                        <label for="NewPhotoForEventTitle" class="label">
+                            What is the event name?
+                            <small>required</small>
+                        </label>
+                        <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>
+                            <small class="error">How should I refer to this exhibition?</small>
                     </div>
 
-                    <section class="services--existing hide" id= "ServicesExistingMenu">
-                        <header>
-                            <h1 class="services__header--existing">What type of existing images?</h1>
-                        </header>
+                    <div class="field--description">
+                        <label class="label" for="NewPhotoForEventDescription">
+                            Provide Photography details:
+                            <small>required</small>
+                            <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>
+                        </label>
+                        <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>
+                            <small class="error">Please provide some context on the exhibition.</small>
+                    </div>
 
-                        <div id="NewPhotoForOtherDetails">
-                        <!-- *********************** -->
-                        <!-- CREATE BELOW VIA JQUERY
+                    <div class="field--date">
+                        <label for="NewPhotoForEventDate">
+                            When should the photography occur?
+                            <small>required</small>
+                        </label>
+                        <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">
+                            <small class="error">Use the MM/DD/YYYY date format.</small>
+                    </div>
 
-                            <div class="field--description">
-                                <label class="label" for="NewPhotoForOtherDescription">
-                                Describe the new images that you need.<small>required</small>
-                                </label>
-                                <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea><small class="error">What would you like photographed?</small>
-                            </div>
-
-                            <div class="field--date">
-                                <label for="NewPhotoForOtherDate">
-                                When should the photography occur?
-                                <small>required</small>
-                                </label>
-                                <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">
-                                <small class="error">Use the MM/DD/YYYY date format.</small>
-                            </div>
-
-                        CREATE ABOVE VIA JQUERY -->
-                        <!-- *********************** -->
-                        </div>
-
-                        <div class="services__option">
-                            <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
-                            <label for="ExistingCollectionItem" class="label">
-                                Collection items
-                            </label>
-
-                        <div id="ExistingPhotoForCollection">
-                        <!-- *********************** -->
-                        <!-- CREATE BELOW VIA JQUERY
-
-                            <div class="field--description">
-                                <label class="label" for="NewPhotoForCollectionNumber">
-                                Provide the ICHi, DN, SDN, or HB numbers.<small>required</small>
-                                </label>
-
-                                <textarea name="existing_collection_number" placeholder="ICHi-39255" id="ExisitingPhotoForCollectionNumber"></textarea>
-                            </div>
-
-                        CREATE ABOVE VIA JQUERY -->
-                        <!-- *********************** -->
-                        </div>
-
-                        <div class="services__option">
-                            <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
-                            <label for="ExistingNonCollectionItem" class="label">
-                            Non-collection items
-                            </label>
-
-                        <div id="ExistingPhotoForNonCollection">
-                        <!-- *********************** -->
-                        <!-- CREATE BELOW VIA JQUERY
-
-                            <div class="field--description">
-                                <label class="label" for="ExistingPhotoForNonCollectionDescription">
-                                Describe the items.<small>required</small>
-                                </label>
-
-                                <textarea name="exisiting_non_collection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingPhotoForNonCollectionDescription"></textarea>
-
-                            </div>
-
-                            CREATE ABOVE VIA JQUERY -->
-                            <!-- *********************** -->
-                        </div>
-
-                        </div>
-                    </section>
-                </fieldset>
-                <div class="navigation--bottom">
-                    <a href="#" class="button radius uppercase" id="GoToUse">Use <i class="fi-play"></i></a>
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
                 </div>
-            </fieldset>
+            </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Other" id="NewPhotoForOther">
+                <label for="NewPhotoForOther" class="label">
+                    Other
+                </label>
+                    
+                <div id="NewPhotoForOtherDetails">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
+
+                    <div class="field--description">
+                        <label class="label" for="NewPhotoForOtherDescription">
+                            Describe the new images that you need.
+                            <small>required</small>
+                        </label>
+                        <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>
+                            <small class="error">What would you like photographed?</small>
+                    </div>
+
+                    <div class="field--date">
+                        <label for="NewPhotoForOtherDate">
+                            When should the photography occur?
+                            <small>required</small>
+                        </label>
+                        <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">
+                            <small class="error">Use the MM/DD/YYYY date format.</small>
+                    </div>
+
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
+                </div>
+            </div>
+        </section>
+    </fieldset>
+
+
+    <!-- ************************************ -->
+    <!--              EXISTING                -->
+    <!-- ************************************ -->
+    <!-- LEFT OFF HERE -->
+    <fieldset>
+        <div class="services">
+            <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
+            <label for="ServicesExisting" class="label">
+                I need copies of existing images.
+            </label>
         </div>
+
+        <section class="services--existing hide" id= "ServicesExistingMenu">
+            <header>
+                <h1 class="services__header--existing">What type of existing images?</h1>
+            </header>
+
+                <div id="NewPhotoForOtherDetails">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
+
+                    <div class="field--description">
+                        <label class="label" for="NewPhotoForOtherDescription">
+                            Describe the new images that you need.
+                            <small>required</small>
+                        </label>
+                        <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>
+                            <small class="error">What would you like photographed?</small>
+                    </div>
+
+                    <div class="field--date">
+                        <label for="NewPhotoForOtherDate">
+                            When should the photography occur?
+                            <small>required</small>
+                        </label>
+                        <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">
+                            <small class="error">Use the MM/DD/YYYY date format.</small>
+                    </div>
+
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
+                </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
+                <label for="ExistingCollectionItem" class="label">
+                    Collection items
+                </label>
+
+                <div id="ExistingPhotoForCollection">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
+
+                    <div class="field--description">
+                        <label class="label" for="NewPhotoForCollectionNumber">
+                            Provide the ICHi, DN, SDN, or HB numbers.
+                            <small>required</small>
+                        </label>
+                        <textarea name="existing_collection_number" placeholder="ICHi-39255" id="ExisitingPhotoForCollectionNumber"></textarea>
+                    </div>
+
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
+                </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
+                <label for="ExistingNonCollectionItem" class="label">
+                Non-collection items
+                </label>
+
+                <div id="ExistingPhotoForNonCollection">
+                <!-- *********************** -->
+                <!-- CREATE BELOW VIA JQUERY
+
+                    <div class="field--description">
+                        <label class="label" for="ExistingPhotoForNonCollectionDescription">
+                        Describe the items.
+                        <small>required</small>
+                        </label>
+                        <textarea name="exisiting_non_collection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingPhotoForNonCollectionDescription"></textarea>
+                    </div>
+
+                CREATE ABOVE VIA JQUERY -->
+                <!-- *********************** -->
+                </div>
+            </div>
+        </section>
+    </fieldset>
+    
+    <div class="navigation--bottom">
+        <a href="#" class="button radius uppercase" id="GoToUse">Use <i class="fi-play"></i></a>
+    </div>
+    </fieldset>
+</div>
 
 
                     <!--  -->
