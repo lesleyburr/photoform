@@ -22,21 +22,12 @@ $( "#GoToFiles" ).click(function( event ) {
 
     // NEW IMAGES
     // SHOW New Images Menu ON CHECK
-    // UNCHECK all checked checkboxes, REMOVE required attribute, HIDE details and HIDE New Images Menu ON UNCHECK
-    // $('#ServicesNew').click(function() {
-    //   $("#ServicesNewMenu").slideToggle(this.checked)
-    //                       .find('input[type=checkbox]:checked').removeAttr('checked')
-    //                       .end()
-    //                       .find(':input')
-    //                       .removeAttr('required');
-    // });
-
+    // UNCHECK all checked checkboxes, DELETE details, and HIDE New Images Menu ON UNCHECK
     $('#ServicesNew').click(function() {
       $("#ServicesNewMenu").slideToggle(this.checked)
                           .find('input[type=checkbox]:checked').removeAttr('checked')
                           .end()
-                          .find(':input')
-                          .removeAttr('required');
+                          .find("[id$=Details]").removeAttr('style').empty();
     });
 
     // Show Exhibition Documentation Details
