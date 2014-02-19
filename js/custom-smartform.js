@@ -53,7 +53,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                 Use the MM/DD/YYYY date format.\
                                               </small>\
                                             </div>')
-                              .slideToggle( 'slow');
+                              .slideToggle(this.checked).empty();
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
     });
 
