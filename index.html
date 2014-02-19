@@ -342,49 +342,60 @@
             <span data-tooltip class="has-tip tip-right" title="Facebook, Tumblr, Blog, etc."><i class="fi-info"></i>
             </span>
         </label>
-        <label for="New3D" class="label">3D collection items</label>
     </div>
 
+    <div class="services__option field--checkbox">
+        <input type="checkbox" name="use" value="Website" id="UseWebsite">
+        <label for="UseWebsite" class="label">
+            Website
+        </label>
+    </div>
 
-                            <div>
-                            <input type="checkbox" name="use" value="Website">
-                            <label class="field-label space-bottom_1 ">
-                                Website
-                            </label>
-                            </div>
+    <div class="services__option field--checkbox">
+        <input type="checkbox" name="use" value="Publication" id="UsePublication">
+        <label for="UsePublication" class="label">
+            Publication
+        </label>
+    </div>
 
-                            <div>
-                            <input type="checkbox" name="use" value="Publication">
-                            <label class="field-label space-bottom_1 ">
-                                Publication
-                            </label>
-                            </div>
+    <div class="services__option field--checkbox">
+        <input type="checkbox" name="use" value="Exhibition" id="UseExhibition">
+        <label for="UseExhibition" class="label">
+            Exhibition
+        </label>
+    </div>
 
-                            <div>
-                            <input type="checkbox" name="use" value="Exhibition">
-                            <label class="field-label space-bottom_1 ">
-                                Exhibition
-                            </label>
-                            </div>
+    <div class="services__option field--checkbox">
+        <input type="checkbox" name="use" value="Advertising and Marketing" id="UseAdvertisingMarketing">
+        <label for="UseAdvertisingMarketing" class="label">
+            Advertising &amp; Marketing
+        </label>
+    </div>
 
-                            <div>
-                            <input type="checkbox" name="use" value="Advertising and Marketing">
-                            <label class="field-label space-bottom_1 ">
-                                Advertising &amp; Marketing
-                            </label>
-                            </div>
+    <div class="services__option">
+        <input type="checkbox" name="use" value="Other" id="UseOther">
+        <label for="UseOther" class="label">
+            Other Use
+        </label>
 
-                            <div>
-                            <input type="checkbox" name="use" value="Other" id="isotheruse">
-                            <label class="field-label space-bottom_1 ">
-                                Other Use
-                            </label>
-                                <label for="use_other_textarea" id="labelfor_use_other_textarea">
-                                    What will these images be used for?
-                                </label>
-                                    <textarea name="use_other" placeholder="The images will be used for the Peer Recogition awards." id="use_other_textarea"></textarea>
-                            </div>
-                        </fieldset>
+        <div id="OtherUse">
+        <!-- *********************** -->
+        <!-- CREATE BELOW VIA JQUERY
+        
+            <div class="field--description">
+                <label class="label" for="OtherUseDescription>
+                    What will these images be used for?
+                    <small>required</small>
+                </label>
+                <textarea name="use_other" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription"></textarea>
+            </div>
+
+        CREATE ABOVE VIA JQUERY -->
+        <!-- *********************** -->
+        </div> 
+
+    </div>
+</fieldset>
 
                         <fieldset class="space-top_1">
                          <legend class="fieldset-title">Who are the images for?</legend>
