@@ -102,11 +102,6 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 		font-size: 1rem;
 	}
 
-
-.hide {
-	display: none;
-}
-
 .uppercase {
 	text-transform: uppercase;
 }

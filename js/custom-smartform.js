@@ -31,7 +31,8 @@ $( "#GoToFiles" ).click(function( event ) {
                           .find("[id$=Details]").removeAttr('style').empty();
     });
 
-    // Show Exhibition Documentation Details
+    // Show Exhibition Documentation Details and
+    // REINITIALIZE Abide
     $("#NewExibitionDoc").click(function() {
       $( "#NewExhibitionDocDetails" ).html('<div class="field--text">\
                                               <label for="NewExhibitionDocTitle" class="label">\
@@ -56,7 +57,8 @@ $( "#GoToFiles" ).click(function( event ) {
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
     });
 
-    // Show Photography for Exhibition Details
+    // Show Photography for Exhibition Details and
+    // REINITIALIZE Abide
     $("#NewPhotoForExhibition").click(function() {
       $( "#NewPhotoForExhibitionDetails" ).html('<div class="field--text">\
                                                     <label for="NewPhotoForExhibitionTitle" class="label">\
@@ -87,7 +89,8 @@ $( "#GoToFiles" ).click(function( event ) {
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
     });
 
-    // Show Photography for Marketing Details
+    // Show Photography for Marketing Details and
+    // REINITIALIZE Abide
     $("#NewPhotoForMarketing").click(function() {
       $( "#NewPhotoForMarketingDetails" ).html('<div class="field--description">\
                                                   <label class="label" for="NewPhotoForMarketingDescription">\
@@ -126,3 +129,17 @@ $( "#GoToFiles" ).click(function( event ) {
   // *********
   // USE
   // *********
+  // SHOW description for other use ON CHECK and
+  // REINITIALIZE Abide
+  $("#UseOther").click(function() {
+    $( "#OtherUseDetails" ).html('<div class="field--description">\
+                                    <label class="label" for="OtherUseDescription">\
+                                      What will these images be used for? \
+                                      <small>required</small>\
+                                    </label>\
+                                    <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription" required></textarea>\
+                                    <small class="error">How do you plan to use these images?</small>\
+                                  </div>')
+                           .slideToggle( 'slow');
+    $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+  });
