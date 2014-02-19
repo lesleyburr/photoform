@@ -28,9 +28,13 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	margin: .75em 0 1.25em 0;
 }
 
-/* ALERTS Foundation Override */
+/* ALERTS Foundation Override 
 .alert-box {
 	font-size: 1.25em;
+}
+
+.services__option {
+	width: 100%;
 }
 
 /* TABS Foundation Override */
@@ -40,7 +44,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 }
 
 
-/* FORM__FIELD */
+/* FORM__FIELDS 
 .field--account-number {
 	width: 15em;
 }
@@ -71,7 +75,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	width: 20em;
 }
 
-	/* FIELD__LABEL Foundation Override */
+	/* FIELD__LABEL Foundation Override 
 	.label {
 		font-weight: normal;
 		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -87,10 +91,6 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 		background-color: #fff;
 		color: #222;
 	}
-
-.services__option {
-
-}
 
 
 /***************************************************/
