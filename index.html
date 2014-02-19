@@ -178,7 +178,7 @@
                     </div>
 
                     <div class="field--date">
-                        <label for="NewPhotoForEventDate">
+                        <label for="NewPhotoForEventDate" class="label">
                             When should the photography occur?
                             <small>required</small>
                         </label>
@@ -211,7 +211,7 @@
                     </div>
 
                     <div class="field--date">
-                        <label for="NewPhotoForOtherDate">
+                        <label for="NewPhotoForOtherDate" class="label">
                             When should the photography occur?
                             <small>required</small>
                         </label>
@@ -401,12 +401,12 @@
 <!-- ***************************************************** -->
 
 <div class="content large-12 columns" id="panel2-4">
-<fieldset class="space-top_1">
+<fieldset>
     <legend class="fieldset-title">File Specs</legend>
 
-    <fieldset class="space-top_1">
+    <fieldset>
         <div>
-            <label class="space-bottom_2">Image Quality</label>
+            <label class="label">Image Quality</label>
         </div>
 
         <div class="files__option field--radio">
@@ -459,8 +459,8 @@
         </div>
     </fieldset>
 
-    <fieldset class="space-top_1">
-        <label class="space-bottom_2">File Type</label>
+    <fieldset>
+        <label>File Type</label>
 
             <div class="files__option field--radio">
                 <input type="radio" name="filetype" value="JPEG" id="FileTypeJpeg" checked>
@@ -471,7 +471,7 @@
 
             <div>
                 <input type="radio" name="filetype" value="TIFF">
-                <label class="field-label space-bottom_1 ">
+                <label class="label">
                 <span data-tooltip class="has-tip tip-right" title="Recommended for print.">
                 TIFF <i class="fi-info"></i></span>
                 </label>
@@ -480,18 +480,33 @@
     </fieldset>
 </fieldset>
 
-                        <fieldset class="space-top_1">
-                         <legend class="fieldset-title">File Delivery Method</legend>
-                            <div>
-                            <input type="checkbox" name="delivery" value="Save on server" id="isserverselected">
-                            <label class="field-label space-bottom_1 ">
-                                Save on server
-                            </label>
-                                <label for="folderlocation" id="labelfor_folderlocation">
-                                    Provide the folder location.
-                                </label>
-                                    <input type="text" name="folder_location" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="folderlocation">
-                            </div>
+<fieldset>
+    <legend class="fieldset-title">File Delivery Method</legend>
+        
+        <div class="files__option">
+            <input type="checkbox" name="delivery" value="Save on server" id="DeliveryServer">
+            <label for="DeliveryServer" class="label">
+                Save on server
+            </label>
+                        
+            <div id="DeliveryServerDetails">
+            <!-- *********************** -->
+            <!-- CREATE BELOW VIA JQUERY
+        
+                <div class="field--description">
+                    <label for="FolderLocation" class="label">
+                        Provide the folder location.
+                        <small>required</small>
+                    </label>
+                    <input type="text" name="folder_location_details" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="FolderLocation" required>
+                    <small class="error">Where should we save the image files?</small>
+                </div>
+
+            CREATE ABOVE VIA JQUERY -->
+            <!-- *********************** -->
+            </div>
+
+        </div>
 
                             <div>
                             <input type="checkbox" name="delivery" value="E-mail" id="isemailselected">
