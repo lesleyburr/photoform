@@ -114,7 +114,10 @@ $( "#GoToFiles" ).click(function( event ) {
     // EXISTING IMAGES
     // Show Existing Images Menu
     // SHOW New Images Menu ON CHECK
-    // UNCHECK all checked checkboxes and HIDE New Images Menu ON UNCHECK
+    // UNCHECK all checked checkboxes, DELETE details, and HIDE New Images Menu ON UNCHECK
     $('#ServicesExisting').click(function() {
-      $("#ServicesExistingMenu").slideToggle(this.checked).find('input[type=checkbox]:checked').removeAttr('checked');
+      $("#ServicesExistingMenu").slideToggle(this.checked)
+                          .find('input[type=checkbox]:checked').removeAttr('checked')
+                          .end()
+                          .find("[id$=Details]").removeAttr('style').empty();
     });
