@@ -249,16 +249,17 @@
                     Collection items
                 </label>
 
-                <div id="ExistingPhotoForCollectionDetails">
+                <div id="ExistingCollectionDetails">
                 <!-- *********************** -->
                 <!-- CREATE BELOW VIA JQUERY
 
                     <div class="field--description">
-                        <label class="label" for="ExisitingPhotoForCollectionNumber">
+                        <label class="label" for="ExisitingCollectionNumber">
                             Provide the ICHi, DN, SDN, or HB numbers.
                             <small>required</small>
                         </label>
-                        <textarea name="existing_collection_number_details" placeholder="ICHi-39255" id="ExisitingPhotoForCollectionNumber"></textarea>
+                        <textarea name="existing_collection_number_details" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>
+                            <small class="error">Provide collection IDs.</small>
                     </div>
 
                 CREATE ABOVE VIA JQUERY -->
@@ -271,16 +272,17 @@
                 Non-collection items
                 </label>
 
-                <div id="ExistingPhotoForNonCollectionDetails">
+                <div id="ExistingNonCollectionDetails">
                 <!-- *********************** -->
                 <!-- CREATE BELOW VIA JQUERY
 
                     <div class="field--description">
-                        <label class="label" for="ExistingPhotoForNonCollectionDescription">
+                        <label class="label" for="ExistingNonCollectionDescription">
                         Describe the items.
                         <small>required</small>
                         </label>
-                        <textarea name="exisiting_non_collection_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingPhotoForNonCollectionDescription"></textarea>
+                        <textarea name="exisiting_non_collection_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>
+                            <small class="error">What would you like photographed?</small>
                     </div>
 
                 CREATE ABOVE VIA JQUERY -->
@@ -360,7 +362,8 @@
                     What will these images be used for?
                     <small>required</small>
                 </label>
-                <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription"></textarea>
+                <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription" required></textarea>
+                    <small class="error">How do you plan to use these images?</small>
             </div>
 
         CREATE ABOVE VIA JQUERY -->
