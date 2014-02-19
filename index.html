@@ -373,35 +373,48 @@
     </div>
 </fieldset>
 
-                        <fieldset class="space-top_1">
-                         <legend class="fieldset-title">Who are the images for?</legend>
+<fieldset class="space-top_1">
+    <legend class="fieldset-title">Who are the images for?</legend>
 
-                            <div>
-                            <input type="radio" name="client" value="the Museum" required>
-                            <label class="field-label space-bottom_1 ">
-                                The Museum
-                            </label>
-                            </div>
+    <div class="client__option field--radio">
+        <input type="radio" name="client" value="the Museum" id="ClientMuseum" required>
+        <label for="ClientMuseum" class="label">
+            The Museum
+        </label>
+    </div>
 
-                            <div>
-                            <input type="radio" name="client" value="external client" id="isexternalclient" required>
-                            <label class="field-label space-bottom_1 ">
-                                An External Client
-                            </label>
-                                <label for="externalclient_name" id="labelfor_externalclient_name">
-                                    What is the name of the external client?
-                                </label>
-                                    <input type="text" name="external_client_name" placeholder="Motorola" id="externalclient_name">
-                            </div>
-                        </fieldset>
+    <div class="client__option">
+        <input type="radio" name="client" value="external client" id="ClientExternal" required>
+        <label for="ClientExternal" class="label">
+            An External Client
+        </label>
+                                
+        <div id="ClientExternalDetails">
+        <!-- *********************** -->
+        <!-- CREATE BELOW VIA JQUERY
+        
+            <div class="field--description">
+                <label class="label" for="ExternalClientName">
+                    What is the name of the external client?
+                    <small>required</small>
+                </label>
+                <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>
+                    <small class="error">Who is your external client?</small>
+            </div>
 
-                    </div>
+        CREATE ABOVE VIA JQUERY -->
+        <!-- *********************** -->
+        </div>
 
-                    <!--  -->
-                    <!-- Files -->
-                    <!--  -->
+    </div>
+</fieldset>
+</div>
 
-                    <div class="content large-12 columns" id="panel2-4">
+<!-- ***************************************************** -->
+<!--                        FILES                          -->
+<!-- ***************************************************** -->
+
+<div class="content large-12 columns" id="panel2-4">
 
                         <fieldset class="space-top_1">
                          <legend class="fieldset-title">File Specs</legend>
