@@ -32,46 +32,39 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
-
-
-$("#NewExibitionDoc").click(function() {
-  if($(this).is(":checked")) {
-    $( "#NewExhibitionDocDetails" ).html('<h1>IT WORKS?</h1>')
-                                    .slideDown('slow');
-  }
-  else {
-    $('#NewExhibitionDocDetails').slideUp('slow', function() {
-      $( "#NewExhibitionDocDetails" ).empty();
-    });
-  }
-});
-
     // Show Exhibition Documentation Details and
     // REINITIALIZE Abide
-    // $("#NewExibitionDoc").click(function() {
-    //   $( "#NewExhibitionDocDetails" ).html('<div class="field--text">\
-    //                                           <label for="NewExhibitionDocTitle" class="label">\
-    //                                             What is the exhibition title?\
-    //                                             <small>required</small>\
-    //                                           </label>\
-    //                                           <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>\
-    //                                           <small class="error">\
-    //                                             How should I refer to this exhibition?\
-    //                                           </small>\
-    //                                         </div>\
-    //                                         <div class="field--date">\
-    //                                           <label for="NewExhibitionDocDate" class="label">\
-    //                                             When should the photography occur?\
-    //                                           <small>required</small></label>\
-    //                                           <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
-    //                                           <small class="error">\
-    //                                             Use the MM/DD/YYYY date format.\
-    //                                           </small>\
-    //                                         </div>')
-    //                                   .slideToggle('slow');
-    //   $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
-    // });
+    $("#NewExibitionDoc").click(function() {
+      if($(this).is(":checked")) {
+        $( "#NewExhibitionDocDetails" ).html('<div class="field--text">\
+                                              <label for="NewExhibitionDocTitle" class="label">\
+                                                What is the exhibition title?\
+                                                <small>required</small>\
+                                              </label>\
+                                              <input type="text" name="new_exdoc_title" placeholder="Chicago: Crossroads of America" id="NewExhibitionDocTitle" required>\
+                                              <small class="error">\
+                                                How should I refer to this exhibition?\
+                                              </small>\
+                                            </div>\
+                                            <div class="field--date">\
+                                              <label for="NewExhibitionDocDate" class="label">\
+                                                When should the photography occur?\
+                                              <small>required</small></label>\
+                                              <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
+                                              <small class="error">\
+                                                Use the MM/DD/YYYY date format.\
+                                              </small>\
+                                            </div>')
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#NewExhibitionDocDetails').slideUp('slow', function() {
+        $( "#NewExhibitionDocDetails" ).empty();
+      });
+      }
+    });
+
 
     // Show Photography for Exhibition Details and
     // REINITIALIZE Abide
