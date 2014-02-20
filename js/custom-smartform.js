@@ -344,7 +344,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     Provide the folder location.\
                                                     <small>required</small>\
                                                   </label>\
-                                                  <input type="text" name="folder_location_details" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="FileFolderLocation" required>\
+                                                  <input type="text" name="folder_location_details" placeholder="\\\\Ch-media\\Projects\\Unexpected Chicago\\2014" class="folder" id="FileFolderLocation" required>\
                                                     <small class="error">Where should we save the image files?</small>\
                                                 </div>')
                                     .slideDown('slow');
