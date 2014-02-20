@@ -60,9 +60,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#NewExhibitionDocDetails').slideUp('slow', function() {
-        $( "#NewExhibitionDocDetails" ).empty();
-      });
-      }
+          $( "#NewExhibitionDocDetails" ).empty();
+          });
+        }
     });
 
 
@@ -100,9 +100,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#NewPhotoForExhibitionDetails').slideUp('slow', function() {
-        $( "#NewPhotoForExhibitionDetails" ).empty();
-      });
-      }
+          $( "#NewPhotoForExhibitionDetails" ).empty();
+          });
+        }
     });
 
 
@@ -133,9 +133,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#NewPhotoForMarketingDetails').slideUp('slow', function() {
-        $( "#NewPhotoForMarketingDetails" ).empty();
-      });
-      }
+          $( "#NewPhotoForMarketingDetails" ).empty();
+          });
+        }
     });
 
 
@@ -174,9 +174,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#NewPhotoForEventDetails').slideUp('slow', function() {
-        $( "#NewPhotoForEventDetails" ).empty();
-      });
-      }
+          $( "#NewPhotoForEventDetails" ).empty();
+          });
+        }
     });
 
 
@@ -206,9 +206,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#NewPhotoForOtherDetails').slideUp('slow', function() {
-        $( "#NewPhotoForOtherDetails" ).empty();
-      });
-      }
+          $( "#NewPhotoForOtherDetails" ).empty();
+          });
+        }
     });
 
 
@@ -243,9 +243,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#ExistingCollectionDetails').slideUp('slow', function() {
-        $( "#ExistingCollectionDetails" ).empty();
-      });
-      }
+          $( "#ExistingCollectionDetails" ).empty();
+          });
+        }
     });
 
 
@@ -266,9 +266,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#ExistingNonCollectionDetails').slideUp('slow', function() {
-        $( "#ExistingNonCollectionDetails" ).empty();
-      });
-      }
+          $( "#ExistingNonCollectionDetails" ).empty();
+          });
+        }
     });
 
 
@@ -293,9 +293,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#UseOtherDetails').slideUp('slow', function() {
-        $('#UseOtherDetails').empty();
-      });
-      }
+          $('#UseOtherDetails').empty();
+          });
+        }
     });
 
   
@@ -317,9 +317,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#UseClientExternalDetails').slideUp('slow', function() {
-        $( "#UseClientExternalDetails" ).empty();
-      });
-      }
+          $( "#UseClientExternalDetails" ).empty();
+          });
+        }
     });
 
 
@@ -345,9 +345,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#FileDeliveryServerDetails').slideUp('slow', function() {
-        $( "#FileDeliveryServerDetails" ).empty();
-      });
-      }
+          $( "#FileDeliveryServerDetails" ).empty();
+          });
+        }
     });
 
 
@@ -364,9 +364,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#FileDeliveryEmailDetails').slideUp('slow', function() {
-        $( "#FileDeliveryEmailDetails" ).empty();
-      });
-      }
+          $( "#FileDeliveryEmailDetails" ).empty();
+          });
+        }
     });
 
 
@@ -387,18 +387,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#FileDeliveryOtherDetails').slideUp('slow', function() {
-        $( "#FileDeliveryOtherDetails" ).empty();
-      });
-      }
+          $( "#FileDeliveryOtherDetails" ).empty();
+          });
+        }
     });
-
-
-
-
-
-
-
-
-
 
 
