@@ -16,6 +16,7 @@
     <div class="row">
     <div class="large-12 columns">
         <header>
+            <img src="img/chmlogo.png" alt="Chicago History Museum logo" class="logo">
             <h1 class="document__title">Request Digital Photography and Imaging</h1>
         </header>
 
@@ -96,7 +97,7 @@
                 <h1 class="services__header--new">What type of new images?</h1>
             </header>
 
-            <div class="services__option field--checkbox">
+            <div class="services__option field--checkbox" id="alert-container">
                 <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
                 <label for="New2D" class="label">2D collection items</label>
                 <p data-alert class="alert-box info radius" id="New2DAlert">
@@ -105,7 +106,7 @@
                 </p>
             </div>
 
-            <div class="services__option field--checkbox">
+            <div class="services__option field--checkbox" id="alert-container">
                 <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
                 <label for="New3D" class="label">3D collection items</label>
                 <p data-alert class="alert-box info radius" id="New3DAlert">
@@ -221,10 +222,12 @@
     <!--                 PLANNED USE                  -->
     <!-- ************************************ -->
     <legend>How are you planning to use the images?</legend>
-    <p data-alert class="alert-box info radius" id="restrictions">
-        <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
-        <a href="#" class="close">&times;</a>
-    </p>
+    <div id="alert-container">
+        <p data-alert class="alert-box info radius">
+            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+            <a href="#" class="close">&times;</a>
+        </p>
+    </div>
 
     <div class="use__option field--checkbox">
         <input type="checkbox" name="use" value="Social media" id="UseSocialMedia">
@@ -393,7 +396,7 @@
             <div class="hide" id="FileDeliveryEmailDetails">
             </div>
 
-            <div class="files__option field--checkbox">
+            <div class="files__option field--checkbox" id="alert-container">
                 <input type="checkbox" name="delivery" value="Burn to disc" id="FileDeliveryDisc">
                 <label for="FileDeliveryDisc" class="label">
                     Burn to disc
@@ -425,10 +428,12 @@
                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
             </p>
             
-            <p data-alert class="alert-box info radius" id="largebatches">
-            <i class="fi-alert"></i> Requests for large batches of new images will take additional time.
-            <a href="#" class="close">&times;</a>
-            </p>
+            <div id="alert-container">
+                <p data-alert class="alert-box info radius" id="largebatches">
+                    <i class="fi-alert"></i> Requests for large batches of new images will take additional time.
+                    <a href="#" class="close">&times;</a>
+                </p>
+            </div>
 
                 <div class="field--date">
                     <label class="label" for="FileDeliveryDate">
