@@ -240,7 +240,7 @@ $( "#GoToFiles" ).click(function( event ) {
   // REINITIALIZE Abide
     $("#UseOther").click(function() {
       if($(this).is(":checked")) {
-        $( "#OtherUseDetails" ).html('<div class="field--description">\
+        $( "#UseOtherDetails" ).html('<div class="field--description">\
                                     <label class="label" for="UseOtherDescription">\
                                       What will these images be used for? \
                                       <small>required</small>\
