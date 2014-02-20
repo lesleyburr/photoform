@@ -116,12 +116,18 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	font-size: 1.5em;
 }
 
-.fi-play {
-	padding-left: 0.5em;
-}
-
-.alert-box {
+.alert-box, .info{
 	font-size: 1em;
 	margin-left: 1.2rem;
 	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+	border: none;
+	width: 60%;
+}
+
+.fi-play {
+	padding-left: 0.5rem;
+}
+
+.fi-alert {
+	padding-right: 0.5rem;
 }
