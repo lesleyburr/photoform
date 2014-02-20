@@ -66,8 +66,8 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-    // Show Photography for Exhibition Details and
-    // REINITIALIZE Abide
+    // Show Photography for Exhibition Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Photography for Exhibition Details ON UNCHECK
     $("#NewPhotoForExhibition").click(function() {
       if($(this).is(":checked")) {
         $( "#NewPhotoForExhibitionDetails" ).html('<div class="field--text">\
@@ -107,8 +107,8 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-    // Show Photography for Marketing Details and
-    // REINITIALIZE Abide
+    // Show Marketing Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Marketing Details ON UNCHECK
     $("#NewPhotoForMarketing").click(function() {
       if($(this).is(":checked")) {
         $( "#NewPhotoForMarketingDetails" ).html('<div class="field--description">\
@@ -138,8 +138,10 @@ $( "#GoToFiles" ).click(function( event ) {
       }
     });
 
-// Show Photography for Event Details and
-    // REINITIALIZE Abide
+
+
+    // Show Event Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Event Details ON UNCHECK
     $("#NewPhotoForEvent").click(function() {
       if($(this).is(":checked")) {
         $( "#NewPhotoForEventDetails" ).html('<div class="field--text">\
@@ -179,8 +181,8 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-// Show Photography for New Other Photo Details and
-    // REINITIALIZE Abide
+    // Show New Other Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY New Other Details ON UNCHECK
     $("#NewPhotoForOther").click(function() {
       if($(this).is(":checked")) {
         $( "#NewPhotoForOtherDetails" ).html('<div class="field--description">\
@@ -224,8 +226,8 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-// Show Photography for Exisiting Collection Details and
-    // REINITIALIZE Abide
+    // Show Collection Item Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Collection Item Details ON UNCHECK
     $("#ExistingCollectionItem").click(function() {
       if($(this).is(":checked")) {
         $( "#ExistingCollectionDetails" ).html('<div class="field--description">\
@@ -247,8 +249,8 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-// Show Photography for Exisiting Non-collection Details and
-    // REINITIALIZE Abide
+    // Show Non-Collection Item Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Non-Collection Item Details ON UNCHECK
     $("#ExistingNonCollectionItem").click(function() {
       if($(this).is(":checked")) {
         $( "#ExistingNonCollectionDetails" ).html('<div class="field--description">\
