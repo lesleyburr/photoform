@@ -16,6 +16,15 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 /***************************************************/
 /* BASE */
 /***************************************************/
+
+/*body {
+	background-color: #E1EAED;
+}
+
+#PhotoAndImagingRequest, .tabs-content {
+	background-color: #efefef;
+}
+*/
 /***************************************************/
 /* LAYOUT */
 /***************************************************/
@@ -63,18 +72,14 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	text-transform: uppercase;
 }
 
-/*FORM__FIELDS 
-
-.field--account-number {
-	width: 15em;
-}
+/*FORM__FIELDS */
 
 .field--checkbox {
 	width: 30em;
 }
 
 .field--date {
-	width: 15em;
+	width: 10em;
 }
 
 .field--description {
@@ -91,10 +96,17 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	width: 15em;
 }
 
+.field--account-number {
+	width: 15em;
+}
+
 .field--text {
 	width: 20em;
-}*/
+}
 
+textarea {
+	width: 30em;
+}
 
 /*Fieldsets*/
 
