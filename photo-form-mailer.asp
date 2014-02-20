@@ -216,7 +216,7 @@ dim quality
 quality = Request.Form("imgquality")
 
 If quality = "Other" Then
-	HTML = HTML & "<p><em>" & Request.Form("imgquality_other") & ", " & Request.Form("filetype") & "</em>.</p>"
+	HTML = HTML & "<p><em>" & Request.Form("imgquality_other_details") & ", " & Request.Form("filetype") & "</em>.</p>"
 Else
 	HTML = HTML & "<p><em>" & quality & ", " & Request.Form("filetype") &  "</em>.</p>"
 End If
@@ -238,7 +238,7 @@ For Each delivery_method in delivery_methods
 	Select Case Trim(delivery_method)
 
 	Case "Save on server"
-		HTML = HTML & "<p>Save the files on the network at " & Request.Form("folder_location") & ".</p>"
+		HTML = HTML & "<p>Save the files on the network at " & Request.Form("delivery_network_path") & ".</p>"
 
 	Case "E-mail"
 		HTML = HTML & "<p>Email the files to " & Request.Form("delivery_email") & ".</p>"

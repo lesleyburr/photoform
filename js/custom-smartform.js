@@ -308,7 +308,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                               What is the name of the external client?\
                                               <small>required</small>\
                                             </label>\
-                                            <input type="text" name="external_client_details" placeholder="Motorola" id="UseClientExternalName" required>\
+                                            <input type="text" name="external_client_name" placeholder="Motorola" id="UseClientExternalName" required>\
                                             <small class="error">Who is your external client?</small>\
                                           </div>')
                                     .slideDown('slow');
@@ -365,7 +365,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     Provide the folder location.\
                                                     <small>required</small>\
                                                   </label>\
-                                                  <input type="text" name="folder_location_details" placeholder="\\\\Ch-media\\Projects\\Unexpected Chicago\\2014" class="folder" id="FileFolderLocation" required>\
+                                                  <input type="text" name="delivery_network_path" placeholder="\\\\Ch-media\\Projects\\Unexpected Chicago\\2014" class="folder" id="FileFolderLocation" required>\
                                                     <small class="error">Where should we save the image files?</small>\
                                                 </div>')
                                     .slideDown('slow');
@@ -384,7 +384,7 @@ $( "#GoToFiles" ).click(function( event ) {
     $("#FileDeliveryEmail").click(function() {
       if($(this).is(":checked")) {
         $( "#FileDeliveryEmailDetails" ).html('<div class="field--description">\
-                                                <input type="email" name="delivery_email_details" placeholder="name@mail.com" required>\
+                                                <input type="email" name="delivery_email" placeholder="name@mail.com" required>\
                                                   <small class="error">What email address should we send the files to?</small>\
                                                 </div>')
                                     .slideDown('slow');
@@ -407,7 +407,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   How would you like the files delivered?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea name="delivery_other_details" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
+                                                <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
                                                   <small class="error">Describe how you need the files delivered.</small>\
                                               </div>')
                                     .slideDown('slow');
