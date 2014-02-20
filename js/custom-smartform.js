@@ -294,13 +294,8 @@ $( "#GoToFiles" ).click(function( event ) {
       else {
         $('#UseOtherDetails').slideUp('slow', function() {
           $('#UseOtherDetails').empty();
-<<<<<<< HEAD
-        });
-      }
-=======
           });
         }
->>>>>>> ccd3d899caf9390f1fdd76ef09eca245bdca64f8
     });
 
   
@@ -322,15 +317,9 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#UseClientExternalDetails').slideUp('slow', function() {
-<<<<<<< HEAD
-          $( '#UseClientExternalDetails' ).empty();
-        });
-      }
-=======
           $( "#UseClientExternalDetails" ).empty();
           });
         }
->>>>>>> ccd3d899caf9390f1fdd76ef09eca245bdca64f8
     });
 
 
@@ -357,13 +346,8 @@ $( "#GoToFiles" ).click(function( event ) {
       else {
         $('#FileDeliveryServerDetails').slideUp('slow', function() {
           $( "#FileDeliveryServerDetails" ).empty();
-<<<<<<< HEAD
-        });
-      }
-=======
           });
         }
->>>>>>> ccd3d899caf9390f1fdd76ef09eca245bdca64f8
     });
 
 
@@ -404,13 +388,8 @@ $( "#GoToFiles" ).click(function( event ) {
       else {
         $('#FileDeliveryOtherDetails').slideUp('slow', function() {
           $( "#FileDeliveryOtherDetails" ).empty();
-<<<<<<< HEAD
-        });
-      }
-=======
           });
         }
->>>>>>> ccd3d899caf9390f1fdd76ef09eca245bdca64f8
     });
 
 
