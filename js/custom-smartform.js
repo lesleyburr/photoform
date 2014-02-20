@@ -15,8 +15,6 @@ $( "#GoToFiles" ).click(function( event ) {
 });
 
 
-
-
 // CONDITIONAL SECTIONS
   // *********
   // SERVICES
@@ -106,7 +104,6 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
     // Show Marketing Details and REINITIALIZE Abide ON CHECK
     // HIDE and EMPTY Marketing Details ON UNCHECK
     $("#NewPhotoForMarketing").click(function() {
@@ -137,7 +134,6 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
-
 
 
     // Show Event Details and REINITIALIZE Abide ON CHECK
@@ -180,7 +176,6 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
     // Show New Other Details and REINITIALIZE Abide ON CHECK
     // HIDE and EMPTY New Other Details ON UNCHECK
     $("#NewPhotoForOther").click(function() {
@@ -210,8 +205,6 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
-
-
 
 
 // EXISTING IMAGES
@@ -272,7 +265,6 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
   // *********
   // USE
   // *********
@@ -297,8 +289,7 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
-
-  
+ 
 
   // CLIENTS
   // ON CHECK
@@ -331,13 +322,13 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
   // *********
   // FILES
   // *********
-    // IMAGE QUALITY
-    // Show File Quality Other Details and REINITIALIZE Abide ON CHECK
-    // HIDE and EMPTY File Quality Other Details ON UNCHECK
+    // ON CHECK
+    // HIDE details for all other image quality options,
+    // SHOW details for image quality other, and
+  // REINITIALIZE Abide
   $("#FileQualityLowRes, #FileQualityEditorial, #FileQualityOther").change(function() {
       if($(this).is(":checked") && $(this).val() == 'Other') {
         
@@ -362,12 +353,6 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
-
-
-
-
-
-
 
 
     // DELIVERY METHOD
@@ -434,5 +419,3 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
-
-
