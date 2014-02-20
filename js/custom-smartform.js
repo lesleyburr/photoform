@@ -244,8 +244,8 @@ $( "#GoToFiles" ).click(function( event ) {
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
-        $('#OtherUseDetails').slideUp('slow', function() {
-        $( "#OtherUseDetails" ).empty();
+        $('#UseOtherDetails').slideUp('slow', function() {
+        $('#UseOtherDetails').empty();
       });
       }
     });
@@ -268,21 +268,8 @@ $( "#GoToFiles" ).click(function( event ) {
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
-        $('#UseOtherDetails').slideUp('slow', function() {
-        $( "#UseOtherDetails" ).empty();
+        $('#UseClientExternalDetails').slideUp('slow', function() {
+        $( "#UseClientExternalDetails" ).empty();
       });
       }
     });
-
-  $("#UseClientExternal").click(function() {
-    $( "#UseClientExternalDetails" ).html('<div class="field--description">\
-                                            <label class="label" for="ExternalClientName">\
-                                              What is the name of the external client?\
-                                              <small>required</small>\
-                                            </label>\
-                                            <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>\
-                                            <small class="error">Who is your external client?</small>\
-                                          </div>')
-                           .slideToggle( 'slow');
-    $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
-  });
