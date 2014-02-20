@@ -145,7 +145,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   What is the event name?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
+                                                <input type="text" name="new_event_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
                                                   <small class="error">How should I refer to this exhibition?</small>\
                                               </div>\
                                               <div class="field--description">\
@@ -154,7 +154,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                   <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                 </label>\
-                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
+                                                <textarea name="new_event_photo_description" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
                                                   <small class="error">Please provide some context on the exhibition.</small>\
                                               </div>\
                                               <div class="field--date">\
@@ -162,7 +162,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   When should the photography occur?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
+                                                <input type="date" name="new_event_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
                                                   <small class="error">Use the MM/DD/YYYY date format.</small>\
                                               </div>')
                                 .slideDown( 'slow');
@@ -228,7 +228,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     Provide the ICHi, DN, SDN, or HB numbers.\
                                                     <small>required</small>\
                                                   </label>\
-                                                  <textarea name="existing_collection_number_details" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
+                                                  <textarea name="existing_collection_ids" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
                                                     <small class="error">Provide collection IDs.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
@@ -251,7 +251,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       Describe the items.\
                                                       <small>required</small>\
                                                     </label>\
-                                                    <textarea name="exisiting_non_collection_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
+                                                    <textarea name="existing_noncollection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
                                                       <small class="error">What would you like photographed?</small>\
                                                   </div>')
                                     .slideDown( 'slow');

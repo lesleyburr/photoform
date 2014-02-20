@@ -125,10 +125,11 @@ If Request.Form("new_images") = "on" Then
 
 			Case "Event photography"
 				HTML = HTML & "<h3>Event Photography</h3>"
-				HTML = HTML & "<p>" & Request.Form("new_event") & " on " & Request.Form("new_event_date") & ".</p>"
+				HTML = HTML & "<p>" & Request.Form("new_event_photo_description") & " for the " & Request.Form("new_event_title") & " event on " & Request.Form("new_event_date") & ".</p>"
 
 			Case "Other"
-				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other") & ".</p>"
+				HTML = HTML & "<h3>Other Type of Photography</h3>"
+				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other_details") & " by " & Request.Form("new_other_date") & ".</p>"
 
 			Case else
 				HTML = HTML & "<p>" & new_image_service & ".</p>"
@@ -152,11 +153,11 @@ If Request.Form("existing_images") = "on" Then
 
 			Case "Collections items"
 				HTML = HTML & "<h3>Collection Items</h3>"
-				HTML = HTML & "<p>" & Request.Form("collection_item_ids") & "</p>"
+				HTML = HTML & "<p>" & Request.Form("existing_collection_ids") & "</p>"
 
 			Case "Non-collections items"
 				HTML = HTML & "<h3>Non-Collection Items</h3>"
-				HTML = HTML & "<p>" & Request.Form("noncollection_item_description") & "</p>"
+				HTML = HTML & "<p>" & Request.Form("existing_noncollection_description") & "</p>"
 
 			Case else
 				HTML = HTML & "<p>" & existing_image_service & ".</p>"
@@ -181,7 +182,8 @@ uses = split(Request.Form("use"),",")
 
 For Each use in uses
 	If Trim(use) = "Other" Then
-		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other") & "</p>"
+		HTML = HTML & "<h3>Other Use</h3>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other_details") & "</p>"
 	Else
 		HTML = HTML & "<p>" & use & "</p>"
 	End If
