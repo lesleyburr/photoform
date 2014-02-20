@@ -183,32 +183,23 @@ $( "#GoToFiles" ).click(function( event ) {
     // REINITIALIZE Abide
     $("#NewPhotoForOther").click(function() {
       if($(this).is(":checked")) {
-        $( "#NewPhotoForOtherDetails" ).html('<div class="field--text">\
-                                                <label for="NewPhotoForEventTitle" class="label">\
-                                                  What is the event name?\
+        $( "#NewPhotoForOtherDetails" ).html('<div class="field--description">\
+                                                <label class="label" for="NewPhotoForOtherDescription">\
+                                                  Describe the new images that you need.\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
-                                                  <small class="error">How should I refer to this exhibition?</small>\
-                                              </div>\
-                                              <div class="field--description">\
-                                                <label class="label" for="NewPhotoForEventDescription">\
-                                                  Provide Photography details:\
-                                                  <small>required</small>\
-                                                  <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
-                                                </label>\
-                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
-                                                  <small class="error">Please provide some context on the exhibition.</small>\
-                                              </div>\
-                                              <div class="field--date">\
-                                                <label for="NewPhotoForEventDate" class="label">\
-                                                  When should the photography occur?\
-                                                  <small>required</small>\
-                                                </label>\
-                                                <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
-                                                  <small class="error">Use the MM/DD/YYYY date format.</small>\
-                                              </div>')
-                                .slideDown( 'slow');
+                                                <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>\
+                                                  <small class="error">What would you like photographed?</small>\
+                                                </div>\
+                                                <div class="field--date">\
+                                                  <label for="NewPhotoForOtherDate" class="label">\
+                                                    When should the photography occur?\
+                                                    <small>required</small>\
+                                                  </label>\
+                                                  <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">\
+                                                    <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                                  </div>')
+                                    .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
