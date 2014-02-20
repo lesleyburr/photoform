@@ -179,7 +179,7 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-// Show Photography for Other New Photo Details and
+// Show Photography for New Other Photo Details and
     // REINITIALIZE Abide
     $("#NewPhotoForOther").click(function() {
       if($(this).is(":checked")) {
@@ -224,7 +224,27 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-
+// Show Photography for Exisiting Collection Details and
+    // REINITIALIZE Abide
+    $("#ExistingCollectionItem").click(function() {
+      if($(this).is(":checked")) {
+        $( "#ExistingCollectionDetails" ).html('<div class="field--description">\
+                                                  <label class="label" for="ExisitingCollectionNumber">\
+                                                    Provide the ICHi, DN, SDN, or HB numbers.\
+                                                    <small>required</small>\
+                                                  </label>\
+                                                  <textarea name="existing_collection_number_details" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
+                                                    <small class="error">Provide collection IDs.</small>\
+                                                </div>')
+                                  .slideDown( 'slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#ExistingCollectionDetails').slideUp('slow', function() {
+        $( "#ExistingCollectionDetails" ).empty();
+      });
+      }
+    });
 
 
 
