@@ -247,6 +247,29 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
+// Show Photography for Exisiting Non-collection Details and
+    // REINITIALIZE Abide
+    $("#ExistingNonCollectionItem").click(function() {
+      if($(this).is(":checked")) {
+        $( "#ExistingNonCollectionDetails" ).html('<div class="field--description">\
+                                                    <label class="label" for="ExistingNonCollectionDescription">\
+                                                      Describe the items.\
+                                                      <small>required</small>\
+                                                    </label>\
+                                                    <textarea name="exisiting_non_collection_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
+                                                      <small class="error">What would you like photographed?</small>\
+                                                  </div>')
+                                    .slideDown( 'slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#ExistingNonCollectionDetails').slideUp('slow', function() {
+        $( "#ExistingNonCollectionDetails" ).empty();
+      });
+      }
+    });
+
+
 
 
 
