@@ -145,7 +145,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   What is the event name?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
+                                                <input type="text" name="new_event_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
                                                   <small class="error">How should I refer to this exhibition?</small>\
                                               </div>\
                                               <div class="field--description">\
@@ -154,7 +154,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                   <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                 </label>\
-                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
+                                                <textarea name="new_event_photo_description" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
                                                   <small class="error">Please provide some context on the exhibition.</small>\
                                               </div>\
                                               <div class="field--date">\
@@ -162,7 +162,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   When should the photography occur?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
+                                                <input type="date" name="new_event_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
                                                   <small class="error">Use the MM/DD/YYYY date format.</small>\
                                               </div>')
                                 .slideDown( 'slow');
