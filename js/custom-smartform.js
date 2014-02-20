@@ -264,6 +264,26 @@ $( "#GoToFiles" ).click(function( event ) {
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
   $("#UseClientExternal").click(function() {
+      if($(this).is(":checked")) {
+        $( "#UseClientExternalDetails" ).html('<div class="field--description">\
+                                    <label class="label" for="OtherUseDescription">\
+                                      What will these images be used for? \
+                                      <small>required</small>\
+                                    </label>\
+                                    <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription" required></textarea>\
+                                    <small class="error">How do you plan to use these images?</small>\
+                                  </div>')
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#UseOtherDetails').slideUp('slow', function() {
+        $( "#UseOtherDetails" ).empty();
+      });
+      }
+    });
+
+  $("#UseClientExternal").click(function() {
     $( "#UseClientExternalDetails" ).html('<div class="field--description">\
                                             <label class="label" for="ExternalClientName">\
                                               What is the name of the external client?\
