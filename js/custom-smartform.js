@@ -302,7 +302,7 @@ $( "#GoToFiles" ).click(function( event ) {
 
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
-  $("#UseClientExternal").click(function() {
+  $("#UseClientExternal").change(function() {
       if($(this).is(":checked")) {
         $( "#UseClientExternalDetails" ).html('<div class="field--description">\
                                             <label class="label" for="UseClientExternalName">\
