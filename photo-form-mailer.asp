@@ -247,6 +247,7 @@ For Each delivery_method in delivery_methods
 		HTML = HTML & "<p>Burn the files to disc.</p>"
 
 	Case "Other"
+		HTML = HTML & "<h3>Other Delivery Method</h3>"
 		HTML = HTML & "<p><strong>*</strong> " & Request.Form("delivery_other") & ".</p>"
 
 	Case else

@@ -154,7 +154,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                   <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                 </label>\
-                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
+                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
                                                   <small class="error">Please provide some context on the exhibition.</small>\
                                               </div>\
                                               <div class="field--date">\
