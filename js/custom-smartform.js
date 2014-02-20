@@ -156,8 +156,9 @@ $( "#GoToFiles" ).click(function( event ) {
   // *********
   // SHOW description for other use ON CHECK and
   // REINITIALIZE Abide
-  $("#UseOther").click(function() {
-    $( "#OtherUseDetails" ).html('<div class="field--description">\
+    $("#UseOther").click(function() {
+      if($(this).is(":checked")) {
+        $( "#OtherUseDetails" ).html('<div class="field--description">\
                                     <label class="label" for="OtherUseDescription">\
                                       What will these images be used for? \
                                       <small>required</small>\
@@ -165,9 +166,17 @@ $( "#GoToFiles" ).click(function( event ) {
                                     <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription" required></textarea>\
                                     <small class="error">How do you plan to use these images?</small>\
                                   </div>')
-                           .slideToggle( 'slow');
-    $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
-  });
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#OtherUseDetails').slideUp('slow', function() {
+        $( "#OtherUseDetails" ).empty();
+      });
+      }
+    });
+
+  
 
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
