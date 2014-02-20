@@ -302,8 +302,13 @@ $( "#GoToFiles" ).click(function( event ) {
 
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
-  $("#UseClientExternal").change(function() {
-      if($(this).is(":checked").val('external client')) {
+  $("#UseClientMuseum, #UseClientExternal").change(function() {
+      if($(this).is(":checked") && $(this).val() == 'external client') {
+        
+        $('[id^=Use][id$=Details]').slideUp('slow', function() {
+          $( "[id^=Use][id$=Details]" ).empty();
+          });
+
         $( "#UseClientExternalDetails" ).html('<div class="field--description">\
                                             <label class="label" for="UseClientExternalName">\
                                               What is the name of the external client?\
@@ -316,8 +321,8 @@ $( "#GoToFiles" ).click(function( event ) {
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
-        $('#UseClientExternalDetails').slideUp('slow', function() {
-          $( "#UseClientExternalDetails" ).empty();
+        $('[id^=Use][id$=Details]').slideUp('slow', function() {
+          $( "[id^=Use][id$=Details]" ).empty();
           });
         }
     });
