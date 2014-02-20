@@ -153,11 +153,11 @@ If Request.Form("existing_images") = "on" Then
 
 			Case "Collections items"
 				HTML = HTML & "<h3>Collection Items</h3>"
-				HTML = HTML & "<p>" & Request.Form("existing_collection_number_details") & "</p>"
+				HTML = HTML & "<p>" & Request.Form("existing_collection_ids") & "</p>"
 
 			Case "Non-collections items"
 				HTML = HTML & "<h3>Non-Collection Items</h3>"
-				HTML = HTML & "<p>" & Request.Form("existing_noncollection_item_description") & "</p>"
+				HTML = HTML & "<p>" & Request.Form("existing_noncollection_description") & "</p>"
 
 			Case else
 				HTML = HTML & "<p>" & existing_image_service & ".</p>"
@@ -182,7 +182,8 @@ uses = split(Request.Form("use"),",")
 
 For Each use in uses
 	If Trim(use) = "Other" Then
-		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other") & "</p>"
+		HTML = HTML & "<h3>Other Use</h3>"
+		HTML = HTML & "<p><strong>*</strong> " & Request.Form("use_other_details") & "</p>"
 	Else
 		HTML = HTML & "<p>" & use & "</p>"
 	End If
