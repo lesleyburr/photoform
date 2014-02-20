@@ -273,11 +273,6 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-
-
-
-
-
   // *********
   // USE
   // *********
@@ -326,3 +321,53 @@ $( "#GoToFiles" ).click(function( event ) {
       });
       }
     });
+
+
+
+
+
+
+
+
+
+
+  // *********
+  // FILES
+  // *********
+    // DELIVERY METHOD
+    // Show File Delivery Server Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY File Delivery Server Details ON UNCHECK
+    $("#FileDeliveryServer").click(function() {
+      if($(this).is(":checked")) {
+        $( "#FileDeliveryServerDetails" ).html('<div class="field--description">\
+                                                  <label for="FileFolderLocation" class="label">\
+                                                    Provide the folder location.\
+                                                    <small>required</small>\
+                                                  </label>\
+                                                  <input type="text" name="folder_location_details" placeholder="\\Ch-media\Projects\Unexpected Chicago\2014" class="folder" id="FileFolderLocation" required>\
+                                                    <small class="error">Where should we save the image files?</small>\
+                                                </div>')
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#FileDeliveryServerDetails').slideUp('slow', function() {
+        $( "#FileDeliveryServerDetails" ).empty();
+      });
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
