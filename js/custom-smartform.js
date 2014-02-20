@@ -299,8 +299,8 @@ $( "#GoToFiles" ).click(function( event ) {
   $("#UseClientMuseum, #UseClientExternal").change(function() {
       if($(this).is(":checked") && $(this).val() == 'external client') {
         
-        $('[id^=Use][id$=Details]').slideUp('slow', function() {
-          $( "[id^=Use][id$=Details]" ).empty();
+        $('[id^=UseClient][id$=Details]').slideUp('slow', function() {
+          $( "[id^=UseClient][id$=Details]" ).empty();
           });
 
         $( "#UseClientExternalDetails" ).html('<div class="field--description">\
@@ -315,8 +315,8 @@ $( "#GoToFiles" ).click(function( event ) {
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
-        $('[id^=Use][id$=Details]').slideUp('slow', function() {
-          $( "[id^=Use][id$=Details]" ).empty();
+        $('[id^=UseClient][id$=Details]').slideUp('slow', function() {
+          $( "[id^=UseClient][id$=Details]" ).empty();
           });
         }
     });
