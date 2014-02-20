@@ -338,6 +338,32 @@ $( "#GoToFiles" ).click(function( event ) {
     // IMAGE QUALITY
     // Show File Quality Other Details and REINITIALIZE Abide ON CHECK
     // HIDE and EMPTY File Quality Other Details ON UNCHECK
+  $("#FileQualityLowRes, #FileQualityEditorial, #FileQualityOther").change(function() {
+      if($(this).is(":checked") && $(this).val() == 'Other') {
+        
+        $('[id^=FileQuality][id$=Details]').slideUp('slow', function() {
+          $( "[id^=FileQuality][id$=Details]" ).empty();
+          });
+
+        $( "#FileQualityOtherDetails" ).html('<div class="field--description">\
+                                                <label class="label" for="QualityOtherDescription">\
+                                                  Describe the image quality needed.\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <textarea name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>\
+                                                <small class="error">What quality do you need you image files to be?</small>\
+                                              </div>')
+                                  .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('[id^=FileQuality][id$=Details]').slideUp('slow', function() {
+          $( "[id^=FileQuality][id$=Details]" ).empty();
+          });
+        }
+    });
+
+
 
 
 
