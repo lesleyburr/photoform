@@ -332,6 +332,15 @@ $( "#GoToFiles" ).click(function( event ) {
   // *********
   // FILES
   // *********
+    // IMAGE QUALITY
+    // Show File Quality Other Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY File Quality Other Details ON UNCHECK
+
+
+
+
+
+
     // DELIVERY METHOD
     // Show File Delivery Server Details and REINITIALIZE Abide ON CHECK
     // HIDE and EMPTY File Delivery Server Details ON UNCHECK
