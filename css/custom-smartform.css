@@ -30,22 +30,41 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 
 /* ALERTS Foundation Override */
 .alert-box {
-	font-size: 1.25em;
+	font-size: 1em;
+}
+
+.alert-box.info {
+	background-color: #C8E3EE;
+}
+
+.alert-box, .info{
+	font-size: 1em;
+	margin-left: 1.2rem;
+	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+	border: none;
+	width: 70%;
 }
 
 .services__option {
 	width: 100%;
 }
 
+.services--new, .services--existing {
+	margin-left: 1.8em;
+}
+
+.services__header--new, .services__header--existing {
+	font-size: 1.5em;
+}
+
 /* TABS Foundation Override */
 .tabs dd > a {
-	color: 
-	font-size: 1.35em;
+	font-size: 1.25em;
 	text-transform: uppercase;
 }
 
+/*FORM__FIELDS 
 
-/* FORM__FIELDS 
 .field--account-number {
 	width: 15em;
 }
@@ -74,6 +93,20 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 
 .field--text {
 	width: 20em;
+}*/
+
+
+/*Fieldsets*/
+
+fieldset legend {
+	color: #0079a1;
+	font-size: 1.3em;
+/*	border: 1px solid #ccc;*/
+}
+
+.legend--inner {
+	font-size: 1.1em;
+	color: #444;
 }
 
 	/* FIELD__LABEL Foundation Override */
@@ -108,21 +141,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	text-transform: uppercase;
 }
 
-.services--new, .services--existing {
-	margin-left: 1.8em;
-}
-
-.services__header--new, .services__header--existing {
-	font-size: 1.5em;
-}
-
-.alert-box, .info{
-	font-size: 1em;
-	margin-left: 1.2rem;
-	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
-	border: none;
-	width: 60%;
-}
+/*ICON FONT Styles*/
 
 .fi-play {
 	padding-left: 0.5rem;
