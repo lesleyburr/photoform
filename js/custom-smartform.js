@@ -38,7 +38,7 @@ $( "#GoToFiles" ).click(function( event ) {
 $("#NewExibitionDoc").click(function() {
   if($(this).is(":checked")) {
     $( "#NewExhibitionDocDetails" ).html('<h1>IT WORKS?</h1>')
-                                      .slideDown('slow');
+                                    .slideDown('slow');
   }
   else {
     $('#NewExhibitionDocDetails').slideUp('slow', function() {
