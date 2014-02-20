@@ -138,6 +138,89 @@ $( "#GoToFiles" ).click(function( event ) {
       }
     });
 
+// Show Photography for Event Details and
+    // REINITIALIZE Abide
+    $("#NewPhotoForEvent").click(function() {
+      if($(this).is(":checked")) {
+        $( "#NewPhotoForEventDetails" ).html('<div class="field--text">\
+                                                <label for="NewPhotoForEventTitle" class="label">\
+                                                  What is the event name?\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
+                                                  <small class="error">How should I refer to this exhibition?</small>\
+                                              </div>\
+                                              <div class="field--description">\
+                                                <label class="label" for="NewPhotoForEventDescription">\
+                                                  Provide Photography details:\
+                                                  <small>required</small>\
+                                                  <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
+                                                </label>\
+                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
+                                                  <small class="error">Please provide some context on the exhibition.</small>\
+                                              </div>\
+                                              <div class="field--date">\
+                                                <label for="NewPhotoForEventDate" class="label">\
+                                                  When should the photography occur?\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
+                                                  <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                              </div>')
+                                .slideDown( 'slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#NewPhotoForEventDetails').slideUp('slow', function() {
+        $( "#NewPhotoForEventDetails" ).empty();
+      });
+      }
+    });
+
+
+
+// Show Photography for Other New Photo Details and
+    // REINITIALIZE Abide
+    $("#NewPhotoForOther").click(function() {
+      if($(this).is(":checked")) {
+        $( "#NewPhotoForOtherDetails" ).html('<div class="field--text">\
+                                                <label for="NewPhotoForEventTitle" class="label">\
+                                                  What is the event name?\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <input type="text" name="new_photo_for_ex_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
+                                                  <small class="error">How should I refer to this exhibition?</small>\
+                                              </div>\
+                                              <div class="field--description">\
+                                                <label class="label" for="NewPhotoForEventDescription">\
+                                                  Provide Photography details:\
+                                                  <small>required</small>\
+                                                  <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
+                                                </label>\
+                                                <textarea name="new_event_details" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent"></textarea>\
+                                                  <small class="error">Please provide some context on the exhibition.</small>\
+                                              </div>\
+                                              <div class="field--date">\
+                                                <label for="NewPhotoForEventDate" class="label">\
+                                                  When should the photography occur?\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <input type="date" name="new_marketing_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
+                                                  <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                              </div>')
+                                .slideDown( 'slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#NewPhotoForOtherDetails').slideUp('slow', function() {
+        $( "#NewPhotoForOtherDetails" ).empty();
+      });
+      }
+    });
+
+
+
+
 
 
     // EXISTING IMAGES
