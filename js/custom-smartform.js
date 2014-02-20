@@ -324,13 +324,6 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-
-
-
-
-
-
-
   // *********
   // FILES
   // *********
@@ -358,8 +351,46 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
+    // Show File Delivery Email Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY File Delivery Email Details ON UNCHECK
+    $("#FileDeliveryEmail").click(function() {
+      if($(this).is(":checked")) {
+        $( "#FileDeliveryEmailDetails" ).html('<div class="field--description">\
+                                                <input type="email" name="delivery_email_details" placeholder="name@mail.com" required>\
+                                                  <small class="error">What email address should we send the files to?</small>\
+                                                </div>')
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#FileDeliveryEmailDetails').slideUp('slow', function() {
+        $( "#FileDeliveryEmailDetails" ).empty();
+      });
+      }
+    });
 
 
+    // Show File Delivery Other Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY File Delivery Other Details ON UNCHECK
+    $("#FileDeliveryOther").click(function() {
+      if($(this).is(":checked")) {
+        $( "#FileDeliveryOtherDetails" ).html('<div class="field--description">\
+                                                <label for="FileDeliveryOtherDescription" class="label">\
+                                                  How would you like the files delivered?\
+                                                  <small>required</small>\
+                                                </label>\
+                                                <textarea name="delivery_other_details" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
+                                                  <small class="error">Describe how you need the files delivered.</small>\
+                                              </div>')
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#FileDeliveryOtherDetails').slideUp('slow', function() {
+        $( "#FileDeliveryOtherDetails" ).empty();
+      });
+      }
+    });
 
 
 
