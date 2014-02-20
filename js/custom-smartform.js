@@ -300,7 +300,10 @@ $( "#GoToFiles" ).click(function( event ) {
 
   
 
-  // SHOW description for external client ON CHECK and
+  // CLIENTS
+  // ON CHECK
+  // HIDE details for all other client options,
+  // SHOW details for external client, and
   // REINITIALIZE Abide
   $("#UseClientMuseum, #UseClientExternal").change(function() {
       if($(this).is(":checked") && $(this).val() == 'external client') {
