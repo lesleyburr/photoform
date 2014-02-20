@@ -212,10 +212,8 @@ $( "#GoToFiles" ).click(function( event ) {
 
 
 
-
-
-    // EXISTING IMAGES
-    // Show Existing Images Menu
+// EXISTING IMAGES
+  // Show Existing Images Menu
     // SHOW New Images Menu ON CHECK
     // UNCHECK all checked checkboxes, DELETE details, and HIDE New Images Menu ON UNCHECK
     $('#ServicesExisting').click(function() {
@@ -224,6 +222,16 @@ $( "#GoToFiles" ).click(function( event ) {
                           .end()
                           .find("[id$=Details]").removeAttr('style').empty();
     });
+
+
+
+
+
+
+
+
+
+
 
   // *********
   // USE
