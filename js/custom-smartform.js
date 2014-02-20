@@ -241,19 +241,19 @@ $( "#GoToFiles" ).click(function( event ) {
     $("#UseOther").click(function() {
       if($(this).is(":checked")) {
         $( "#OtherUseDetails" ).html('<div class="field--description">\
-                                    <label class="label" for="OtherUseDescription">\
+                                    <label class="label" for="UseOtherDescription">\
                                       What will these images be used for? \
                                       <small>required</small>\
                                     </label>\
-                                    <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="OtherUseDescription" required></textarea>\
+                                    <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="UseOtherDescription" required></textarea>\
                                     <small class="error">How do you plan to use these images?</small>\
                                   </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
       else {
-        $('#OtherUseDetails').slideUp('slow', function() {
-        $( "#OtherUseDetails" ).empty();
+        $('#UseOtherDetails').slideUp('slow', function() {
+        $('#UseOtherDetails').empty();
       });
       }
     });
@@ -263,14 +263,21 @@ $( "#GoToFiles" ).click(function( event ) {
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
   $("#UseClientExternal").click(function() {
-    $( "#UseClientExternalDetails" ).html('<div class="field--description">\
-                                            <label class="label" for="ExternalClientName">\
+      if($(this).is(":checked")) {
+        $( "#UseClientExternalDetails" ).html('<div class="field--description">\
+                                            <label class="label" for="UseClientExternalName">\
                                               What is the name of the external client?\
                                               <small>required</small>\
                                             </label>\
-                                            <input type="text" name="external_client_details" placeholder="Motorola" id="ExternalClientName" required>\
+                                            <input type="text" name="external_client_details" placeholder="Motorola" id="UseClientExternalName" required>\
                                             <small class="error">Who is your external client?</small>\
                                           </div>')
-                           .slideToggle( 'slow');
-    $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
-  });
+                                    .slideDown('slow');
+       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#UseClientExternalDetails').slideUp('slow', function() {
+        $( "#UseClientExternalDetails" ).empty();
+      });
+      }
+    });
