@@ -32,8 +32,8 @@ $( "#GoToFiles" ).click(function( event ) {
     });
 
 
-    // Show Exhibition Documentation Details and
-    // REINITIALIZE Abide
+    // Show Exhibition Documentation Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY Exhibition Documentation Details ON UNCHECK
     $("#NewExibitionDoc").click(function() {
       if($(this).is(":checked")) {
         $( "#NewExhibitionDocDetails" ).html('<div class="field--text">\
