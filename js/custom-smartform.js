@@ -228,7 +228,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     Provide the ICHi, DN, SDN, or HB numbers.\
                                                     <small>required</small>\
                                                   </label>\
-                                                  <textarea name="existing_collection_number_details" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
+                                                  <textarea name="existing_collection_ids" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
                                                     <small class="error">Provide collection IDs.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
@@ -251,7 +251,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       Describe the items.\
                                                       <small>required</small>\
                                                     </label>\
-                                                    <textarea name="exisiting_non_collection_details" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
+                                                    <textarea name="existing_noncollection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
                                                       <small class="error">What would you like photographed?</small>\
                                                   </div>')
                                     .slideDown( 'slow');
