@@ -293,8 +293,8 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#UseOtherDetails').slideUp('slow', function() {
-        $('#UseOtherDetails').empty();
-      });
+          $('#UseOtherDetails').empty();
+        });
       }
     });
 
@@ -303,7 +303,7 @@ $( "#GoToFiles" ).click(function( event ) {
   // SHOW description for external client ON CHECK and
   // REINITIALIZE Abide
   $("#UseClientExternal").change(function() {
-      if($(this).is(":checked")) {
+      if($(this).is(":checked").val('external client')) {
         $( "#UseClientExternalDetails" ).html('<div class="field--description">\
                                             <label class="label" for="UseClientExternalName">\
                                               What is the name of the external client?\
@@ -317,8 +317,8 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#UseClientExternalDetails').slideUp('slow', function() {
-        $( "#UseClientExternalDetails" ).empty();
-      });
+          $( '#UseClientExternalDetails' ).empty();
+        });
       }
     });
 
@@ -345,8 +345,8 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#FileDeliveryServerDetails').slideUp('slow', function() {
-        $( "#FileDeliveryServerDetails" ).empty();
-      });
+          $( "#FileDeliveryServerDetails" ).empty();
+        });
       }
     });
 
@@ -387,8 +387,8 @@ $( "#GoToFiles" ).click(function( event ) {
       }
       else {
         $('#FileDeliveryOtherDetails').slideUp('slow', function() {
-        $( "#FileDeliveryOtherDetails" ).empty();
-      });
+          $( "#FileDeliveryOtherDetails" ).empty();
+        });
       }
     });
 
