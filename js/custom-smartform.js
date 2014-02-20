@@ -69,7 +69,8 @@ $( "#GoToFiles" ).click(function( event ) {
     // Show Photography for Exhibition Details and
     // REINITIALIZE Abide
     $("#NewPhotoForExhibition").click(function() {
-      $( "#NewPhotoForExhibitionDetails" ).html('<div class="field--text">\
+      if($(this).is(":checked")) {
+        $( "#NewPhotoForExhibitionDetails" ).html('<div class="field--text">\
                                                     <label for="NewPhotoForExhibitionTitle" class="label">\
                                                       What is the exhibition title?\
                                                       <small>required</small>\
@@ -94,14 +95,23 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
                                                     <small class="error">Use the MM/DD/YYYY date format.</small>\
                                                   </div>')
-                                    .slideToggle( 'slow');
+                                    .slideDown('slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#NewPhotoForExhibitionDetails').slideUp('slow', function() {
+        $( "#NewPhotoForExhibitionDetails" ).empty();
+      });
+      }
     });
+
+
 
     // Show Photography for Marketing Details and
     // REINITIALIZE Abide
     $("#NewPhotoForMarketing").click(function() {
-      $( "#NewPhotoForMarketingDetails" ).html('<div class="field--description">\
+      if($(this).is(":checked")) {
+        $( "#NewPhotoForMarketingDetails" ).html('<div class="field--description">\
                                                   <label class="label" for="NewPhotoForMarketingDescription">\
                                                     Provide Photography details:\
                                                     <small>required</small>\
@@ -118,8 +128,14 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <input type="date" name="new_marketing_date" id="NewPhotoForMarketingDate" required pattern="month_day_year">\
                                                   <small class="error">Use the MM/DD/YYYY date format.</small>\
                                                 </div>')
-                                  .slideToggle( 'slow');
+                                  .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#NewPhotoForMarketingDetails').slideUp('slow', function() {
+        $( "#NewPhotoForMarketingDetails" ).empty();
+      });
+      }
     });
 
 
