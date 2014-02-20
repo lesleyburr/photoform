@@ -419,3 +419,12 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
+
+
+
+
+
+  // *********
+  // ALERTS
+  // *********
+      // SHOW New Images Menu ON CHECK

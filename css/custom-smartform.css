@@ -25,6 +25,11 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	background-color: #efefef;
 }
 */
+
+.logo {
+	margin-top: 2rem;
+	width: 45%;
+}
 /***************************************************/
 /* LAYOUT */
 /***************************************************/
@@ -34,7 +39,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 
 /* DOCUMENT */
 .document__title {
-	margin: .75em 0 1.25em 0;
+	margin: .4em 0 1.25em 0;
 }
 
 /* ALERTS Foundation Override */
@@ -51,7 +56,6 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	margin-left: 1.2rem;
 	padding: 0.6rem 0.6rem 0.6rem 0.6rem;
 	border: none;
-	width: 70%;
 }
 
 .services__option {
@@ -153,7 +157,7 @@ fieldset legend {
 	text-transform: uppercase;
 }
 
-/*ICON FONT Styles*/
+/*Foundation icon font styles*/
 
 .fi-play {
 	padding-left: 0.5rem;
