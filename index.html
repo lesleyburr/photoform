@@ -59,7 +59,7 @@
     <div class="field--text">
         <label for="department" class="label">Department <small>required</small></label>
         <input type="text" name="department" placeholder="Publications" id="department" required>
-        <small class="error">Do you work here?</small>
+        <small class="error">What's your department?</small>
     </div>
 
     <div class="field--account-number">
@@ -70,7 +70,7 @@
             </span>
         </label>
         <input type="text" name="account" placeholder="111-111-1111-0000" id="account" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$">
-        <small class="error">Nothing's free!</small>
+        <small class="error">Enter your 14 digit account number.</small>
     </div>
 </fieldset>
 <div class="navigation--bottom">
@@ -228,13 +228,13 @@
     <legend>How are you planning to use the images?</legend>
     <div class="hide" id="CollectionsAlertDefinite">
         <p data-alert class="alert-box info radius">
-            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
         </p>
     </div>
     <div class="hide" id="CollectionsAlertMaybe">
         <p data-alert class="alert-box info radius">
-            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
         </p>
     </div>
@@ -279,7 +279,7 @@
     <div class="use__option">
         <input type="checkbox" name="use" value="Other" id="UseOther">
         <label for="UseOther" class="label">
-            Other Use
+            Other use
         </label>
 
         <div class="hide" id="UseOtherDetails">
@@ -453,7 +453,7 @@
                         <small>required</small>
                     </label>
                     <input type="date" name="date" id="FileDeliveryDate" required pattern="month_day_year">
-                    <small class="error">A due date is required.</small>
+                    <small class="error">Use MM/DD/YYYY</small>
                 </div>
 
         </fieldset>
