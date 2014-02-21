@@ -90,9 +90,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 }
 
 .field--description {
-	height: 5em;
 	width: 30em;
-	margin-bottom: 1em;
 }
 
 .field--email {
