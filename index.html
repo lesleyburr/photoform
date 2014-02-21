@@ -226,13 +226,7 @@
     <!--                 PLANNED USE                  -->
     <!-- ************************************ -->
     <legend>How are you planning to use the images?</legend>
-    <div class="hide" id="CollectionsAlertDefinite">
-        <p data-alert class="alert-box info radius" id="alert-container">
-            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
-            <a href="#" class="close">&times;</a>
-        </p>
-    </div>
-    <div class="hide" id="CollectionsAlertMaybe">
+    <div class="hide" id="CollectionsAlert">
         <p data-alert class="alert-box info radius" id="alert-container">
             <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
@@ -453,7 +447,7 @@
                         <small>required</small>
                     </label>
                     <input type="date" name="date" id="FileDeliveryDate" required pattern="month_day_year">
-                    <small class="error">Use MM/DD/YYYY</small>
+                    <small class="error">Use MM/DD/YYYY.</small>
                 </div>
 
         </fieldset>
