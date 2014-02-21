@@ -213,13 +213,8 @@ $( "#GoToFiles" ).click(function( event ) {
         }
     });
 
-        // Show New Other Photography Date and REINITIALIZE Abide ON CHECK
+        // Show New Other Photography Date and REINITIALIZE Abide ON photography need CHANGE
         // HIDE and EMPTY New Other Photography Date ON UNCHECK
-        // $(document).on('click', '#NewOtherPhotographyYes', function() {
-        //     $( "#NewOtherDatex" ).html('<h1>I WORK</h1>')
-        //                         .slideToggle('slow');
-        // });
-
         $(document).on('change', '#NewOtherPhotographyYes, #NewOtherPhotographyNo', function() {
           if($(this).is(":checked") && $(this).val() == 'Yes') {
             $('#NewOtherPhotographyDate').slideUp('slow', function() {
