@@ -26,16 +26,17 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 }
 */
 
-.logo {
-	margin-top: 2rem;
-	width: 45%;
-}
 /***************************************************/
 /* LAYOUT */
 /***************************************************/
 /***************************************************/
 /* MODULES */
 /***************************************************/
+
+.logo {
+	margin-top: 2rem;
+	width: 45%;
+}
 
 /* DOCUMENT */
 .document__title {
@@ -109,9 +110,10 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 	width: 20em;
 }
 
-textarea {
-	width: 30em;
+.field--description__input {
+	height: 5em	;
 }
+
 
 /*Fieldsets*/
 
