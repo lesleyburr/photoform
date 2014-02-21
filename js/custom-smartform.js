@@ -82,7 +82,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       <small>required</small>\
                                                       <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                     </label>\
-                                                    <textarea name="new_photo_for_ex_details" placeholder="Photograph the women&rsquo;s suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>\
+                                                    <textarea class="field--description__input" name="new_photo_for_ex_details" placeholder="Photograph the women&rsquo;s suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>\
                                                     <small class="error">Please provide some context on the exhibition.</small>\
                                                   </div>\
                                                   <div class="field--date">\
@@ -114,7 +114,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     <small>required</small>\
                                                     <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                   </label>\
-                                                  <textarea name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="NewPhotoForMarketing" required></textarea>\
+                                                  <textarea class="field--description__input" name="new_marketing_details" placeholder="Photograph someone in the hot dog suit standing in front of the Pioneer." id="NewPhotoForMarketing" required></textarea>\
                                                   <small class="error">What would you like photographed?</small>\
                                                 </div>\
                                                 <div class="field--date">\
@@ -154,7 +154,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                   <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                 </label>\
-                                                <textarea name="new_event_photo_description" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
+                                                <textarea class="field--description__input" name="new_event_photo_description" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
                                                   <small class="error">Please provide some context on the exhibition.</small>\
                                               </div>\
                                               <div class="field--date">\
@@ -185,7 +185,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   Describe the new images that you need.\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>\
+                                                <textarea class="field--description__input" name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>\
                                                   <small class="error">What would you like photographed?</small>\
                                                 </div>\
                                                 <div class="field--date">\
@@ -228,7 +228,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     Provide the ICHi, DN, SDN, or HB numbers.\
                                                     <small>required</small>\
                                                   </label>\
-                                                  <textarea name="existing_collection_ids" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
+                                                  <textarea class="field--description__input" name="existing_collection_ids" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
                                                     <small class="error">Provide collection IDs.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
@@ -251,7 +251,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       Describe the items.\
                                                       <small>required</small>\
                                                     </label>\
-                                                    <textarea name="existing_noncollection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
+                                                    <textarea class="field--description__input" name="existing_noncollection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
                                                       <small class="error">What would you like photographed?</small>\
                                                   </div>')
                                     .slideDown( 'slow');
@@ -277,7 +277,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                       What will these images be used for? \
                                       <small>required</small>\
                                     </label>\
-                                    <textarea name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="UseOtherDescription" required></textarea>\
+                                    <textarea class="field--description__input" name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="UseOtherDescription" required></textarea>\
                                     <small class="error">How do you plan to use these images?</small>\
                                   </div>')
                                     .slideDown('slow');
@@ -341,7 +341,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   Describe the image quality needed.\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>\
+                                                <textarea class="field--description__input" name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>\
                                                 <small class="error">What quality do you need you image files to be?</small>\
                                               </div>')
                                   .slideDown('slow');
@@ -407,7 +407,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   How would you like the files delivered?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
+                                                <textarea class="field--description__input" name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
                                                   <small class="error">Describe how you need the files delivered.</small>\
                                               </div>')
                                     .slideDown('slow');
