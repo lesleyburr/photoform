@@ -188,14 +188,21 @@ $( "#GoToFiles" ).click(function( event ) {
                                                 <textarea class="field--description__input" name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>\
                                                   <small class="error">What would you like photographed?</small>\
                                                 </div>\
-                                                <div class="field--date">\
-                                                  <label for="NewPhotoForOtherDate" class="label">\
-                                                    When should the photography occur?\
-                                                    <small>required</small>\
-                                                  </label>\
-                                                  <input type="date" name="new_other_date" id="NewPhotoForOtherDate" required pattern="month_day_year">\
-                                                    <small class="error">Use the MM/DD/YYYY date format.</small>\
-                                                  </div>')
+                                                <div class="fieldset--radio">\
+                                                  <fieldset>\
+                                                  <legend class="legend--inner">Do you need photography?</legend>\
+                                                    <div class="field--radio">\
+                                                      <input type="radio" name="new_other_photography" value="No" id="NewOtherPhotographyNo" checked>\
+                                                      <label class="label" for="NewOtherPhotographyNo">NO</label>\
+                                                    </div>\
+                                                    <div class="field--radio">\
+                                                      <input type="radio" name="new_other_photography" value="Yes" id="NewOtherPhotographyYes">\
+                                                      <label class="label" for="NewOtherPhotographyYes">YES</label>\
+                                                    </div>\
+                                                  </fieldset>\
+                                                </div>\
+                                                <div class="hide" id="NewOtherDate">\
+                                                </div>')
                                     .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
       }
@@ -205,6 +212,31 @@ $( "#GoToFiles" ).click(function( event ) {
           });
         }
     });
+
+        // Show New Other Photography Date and REINITIALIZE Abide ON CHECK
+        // HIDE and EMPTY New Other Photography Date ON UNCHECK
+        $("#NewOtherPhotographyNo, #NewOtherPhotographyYes").change(function() {
+          if($(this).is(":checked") && $(this).val() == 'Yes') {
+            $('#NewOtherDate').slideUp('slow', function() {
+              $( "#NewOtherDate" ).empty();
+            });
+            $( "#NewOtherDate" ).html('<div class="field--date">\
+                                        <label for="NewOtherDate" class="label">\
+                                          When should the photography occur?\
+                                          <small>required</small>\
+                                        </label>\
+                                        <input type="date" name="new_other_date" id="NewOtherDate" required pattern="month_day_year">\
+                                        <small class="error">Use MM/DD/YYYY</small>\
+                                       </div>')
+                                .slideDown('slow');
+            $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+          }
+          else {
+            $('#NewOtherDate').slideUp('slow', function() {
+              $( "#NewOtherDate" ).empty();
+            });
+          }
+        });
 
 
 // EXISTING IMAGES
