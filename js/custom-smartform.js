@@ -407,7 +407,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   How would you like the files delivered?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea class="field--description__input" name="delivery_other" placeholder="I prefer carrier pigeon, but will for the Pony Express." id="FileDeliveryOtherDescription"></textarea>\
+                                                <textarea class="field--description__input" name="delivery_other" placeholder="Teleportation." id="FileDeliveryOtherDescription" required></textarea>\
                                                   <small class="error">Describe how you need the files delivered.</small>\
                                               </div>')
                                     .slideDown('slow');
