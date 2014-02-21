@@ -398,7 +398,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     <small>required</small>\
                                                   </label>\
                                                   <input type="text" name="delivery_network_path" placeholder="\\\\Ch-media\\Projects\\Unexpected Chicago\\2014" class="folder" id="FileFolderLocation" required>\
-                                                    <small class="error">Where should we save the image files?</small>\
+                                                    <small class="error">Use \\\\servername\\foldername</small>\
                                                 </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -440,7 +440,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                 </label>\
                                                 <textarea class="field--description__input" name="delivery_other" placeholder="Teleportation." id="FileDeliveryOtherDescription" required></textarea>\
-                                                  <small class="error">Describe how you need the files delivered.</small>\
+                                                  <small class="error">Describe the delivery method.</small>\
                                               </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
