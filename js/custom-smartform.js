@@ -48,7 +48,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                               <label for="NewExhibitionDocDate" class="label">\
                                                 When should the photography occur?\
                                               <small>required</small></label>\
-                                              <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
+                                              <input type="text" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
                                               <small class="error">\
                                                 Use MM/DD/YYYY.\
                                               </small>\
@@ -90,7 +90,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       When should the photography occur? \
                                                       <small>required</small>\
                                                     </label>\
-                                                    <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
+                                                    <input type="text" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
                                                     <small class="error">Use MM/DD/YYYY.</small>\
                                                   </div>')
                                     .slideDown('slow');
@@ -122,7 +122,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     When should the photography occur?\
                                                   <small>required</small>\
                                                   </label>\
-                                                  <input type="date" name="new_marketing_date" id="NewPhotoForMarketingDate" required pattern="month_day_year">\
+                                                  <input type="text" name="new_marketing_date" id="NewPhotoForMarketingDate" required pattern="month_day_year">\
                                                   <small class="error">Use MM/DD/YYYY.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
@@ -162,7 +162,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   When should the photography occur?\
                                                   <small>required</small>\
                                                 </label>\
-                                                <input type="date" name="new_event_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
+                                                <input type="text" name="new_event_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
                                                   <small class="error">Use MM/DD/YYYY.</small>\
                                               </div>')
                                 .slideDown( 'slow');
@@ -225,7 +225,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                           When should the photography occur?\
                                           <small>required</small>\
                                         </label>\
-                                        <input type="date" name="new_other_date" id="NewOtherDate" required pattern="month_day_year">\
+                                        <input type="text" name="new_other_date" id="NewOtherDate" required pattern="month_day_year">\
                                         <small class="error">Use MM/DD/YYYY.</small>\
                                        </div>')
                                 .slideDown('slow');
