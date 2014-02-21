@@ -129,7 +129,10 @@ If Request.Form("new_images") = "on" Then
 
 			Case "Other"
 				HTML = HTML & "<h3>Other Type of Photography</h3>"
-				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other_details") & " by " & Request.Form("new_other_date") & ".</p>"
+				HTML = HTML & "<p><strong>*</strong> " & Request.Form("new_other_details")  & "</p>"
+				If Request.Form("new_other_photography") = "Yes" Then
+					 HTML = HTML & "<p>Perform the photography on " & Request.Form("new_other_date") & ".</p>"
+				End If
 
 			Case else
 				HTML = HTML & "<p>" & new_image_service & ".</p>"
