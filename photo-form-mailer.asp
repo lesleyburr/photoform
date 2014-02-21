@@ -110,7 +110,7 @@ If Request.Form("new_images") = "on" Then
 
 			Case "Exhibition documentation"
 				HTML = HTML & "<h3>Exhibition Documentation</h3>"
-				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("new_exdoc_title") & "</em> exhibitiion.<br />"
+				HTML = HTML & "<p>I need images that document the <em>" & Request.Form("new_exdoc_title") & "</em> exhibition.<br />"
 				HTML = HTML & "Please photograph the gallery on " & Request.Form("new_exdoc_date") & ".</p>"
 
 			Case "Photography for exhibitions"
