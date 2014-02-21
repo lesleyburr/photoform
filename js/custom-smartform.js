@@ -201,7 +201,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     </div>\
                                                   </fieldset>\
                                                 </div>\
-                                                <div class="hide" id="NewOtherDatex">\
+                                                <div class="hide" id="NewOtherPhotographyDate">\
                                                 </div>')
                                     .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -215,32 +215,33 @@ $( "#GoToFiles" ).click(function( event ) {
 
         // Show New Other Photography Date and REINITIALIZE Abide ON CHECK
         // HIDE and EMPTY New Other Photography Date ON UNCHECK
-        $("#NewOtherPhotographyYes").click(function() {
-            $( "#NewOtherDatex" ).html('<h1>I WORK</h1>')
-                                .slideToggle('slow');
-        });
-        // $("#NewOtherPhotographyNo, #NewOtherPhotographyYes").change(function() {
-        //   if($(this).is(":checked") && $(this).val() == 'Yes') {
-        //     $('#NewOtherDate').slideUp('slow', function() {
-        //       $( "#NewOtherDate" ).empty();
-        //     });
-        //     $( "#NewOtherDate" ).html('<div class="field--date">\
-        //                                 <label for="NewOtherDate" class="label">\
-        //                                   When should the photography occur?\
-        //                                   <small>required</small>\
-        //                                 </label>\
-        //                                 <input type="date" name="new_other_date" id="NewOtherDate" required pattern="month_day_year">\
-        //                                 <small class="error">Use MM/DD/YYYY</small>\
-        //                                </div>')
-        //                         .slideDown('slow');
-        //     $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
-        //   }
-        //   else {
-        //     $('#NewOtherDate').slideUp('slow', function() {
-        //       $( "#NewOtherDate" ).empty();
-        //     });
-        //   }
+        // $(document).on('click', '#NewOtherPhotographyYes', function() {
+        //     $( "#NewOtherDatex" ).html('<h1>I WORK</h1>')
+        //                         .slideToggle('slow');
         // });
+
+        $(document).on('change', '#NewOtherPhotographyYes, #NewOtherPhotographyNo', function() {
+          if($(this).is(":checked") && $(this).val() == 'Yes') {
+            $('#NewOtherPhotographyDate').slideUp('slow', function() {
+              $( "#NewOtherPhotographyDate" ).empty();
+            });
+            $( "#NewOtherPhotographyDate" ).html('<div class="field--date">\
+                                        <label for="NewOtherDate" class="label">\
+                                          When should the photography occur?\
+                                          <small>required</small>\
+                                        </label>\
+                                        <input type="date" name="new_other_date" id="NewOtherDate" required pattern="month_day_year">\
+                                        <small class="error">Use MM/DD/YYYY</small>\
+                                       </div>')
+                                .slideDown('slow');
+            $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+          }
+          else {
+            $('#NewOtherPhotographyDate').slideUp('slow', function() {
+              $( "#NewOtherPhotographyDate" ).empty();
+            });
+          }
+        });
 
 
 // EXISTING IMAGES
