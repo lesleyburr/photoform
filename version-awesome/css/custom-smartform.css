@@ -1,0 +1,170 @@
+/*
+
+BEM (BLOCK ELEMENT MODIFIER ) NOTATION
+.block {}
+.block__element {} part of block which makes it a whole
+.block--modifier {} diferrent version or state of block
+
+.person {}
+.person__hand {}
+.person--female {}
+.person--female__hand {}
+.person__hand--left {}
+
+*/
+
+/***************************************************/
+/* BASE */
+/***************************************************/
+
+/*body {
+	background-color: #E1EAED;
+}
+
+#PhotoAndImagingRequest, .tabs-content {
+	background-color: #efefef;
+}
+*/
+
+/***************************************************/
+/* LAYOUT */
+/***************************************************/
+/***************************************************/
+/* MODULES */
+/***************************************************/
+
+/* DOCUMENT */
+.document__logo {
+	margin-top: 2rem;
+	width: 45%;
+}
+
+.document__title {
+	margin: .4em 0 1.25em 0;
+}
+
+.services__option {
+	width: 100%;
+}
+
+.services--new, .services--existing {
+	margin-left: 1.8em;
+}
+
+.services__header--new, .services__header--existing {
+	font-size: 1.5em;
+}
+
+/* TABS Foundation Override */
+.tabs dd > a {
+	font-size: 1.25em;
+	text-transform: uppercase;
+}
+
+/* ALERTS Foundation Override */
+
+#alert-container {
+	width: 85%;
+}
+
+.alert-box {
+	font-size: 1em;
+}
+
+.alert-box.info {
+	background-color: #C8E3EE;
+}
+
+.alert-box, .info{
+	font-size: 1em;
+	border: none;
+}
+
+/*FORM__FIELDS */
+
+.field--checkbox {
+	width: 30em;
+}
+
+.field--date {
+	width: 10em;
+}
+
+.field--description {
+	width: 30em;
+}
+
+.field--email {
+	width: 20em;
+}
+
+.field--tel {
+	width: 15em;
+}
+
+.field--account-number {
+	width: 15em;
+}
+
+.field--text {
+	width: 20em;
+}
+
+.field--description__input {
+	height: 5em	;
+}
+
+
+/*Fieldsets*/
+
+fieldset legend {
+	color: #0079a1;
+	font-size: 1.3em;
+}
+
+.legend--inner {
+	font-size: 1.1em;
+	color: #444;
+}
+
+	/* FIELD__LABEL Foundation Override */
+	.label {
+		font-weight: normal;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		text-align: left;
+		text-decoration: none;
+		line-height: 1.5;
+		white-space: nowrap;
+		display: inline-block;
+		position: relative;
+		margin-bottom: 0.25rem;
+		margin-top: .55rem;
+		padding: 0;
+		font-size: 1.2rem;
+		background-color: #fff;
+		color: #222;
+	}
+
+
+/***************************************************/
+/* STATES */
+/***************************************************/
+
+	/* Field__Message--Error Foundation Override */
+	[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
+		font-size: 1rem;
+	}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+/*Foundation icon font styles*/
+
+.fi-play {
+	padding-left: 0.5rem;
+}
+
+.fi-alert {
+	padding-right: 0.5rem;
+}

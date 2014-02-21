@@ -1,0 +1,478 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom-smartform.css" />
+    <link rel="stylesheet" href="css/foundation-icons.css"/>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <title>Request Photography and Imaging</title>
+  </head>
+
+<body>
+<main>
+    <div class="row">
+    <div class="large-12 columns">
+        <header>
+            <img src="img/chmlogo.png" alt="Chicago History Museum logo" class="document__logo">
+            <h1 class="document__title">Request Digital Photography and Imaging</h1>
+        </header>
+
+        <form data-abide method="post" action="photo-form-mailer.asp" id="PhotoAndImagingRequest">
+
+        <!-- TAB NAVIGATION -->
+        <dl class="tabs" data-tab>
+            <dd class="active"><a href="#panel1-1" >Personal Info</a></dd>
+            <dd><a href="#panel1-2"  id="tab1-2">Services</a></dd>
+            <dd><a href="#panel1-3" id="tab1-3">Use</a></dd>
+            <dd><a href="#panel1-4" id="tab1-4">Files</a></dd>
+        </dl>
+
+        <!-- TAB CONTENT SECTIONS -->
+        <div class="tabs-content large-12 columns">
+
+<!-- ***************************************************** -->
+<!--               PERSONAL INFORMATION                    -->
+<!-- ***************************************************** -->
+<div class="content active large-12 columns" id="panel1-1">
+<fieldset>
+    <div class="field--text">
+        <label for="name" class="label">Full Name <small>required</small></label>
+        <input type="text" name="name" placeholder="Bill Murray" id="name" required pattern="[a-zA-Z]+">
+        <small class="error">Hi! What's your name?</small>
+    </div>
+
+    <div class="field--email">
+        <label for="email" class="label">E-mail <small>required</small></label>
+        <input type="email" name="email" placeholder="name@mail.com" id="email" required>
+        <small class="error">I need this to send you things.</small>
+    </div>
+
+    <div class="field--tel">
+        <label for="phone" class="label">Phone <small>required</small></label>
+        <input type="tel" name="phone" placeholder="312-799-0000" id="phone" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$">
+         <small class="error">We need to talk, sometimes.</small>
+    </div>
+
+    <div class="field--text">
+        <label for="department" class="label">Department <small>required</small></label>
+        <input type="text" name="department" placeholder="Publications" id="department" required>
+        <small class="error">What's your department?</small>
+    </div>
+
+    <div class="field--account-number">
+        <label for="account" class="label">
+            Account Number <small>required</small>
+            <span data-tooltip class="has-tip tip-right" title="If this request is not project-based, then make the last four digits 0000.">
+                <i class="fi-info"></i>
+            </span>
+        </label>
+        <input type="text" name="account" placeholder="111-111-1111-0000" id="account" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$">
+        <small class="error">Enter your 14 digit account number.</small>
+    </div>
+</fieldset>
+<div class="navigation--bottom">
+    <a href="#" class="button radius uppercase" id="GoToServices">Services <i class="fi-play"></i></a>
+</div>
+</div>
+
+<!-- ***************************************************** -->
+<!--               SERVICES                                -->
+<!-- ***************************************************** -->
+<div class="content large-12 columns" id="panel1-2">
+    <!-- ************************************ -->
+    <!--                 NEW                  -->
+    <!-- ************************************ -->
+<fieldset>
+    <fieldset>
+        <div class="services field--checkbox">
+            <input type="checkbox" name="new_images" value="on" id="ServicesNew">
+            <label for="ServicesNew" class="label">I need new images.</label>
+        </div>
+        
+        <section class="services--new hide" id="ServicesNewMenu">
+            <header>
+                <h1 class="services__header--new">What type of new images?</h1>
+            </header>
+
+            <div class="services__option field--checkbox" id="alert-container">
+                <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
+                <label for="New2D" class="label">2D collection items</label>
+                <div class="hide" id="New2DAlert">
+                        <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> Bring materials to the Rights &amp; Reproductions department.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="services__option field--checkbox" id="alert-container">
+                <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
+                <label for="New3D" class="label">3D collection items</label>
+                <div class="hide" id="New3DAlert">
+                    <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> Please coordinate material delivery to the photo lab with collection managers.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="services__option field--checkbox">
+                <input type="checkbox" name="new_image_service" value="Exhibition documentation" id="NewExibitionDoc">
+                <label for="NewExibitionDoc" class="label">
+                    Exhibition documentation
+                    <span data-tooltip class="has-tip tip-right" title="Photography of a gallery space."><i class="fi-info"></i></span>
+                </label>
+
+                <div class="hide" id="NewExhibitionDocDetails">
+                </div>
+            </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Photography for exhibitions" id="NewPhotoForExhibition">
+                <label  for="NewPhotoForExhibition" class="label">
+                    Photography for exhibitions
+                    <span data-tooltip class="has-tip tip-right" title="Images that will be used in an exhibition."><i class="fi-info"></i></span>
+                </label>
+                
+                <div class="hide" id="NewPhotoForExhibitionDetails">
+                </div>
+            </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Marketing photography" id="NewPhotoForMarketing">
+                <label  for="NewPhotoForMarketing" class="label">
+                    Marketing photography
+                </label>
+                
+                <div class="hide" id="NewPhotoForMarketingDetails">
+                </div>
+            </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Event photography" id="NewPhotoForEvent">
+                <label  for="NewPhotoForEvent" class="label">
+                Event photography
+                </label>
+                
+                <div class="hide" id="NewPhotoForEventDetails">
+                </div>
+            </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="new_image_service" value="Other" id="NewPhotoForOther">
+                <label for="NewPhotoForOther" class="label">
+                    Other
+                </label>
+                    
+                <div class="hide" id="NewPhotoForOtherDetails">
+                </div>
+            </div>
+        </section>
+    </fieldset>
+
+
+    <!-- ************************************ -->
+    <!--              EXISTING                -->
+    <!-- ************************************ -->
+    <fieldset>
+        <div class="services">
+            <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
+            <label for="ServicesExisting" class="label">
+                I need copies of existing images.
+            </label>
+        </div>
+
+        <section class="services--existing hide" id= "ServicesExistingMenu">
+            <header>
+                <h1 class="services__header--existing">What type of existing images?</h1>
+            </header>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
+                <label for="ExistingCollectionItem" class="label">
+                    Collection items
+                </label>
+
+                <div class="hide" id="ExistingCollectionDetails">
+                </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
+                <label for="ExistingNonCollectionItem" class="label">
+                    Non-collection items
+                </label>
+
+                <div class="hide" id="ExistingNonCollectionDetails">
+                </div>
+            </div>
+        </section>
+    </fieldset>
+</fieldset>
+<div class="navigation--bottom">
+    <a href="#" class="button radius uppercase" id="GoToUse">Use <i class="fi-play"></i></a>
+</div>
+</div>
+
+
+<!-- ***************************************************** -->
+<!--                        USE                            -->
+<!-- ***************************************************** -->
+<div class="content large-12 columns" id="panel1-3">
+<fieldset>
+    <!-- ************************************ -->
+    <!--                 PLANNED USE                  -->
+    <!-- ************************************ -->
+    <legend>How are you planning to use the images?</legend>
+    <div class="hide" id="CollectionsAlert">
+        <p data-alert class="alert-box info radius" id="alert-container">
+            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
+            <a href="#" class="close">&times;</a>
+        </p>
+    </div>
+
+    <div class="use__option field--checkbox">
+        <input type="checkbox" name="use" value="Social media" id="UseSocialMedia">
+        <label for="UseSocialMedia" class="label">
+            Social media 
+            <span data-tooltip class="has-tip tip-right" title="Facebook, Tumblr, Blog, etc."><i class="fi-info"></i>
+            </span>
+        </label>
+    </div>
+
+    <div class="use__option field--checkbox">
+        <input type="checkbox" name="use" value="Website" id="UseWebsite">
+        <label for="UseWebsite" class="label">
+            Website
+        </label>
+    </div>
+
+    <div class="use__option field--checkbox">
+        <input type="checkbox" name="use" value="Publication" id="UsePublication">
+        <label for="UsePublication" class="label">
+            Publication
+        </label>
+    </div>
+
+    <div class="use__option field--checkbox">
+        <input type="checkbox" name="use" value="Exhibition" id="UseExhibition">
+        <label for="UseExhibition" class="label">
+            Exhibition
+        </label>
+    </div>
+
+    <div class="use__option field--checkbox">
+        <input type="checkbox" name="use" value="Advertising and Marketing" id="UseAdMarketing">
+        <label for="UseAdMarketing" class="label">
+            Advertising &amp; Marketing
+        </label>
+    </div>
+
+    <div class="use__option">
+        <input type="checkbox" name="use" value="Other" id="UseOther">
+        <label for="UseOther" class="label">
+            Other use
+        </label>
+
+        <div class="hide" id="UseOtherDetails">
+        </div> 
+
+    </div>
+</fieldset>
+
+    <!-- ************************************ -->
+    <!--              CLIENT                  -->
+    <!-- ************************************ -->
+<fieldset>
+<legend>Who are the images for?</legend>
+
+    <div class="use__option field--radio">
+        <input type="radio" name="client" value="the Museum" id="UseClientMuseum" checked>
+        <label for="UseClientMuseum" class="label">
+            The Museum
+        </label>
+    </div>
+
+    <div class="use__option">
+        <input type="radio" name="client" value="external client" id="UseClientExternal">
+        <label for="UseClientExternal" class="label">
+            An External Client
+        </label>
+                                
+        <div class="hide" id="UseClientExternalDetails">
+        </div>
+
+    </div>
+</fieldset>
+<div class="navigation--bottom">
+    <a href="#" class="button radius uppercase" id="GoToFiles">Files <i class="fi-play"></i></a>
+</div>
+</div>
+
+<!-- ***************************************************** -->
+<!--                        FILES                          -->
+<!-- ***************************************************** -->
+<div class="content large-12 columns" id="panel1-4">
+<fieldset>
+<legend>File Specs</legend>
+
+    <!-- ************************************ -->
+    <!--             IMAGE QUALITY            -->
+    <!-- ************************************ -->
+    <fieldset>
+    <legend class="legend--inner">Image Quality</legend>
+
+        <div class="files__option field--radio">
+            <input type="radio" name="imgquality" value="Low resolution" id="FileQualityLowRes">
+            <label class="label" for="FileQualityLowRes">
+                    Low resolution <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi."><i class="fi-info"></i></span>
+            </label>
+        </div>
+
+        <div class="files__option field--radio">
+            <input type="radio" name="imgquality" value="Editorial quality" id="FileQualityEditorial"checked>
+            <label class="label" for="FileQualityEditorial">
+                Editorial quality <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi."><i class="fi-info"></i></span>
+            </label>
+        </div>
+
+        <div class="files__option">
+            <input type="radio" name="imgquality" value="Other" id="FileQualityOther">
+            <label class="label" for="FileQualityOther">
+                Other
+            </label>
+                                
+            <div class="hide" id="FileQualityOtherDetails">
+            </div>
+
+        </div>
+    </fieldset>
+
+    <!-- ************************************ -->
+    <!--           FILE TYPE                  -->
+    <!-- ************************************ -->
+    <fieldset>
+    <legend class="legend--inner">File Type</legend>
+
+            <div class="files__option field--radio">
+                <input type="radio" name="filetype" value="JPEG" id="FileTypeJpeg" checked>
+                <label class="label" for="FileTypeJpeg">
+                    JPEG <span data-tooltip class="has-tip tip-right" title="Recommended for web or research."><i class="fi-info"></i></span>
+                </label>
+            </div>
+
+            <div class="files__option field--radio">
+                <input type="radio" name="filetype" value="TIFF" id="FileTypeTiff">
+                <label class="label" for="FileTypeTiff">
+                    TIFF <span data-tooltip class="has-tip tip-right" title="Recommended for print."><i class="fi-info"></i></span>
+                </label>
+            </div>
+                            
+    </fieldset>
+</fieldset>
+
+    <!-- ************************************ -->
+    <!--           DELIVERY METHOD            -->
+    <!-- ************************************ -->
+<fieldset>
+<legend>File Delivery Method</legend>
+        
+        <div class="files__option">
+            <input type="checkbox" name="delivery" value="Save on server" id="FileDeliveryServer">
+            <label for="FileDeliveryServer" class="label">
+                Save on server
+            </label>
+                        
+            <div class="hide" id="FileDeliveryServerDetails">
+            </div>
+
+        </div>
+
+        <div class="files__option">
+            <input type="checkbox" name="delivery" value="E-mail" id="FileDeliveryEmail">
+            <label for="FileDeliveryEmail" class="label">
+                E-mail
+            </label>
+        </div>
+                            
+            <div class="hide" id="FileDeliveryEmailDetails">
+            </div>
+
+            <div class="files__option field--checkbox" id="alert-container">
+                <input type="checkbox" name="delivery" value="Burn to disc" id="FileDeliveryDisc">
+                <label for="FileDeliveryDisc" class="label">
+                    Burn to disc
+                </label>
+                <div class="hide" id="FileDiscAlert">
+                    <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> CDs and DVDs with labels are $2 each and are charged to your account.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="files__option">
+                <input type="checkbox" name="delivery" value="Other" id="FileDeliveryOther">
+                <label for="FileDeliveryOther" class="label">
+                    Other delivery method
+                </label>
+
+                <div class="hide" id="FileDeliveryOtherDetails">
+                </div>
+
+            </div>
+        </fieldset>
+
+        <!-- ************************************ -->
+        <!--                 DUE DATE             -->
+        <!-- ************************************ -->
+        <fieldset>
+        <legend>File Delivery Date</legend>
+            <p>
+                Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
+            </p>
+            
+            <div class="hide" id="LargeBatches">
+                <p data-alert class="alert-box info radius" id="alert-container">
+                    <i class="fi-alert"></i> Requests for large batches of new images will take additional time.
+                    <a href="#" class="close">&times;</a>
+                </p>
+            </div>
+
+                <div class="field--date">
+                    <label class="label" for="FileDeliveryDate">
+                        When do you need the files?
+                        <small>required</small>
+                    </label>
+                    <input type="date" name="date" id="FileDeliveryDate" required pattern="month_day_year">
+                    <small class="error">Use MM/DD/YYYY.</small>
+                </div>
+
+        </fieldset>
+                        
+
+        <input type="submit" name="submit" value="PLACE MY ORDER" class="button">
+
+        </div>
+
+
+
+        </div>
+
+        </form>
+
+    </div>
+    </div>
+
+</main>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="js/custom-smartform.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
