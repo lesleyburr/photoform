@@ -33,12 +33,12 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 /* MODULES */
 /***************************************************/
 
+/* DOCUMENT */
 .document__logo {
 	margin-top: 2rem;
 	width: 45%;
 }
 
-/* DOCUMENT */
 .document__title {
 	margin: .4em 0 1.25em 0;
 }
