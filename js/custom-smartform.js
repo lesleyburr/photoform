@@ -50,7 +50,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                               <small>required</small></label>\
                                               <input type="date" name="new_exdoc_date" id="NewExhibitionDocDate" required pattern="month_day_year">\
                                               <small class="error">\
-                                                Use the MM/DD/YYYY date format.\
+                                                Use MM/DD/YYYY.\
                                               </small>\
                                             </div>')
                                     .slideDown('slow');
@@ -83,7 +83,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                     </label>\
                                                     <textarea class="field--description__input" name="new_photo_for_ex_details" placeholder="Photograph the women&rsquo;s suffrage cutouts with people standing among them." id="NewPhotoForExhibitionDescription" required></textarea>\
-                                                    <small class="error">Please provide some context on the exhibition.</small>\
+                                                    <small class="error">What would you like photographed.</small>\
                                                   </div>\
                                                   <div class="field--date">\
                                                     <label for="NewPhotoForExhibitionDate" class="label">\
@@ -91,7 +91,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       <small>required</small>\
                                                     </label>\
                                                     <input type="date" name="new_photo_for_ex_date" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
-                                                    <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                                    <small class="error">Use MM/DD/YYYY.</small>\
                                                   </div>')
                                     .slideDown('slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -123,7 +123,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                   </label>\
                                                   <input type="date" name="new_marketing_date" id="NewPhotoForMarketingDate" required pattern="month_day_year">\
-                                                  <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                                  <small class="error">Use MM/DD/YYYY.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -146,7 +146,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                 </label>\
                                                 <input type="text" name="new_event_title" placeholder="Museum Christmas party." id="NewPhotoForEventTitle" required>\
-                                                  <small class="error">How should I refer to this exhibition?</small>\
+                                                  <small class="error">How should I refer to this event?</small>\
                                               </div>\
                                               <div class="field--description">\
                                                 <label class="label" for="NewPhotoForEventDescription">\
@@ -155,7 +155,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <span data-tooltip class="has-tip tip-right" title="Objects, people, or locations to be photographed."><i class="fi-info"></i></span>\
                                                 </label>\
                                                 <textarea class="field--description__input" name="new_event_photo_description" placeholder="Photograph Abe Lincoln breakdancing." id="NewPhotoForEvent" required></textarea>\
-                                                  <small class="error">Please provide some context on the exhibition.</small>\
+                                                  <small class="error">What would you like photographed?</small>\
                                               </div>\
                                               <div class="field--date">\
                                                 <label for="NewPhotoForEventDate" class="label">\
@@ -163,7 +163,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                 </label>\
                                                 <input type="date" name="new_event_date" id="NewPhotoForEventDate" required pattern="month_day_year">\
-                                                  <small class="error">Use the MM/DD/YYYY date format.</small>\
+                                                  <small class="error">Use MM/DD/YYYY.</small>\
                                               </div>')
                                 .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -257,10 +257,13 @@ $( "#GoToFiles" ).click(function( event ) {
       if($(this).is(":checked")) {
         $( "#ExistingCollectionDetails" ).html('<div class="field--description">\
                                                   <label class="label" for="ExisitingCollectionNumber">\
-                                                    Provide the ICHi, DN, SDN, or HB numbers.\
+                                                    Provide the collection item IDs.\
                                                     <small>required</small>\
+                                                    <span data-tooltip class="has-tip tip-right" title="ICHi, DN, SDN, or HB numbers.">\
+                                                      <i class="fi-info"></i>\
+                                                    </span>\
                                                   </label>\
-                                                  <textarea class="field--description__input" name="existing_collection_ids" placeholder="ICHi-39255" id="ExisitingCollectionNumber" required></textarea>\
+                                                  <textarea class="field--description__input" name="existing_collection_ids" placeholder="ICHi-39255, DN-55555, and HB-12345" id="ExisitingCollectionNumber" required></textarea>\
                                                     <small class="error">Provide collection IDs.</small>\
                                                 </div>')
                                   .slideDown( 'slow');
@@ -284,7 +287,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       <small>required</small>\
                                                     </label>\
                                                     <textarea class="field--description__input" name="existing_noncollection_description" placeholder="Photographs of wedding receptions in the Chicago Room." id="ExistingNonCollectionDescription" required></textarea>\
-                                                      <small class="error">What would you like photographed?</small>\
+                                                      <small class="error">Tell me about the images.</small>\
                                                   </div>')
                                     .slideDown( 'slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -306,7 +309,7 @@ $( "#GoToFiles" ).click(function( event ) {
       if($(this).is(":checked")) {
         $( "#UseOtherDetails" ).html('<div class="field--description">\
                                     <label class="label" for="UseOtherDescription">\
-                                      What will these images be used for? \
+                                      How will these images be used? \
                                       <small>required</small>\
                                     </label>\
                                     <textarea class="field--description__input" name="use_other_details" placeholder="The images will be used for the Peer Recogition awards." id="UseOtherDescription" required></textarea>\
@@ -341,7 +344,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                               <small>required</small>\
                                             </label>\
                                             <input type="text" name="external_client_name" placeholder="Motorola" id="UseClientExternalName" required>\
-                                            <small class="error">Who is your external client?</small>\
+                                            <small class="error">Who is the external client?</small>\
                                           </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -374,7 +377,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                 </label>\
                                                 <textarea class="field--description__input" name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>\
-                                                <small class="error">What quality do you need you image files to be?</small>\
+                                                <small class="error">What size and resolution is needed?</small>\
                                               </div>')
                                   .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -398,7 +401,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     <small>required</small>\
                                                   </label>\
                                                   <input type="text" name="delivery_network_path" placeholder="\\\\Ch-media\\Projects\\Unexpected Chicago\\2014" class="folder" id="FileFolderLocation" required>\
-                                                    <small class="error">Where should we save the image files?</small>\
+                                                    <small class="error">Use\\\\servername\\foldername</small>\
                                                 </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -440,7 +443,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   <small>required</small>\
                                                 </label>\
                                                 <textarea class="field--description__input" name="delivery_other" placeholder="Teleportation." id="FileDeliveryOtherDescription" required></textarea>\
-                                                  <small class="error">Describe how you need the files delivered.</small>\
+                                                  <small class="error">Describe the delivery method.</small>\
                                               </div>')
                                     .slideDown('slow');
        $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -460,40 +463,40 @@ $( "#GoToFiles" ).click(function( event ) {
   // ALERTS
   // *********
       // NEW IMAGES
-      // SHOW 2D Collection Items ON CHECK
+      // SHOW 2D Collection Items alert ON CHECK
       // HIDE 2D Collection Items alert ON UNCHECK
       $("#New2D").click(function() {
         $("#New2DAlert").fadeToggle( "slow", "linear" );
       });
 
-      // SHOW 3D Collection Items ON CHECK
+      // SHOW 3D Collection Items alert ON CHECK
       // HIDE 3D Collection Items alert ON UNCHECK
       $("#New3D").click(function() {
         $("#New3DAlert").fadeToggle( "slow", "linear" );
       });
 
       // USE
-      // SHOW Definite Alert About Collections Items Rights Restrictions New Images Menu when New 2D, New 3D, and Exisiting Collection Items are CHECKED
-      // HIDE Definite Alert About Collections Items Rights Restrictions ON UNCHECK
+      // SHOW Definite Restrictions alert when any new or exisiting collection items are CHECKED
+      // HIDE Definite Restrictions alert ON UNCHECK
       $('#New2D, #New3D, #ExistingCollectionItem').click(function() {
         $("#CollectionsAlertDefinite").toggle(this.checked);
       });
 
-      // SHOW If Alert About Collections Items Rights Restrictions New Images Menu when Ex Doc, Photo Ex, Marketing, Events, and Other New Photography are CHECKED
-      // HIDE If Alert About Collections Items Rights Restrictions ON UNCHECK
+      // SHOW Maybe Resctrictions alert when any new images that could be collections items are CHECKED
+      // HIDE Maybe Restrictions alert ON UNCHECK
       $('#NewExibitionDoc, #NewPhotoForExhibition, #NewPhotoForMarketing, #NewPhotoForEvent, #NewPhotoForOther').click(function() {
         $("#CollectionsAlertMaybe").toggle(this.checked);
       });
 
       // FILE DELIVERY METHOD
-      // SHOW Burn to Disc ON CHECK
+      // SHOW Burn to Disc alert ON CHECK
       // HIDE Burn to Disc alert ON UNCHECK
       $("#FileDeliveryDisc").click(function() {
         $("#FileDiscAlert").fadeToggle( "slow", "linear" );
       });
 
       // FILE DELIVERY DATE
-      // SHOW Large Batches alert when File Delivery Date Input in clicked IF New Images Service Menu is CHECKED
+      // SHOW Large Batches alert IF New Images Service Menu is CHECKED
       // HIDE Large Batches alert ON UNCHECK
       $('#ServicesNew').click(function() {
         $("#LargeBatches").toggle(this.checked);

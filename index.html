@@ -59,7 +59,7 @@
     <div class="field--text">
         <label for="department" class="label">Department <small>required</small></label>
         <input type="text" name="department" placeholder="Publications" id="department" required>
-        <small class="error">Do you work here?</small>
+        <small class="error">What's your department?</small>
     </div>
 
     <div class="field--account-number">
@@ -70,7 +70,7 @@
             </span>
         </label>
         <input type="text" name="account" placeholder="111-111-1111-0000" id="account" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$">
-        <small class="error">Nothing's free!</small>
+        <small class="error">Enter your 14 digit account number.</small>
     </div>
 </fieldset>
 <div class="navigation--bottom">
@@ -82,10 +82,10 @@
 <!--               SERVICES                                -->
 <!-- ***************************************************** -->
 <div class="content large-12 columns" id="panel1-2">
-<fieldset>
     <!-- ************************************ -->
     <!--                 NEW                  -->
     <!-- ************************************ -->
+<fieldset>
     <fieldset>
         <div class="services field--checkbox">
             <input type="checkbox" name="new_images" value="on" id="ServicesNew">
@@ -97,7 +97,7 @@
                 <h1 class="services__header--new">What type of new images?</h1>
             </header>
 
-            <div class="services__option field--checkbox">
+            <div class="services__option field--checkbox" id="alert-container">
                 <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
                 <label for="New2D" class="label">2D collection items</label>
                 <div class="hide" id="New2DAlert">
@@ -227,14 +227,14 @@
     <!-- ************************************ -->
     <legend>How are you planning to use the images?</legend>
     <div class="hide" id="CollectionsAlertDefinite">
-        <p data-alert class="alert-box info radius">
-            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+        <p data-alert class="alert-box info radius" id="alert-container">
+            <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
         </p>
     </div>
     <div class="hide" id="CollectionsAlertMaybe">
-        <p data-alert class="alert-box info radius">
-            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+        <p data-alert class="alert-box info radius" id="alert-container">
+            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure the images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
         </p>
     </div>
@@ -279,7 +279,7 @@
     <div class="use__option">
         <input type="checkbox" name="use" value="Other" id="UseOther">
         <label for="UseOther" class="label">
-            Other Use
+            Other use
         </label>
 
         <div class="hide" id="UseOtherDetails">
@@ -288,10 +288,10 @@
     </div>
 </fieldset>
 
-<fieldset>
     <!-- ************************************ -->
     <!--              CLIENT                  -->
     <!-- ************************************ -->
+<fieldset>
 <legend>Who are the images for?</legend>
 
     <div class="use__option field--radio">
@@ -324,10 +324,10 @@
 <fieldset>
 <legend>File Specs</legend>
 
-    <fieldset>
     <!-- ************************************ -->
     <!--             IMAGE QUALITY            -->
     <!-- ************************************ -->
+    <fieldset>
     <legend class="legend--inner">Image Quality</legend>
 
         <div class="files__option field--radio">
@@ -356,10 +356,10 @@
         </div>
     </fieldset>
 
-    <fieldset>
     <!-- ************************************ -->
     <!--           FILE TYPE                  -->
     <!-- ************************************ -->
+    <fieldset>
     <legend class="legend--inner">File Type</legend>
 
             <div class="files__option field--radio">
@@ -379,10 +379,10 @@
     </fieldset>
 </fieldset>
 
-<fieldset>
     <!-- ************************************ -->
     <!--           DELIVERY METHOD            -->
     <!-- ************************************ -->
+<fieldset>
 <legend>File Delivery Method</legend>
         
         <div class="files__option">
@@ -431,17 +431,17 @@
             </div>
         </fieldset>
 
-        <fieldset>
         <!-- ************************************ -->
         <!--                 DUE DATE             -->
         <!-- ************************************ -->
+        <fieldset>
         <legend>File Delivery Date</legend>
             <p>
                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
             </p>
             
             <div class="hide" id="LargeBatches">
-                <p data-alert class="alert-box info radius">
+                <p data-alert class="alert-box info radius" id="alert-container">
                     <i class="fi-alert"></i> Requests for large batches of new images will take additional time.
                     <a href="#" class="close">&times;</a>
                 </p>
@@ -453,7 +453,7 @@
                         <small>required</small>
                     </label>
                     <input type="date" name="date" id="FileDeliveryDate" required pattern="month_day_year">
-                    <small class="error">A due date is required.</small>
+                    <small class="error">Use MM/DD/YYYY</small>
                 </div>
 
         </fieldset>
