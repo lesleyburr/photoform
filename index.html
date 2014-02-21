@@ -97,22 +97,26 @@
                 <h1 class="services__header--new">What type of new images?</h1>
             </header>
 
-            <div class="services__option field--checkbox" id="alert-container">
+            <div class="services__option field--checkbox">
                 <input type="checkbox" name="new_image_service" value="2D collection items" id="New2D">
                 <label for="New2D" class="label">2D collection items</label>
-                <p data-alert class="alert-box info radius" id="New2DAlert">
-                    <i class="fi-alert"></i> Bring materials to the Rights &amp; Reproductions department.
-                    <a href="#" class="close">&times;</a>
-                </p>
+                <div class="hide" id="New2DAlert">
+                        <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> Bring materials to the Rights &amp; Reproductions department.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
             </div>
 
             <div class="services__option field--checkbox" id="alert-container">
                 <input type="checkbox" name="new_image_service" value="3D collection items" id="New3D">
                 <label for="New3D" class="label">3D collection items</label>
-                <p data-alert class="alert-box info radius" id="New3DAlert">
-                    <i class="fi-alert"></i> Please coordinate material delivery to the photo lab with collection managers.
-                    <a href="#" class="close">&times;</a>
-                </p>
+                <div class="hide" id="New3DAlert">
+                    <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> Please coordinate material delivery to the photo lab with collection managers.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
             </div>
 
             <div class="services__option field--checkbox">
@@ -222,9 +226,15 @@
     <!--                 PLANNED USE                  -->
     <!-- ************************************ -->
     <legend>How are you planning to use the images?</legend>
-    <div id="alert-container">
+    <div class="hide" id="CollectionsAlertDefinite">
         <p data-alert class="alert-box info radius">
             <i class="fi-alert"></i> You are requesting collections materials, and some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
+            <a href="#" class="close">&times;</a>
+        </p>
+    </div>
+    <div class="hide" id="CollectionsAlertMaybe">
+        <p data-alert class="alert-box info radius">
+            <i class="fi-alert"></i> If you are requesting collections materials, some images in our collection have restrictions. Rights &amp; Reproductions will make sure your images are cleared for their intended use.
             <a href="#" class="close">&times;</a>
         </p>
     </div>
@@ -401,10 +411,12 @@
                 <label for="FileDeliveryDisc" class="label">
                     Burn to disc
                 </label>
-                <p data-alert class="alert-box info radius" id="FileDiscAlert">
-                    <i class="fi-alert"></i> CDs and DVDs with labels are $2 each and are charged to your account.
-                    <a href="#" class="close">&times;</a>
-                </p>
+                <div class="hide" id="FileDiscAlert">
+                    <p data-alert class="alert-box info radius">
+                        <i class="fi-alert"></i> CDs and DVDs with labels are $2 each and are charged to your account.
+                        <a href="#" class="close">&times;</a>
+                    </p>
+                </div>
             </div>
 
             <div class="files__option">
@@ -428,8 +440,8 @@
                 Allow for a two week turnaround. Rush orders are reviewed on a case-by-case basis.
             </p>
             
-            <div id="alert-container">
-                <p data-alert class="alert-box info radius" id="largebatches">
+            <div class="hide" id="LargeBatches">
+                <p data-alert class="alert-box info radius">
                     <i class="fi-alert"></i> Requests for large batches of new images will take additional time.
                     <a href="#" class="close">&times;</a>
                 </p>

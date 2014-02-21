@@ -427,13 +427,43 @@ $( "#GoToFiles" ).click(function( event ) {
   // *********
   // ALERTS
   // *********
-      // SHOW New Images Menu ON CHECK
+      // NEW IMAGES
+      // SHOW 2D Collection Items ON CHECK
+      // HIDE 2D Collection Items alert ON UNCHECK
+      $("#New2D").click(function() {
+        $("#New2DAlert").fadeToggle( "slow", "linear" );
+      });
 
+      // SHOW 3D Collection Items ON CHECK
+      // HIDE 3D Collection Items alert ON UNCHECK
+      $("#New3D").click(function() {
+        $("#New3DAlert").fadeToggle( "slow", "linear" );
+      });
 
+      // USE
+      // SHOW Definite Alert About Collections Items Rights Restrictions New Images Menu when New 2D, New 3D, and Exisiting Collection Items are CHECKED
+      // HIDE Definite Alert About Collections Items Rights Restrictions ON UNCHECK
+      $('#New2D, #New3D, #ExistingCollectionItem').click(function() {
+        $("#CollectionsAlertDefinite").toggle(this.checked);
+      });
 
+      // SHOW If Alert About Collections Items Rights Restrictions New Images Menu when Ex Doc, Photo Ex, Marketing, Events, and Other New Photography are CHECKED
+      // HIDE If Alert About Collections Items Rights Restrictions ON UNCHECK
+      $('#NewExibitionDoc, #NewPhotoForExhibition, #NewPhotoForMarketing, #NewPhotoForEvent, #NewPhotoForOther').click(function() {
+        $("#CollectionsAlertMaybe").toggle(this.checked);
+      });
 
+      // FILE DELIVERY METHOD
+      // SHOW Burn to Disc ON CHECK
+      // HIDE Burn to Disc alert ON UNCHECK
+      $("#FileDeliveryDisc").click(function() {
+        $("#FileDiscAlert").fadeToggle( "slow", "linear" );
+      });
 
+      // FILE DELIVERY DATE
+      // SHOW Large Batches alert when File Delivery Date Input in clicked IF New Images Service Menu is CHECKED
+      // HIDE Large Batches alert ON UNCHECK
+      $('#ServicesNew').click(function() {
+        $("#LargeBatches").toggle(this.checked);
+      });
 
-
-
-      

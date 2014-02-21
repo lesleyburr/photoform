@@ -63,9 +63,9 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 
 /* ALERTS Foundation Override */
 
-#alert-container {
+/*#alert-container {
 	width: 100%;
-}
+}*/
 
 .alert-box {
 	font-size: 1em;
