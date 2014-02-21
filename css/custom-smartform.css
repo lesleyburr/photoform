@@ -33,7 +33,7 @@ BEM (BLOCK ELEMENT MODIFIER ) NOTATION
 /* MODULES */
 /***************************************************/
 
-.logo {
+.document__logo {
 	margin-top: 2rem;
 	width: 45%;
 }
