@@ -58,8 +58,7 @@ Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
 objCDOMail.To = "" & Request.Form("email") & ""
-'objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
-objCDOMail.Bcc = "gonzalez@chicagohistory.org"
+objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
 
 strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
@@ -177,7 +176,7 @@ HTML = HTML & "</section>"
 ' *************************************
 HTML = HTML & "<section>"
 HTML = HTML & "<header>"
-HTML = HTML & "<h1 style=""font-size: 18px; text-transform: uppercase"">Planned Use</h1>"
+HTML = HTML & "<h1 style=""font-size: 18px; text-transform: uppercase: margin-bottom: 0"">Planned Use</h1>"
 HTML = HTML & "</header>"
 
 Dim uses, use
@@ -218,7 +217,7 @@ dim quality
 quality = Request.Form("imgquality")
 
 If quality = "Other" Then
-	HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0""><em>" & Request.Form("imgquality_other_details") & ", " & Request.Form("filetype") & "</em>.</p>"
+	HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0""><em>* " & Request.Form("imgquality_other_details") & ", " & Request.Form("filetype") & "</em>.</p>"
 Else
 	HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0""><em>" & quality & ", " & Request.Form("filetype") &  "</em>.</p>"
 End If

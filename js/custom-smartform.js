@@ -29,6 +29,83 @@ $( "#GoToFiles" ).click(function( event ) {
                           .find("[id$=Details]").removeAttr('style').empty();
     });
 
+    // Show 2D or 3D Photography Details and REINITIALIZE Abide ON CHECK
+    // HIDE and EMPTY 2D or 3D Details ON UNCHECK
+    $("#New2D").click(function() {
+      if($(this).is(":checked")) {
+        $( "#New2DDetails" ).html('<div class="field--text">\
+                                                    <label for="New2DQty" class="label">\
+                                                      How many images do you need? \
+                                                      <small>required</small>\
+                                                    </label>\
+                                                    <input type="text" name="new_2d_qty" placeholder="Facing Freedom" id="New2DQty" required>\
+                                                    <small class="error">Please provide the number of images needed.</small>\
+                                                  </div>\
+                                                  <div class="field--description">\
+                                                    <label class="label" for="New2DDescription">\
+                                                      Provide Photography details:\
+                                                      <small>required</small>\
+                                                      <span data-tooltip class="has-tip tip-right" title="Documents, slides, negatives, etc."><i class="fi-info"></i></span>\
+                                                    </label>\
+                                                    <textarea class="field--description__input" name="new_2d_details" placeholder="Photograph the Great Chicago Fire map." id="New2DDescription" required></textarea>\
+                                                    <small class="error">What would you like photographed?</small>\
+                                                  </div>\
+                                                  <div class="field--date">\
+                                                    <label for="New2DDate" class="label">\
+                                                      When should the photography occur by? \
+                                                      <small>required</small>\
+                                                    </label>\
+                                                    <input type="text" name="new_2d_date" placeholder="MM/DD/YYYY" id="New2DDate" required pattern="month_day_year">\
+                                                    <small class="error">Use MM/DD/YYYY.</small>\
+                                                  </div>')
+                                    .slideDown('slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#New2DDetails').slideUp('slow', function() {
+          $( "#New2DDetails" ).empty();
+          });
+        }
+    });
+
+
+    $("#New3D").click(function() {
+      if($(this).is(":checked")) {
+        $( "#New3DDetails" ).html('<div class="field--text">\
+                                                    <label for="New3DQty" class="label">\
+                                                      How many images do you need? \
+                                                      <small>required</small>\
+                                                    </label>\
+                                                    <input type="text" name="new_3d_qty" placeholder="Facing Freedom" id="New3DQty" required>\
+                                                    <small class="error">Please provide the number of images needed.</small>\
+                                                  </div>\
+                                                  <div class="field--description">\
+                                                    <label class="label" for="New3DDescription">\
+                                                      Provide Photography details:\
+                                                      <small>required</small>\
+                                                      <span data-tooltip class="has-tip tip-right" title="Objects, people, animals, etc."><i class="fi-info"></i></span>\
+                                                    </label>\
+                                                    <textarea class="field--description__input" name="new_3d_details" placeholder="Photograph the Great Chicago Fire map." id="New3DDescription" required></textarea>\
+                                                    <small class="error">What would you like photographed?</small>\
+                                                  </div>\
+                                                  <div class="field--date">\
+                                                    <label for="New3DDate" class="label">\
+                                                      When should the photography occur by? \
+                                                      <small>required</small>\
+                                                    </label>\
+                                                    <input type="text" name="new_3d_date" placeholder="MM/DD/YYYY" id="New3DDate" required pattern="month_day_year">\
+                                                    <small class="error">Use MM/DD/YYYY.</small>\
+                                                  </div>')
+                                    .slideDown('slow');
+      $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
+      }
+      else {
+        $('#New3DDetails').slideUp('slow', function() {
+          $( "#New3DDetails" ).empty();
+          });
+        }
+    });
+
 
     // Show Exhibition Documentation Details and REINITIALIZE Abide ON CHECK
     // HIDE and EMPTY Exhibition Documentation Details ON UNCHECK
@@ -46,7 +123,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                             </div>\
                                             <div class="field--date">\
                                               <label for="NewExhibitionDocDate" class="label">\
-                                                When should the photography occur?\
+                                                When should the photography occur by?\
                                               <small>required</small></label>\
                                               <input type="text" name="new_exdoc_date" placeholder="MM/DD/YYYY" id="NewExhibitionDocDate" required pattern="month_day_year">\
                                               <small class="error">\
@@ -87,7 +164,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                   </div>\
                                                   <div class="field--date">\
                                                     <label for="NewPhotoForExhibitionDate" class="label">\
-                                                      When should the photography occur? \
+                                                      When should the photography occur by? \
                                                       <small>required</small>\
                                                     </label>\
                                                     <input type="text" name="new_photo_for_ex_date" placeholder="MM/DD/YYYY" id="NewPhotoForExhibitionDate" required pattern="month_day_year">\
@@ -119,7 +196,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                 </div>\
                                                 <div class="field--date">\
                                                   <label for="NewPhotoForMarketingDate" class="label">\
-                                                    When should the photography occur?\
+                                                    When should the photography occur by?\
                                                   <small>required</small>\
                                                   </label>\
                                                   <input type="text" name="new_marketing_date" placeholder="MM/DD/YYYY" id="NewPhotoForMarketingDate" required pattern="month_day_year">\
@@ -159,7 +236,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                               </div>\
                                               <div class="field--date">\
                                                 <label for="NewPhotoForEventDate" class="label">\
-                                                  When should the photography occur?\
+                                                  When should the photography occur by?\
                                                   <small>required</small>\
                                                 </label>\
                                                 <input type="text" name="new_event_date" placeholder="MM/DD/YYYY" id="NewPhotoForEventDate" required pattern="month_day_year">\
@@ -222,7 +299,7 @@ $( "#GoToFiles" ).click(function( event ) {
             });
             $( "#NewOtherPhotographyDate" ).html('<div class="field--date">\
                                         <label for="NewOtherDate" class="label">\
-                                          When should the photography occur?\
+                                          When should the photography occur by?\
                                           <small>required</small>\
                                         </label>\
                                         <input type="text" name="new_other_date" placeholder="MM/DD/YYYY" id="NewOtherDate" required pattern="month_day_year">\
