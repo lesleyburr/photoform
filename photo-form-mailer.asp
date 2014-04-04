@@ -104,9 +104,16 @@ If Request.Form("new_images") = "on" Then
 
 			Case "2D collection items"
 				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0"">Photographs of 2D objects from the collection.</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>I need "& Request.Form("new_2d_qty") & " images.</p>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("new_2d_details") & "</p>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>The photography should take place by " & Request.Form("new_2d_date") & ".</p>"
+
 
 			Case "3D collection items"
 				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0"">Photographs of 3D objects from the collection.</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>I need "& Request.Form("new_3d_qty") & " images.</p>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("new_3d_details") & "</p>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>The photography should take place by " & Request.Form("new_3d_date") & ".</p>"
 
 			Case "Exhibition documentation"
 				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">Exhibition Documentation</h3>"
