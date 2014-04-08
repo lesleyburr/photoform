@@ -35,10 +35,10 @@ $( "#GoToFiles" ).click(function( event ) {
       if($(this).is(":checked")) {
         $( "#New2DDetails" ).html('<div class="field--text">\
                                                     <label for="New2DQty" class="label">\
-                                                      How many images do you need? \
+                                                      How many 2d objects will be photographed? \
                                                       <small>required</small>\
                                                     </label>\
-                                                    <input type="text" name="new_2d_qty" placeholder="Facing Freedom" id="New2DQty" required>\
+                                                    <input type="text" name="new_2d_qty" placeholder="25" id="New2DQty" required>\
                                                     <small class="error">Please provide the number of images needed.</small>\
                                                   </div>\
                                                   <div class="field--description">\
@@ -49,14 +49,6 @@ $( "#GoToFiles" ).click(function( event ) {
                                                     </label>\
                                                     <textarea class="field--description__input" name="new_2d_details" placeholder="Photograph the Great Chicago Fire map." id="New2DDescription" required></textarea>\
                                                     <small class="error">What would you like photographed?</small>\
-                                                  </div>\
-                                                  <div class="field--date">\
-                                                    <label for="New2DDate" class="label">\
-                                                      When should the photography occur by? \
-                                                      <small>required</small>\
-                                                    </label>\
-                                                    <input type="text" name="new_2d_date" placeholder="MM/DD/YYYY" id="New2DDate" required pattern="month_day_year">\
-                                                    <small class="error">Use MM/DD/YYYY.</small>\
                                                   </div>')
                                     .slideDown('slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -73,10 +65,10 @@ $( "#GoToFiles" ).click(function( event ) {
       if($(this).is(":checked")) {
         $( "#New3DDetails" ).html('<div class="field--text">\
                                                     <label for="New3DQty" class="label">\
-                                                      How many images do you need? \
+                                                      How many 3d objects will be photographed? \
                                                       <small>required</small>\
                                                     </label>\
-                                                    <input type="text" name="new_3d_qty" placeholder="Facing Freedom" id="New3DQty" required>\
+                                                    <input type="text" name="new_3d_qty" placeholder="25" id="New3DQty" required>\
                                                     <small class="error">Please provide the number of images needed.</small>\
                                                   </div>\
                                                   <div class="field--description">\
@@ -85,16 +77,8 @@ $( "#GoToFiles" ).click(function( event ) {
                                                       <small>required</small>\
                                                       <span data-tooltip class="has-tip tip-right" title="Objects, people, animals, etc."><i class="fi-info"></i></span>\
                                                     </label>\
-                                                    <textarea class="field--description__input" name="new_3d_details" placeholder="Photograph the Great Chicago Fire map." id="New3DDescription" required></textarea>\
+                                                    <textarea class="field--description__input" name="new_3d_details" placeholder="Photograph the Blob in Uhlein Plaza." id="New3DDescription" required></textarea>\
                                                     <small class="error">What would you like photographed?</small>\
-                                                  </div>\
-                                                  <div class="field--date">\
-                                                    <label for="New3DDate" class="label">\
-                                                      When should the photography occur by? \
-                                                      <small>required</small>\
-                                                    </label>\
-                                                    <input type="text" name="new_3d_date" placeholder="MM/DD/YYYY" id="New3DDate" required pattern="month_day_year">\
-                                                    <small class="error">Use MM/DD/YYYY.</small>\
                                                   </div>')
                                     .slideDown('slow');
       $('#PhotoAndImagingRequest').foundation({bindings: 'events'});
@@ -496,7 +480,7 @@ $( "#GoToFiles" ).click(function( event ) {
     $("#FileDeliveryEmail").click(function() {
       if($(this).is(":checked")) {
         $( "#FileDeliveryEmailDetails" ).html('<div class="field--description">\
-                                                <input type="email" name="delivery_email" placeholder="name@mail.com" required>\
+                                                <input type="email" name="delivery_email" placeholder="name@mail.com" multiple>\
                                                   <small class="error">What email address should we send the files to?</small>\
                                                 </div>')
                                     .slideDown('slow');

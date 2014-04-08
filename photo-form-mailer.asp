@@ -58,7 +58,9 @@ Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
 objCDOMail.To = "" & Request.Form("email") & ""
-objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
+'objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
+
+objCDOMail.Bcc = "gonzalez@chicagohistory.org"
 
 strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
@@ -103,17 +105,15 @@ If Request.Form("new_images") = "on" Then
 		Select Case Trim(new_image_service)
 
 			Case "2D collection items"
-				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0"">Photographs of 2D objects from the collection.</h3>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>I need "& Request.Form("new_2d_qty") & " images.</p>"
+				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">Photographs of 2D objects from the collection.</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">I need " & Request.Form("new_2d_qty") & " objects photographed.</p>"
 				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("new_2d_details") & "</p>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>The photography should take place by " & Request.Form("new_2d_date") & ".</p>"
 
 
 			Case "3D collection items"
-				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0"">Photographs of 3D objects from the collection.</h3>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>I need "& Request.Form("new_3d_qty") & " images.</p>"
+				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">Photographs of 3D objects from the collection.</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">I need "& Request.Form("new_3d_qty") & " objects photographed.</p>"
 				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("new_3d_details") & "</p>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0>The photography should take place by " & Request.Form("new_3d_date") & ".</p>"
 
 			Case "Exhibition documentation"
 				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-top: 0; margin-bottom: 0"">Exhibition Documentation</h3>"
