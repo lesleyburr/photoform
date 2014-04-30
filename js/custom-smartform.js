@@ -249,7 +249,7 @@ $( "#GoToFiles" ).click(function( event ) {
                                                 <textarea class="field--description__input" name="new_other_details" placeholder="Photograph the skyline from North Avenue beach in black and white." id="NewPhotoForOther" required></textarea>\
                                                   <small class="error">What would you like photographed?</small>\
                                                 </div>\
-                                                <div class="fieldset--radio">\
+                                                <div class="fieldset--radio hide">\
                                                   <fieldset>\
                                                   <legend class="legend--inner">Do you need photography?</legend>\
                                                     <div class="field--radio">\
@@ -434,10 +434,10 @@ $( "#GoToFiles" ).click(function( event ) {
 
         $( "#FileQualityOtherDetails" ).html('<div class="field--description">\
                                                 <label class="label" for="QualityOtherDescription">\
-                                                  Describe the image quality needed.\
+                                                  Describe the image quality and specifiy resolution needed in detail.\
                                                   <small>required</small>\
                                                 </label>\
-                                                <textarea class="field--description__input" name="imgquality_other_details" placeholder="I need the files to be 600dpi." id="QualityOtherDescription" required></textarea>\
+                                                <textarea class="field--description__input" name="imgquality_other_details" placeholder="I need the files to be high quality 600dpi for very large prints." id="QualityOtherDescription" required></textarea>\
                                                 <small class="error">What size and resolution is needed?</small>\
                                               </div>')
                                   .slideDown('slow');

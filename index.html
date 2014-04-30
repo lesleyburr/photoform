@@ -82,10 +82,49 @@
 <!--               SERVICES                                -->
 <!-- ***************************************************** -->
 <div class="content large-12 columns" id="panel1-2">
+
+<fieldset>
+
+    <!-- ************************************ -->
+    <!--              EXISTING                -->
+    <!-- ************************************ -->
+    <fieldset>
+        <div class="services">
+            <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
+            <label for="ServicesExisting" class="label">
+                I need copies of existing images.
+            </label>
+        </div>
+
+        <section class="services--existing hide" id= "ServicesExistingMenu">
+            <header>
+                <h1 class="services__header--existing">What type of existing images?</h1>
+            </header>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
+                <label for="ExistingCollectionItem" class="label">
+                    Collection items
+                </label>
+
+                <div class="hide" id="ExistingCollectionDetails">
+                </div>
+
+            <div class="services__option">
+                <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
+                <label for="ExistingNonCollectionItem" class="label">
+                    Non-collection items
+                </label>
+
+                <div class="hide" id="ExistingNonCollectionDetails">
+                </div>
+            </div>
+        </section>
+    </fieldset>
+
     <!-- ************************************ -->
     <!--                 NEW                  -->
-    <!-- ************************************ -->
-<fieldset>
+    <!-- ************************************ -->    
     <fieldset>
         <div class="services field--checkbox">
             <input type="checkbox" name="new_images" value="on" id="ServicesNew">
@@ -178,42 +217,6 @@
     </fieldset>
 
 
-    <!-- ************************************ -->
-    <!--              EXISTING                -->
-    <!-- ************************************ -->
-    <fieldset>
-        <div class="services">
-            <input type="checkbox" name="existing_images" value="on" id="ServicesExisting">
-            <label for="ServicesExisting" class="label">
-                I need copies of existing images.
-            </label>
-        </div>
-
-        <section class="services--existing hide" id= "ServicesExistingMenu">
-            <header>
-                <h1 class="services__header--existing">What type of existing images?</h1>
-            </header>
-
-            <div class="services__option">
-                <input type="checkbox" name="existing_image_service" value="Collections items" id="ExistingCollectionItem">
-                <label for="ExistingCollectionItem" class="label">
-                    Collection items
-                </label>
-
-                <div class="hide" id="ExistingCollectionDetails">
-                </div>
-
-            <div class="services__option">
-                <input type="checkbox" name="existing_image_service" value="Non-collections items" id="ExistingNonCollectionItem">
-                <label for="ExistingNonCollectionItem" class="label">
-                    Non-collection items
-                </label>
-
-                <div class="hide" id="ExistingNonCollectionDetails">
-                </div>
-            </div>
-        </section>
-    </fieldset>
 </fieldset>
 <div class="navigation--bottom">
     <a href="#" class="button radius uppercase" id="GoToUse">Use <i class="fi-play"></i></a>
@@ -329,18 +332,25 @@
     <legend class="legend--inner">Image Quality</legend>
 
         <div class="files__option field--radio">
+            <input type="radio" name="imgquality" value="PDF" id="FileQualityPDF">
+            <label class="label" for="FileQualityPDF">
+                    PDF <span data-tooltip class="has-tip tip-right" title="For contact sheets, presentations, and reference prints."><i class="fi-info"></i></span>
+            </label>
+        </div>
+
+        <div class="files__option field--radio">
             <input type="radio" name="imgquality" value="Low resolution" id="FileQualityLowRes">
             <label class="label" for="FileQualityLowRes">
-                    Low resolution <span data-tooltip class="has-tip tip-right" title="For web use or a PowerPoint presentation, 72 dpi."><i class="fi-info"></i></span>
+                    Low resolution <span data-tooltip class="has-tip tip-right" title="Screen quality resolution for web use, or PowerPoint and Prezi presentations (72 dpi)."><i class="fi-info"></i></span>
             </label>
         </div>
 
         <div class="files__option field--radio">
             <input type="radio" name="imgquality" value="Editorial quality" id="FileQualityEditorial"checked>
             <label class="label" for="FileQualityEditorial">
-                Editorial quality <span data-tooltip class="has-tip tip-right" title="For printing or publication use, 300 dpi."><i class="fi-info"></i></span>
+                Editorial quality <span data-tooltip class="has-tip tip-right" title="For most print publications, photographic prints, and other output that requires high detail (300 dpi, 8x10)."><i class="fi-info"></i></span>
             </label>
-        </div>
+        </div> 
 
         <div class="files__option">
             <input type="radio" name="imgquality" value="Other" id="FileQualityOther">

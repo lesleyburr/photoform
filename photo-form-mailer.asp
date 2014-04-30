@@ -93,6 +93,34 @@ HTML = HTML & "<h1 style=""font-size: 18px; text-transform: uppercase; margin-bo
 HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0""><em><strong>*</strong> indicates a custom request.</em></p>"
 HTML = HTML & "</header>"
 
+' - Existing Images Requested
+If Request.Form("existing_images") = "on" Then
+
+	HTML = HTML & "<h2 style=""font-size: 16px; text-transform: uppercase; margin-bottom: 0"">Existing Images</h2>"
+
+	Dim existing_image_services, existing_image_service
+	existing_image_services = split(Request.Form("existing_image_service"),",")
+
+	For Each existing_image_service in existing_image_services
+
+		Select Case Trim(existing_image_service)
+
+			Case "Collections items"
+				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-bottom: 0; margin-top: 0"">Collection Items</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("existing_collection_ids") & "</p>"
+
+			Case "Non-collections items"
+				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-bottom: 0; margin-top: 0"">Non-Collection Items</h3>"
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("existing_noncollection_description") & "</p>"
+
+			Case else
+				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & existing_image_service & ".</p>"
+
+		End Select
+	Next
+End If
+
+
 ' - New Images Requested
 If Request.Form("new_images") = "on" Then
 	HTML = HTML & "<h2 style=""font-size: 16px; text-transform: uppercase; margin-bottom: 0"">New Images</h2>"
@@ -147,33 +175,6 @@ If Request.Form("new_images") = "on" Then
 	Next
 End If
 
-
-' - Existing Images Requested
-If Request.Form("existing_images") = "on" Then
-
-	HTML = HTML & "<h2 style=""font-size: 16px; text-transform: uppercase; margin-bottom: 0"">Existing Images</h2>"
-
-	Dim existing_image_services, existing_image_service
-	existing_image_services = split(Request.Form("existing_image_service"),",")
-
-	For Each existing_image_service in existing_image_services
-
-		Select Case Trim(existing_image_service)
-
-			Case "Collections items"
-				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-bottom: 0; margin-top: 0"">Collection Items</h3>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("existing_collection_ids") & "</p>"
-
-			Case "Non-collections items"
-				HTML = HTML & "<h3 style=""font-size: 14px; font-weight: 200; margin-bottom: 0; margin-top: 0"">Non-Collection Items</h3>"
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & Request.Form("existing_noncollection_description") & "</p>"
-
-			Case else
-				HTML = HTML & "<p style=""font-size: 14px; font-weight: 200; margin-top: 0"">" & existing_image_service & ".</p>"
-
-		End Select
-	Next
-End If
 HTML = HTML & "</section>"
 
 
