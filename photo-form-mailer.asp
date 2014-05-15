@@ -58,9 +58,9 @@ Dim objCDOMail, strSubject, HTML
 Set objCDOMail = Server.CreateObject("CDONTS.NewMail")
 objCDOMail.From = "photoworkrequest@chicagohistory.org"
 objCDOMail.To = "" & Request.Form("email") & ""
-'objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
+objCDOMail.Bcc = "Jensen@chicagohistory.org, green@chicagohistory.org, rightsrepro@chicagohistory.org, campbell@chicagohistory.org, phototemp@chicagohistory.org"
 
-objCDOMail.Bcc = "burr@chicagohistory.org"
+'objCDOMail.Bcc = "burr@chicagohistory.org"
 
 strSubject = atopic & "-" & Request.Form("name")
 objCDOMail.Subject = strSubject
